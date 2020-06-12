@@ -24,47 +24,20 @@ const StyledInput = styled.input`
     }
   }
 `;
+
 StyledInput.defaultProps = {
   theme: colourPalette.examplePalette,
 };
+
 StyledInput.displayName = "StyledInput";
 
-const StyledTextArea = styled.textarea`
-  display: block;
-  box-sizing: border-box;
-  outline: none;
-  border: 1px solid ${props => props.theme.black.tint40.hex};
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family: "Gentona", "Montserrat";
-  transition: 0.3s ease all;
-  color: ${props => props.theme.black.main.hex};
-  :active,
-  :focus {
-    border-bottom: 2px solid ${props => props.theme.primary.main.hex};
-    + label {
-      color: ${props => props.theme.primary.main.hex};
-    }
-  }
-  border-radius: 5px;
-  margin-top: 0.5rem;
-  height: 10rem;
-  border-bottom: 1px solid ${props => props.theme.black.tint40.hex};
-`;
-StyledTextArea.defaultProps = {
-  theme: colourPalette.examplePalette,
-};
 
-StyledTextArea.displayName = "StyledInput";
-
-interface IInput extends React.HTMLProps<HTMLInputElement> {
+interface IProps extends React.HTMLProps<HTMLInputElement> {
   multiLine: boolean;
-}
-interface ITextArea extends React.HTMLProps<HTMLTextAreaElement> {
-  multiLine: boolean;
+  icon: React.ReactNode;
 }
 
-const Input: React.FC<IInput> | React.FC<ITextArea> = (props: IInput) => {
+const Input: React.FC<IProps> = (props: IProps ) => {
   const {
     className,
     type,
@@ -75,16 +48,14 @@ const Input: React.FC<IInput> | React.FC<ITextArea> = (props: IInput) => {
     value,
     required,
     disabled,
-    multiLine = false,
+    icon,
   } = props;
 
-  const InputType: React.ComponentType<
-    React.HTMLProps<HTMLInputElement> | React.HTMLProps<HTMLTextAreaElement>
-  > = multiLine ? StyledTextArea : StyledInput;
   const inputClassName = className ? `Input ${className}` : "Input";
   return (
     <Container>
-      <InputType
+      {icon || null}
+      <StyledInput
         className={inputClassName}
         type={type}
         onChange={onChange}
