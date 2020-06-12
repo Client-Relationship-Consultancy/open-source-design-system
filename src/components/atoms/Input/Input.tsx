@@ -1,25 +1,63 @@
 import React from "react";
 import styled from "styled-components";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
+import Icon from "../Icon";
 import { colourPalette } from "../../../brandColours";
 
 interface IContainer {
-  bgColor: string;
+  bgColor?: string;
+  border?: "bottom" | "all";
 }
 
 export const Container = styled.div<IContainer>`
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.5rem;
+  ${props => (props.border === "bottom" ? "padding-left: 0;" : "")}
   background-color: ${props => props.bgColor || "transparent"};
+  width: 100%;
+  ${props => {
+    switch (props.border) {
+      case "all":
+        return `border: 1px solid ${props.theme.black.tint60.hex};`;
+      case "bottom":
+        return `border-bottom: 1px solid ${props.theme.black.tint60.hex};`;
+      default:
+        return "border: none;";
+    }
+  }}
+  svg {
+    color: ${props => props.theme.black.tint80.hex};
+  }
   > * + * {
     margin-left: 0.25rem;
   }
+  :focus-within {
+    svg {
+      color: ${props => props.theme.secondary.main.hex};
+    }
+    ${props => {
+      switch (props.border) {
+        case "all":
+          return `border: 1px solid ${props.theme.secondary.main.hex};`;
+        case "bottom":
+          return `border-bottom: 1px solid ${props.theme.secondary.main.hex};`;
+        default:
+          return "border: none;";
+      }
+    }}
+  }
 `;
+
+Container.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
 
 Container.displayName = "Container";
 
 export const StyledInput = styled.input`
+  width: 100%;
   background-color: transparent;
   display: block;
   box-sizing: border-box;
@@ -40,9 +78,10 @@ StyledInput.defaultProps = {
 
 StyledInput.displayName = "StyledInput";
 
-interface IProps extends React.HTMLProps<HTMLInputElement> {
-  icon: React.ReactNode;
-  bgColor: string;
+type InputType = React.HTMLProps<HTMLInputElement> & IContainer;
+
+interface IProps extends InputType {
+  icon: IconProp;
 }
 
 const Input: React.FC<IProps> = (props: IProps) => {
@@ -59,6 +98,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
     icon,
     onFocus,
     bgColor,
+    border,
   } = props;
 
   const handleFocus =
@@ -67,8 +107,8 @@ const Input: React.FC<IProps> = (props: IProps) => {
   const inputClassName = className ? `Input ${className}` : "Input";
 
   return (
-    <Container bgColor={bgColor}>
-      {icon || null}
+    <Container bgColor={bgColor} border={border}>
+      {icon && <Icon name={icon} />}
       <StyledInput
         className={inputClassName}
         type={type}

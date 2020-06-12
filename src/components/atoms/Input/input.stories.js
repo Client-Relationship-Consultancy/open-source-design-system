@@ -15,7 +15,23 @@ stories.add("Standard", context => {
 })
 
 stories.add("With Icon", context => {
-  return <Input placeholder="Search the table..." bgColor="#F5F5F5" icon={<NewIcon name="search" color="primary" />} />
+  return <Input placeholder="Search the table..." bgColor="#F5F5F5" icon="search" />
+})
+
+stories.add("With bottom border", context => {
+  return <Input border="bottom" />
+})
+
+stories.add("With icon and bottom border", context => {
+  return <Input icon="search" border="bottom" />
+})
+
+stories.add("With all border", context => {
+  return <Input bgColor="#F5F5F5" border="all" />
+})
+
+stories.add("With icon and all border", context => {
+  return <Input bgColor="#F5F5F5" border="all" icon="search" />
 })
 
 stories.add("With custom onFocus", context => {

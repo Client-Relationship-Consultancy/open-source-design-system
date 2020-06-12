@@ -2,6 +2,9 @@ import React from "react"
 import { mount } from "enzyme"
 import "jest-styled-components"
 import Input, { Container, StyledInput } from "./Input"
+import { colourPalette } from "../../../brandColours"
+
+const { black } = colourPalette.examplePalette
 
 describe("Input", () => {
   const commonProps = {
@@ -45,6 +48,22 @@ describe("<Container />", () => {
   it("should have background colour if bgColor is passed", () => {
     const component = mount(<Container bgColor="red" />)
     expect(component.find("Container")).toHaveStyleRule("background-color", "red")
+  })
+
+  it("should have no border if border is not passed", () => {
+    const component = mount(<Container />)
+    expect(component.find("Container")).toHaveStyleRule("none")
+  })
+
+  it("should have bottom border if border is passed bottom", () => {
+    const component = mount(<Container border="bottom" />)
+    expect(component.find("Container")).toHaveStyleRule("border", undefined)
+    expect(component.find("Container")).toHaveStyleRule("border-bottom", `1px solid ${black.tint60.hex}`)
+  })
+
+  it("should have a border if border is passed all", () => {
+    const component = mount(<Container border="all" />)
+    expect(component.find("Container")).toHaveStyleRule("border", `1px solid ${black.tint60.hex}`)
   })
 })
 
