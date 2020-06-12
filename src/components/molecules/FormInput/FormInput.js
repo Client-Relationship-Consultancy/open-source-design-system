@@ -26,7 +26,6 @@ const FormInput = props => {
     placeholder,
     label,
     disabled,
-    multiLine,
   } = props
   return (
     <Container className={className}>
@@ -38,7 +37,6 @@ const FormInput = props => {
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
-        multiLine={multiLine}
       />
       <Label htmlFor={id}>{label}</Label>
     </Container>
@@ -64,7 +62,6 @@ FormInput.propTypes = {
   /** Needed when making controlled inputs for React */
   value: PropTypes.string.isRequired,
   className: PropTypes.string,
-  multiLine: PropTypes.bool,
 }
 
 export default FormInput

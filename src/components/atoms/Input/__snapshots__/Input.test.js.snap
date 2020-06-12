@@ -1,13 +1,525 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Container /> should match last snapshot 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+}
+
+.c0 > * + * {
+  margin-left: 0.25rem;
+}
+
+<Container>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Input__Container-hd9u5w-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:inline-flex;align-items:center;padding:0.25rem 0.5rem;background-color:",
+            [Function],
+            ";> * + *{margin-left:0.25rem;}",
+          ],
+        },
+        "displayName": "Container",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Input__Container-hd9u5w-0",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</Container>
+`;
+
+exports[`<StyledInput /> should match last snapshot 1`] = `
+.c0 {
+  background-color: transparent;
+  display: block;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-family: "Gentona","Montserrat";
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  color: #272727;
+}
+
+.c0::-webkit-input-placeholder {
+  color: #696969;
+}
+
+.c0::-moz-placeholder {
+  color: #696969;
+}
+
+.c0:-ms-input-placeholder {
+  color: #696969;
+}
+
+.c0::placeholder {
+  color: #696969;
+}
+
+<StyledInput
+  theme={
+    Object {
+      "action": Object {
+        "dark": Object {
+          "RGB": "79,38,98",
+          "hex": "#4E2662",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "173,101,207",
+          "hex": "#AD65CF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "116,60,143",
+          "hex": "#743C8F",
+          "on": "#FFFFFF",
+        },
+      },
+      "background": Object {
+        "RGB": "246,246,246",
+        "hex": "#F6F6F6",
+      },
+      "black": Object {
+        "main": Object {
+          "RGB": "39,39,39",
+          "hex": "#272727",
+          "on": "#FFFFFF",
+        },
+        "tint20": Object {
+          "RGB": "236,236,236",
+          "hex": "#ECECEC",
+          "on": "#272727",
+        },
+        "tint40": Object {
+          "RGB": "199,199,199",
+          "hex": "#C7C7C7",
+          "on": "#272727",
+        },
+        "tint60": Object {
+          "RGB": "160,160,160",
+          "hex": "#A0A0A0",
+          "on": "#FFFFFF",
+        },
+        "tint80": Object {
+          "RGB": "105,105,105",
+          "hex": "#696969",
+          "on": "#FFFFFF",
+        },
+      },
+      "complimentary": Object {
+        "dark": Object {
+          "RGB": "206,185,0",
+          "hex": "#CEB900",
+          "on": "#272727",
+        },
+        "light": Object {
+          "RGB": "255,245,157",
+          "hex": "#FFF59D",
+          "on": "#272727",
+        },
+        "main": Object {
+          "RGB": "255,238,82",
+          "hex": "#FFEE52",
+          "on": "#272727",
+        },
+      },
+      "error": Object {
+        "dark": Object {
+          "RGB": "197,73,1",
+          "hex": "#C54901",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "255,115,32",
+          "hex": "#FF7320",
+          "on": "#FFFFFF",
+        },
+      },
+      "primary": Object {
+        "dark": Object {
+          "RGB": "102,22,20",
+          "hex": "#661614",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "218,52,47",
+          "hex": "#DA342F",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "164,40,36",
+          "hex": "#A42824",
+          "on": "#FFFFFF",
+        },
+      },
+      "secondary": Object {
+        "dark": Object {
+          "RGB": "5,38,59",
+          "hex": "#05263B",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "89,156,175",
+          "hex": "#599CAF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "11,70,107",
+          "hex": "#0B466B",
+          "on": "#FFFFFF",
+        },
+      },
+      "surface": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
+      "white": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "action": Object {
+              "dark": Object {
+                "RGB": "79,38,98",
+                "hex": "#4E2662",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "173,101,207",
+                "hex": "#AD65CF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "116,60,143",
+                "hex": "#743C8F",
+                "on": "#FFFFFF",
+              },
+            },
+            "background": Object {
+              "RGB": "246,246,246",
+              "hex": "#F6F6F6",
+            },
+            "black": Object {
+              "main": Object {
+                "RGB": "39,39,39",
+                "hex": "#272727",
+                "on": "#FFFFFF",
+              },
+              "tint20": Object {
+                "RGB": "236,236,236",
+                "hex": "#ECECEC",
+                "on": "#272727",
+              },
+              "tint40": Object {
+                "RGB": "199,199,199",
+                "hex": "#C7C7C7",
+                "on": "#272727",
+              },
+              "tint60": Object {
+                "RGB": "160,160,160",
+                "hex": "#A0A0A0",
+                "on": "#FFFFFF",
+              },
+              "tint80": Object {
+                "RGB": "105,105,105",
+                "hex": "#696969",
+                "on": "#FFFFFF",
+              },
+            },
+            "complimentary": Object {
+              "dark": Object {
+                "RGB": "206,185,0",
+                "hex": "#CEB900",
+                "on": "#272727",
+              },
+              "light": Object {
+                "RGB": "255,245,157",
+                "hex": "#FFF59D",
+                "on": "#272727",
+              },
+              "main": Object {
+                "RGB": "255,238,82",
+                "hex": "#FFEE52",
+                "on": "#272727",
+              },
+            },
+            "error": Object {
+              "dark": Object {
+                "RGB": "197,73,1",
+                "hex": "#C54901",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "255,115,32",
+                "hex": "#FF7320",
+                "on": "#FFFFFF",
+              },
+            },
+            "primary": Object {
+              "dark": Object {
+                "RGB": "102,22,20",
+                "hex": "#661614",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "218,52,47",
+                "hex": "#DA342F",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "164,40,36",
+                "hex": "#A42824",
+                "on": "#FFFFFF",
+              },
+            },
+            "secondary": Object {
+              "dark": Object {
+                "RGB": "5,38,59",
+                "hex": "#05263B",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "89,156,175",
+                "hex": "#599CAF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "11,70,107",
+                "hex": "#0B466B",
+                "on": "#FFFFFF",
+              },
+            },
+            "surface": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+            "white": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Input__StyledInput-hd9u5w-1",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "background-color:transparent;display:block;box-sizing:border-box;outline:none;border:none;font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";transition:0.3s ease all;color:",
+            [Function],
+            ";::placeholder{color:",
+            [Function],
+            ";}",
+          ],
+        },
+        "displayName": "StyledInput",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Input__StyledInput-hd9u5w-1",
+        "target": "input",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "action": Object {
+          "dark": Object {
+            "RGB": "79,38,98",
+            "hex": "#4E2662",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "173,101,207",
+            "hex": "#AD65CF",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "116,60,143",
+            "hex": "#743C8F",
+            "on": "#FFFFFF",
+          },
+        },
+        "background": Object {
+          "RGB": "246,246,246",
+          "hex": "#F6F6F6",
+        },
+        "black": Object {
+          "main": Object {
+            "RGB": "39,39,39",
+            "hex": "#272727",
+            "on": "#FFFFFF",
+          },
+          "tint20": Object {
+            "RGB": "236,236,236",
+            "hex": "#ECECEC",
+            "on": "#272727",
+          },
+          "tint40": Object {
+            "RGB": "199,199,199",
+            "hex": "#C7C7C7",
+            "on": "#272727",
+          },
+          "tint60": Object {
+            "RGB": "160,160,160",
+            "hex": "#A0A0A0",
+            "on": "#FFFFFF",
+          },
+          "tint80": Object {
+            "RGB": "105,105,105",
+            "hex": "#696969",
+            "on": "#FFFFFF",
+          },
+        },
+        "complimentary": Object {
+          "dark": Object {
+            "RGB": "206,185,0",
+            "hex": "#CEB900",
+            "on": "#272727",
+          },
+          "light": Object {
+            "RGB": "255,245,157",
+            "hex": "#FFF59D",
+            "on": "#272727",
+          },
+          "main": Object {
+            "RGB": "255,238,82",
+            "hex": "#FFEE52",
+            "on": "#272727",
+          },
+        },
+        "error": Object {
+          "dark": Object {
+            "RGB": "197,73,1",
+            "hex": "#C54901",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "255,115,32",
+            "hex": "#FF7320",
+            "on": "#FFFFFF",
+          },
+        },
+        "primary": Object {
+          "dark": Object {
+            "RGB": "102,22,20",
+            "hex": "#661614",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "218,52,47",
+            "hex": "#DA342F",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "164,40,36",
+            "hex": "#A42824",
+            "on": "#FFFFFF",
+          },
+        },
+        "secondary": Object {
+          "dark": Object {
+            "RGB": "5,38,59",
+            "hex": "#05263B",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "89,156,175",
+            "hex": "#599CAF",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "11,70,107",
+            "hex": "#0B466B",
+            "on": "#FFFFFF",
+          },
+        },
+        "surface": Object {
+          "RGB": "255,255,255",
+          "hex": "#FFFFFF",
+          "on": "#272727",
+        },
+        "white": Object {
+          "RGB": "255,255,255",
+          "hex": "#FFFFFF",
+          "on": "#272727",
+        },
+      }
+    }
+  >
+    <input
+      className="c0"
+    />
+  </StyledComponent>
+</StyledInput>
+`;
+
 exports[`Input render matches last snapshot 1`] = `
 .c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: transparent;
+}
+
+.c0 > * + * {
+  margin-left: 0.25rem;
+}
+
+.c1 {
+  background-color: transparent;
   display: block;
   box-sizing: border-box;
   outline: none;
   border: none;
-  border-bottom: 1px solid #C7C7C7;
-  padding: 0.5rem;
   font-size: 1rem;
   font-family: "Gentona","Montserrat";
   -webkit-transition: 0.3s ease all;
@@ -15,14 +527,20 @@ exports[`Input render matches last snapshot 1`] = `
   color: #272727;
 }
 
-.c0:active,
-.c0:focus {
-  border-bottom: 2px solid #A42824;
+.c1::-webkit-input-placeholder {
+  color: #696969;
 }
 
-.c0:active + label,
-.c0:focus + label {
-  color: #A42824;
+.c1::-moz-placeholder {
+  color: #696969;
+}
+
+.c1:-ms-input-placeholder {
+  color: #696969;
+}
+
+.c1::placeholder {
+  color: #696969;
 }
 
 <Input
@@ -31,145 +549,44 @@ exports[`Input render matches last snapshot 1`] = `
   type="text"
   value="Hello"
 >
-  <StyledInput
-    className="Input"
-    name="example"
-    onChange={[Function]}
-    theme={
-      Object {
-        "action": Object {
-          "dark": Object {
-            "RGB": "79,38,98",
-            "hex": "#4E2662",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "173,101,207",
-            "hex": "#AD65CF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "116,60,143",
-            "hex": "#743C8F",
-            "on": "#FFFFFF",
-          },
-        },
-        "background": Object {
-          "RGB": "246,246,246",
-          "hex": "#F6F6F6",
-        },
-        "black": Object {
-          "main": Object {
-            "RGB": "39,39,39",
-            "hex": "#272727",
-            "on": "#FFFFFF",
-          },
-          "tint20": Object {
-            "RGB": "236,236,236",
-            "hex": "#ECECEC",
-            "on": "#272727",
-          },
-          "tint40": Object {
-            "RGB": "199,199,199",
-            "hex": "#C7C7C7",
-            "on": "#272727",
-          },
-          "tint60": Object {
-            "RGB": "160,160,160",
-            "hex": "#A0A0A0",
-            "on": "#FFFFFF",
-          },
-          "tint80": Object {
-            "RGB": "105,105,105",
-            "hex": "#696969",
-            "on": "#FFFFFF",
-          },
-        },
-        "complimentary": Object {
-          "dark": Object {
-            "RGB": "206,185,0",
-            "hex": "#CEB900",
-            "on": "#272727",
-          },
-          "light": Object {
-            "RGB": "255,245,157",
-            "hex": "#FFF59D",
-            "on": "#272727",
-          },
-          "main": Object {
-            "RGB": "255,238,82",
-            "hex": "#FFEE52",
-            "on": "#272727",
-          },
-        },
-        "error": Object {
-          "dark": Object {
-            "RGB": "197,73,1",
-            "hex": "#C54901",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "255,115,32",
-            "hex": "#FF7320",
-            "on": "#FFFFFF",
-          },
-        },
-        "primary": Object {
-          "dark": Object {
-            "RGB": "102,22,20",
-            "hex": "#661614",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "218,52,47",
-            "hex": "#DA342F",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "164,40,36",
-            "hex": "#A42824",
-            "on": "#FFFFFF",
-          },
-        },
-        "secondary": Object {
-          "dark": Object {
-            "RGB": "5,38,59",
-            "hex": "#05263B",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "89,156,175",
-            "hex": "#599CAF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "11,70,107",
-            "hex": "#0B466B",
-            "on": "#FFFFFF",
-          },
-        },
-        "surface": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-        "white": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-      }
-    }
-    type="text"
-    value="Hello"
-  >
+  <Container>
     <StyledComponent
-      className="Input"
       forwardedComponent={
         Object {
           "$$typeof": Symbol(react.forward_ref),
-          "_foldedDefaultProps": Object {
-            "theme": Object {
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "Input__Container-hd9u5w-0",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "display:inline-flex;align-items:center;padding:0.25rem 0.5rem;background-color:",
+              [Function],
+              ";> * + *{margin-left:0.25rem;}",
+            ],
+          },
+          "displayName": "Container",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "Input__Container-hd9u5w-0",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
+      >
+        <StyledInput
+          className="Input"
+          name="example"
+          onChange={[Function]}
+          onFocus={[Function]}
+          theme={
+            Object {
               "action": Object {
                 "dark": Object {
                   "RGB": "79,38,98",
@@ -291,1107 +708,308 @@ exports[`Input render matches last snapshot 1`] = `
                 "hex": "#FFFFFF",
                 "on": "#272727",
               },
-            },
-          },
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "Input__StyledInput-sc-27uu00-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display:block;box-sizing:border-box;outline:none;border:none;border-bottom:1px solid ",
-              [Function],
-              ";padding:0.5rem;font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";transition:0.3s ease all;color:",
-              [Function],
-              ";:active,:focus{border-bottom:2px solid ",
-              [Function],
-              ";+ label{color:",
-              [Function],
-              ";}}",
-            ],
-          },
-          "displayName": "StyledInput",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "Input__StyledInput-sc-27uu00-0",
-          "target": "input",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      name="example"
-      onChange={[Function]}
-      theme={
-        Object {
-          "action": Object {
-            "dark": Object {
-              "RGB": "79,38,98",
-              "hex": "#4E2662",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "173,101,207",
-              "hex": "#AD65CF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "116,60,143",
-              "hex": "#743C8F",
-              "on": "#FFFFFF",
-            },
-          },
-          "background": Object {
-            "RGB": "246,246,246",
-            "hex": "#F6F6F6",
-          },
-          "black": Object {
-            "main": Object {
-              "RGB": "39,39,39",
-              "hex": "#272727",
-              "on": "#FFFFFF",
-            },
-            "tint20": Object {
-              "RGB": "236,236,236",
-              "hex": "#ECECEC",
-              "on": "#272727",
-            },
-            "tint40": Object {
-              "RGB": "199,199,199",
-              "hex": "#C7C7C7",
-              "on": "#272727",
-            },
-            "tint60": Object {
-              "RGB": "160,160,160",
-              "hex": "#A0A0A0",
-              "on": "#FFFFFF",
-            },
-            "tint80": Object {
-              "RGB": "105,105,105",
-              "hex": "#696969",
-              "on": "#FFFFFF",
-            },
-          },
-          "complimentary": Object {
-            "dark": Object {
-              "RGB": "206,185,0",
-              "hex": "#CEB900",
-              "on": "#272727",
-            },
-            "light": Object {
-              "RGB": "255,245,157",
-              "hex": "#FFF59D",
-              "on": "#272727",
-            },
-            "main": Object {
-              "RGB": "255,238,82",
-              "hex": "#FFEE52",
-              "on": "#272727",
-            },
-          },
-          "error": Object {
-            "dark": Object {
-              "RGB": "197,73,1",
-              "hex": "#C54901",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "255,115,32",
-              "hex": "#FF7320",
-              "on": "#FFFFFF",
-            },
-          },
-          "primary": Object {
-            "dark": Object {
-              "RGB": "102,22,20",
-              "hex": "#661614",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "218,52,47",
-              "hex": "#DA342F",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "164,40,36",
-              "hex": "#A42824",
-              "on": "#FFFFFF",
-            },
-          },
-          "secondary": Object {
-            "dark": Object {
-              "RGB": "5,38,59",
-              "hex": "#05263B",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "89,156,175",
-              "hex": "#599CAF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "11,70,107",
-              "hex": "#0B466B",
-              "on": "#FFFFFF",
-            },
-          },
-          "surface": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-          "white": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-        }
-      }
-      type="text"
-      value="Hello"
-    >
-      <input
-        className="c0 Input"
-        name="example"
-        onChange={[Function]}
-        type="text"
-        value="Hello"
-      />
+            }
+          }
+          type="text"
+          value="Hello"
+        >
+          <StyledComponent
+            className="Input"
+            forwardedComponent={
+              Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "_foldedDefaultProps": Object {
+                  "theme": Object {
+                    "action": Object {
+                      "dark": Object {
+                        "RGB": "79,38,98",
+                        "hex": "#4E2662",
+                        "on": "#FFFFFF",
+                      },
+                      "light": Object {
+                        "RGB": "173,101,207",
+                        "hex": "#AD65CF",
+                        "on": "#FFFFFF",
+                      },
+                      "main": Object {
+                        "RGB": "116,60,143",
+                        "hex": "#743C8F",
+                        "on": "#FFFFFF",
+                      },
+                    },
+                    "background": Object {
+                      "RGB": "246,246,246",
+                      "hex": "#F6F6F6",
+                    },
+                    "black": Object {
+                      "main": Object {
+                        "RGB": "39,39,39",
+                        "hex": "#272727",
+                        "on": "#FFFFFF",
+                      },
+                      "tint20": Object {
+                        "RGB": "236,236,236",
+                        "hex": "#ECECEC",
+                        "on": "#272727",
+                      },
+                      "tint40": Object {
+                        "RGB": "199,199,199",
+                        "hex": "#C7C7C7",
+                        "on": "#272727",
+                      },
+                      "tint60": Object {
+                        "RGB": "160,160,160",
+                        "hex": "#A0A0A0",
+                        "on": "#FFFFFF",
+                      },
+                      "tint80": Object {
+                        "RGB": "105,105,105",
+                        "hex": "#696969",
+                        "on": "#FFFFFF",
+                      },
+                    },
+                    "complimentary": Object {
+                      "dark": Object {
+                        "RGB": "206,185,0",
+                        "hex": "#CEB900",
+                        "on": "#272727",
+                      },
+                      "light": Object {
+                        "RGB": "255,245,157",
+                        "hex": "#FFF59D",
+                        "on": "#272727",
+                      },
+                      "main": Object {
+                        "RGB": "255,238,82",
+                        "hex": "#FFEE52",
+                        "on": "#272727",
+                      },
+                    },
+                    "error": Object {
+                      "dark": Object {
+                        "RGB": "197,73,1",
+                        "hex": "#C54901",
+                        "on": "#FFFFFF",
+                      },
+                      "main": Object {
+                        "RGB": "255,115,32",
+                        "hex": "#FF7320",
+                        "on": "#FFFFFF",
+                      },
+                    },
+                    "primary": Object {
+                      "dark": Object {
+                        "RGB": "102,22,20",
+                        "hex": "#661614",
+                        "on": "#FFFFFF",
+                      },
+                      "light": Object {
+                        "RGB": "218,52,47",
+                        "hex": "#DA342F",
+                        "on": "#FFFFFF",
+                      },
+                      "main": Object {
+                        "RGB": "164,40,36",
+                        "hex": "#A42824",
+                        "on": "#FFFFFF",
+                      },
+                    },
+                    "secondary": Object {
+                      "dark": Object {
+                        "RGB": "5,38,59",
+                        "hex": "#05263B",
+                        "on": "#FFFFFF",
+                      },
+                      "light": Object {
+                        "RGB": "89,156,175",
+                        "hex": "#599CAF",
+                        "on": "#FFFFFF",
+                      },
+                      "main": Object {
+                        "RGB": "11,70,107",
+                        "hex": "#0B466B",
+                        "on": "#FFFFFF",
+                      },
+                    },
+                    "surface": Object {
+                      "RGB": "255,255,255",
+                      "hex": "#FFFFFF",
+                      "on": "#272727",
+                    },
+                    "white": Object {
+                      "RGB": "255,255,255",
+                      "hex": "#FFFFFF",
+                      "on": "#272727",
+                    },
+                  },
+                },
+                "attrs": Array [],
+                "componentStyle": ComponentStyle {
+                  "componentId": "Input__StyledInput-hd9u5w-1",
+                  "isStatic": false,
+                  "lastClassName": "c1",
+                  "rules": Array [
+                    "background-color:transparent;display:block;box-sizing:border-box;outline:none;border:none;font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";transition:0.3s ease all;color:",
+                    [Function],
+                    ";::placeholder{color:",
+                    [Function],
+                    ";}",
+                  ],
+                },
+                "displayName": "StyledInput",
+                "foldedComponentIds": Array [],
+                "render": [Function],
+                "styledComponentId": "Input__StyledInput-hd9u5w-1",
+                "target": "input",
+                "toString": [Function],
+                "warnTooManyClasses": [Function],
+                "withComponent": [Function],
+              }
+            }
+            forwardedRef={null}
+            name="example"
+            onChange={[Function]}
+            onFocus={[Function]}
+            theme={
+              Object {
+                "action": Object {
+                  "dark": Object {
+                    "RGB": "79,38,98",
+                    "hex": "#4E2662",
+                    "on": "#FFFFFF",
+                  },
+                  "light": Object {
+                    "RGB": "173,101,207",
+                    "hex": "#AD65CF",
+                    "on": "#FFFFFF",
+                  },
+                  "main": Object {
+                    "RGB": "116,60,143",
+                    "hex": "#743C8F",
+                    "on": "#FFFFFF",
+                  },
+                },
+                "background": Object {
+                  "RGB": "246,246,246",
+                  "hex": "#F6F6F6",
+                },
+                "black": Object {
+                  "main": Object {
+                    "RGB": "39,39,39",
+                    "hex": "#272727",
+                    "on": "#FFFFFF",
+                  },
+                  "tint20": Object {
+                    "RGB": "236,236,236",
+                    "hex": "#ECECEC",
+                    "on": "#272727",
+                  },
+                  "tint40": Object {
+                    "RGB": "199,199,199",
+                    "hex": "#C7C7C7",
+                    "on": "#272727",
+                  },
+                  "tint60": Object {
+                    "RGB": "160,160,160",
+                    "hex": "#A0A0A0",
+                    "on": "#FFFFFF",
+                  },
+                  "tint80": Object {
+                    "RGB": "105,105,105",
+                    "hex": "#696969",
+                    "on": "#FFFFFF",
+                  },
+                },
+                "complimentary": Object {
+                  "dark": Object {
+                    "RGB": "206,185,0",
+                    "hex": "#CEB900",
+                    "on": "#272727",
+                  },
+                  "light": Object {
+                    "RGB": "255,245,157",
+                    "hex": "#FFF59D",
+                    "on": "#272727",
+                  },
+                  "main": Object {
+                    "RGB": "255,238,82",
+                    "hex": "#FFEE52",
+                    "on": "#272727",
+                  },
+                },
+                "error": Object {
+                  "dark": Object {
+                    "RGB": "197,73,1",
+                    "hex": "#C54901",
+                    "on": "#FFFFFF",
+                  },
+                  "main": Object {
+                    "RGB": "255,115,32",
+                    "hex": "#FF7320",
+                    "on": "#FFFFFF",
+                  },
+                },
+                "primary": Object {
+                  "dark": Object {
+                    "RGB": "102,22,20",
+                    "hex": "#661614",
+                    "on": "#FFFFFF",
+                  },
+                  "light": Object {
+                    "RGB": "218,52,47",
+                    "hex": "#DA342F",
+                    "on": "#FFFFFF",
+                  },
+                  "main": Object {
+                    "RGB": "164,40,36",
+                    "hex": "#A42824",
+                    "on": "#FFFFFF",
+                  },
+                },
+                "secondary": Object {
+                  "dark": Object {
+                    "RGB": "5,38,59",
+                    "hex": "#05263B",
+                    "on": "#FFFFFF",
+                  },
+                  "light": Object {
+                    "RGB": "89,156,175",
+                    "hex": "#599CAF",
+                    "on": "#FFFFFF",
+                  },
+                  "main": Object {
+                    "RGB": "11,70,107",
+                    "hex": "#0B466B",
+                    "on": "#FFFFFF",
+                  },
+                },
+                "surface": Object {
+                  "RGB": "255,255,255",
+                  "hex": "#FFFFFF",
+                  "on": "#272727",
+                },
+                "white": Object {
+                  "RGB": "255,255,255",
+                  "hex": "#FFFFFF",
+                  "on": "#272727",
+                },
+              }
+            }
+            type="text"
+            value="Hello"
+          >
+            <input
+              className="c1 Input"
+              name="example"
+              onChange={[Function]}
+              onFocus={[Function]}
+              type="text"
+              value="Hello"
+            />
+          </StyledComponent>
+        </StyledInput>
+      </div>
     </StyledComponent>
-  </StyledInput>
-</Input>
-`;
-
-exports[`Input render matches last snapshot with classname 1`] = `
-.c0 {
-  display: block;
-  box-sizing: border-box;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid #C7C7C7;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family: "Gentona","Montserrat";
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-  color: #272727;
-}
-
-.c0:active,
-.c0:focus {
-  border-bottom: 2px solid #A42824;
-}
-
-.c0:active + label,
-.c0:focus + label {
-  color: #A42824;
-}
-
-<Input
-  className="testClassName"
-  name="example"
-  onChange={[Function]}
-  type="text"
-  value="Hello"
->
-  <StyledInput
-    className="Input testClassName"
-    name="example"
-    onChange={[Function]}
-    theme={
-      Object {
-        "action": Object {
-          "dark": Object {
-            "RGB": "79,38,98",
-            "hex": "#4E2662",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "173,101,207",
-            "hex": "#AD65CF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "116,60,143",
-            "hex": "#743C8F",
-            "on": "#FFFFFF",
-          },
-        },
-        "background": Object {
-          "RGB": "246,246,246",
-          "hex": "#F6F6F6",
-        },
-        "black": Object {
-          "main": Object {
-            "RGB": "39,39,39",
-            "hex": "#272727",
-            "on": "#FFFFFF",
-          },
-          "tint20": Object {
-            "RGB": "236,236,236",
-            "hex": "#ECECEC",
-            "on": "#272727",
-          },
-          "tint40": Object {
-            "RGB": "199,199,199",
-            "hex": "#C7C7C7",
-            "on": "#272727",
-          },
-          "tint60": Object {
-            "RGB": "160,160,160",
-            "hex": "#A0A0A0",
-            "on": "#FFFFFF",
-          },
-          "tint80": Object {
-            "RGB": "105,105,105",
-            "hex": "#696969",
-            "on": "#FFFFFF",
-          },
-        },
-        "complimentary": Object {
-          "dark": Object {
-            "RGB": "206,185,0",
-            "hex": "#CEB900",
-            "on": "#272727",
-          },
-          "light": Object {
-            "RGB": "255,245,157",
-            "hex": "#FFF59D",
-            "on": "#272727",
-          },
-          "main": Object {
-            "RGB": "255,238,82",
-            "hex": "#FFEE52",
-            "on": "#272727",
-          },
-        },
-        "error": Object {
-          "dark": Object {
-            "RGB": "197,73,1",
-            "hex": "#C54901",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "255,115,32",
-            "hex": "#FF7320",
-            "on": "#FFFFFF",
-          },
-        },
-        "primary": Object {
-          "dark": Object {
-            "RGB": "102,22,20",
-            "hex": "#661614",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "218,52,47",
-            "hex": "#DA342F",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "164,40,36",
-            "hex": "#A42824",
-            "on": "#FFFFFF",
-          },
-        },
-        "secondary": Object {
-          "dark": Object {
-            "RGB": "5,38,59",
-            "hex": "#05263B",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "89,156,175",
-            "hex": "#599CAF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "11,70,107",
-            "hex": "#0B466B",
-            "on": "#FFFFFF",
-          },
-        },
-        "surface": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-        "white": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-      }
-    }
-    type="text"
-    value="Hello"
-  >
-    <StyledComponent
-      className="Input testClassName"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "_foldedDefaultProps": Object {
-            "theme": Object {
-              "action": Object {
-                "dark": Object {
-                  "RGB": "79,38,98",
-                  "hex": "#4E2662",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "173,101,207",
-                  "hex": "#AD65CF",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "116,60,143",
-                  "hex": "#743C8F",
-                  "on": "#FFFFFF",
-                },
-              },
-              "background": Object {
-                "RGB": "246,246,246",
-                "hex": "#F6F6F6",
-              },
-              "black": Object {
-                "main": Object {
-                  "RGB": "39,39,39",
-                  "hex": "#272727",
-                  "on": "#FFFFFF",
-                },
-                "tint20": Object {
-                  "RGB": "236,236,236",
-                  "hex": "#ECECEC",
-                  "on": "#272727",
-                },
-                "tint40": Object {
-                  "RGB": "199,199,199",
-                  "hex": "#C7C7C7",
-                  "on": "#272727",
-                },
-                "tint60": Object {
-                  "RGB": "160,160,160",
-                  "hex": "#A0A0A0",
-                  "on": "#FFFFFF",
-                },
-                "tint80": Object {
-                  "RGB": "105,105,105",
-                  "hex": "#696969",
-                  "on": "#FFFFFF",
-                },
-              },
-              "complimentary": Object {
-                "dark": Object {
-                  "RGB": "206,185,0",
-                  "hex": "#CEB900",
-                  "on": "#272727",
-                },
-                "light": Object {
-                  "RGB": "255,245,157",
-                  "hex": "#FFF59D",
-                  "on": "#272727",
-                },
-                "main": Object {
-                  "RGB": "255,238,82",
-                  "hex": "#FFEE52",
-                  "on": "#272727",
-                },
-              },
-              "error": Object {
-                "dark": Object {
-                  "RGB": "197,73,1",
-                  "hex": "#C54901",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "255,115,32",
-                  "hex": "#FF7320",
-                  "on": "#FFFFFF",
-                },
-              },
-              "primary": Object {
-                "dark": Object {
-                  "RGB": "102,22,20",
-                  "hex": "#661614",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "218,52,47",
-                  "hex": "#DA342F",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "164,40,36",
-                  "hex": "#A42824",
-                  "on": "#FFFFFF",
-                },
-              },
-              "secondary": Object {
-                "dark": Object {
-                  "RGB": "5,38,59",
-                  "hex": "#05263B",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "89,156,175",
-                  "hex": "#599CAF",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "11,70,107",
-                  "hex": "#0B466B",
-                  "on": "#FFFFFF",
-                },
-              },
-              "surface": Object {
-                "RGB": "255,255,255",
-                "hex": "#FFFFFF",
-                "on": "#272727",
-              },
-              "white": Object {
-                "RGB": "255,255,255",
-                "hex": "#FFFFFF",
-                "on": "#272727",
-              },
-            },
-          },
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "Input__StyledInput-sc-27uu00-0",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display:block;box-sizing:border-box;outline:none;border:none;border-bottom:1px solid ",
-              [Function],
-              ";padding:0.5rem;font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";transition:0.3s ease all;color:",
-              [Function],
-              ";:active,:focus{border-bottom:2px solid ",
-              [Function],
-              ";+ label{color:",
-              [Function],
-              ";}}",
-            ],
-          },
-          "displayName": "StyledInput",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "Input__StyledInput-sc-27uu00-0",
-          "target": "input",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      name="example"
-      onChange={[Function]}
-      theme={
-        Object {
-          "action": Object {
-            "dark": Object {
-              "RGB": "79,38,98",
-              "hex": "#4E2662",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "173,101,207",
-              "hex": "#AD65CF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "116,60,143",
-              "hex": "#743C8F",
-              "on": "#FFFFFF",
-            },
-          },
-          "background": Object {
-            "RGB": "246,246,246",
-            "hex": "#F6F6F6",
-          },
-          "black": Object {
-            "main": Object {
-              "RGB": "39,39,39",
-              "hex": "#272727",
-              "on": "#FFFFFF",
-            },
-            "tint20": Object {
-              "RGB": "236,236,236",
-              "hex": "#ECECEC",
-              "on": "#272727",
-            },
-            "tint40": Object {
-              "RGB": "199,199,199",
-              "hex": "#C7C7C7",
-              "on": "#272727",
-            },
-            "tint60": Object {
-              "RGB": "160,160,160",
-              "hex": "#A0A0A0",
-              "on": "#FFFFFF",
-            },
-            "tint80": Object {
-              "RGB": "105,105,105",
-              "hex": "#696969",
-              "on": "#FFFFFF",
-            },
-          },
-          "complimentary": Object {
-            "dark": Object {
-              "RGB": "206,185,0",
-              "hex": "#CEB900",
-              "on": "#272727",
-            },
-            "light": Object {
-              "RGB": "255,245,157",
-              "hex": "#FFF59D",
-              "on": "#272727",
-            },
-            "main": Object {
-              "RGB": "255,238,82",
-              "hex": "#FFEE52",
-              "on": "#272727",
-            },
-          },
-          "error": Object {
-            "dark": Object {
-              "RGB": "197,73,1",
-              "hex": "#C54901",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "255,115,32",
-              "hex": "#FF7320",
-              "on": "#FFFFFF",
-            },
-          },
-          "primary": Object {
-            "dark": Object {
-              "RGB": "102,22,20",
-              "hex": "#661614",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "218,52,47",
-              "hex": "#DA342F",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "164,40,36",
-              "hex": "#A42824",
-              "on": "#FFFFFF",
-            },
-          },
-          "secondary": Object {
-            "dark": Object {
-              "RGB": "5,38,59",
-              "hex": "#05263B",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "89,156,175",
-              "hex": "#599CAF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "11,70,107",
-              "hex": "#0B466B",
-              "on": "#FFFFFF",
-            },
-          },
-          "surface": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-          "white": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-        }
-      }
-      type="text"
-      value="Hello"
-    >
-      <input
-        className="c0 Input testClassName"
-        name="example"
-        onChange={[Function]}
-        type="text"
-        value="Hello"
-      />
-    </StyledComponent>
-  </StyledInput>
-</Input>
-`;
-
-exports[`Input render matches last snapshot with multiline 1`] = `
-.c0 {
-  display: block;
-  box-sizing: border-box;
-  outline: none;
-  border: 1px solid #C7C7C7;
-  padding: 0.5rem;
-  font-size: 1rem;
-  font-family: "Gentona","Montserrat";
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-  color: #272727;
-  border-radius: 5px;
-  margin-top: 0.5rem;
-  height: 10rem;
-  border-bottom: 1px solid #C7C7C7;
-}
-
-.c0:active,
-.c0:focus {
-  border-bottom: 2px solid #A42824;
-}
-
-.c0:active + label,
-.c0:focus + label {
-  color: #A42824;
-}
-
-<Input
-  multiLine={true}
-  name="example"
-  onChange={[Function]}
-  type="text"
-  value="Hello"
->
-  <StyledInput
-    className="Input"
-    name="example"
-    onChange={[Function]}
-    theme={
-      Object {
-        "action": Object {
-          "dark": Object {
-            "RGB": "79,38,98",
-            "hex": "#4E2662",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "173,101,207",
-            "hex": "#AD65CF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "116,60,143",
-            "hex": "#743C8F",
-            "on": "#FFFFFF",
-          },
-        },
-        "background": Object {
-          "RGB": "246,246,246",
-          "hex": "#F6F6F6",
-        },
-        "black": Object {
-          "main": Object {
-            "RGB": "39,39,39",
-            "hex": "#272727",
-            "on": "#FFFFFF",
-          },
-          "tint20": Object {
-            "RGB": "236,236,236",
-            "hex": "#ECECEC",
-            "on": "#272727",
-          },
-          "tint40": Object {
-            "RGB": "199,199,199",
-            "hex": "#C7C7C7",
-            "on": "#272727",
-          },
-          "tint60": Object {
-            "RGB": "160,160,160",
-            "hex": "#A0A0A0",
-            "on": "#FFFFFF",
-          },
-          "tint80": Object {
-            "RGB": "105,105,105",
-            "hex": "#696969",
-            "on": "#FFFFFF",
-          },
-        },
-        "complimentary": Object {
-          "dark": Object {
-            "RGB": "206,185,0",
-            "hex": "#CEB900",
-            "on": "#272727",
-          },
-          "light": Object {
-            "RGB": "255,245,157",
-            "hex": "#FFF59D",
-            "on": "#272727",
-          },
-          "main": Object {
-            "RGB": "255,238,82",
-            "hex": "#FFEE52",
-            "on": "#272727",
-          },
-        },
-        "error": Object {
-          "dark": Object {
-            "RGB": "197,73,1",
-            "hex": "#C54901",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "255,115,32",
-            "hex": "#FF7320",
-            "on": "#FFFFFF",
-          },
-        },
-        "primary": Object {
-          "dark": Object {
-            "RGB": "102,22,20",
-            "hex": "#661614",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "218,52,47",
-            "hex": "#DA342F",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "164,40,36",
-            "hex": "#A42824",
-            "on": "#FFFFFF",
-          },
-        },
-        "secondary": Object {
-          "dark": Object {
-            "RGB": "5,38,59",
-            "hex": "#05263B",
-            "on": "#FFFFFF",
-          },
-          "light": Object {
-            "RGB": "89,156,175",
-            "hex": "#599CAF",
-            "on": "#FFFFFF",
-          },
-          "main": Object {
-            "RGB": "11,70,107",
-            "hex": "#0B466B",
-            "on": "#FFFFFF",
-          },
-        },
-        "surface": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-        "white": Object {
-          "RGB": "255,255,255",
-          "hex": "#FFFFFF",
-          "on": "#272727",
-        },
-      }
-    }
-    type="text"
-    value="Hello"
-  >
-    <StyledComponent
-      className="Input"
-      forwardedComponent={
-        Object {
-          "$$typeof": Symbol(react.forward_ref),
-          "_foldedDefaultProps": Object {
-            "theme": Object {
-              "action": Object {
-                "dark": Object {
-                  "RGB": "79,38,98",
-                  "hex": "#4E2662",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "173,101,207",
-                  "hex": "#AD65CF",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "116,60,143",
-                  "hex": "#743C8F",
-                  "on": "#FFFFFF",
-                },
-              },
-              "background": Object {
-                "RGB": "246,246,246",
-                "hex": "#F6F6F6",
-              },
-              "black": Object {
-                "main": Object {
-                  "RGB": "39,39,39",
-                  "hex": "#272727",
-                  "on": "#FFFFFF",
-                },
-                "tint20": Object {
-                  "RGB": "236,236,236",
-                  "hex": "#ECECEC",
-                  "on": "#272727",
-                },
-                "tint40": Object {
-                  "RGB": "199,199,199",
-                  "hex": "#C7C7C7",
-                  "on": "#272727",
-                },
-                "tint60": Object {
-                  "RGB": "160,160,160",
-                  "hex": "#A0A0A0",
-                  "on": "#FFFFFF",
-                },
-                "tint80": Object {
-                  "RGB": "105,105,105",
-                  "hex": "#696969",
-                  "on": "#FFFFFF",
-                },
-              },
-              "complimentary": Object {
-                "dark": Object {
-                  "RGB": "206,185,0",
-                  "hex": "#CEB900",
-                  "on": "#272727",
-                },
-                "light": Object {
-                  "RGB": "255,245,157",
-                  "hex": "#FFF59D",
-                  "on": "#272727",
-                },
-                "main": Object {
-                  "RGB": "255,238,82",
-                  "hex": "#FFEE52",
-                  "on": "#272727",
-                },
-              },
-              "error": Object {
-                "dark": Object {
-                  "RGB": "197,73,1",
-                  "hex": "#C54901",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "255,115,32",
-                  "hex": "#FF7320",
-                  "on": "#FFFFFF",
-                },
-              },
-              "primary": Object {
-                "dark": Object {
-                  "RGB": "102,22,20",
-                  "hex": "#661614",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "218,52,47",
-                  "hex": "#DA342F",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "164,40,36",
-                  "hex": "#A42824",
-                  "on": "#FFFFFF",
-                },
-              },
-              "secondary": Object {
-                "dark": Object {
-                  "RGB": "5,38,59",
-                  "hex": "#05263B",
-                  "on": "#FFFFFF",
-                },
-                "light": Object {
-                  "RGB": "89,156,175",
-                  "hex": "#599CAF",
-                  "on": "#FFFFFF",
-                },
-                "main": Object {
-                  "RGB": "11,70,107",
-                  "hex": "#0B466B",
-                  "on": "#FFFFFF",
-                },
-              },
-              "surface": Object {
-                "RGB": "255,255,255",
-                "hex": "#FFFFFF",
-                "on": "#272727",
-              },
-              "white": Object {
-                "RGB": "255,255,255",
-                "hex": "#FFFFFF",
-                "on": "#272727",
-              },
-            },
-          },
-          "attrs": Array [],
-          "componentStyle": ComponentStyle {
-            "componentId": "Input__StyledTextArea-sc-27uu00-1",
-            "isStatic": false,
-            "lastClassName": "c0",
-            "rules": Array [
-              "display:block;box-sizing:border-box;outline:none;border:1px solid ",
-              [Function],
-              ";padding:0.5rem;font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";transition:0.3s ease all;color:",
-              [Function],
-              ";:active,:focus{border-bottom:2px solid ",
-              [Function],
-              ";+ label{color:",
-              [Function],
-              ";}}border-radius:5px;margin-top:0.5rem;height:10rem;border-bottom:1px solid ",
-              [Function],
-              ";",
-            ],
-          },
-          "displayName": "StyledInput",
-          "foldedComponentIds": Array [],
-          "render": [Function],
-          "styledComponentId": "Input__StyledTextArea-sc-27uu00-1",
-          "target": "textarea",
-          "toString": [Function],
-          "warnTooManyClasses": [Function],
-          "withComponent": [Function],
-        }
-      }
-      forwardedRef={null}
-      name="example"
-      onChange={[Function]}
-      theme={
-        Object {
-          "action": Object {
-            "dark": Object {
-              "RGB": "79,38,98",
-              "hex": "#4E2662",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "173,101,207",
-              "hex": "#AD65CF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "116,60,143",
-              "hex": "#743C8F",
-              "on": "#FFFFFF",
-            },
-          },
-          "background": Object {
-            "RGB": "246,246,246",
-            "hex": "#F6F6F6",
-          },
-          "black": Object {
-            "main": Object {
-              "RGB": "39,39,39",
-              "hex": "#272727",
-              "on": "#FFFFFF",
-            },
-            "tint20": Object {
-              "RGB": "236,236,236",
-              "hex": "#ECECEC",
-              "on": "#272727",
-            },
-            "tint40": Object {
-              "RGB": "199,199,199",
-              "hex": "#C7C7C7",
-              "on": "#272727",
-            },
-            "tint60": Object {
-              "RGB": "160,160,160",
-              "hex": "#A0A0A0",
-              "on": "#FFFFFF",
-            },
-            "tint80": Object {
-              "RGB": "105,105,105",
-              "hex": "#696969",
-              "on": "#FFFFFF",
-            },
-          },
-          "complimentary": Object {
-            "dark": Object {
-              "RGB": "206,185,0",
-              "hex": "#CEB900",
-              "on": "#272727",
-            },
-            "light": Object {
-              "RGB": "255,245,157",
-              "hex": "#FFF59D",
-              "on": "#272727",
-            },
-            "main": Object {
-              "RGB": "255,238,82",
-              "hex": "#FFEE52",
-              "on": "#272727",
-            },
-          },
-          "error": Object {
-            "dark": Object {
-              "RGB": "197,73,1",
-              "hex": "#C54901",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "255,115,32",
-              "hex": "#FF7320",
-              "on": "#FFFFFF",
-            },
-          },
-          "primary": Object {
-            "dark": Object {
-              "RGB": "102,22,20",
-              "hex": "#661614",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "218,52,47",
-              "hex": "#DA342F",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "164,40,36",
-              "hex": "#A42824",
-              "on": "#FFFFFF",
-            },
-          },
-          "secondary": Object {
-            "dark": Object {
-              "RGB": "5,38,59",
-              "hex": "#05263B",
-              "on": "#FFFFFF",
-            },
-            "light": Object {
-              "RGB": "89,156,175",
-              "hex": "#599CAF",
-              "on": "#FFFFFF",
-            },
-            "main": Object {
-              "RGB": "11,70,107",
-              "hex": "#0B466B",
-              "on": "#FFFFFF",
-            },
-          },
-          "surface": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-          "white": Object {
-            "RGB": "255,255,255",
-            "hex": "#FFFFFF",
-            "on": "#272727",
-          },
-        }
-      }
-      type="text"
-      value="Hello"
-    >
-      <textarea
-        className="c0 Input"
-        name="example"
-        onChange={[Function]}
-        type="text"
-        value="Hello"
-      />
-    </StyledComponent>
-  </StyledInput>
+  </Container>
 </Input>
 `;

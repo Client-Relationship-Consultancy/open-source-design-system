@@ -7,7 +7,7 @@ interface IContainer {
   bgColor: string;
 }
 
-const Container = styled.div<IContainer>`
+export const Container = styled.div<IContainer>`
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.5rem;
@@ -17,7 +17,9 @@ const Container = styled.div<IContainer>`
   }
 `;
 
-const StyledInput = styled.input`
+Container.displayName = "Container";
+
+export const StyledInput = styled.input`
   background-color: transparent;
   display: block;
   box-sizing: border-box;
@@ -39,7 +41,6 @@ StyledInput.defaultProps = {
 StyledInput.displayName = "StyledInput";
 
 interface IProps extends React.HTMLProps<HTMLInputElement> {
-  multiLine: boolean;
   icon: React.ReactNode;
   bgColor: string;
 }
@@ -64,6 +65,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
     onFocus || ((event: React.FocusEvent<HTMLInputElement>) => event.target.select());
 
   const inputClassName = className ? `Input ${className}` : "Input";
+
   return (
     <Container bgColor={bgColor}>
       {icon || null}
