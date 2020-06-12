@@ -3,25 +3,32 @@ import styled from "styled-components";
 
 import { colourPalette } from "../../../brandColours";
 
-const Container = styled.div``;
+interface IContainer {
+  bgColor: string;
+}
+
+const Container = styled.div<IContainer>`
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  background-color: ${props => props.bgColor || "transparent"};
+  > * + * {
+    margin-left: 0.25rem;
+  }
+`;
 
 const StyledInput = styled.input`
+  background-color: transparent;
   display: block;
   box-sizing: border-box;
   outline: none;
   border: none;
-  border-bottom: 1px solid ${props => props.theme.black.tint40.hex};
-  padding: 0.5rem;
   font-size: 1rem;
   font-family: "Gentona", "Montserrat";
   transition: 0.3s ease all;
   color: ${props => props.theme.black.main.hex};
-  :active,
-  :focus {
-    border-bottom: 2px solid ${props => props.theme.primary.main.hex};
-    + label {
-      color: ${props => props.theme.primary.main.hex};
-    }
+  ::placeholder {
+    color: ${props => props.theme.black.tint80.hex};
   }
 `;
 
@@ -31,13 +38,13 @@ StyledInput.defaultProps = {
 
 StyledInput.displayName = "StyledInput";
 
-
 interface IProps extends React.HTMLProps<HTMLInputElement> {
   multiLine: boolean;
   icon: React.ReactNode;
+  bgColor: string;
 }
 
-const Input: React.FC<IProps> = (props: IProps ) => {
+const Input: React.FC<IProps> = (props: IProps) => {
   const {
     className,
     type,
@@ -49,11 +56,16 @@ const Input: React.FC<IProps> = (props: IProps ) => {
     required,
     disabled,
     icon,
+    onFocus,
+    bgColor,
   } = props;
+
+  const handleFocus =
+    onFocus || ((event: React.FocusEvent<HTMLInputElement>) => event.target.select());
 
   const inputClassName = className ? `Input ${className}` : "Input";
   return (
-    <Container>
+    <Container bgColor={bgColor}>
       {icon || null}
       <StyledInput
         className={inputClassName}
@@ -65,6 +77,7 @@ const Input: React.FC<IProps> = (props: IProps ) => {
         value={value}
         required={required}
         disabled={disabled}
+        onFocus={handleFocus}
       />
     </Container>
   );
