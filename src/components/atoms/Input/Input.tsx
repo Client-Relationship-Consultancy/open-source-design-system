@@ -50,14 +50,14 @@ const StyledTextArea = styled.textarea`
   margin-top: 0.5rem;
   height: 10rem;
   border-bottom: 1px solid ${props => props.theme.black.tint40.hex};
-`
+`;
 StyledTextArea.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledTextArea.displayName = "StyledInput"
+};
+StyledTextArea.displayName = "StyledInput";
 
 // Declare React Component Input
-const Input = props => {
+const Input = (props: any) => {
   // Refactored values out of props
   const {
     className,
@@ -72,41 +72,41 @@ const Input = props => {
     multiLine = false,
   } = props
 
-  const InputType = multiLine ? StyledTextArea : StyledInput
-  const inputClassName = className ? `Input ${className}` : "Input"
+  const InputType = multiLine ? StyledTextArea : StyledInput;
+  const inputClassName = className ? `Input ${className}` : "Input";
   return (
-    <InputType
-      className={inputClassName}
-      type={type}
-      onChange={onChange}
-      placeholder={placeholder}
-      id={id}
-      name={name}
-      value={value}
-      required={required}
-      disabled={disabled}
-    />
-  )
+      <InputType
+        className={inputClassName}
+        type={type}
+        onChange={onChange}
+        placeholder={placeholder}
+        id={id}
+        name={name}
+        value={value}
+        required={required}
+        disabled={disabled}
+      />
+  );
 }
 
-// Declare the display name of component for static build
-// Display name should match export name
-Input.displayName = "Input"
-// Declare propTypes of Input
-Input.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  disabled: PropTypes.bool,
-  /** Placeholder is not a replacement for label as it is not optimal for handicapped users */
-  placeholder: PropTypes.string,
-  /** Needed for controlled inputs */
-  onChange: PropTypes.func,
-  /** Needed for controlled inputs */
-  value: PropTypes.string,
-  required: PropTypes.bool,
-  className: PropTypes.string,
-  multiLine: PropTypes.bool,
-}
+// // Declare the display name of component for static build
+// // Display name should match export name
+// Input.displayName = "Input"
+// // Declare propTypes of Input
+// Input.propTypes = {
+//   id: PropTypes.string,
+//   name: PropTypes.string,
+//   type: PropTypes.string,
+//   disabled: PropTypes.bool,
+//   /** Placeholder is not a replacement for label as it is not optimal for handicapped users */
+//   placeholder: PropTypes.string,
+//   /** Needed for controlled inputs */
+//   onChange: PropTypes.func,
+//   /** Needed for controlled inputs */
+//   value: PropTypes.string,
+//   required: PropTypes.bool,
+//   className: PropTypes.string,
+//   multiLine: PropTypes.bool,
+// }
 
 export default Input
