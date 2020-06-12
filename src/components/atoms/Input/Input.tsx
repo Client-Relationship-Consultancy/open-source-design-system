@@ -56,7 +56,11 @@ Container.defaultProps = {
 
 Container.displayName = "Container";
 
-export const StyledInput = styled.input`
+interface IStyledInput {
+  color?: string;
+}
+
+export const StyledInput = styled.input<IStyledInput>`
   width: 100%;
   background-color: transparent;
   display: block;
@@ -66,7 +70,7 @@ export const StyledInput = styled.input`
   font-size: 1rem;
   font-family: "Gentona", "Montserrat";
   transition: 0.3s ease all;
-  color: ${props => props.theme.black.main.hex};
+  color: ${props => props.color || props.theme.black.main.hex};
   ::placeholder {
     color: ${props => props.theme.black.tint80.hex};
   }
@@ -78,10 +82,10 @@ StyledInput.defaultProps = {
 
 StyledInput.displayName = "StyledInput";
 
-type InputType = React.HTMLProps<HTMLInputElement> & IContainer;
+type InputType = React.HTMLProps<HTMLInputElement> & IContainer & IStyledInput;
 
 interface IProps extends InputType {
-  icon: IconProp;
+  icon?: IconProp;
 }
 
 const Input: React.FC<IProps> = (props: IProps) => {
@@ -99,6 +103,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
     onFocus,
     bgColor,
     border,
+    color
   } = props;
 
   const handleFocus =
@@ -120,6 +125,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
         required={required}
         disabled={disabled}
         onFocus={handleFocus}
+        color={color}
       />
     </Container>
   );

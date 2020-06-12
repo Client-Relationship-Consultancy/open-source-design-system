@@ -42,28 +42,28 @@ describe("<Container />", () => {
 
   it("should have background colour as transparent if no bgColor is passed", () => {
     const component = mount(<Container />)
-    expect(component.find("Container")).toHaveStyleRule("background-color", "transparent")
+    expect(component).toHaveStyleRule("background-color", "transparent")
   })
 
   it("should have background colour if bgColor is passed", () => {
     const component = mount(<Container bgColor="red" />)
-    expect(component.find("Container")).toHaveStyleRule("background-color", "red")
+    expect(component).toHaveStyleRule("background-color", "red")
   })
 
   it("should have no border if border is not passed", () => {
     const component = mount(<Container />)
-    expect(component.find("Container")).toHaveStyleRule("none")
+    expect(component).toHaveStyleRule("none")
   })
 
   it("should have bottom border if border is passed bottom", () => {
     const component = mount(<Container border="bottom" />)
-    expect(component.find("Container")).toHaveStyleRule("border", undefined)
-    expect(component.find("Container")).toHaveStyleRule("border-bottom", `1px solid ${black.tint60.hex}`)
+    expect(component).toHaveStyleRule("border", undefined)
+    expect(component).toHaveStyleRule("border-bottom", `1px solid ${black.tint60.hex}`)
   })
 
   it("should have a border if border is passed all", () => {
     const component = mount(<Container border="all" />)
-    expect(component.find("Container")).toHaveStyleRule("border", `1px solid ${black.tint60.hex}`)
+    expect(component).toHaveStyleRule("border", `1px solid ${black.tint60.hex}`)
   })
 })
 
@@ -71,5 +71,9 @@ describe("<StyledInput />", () => {
   it("should match last snapshot", () => {
     const component = mount(<StyledInput />)
     expect(component).toMatchSnapshot()
+  })
+  it("should take the color if passed in as prop", () => {
+    const component = mount(<StyledInput color="red" />)
+    expect(component).toHaveStyleRule("color", "red")
   })
 })
