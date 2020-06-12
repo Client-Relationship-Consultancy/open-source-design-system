@@ -11,17 +11,4 @@ describe("FormInput test", () => {
     )
     expect(component).toMatchSnapshot()
   })
-  it("multi line input matches the last snapshot", () => {
-    const component = shallow(
-      <FormInput
-        label="Label"
-        name="firstName"
-        type="text"
-        value="Bob"
-        onChange={() => {}}
-        multiline
-      />,
-    )
-    expect(component).toMatchSnapshot()
-  })
 })

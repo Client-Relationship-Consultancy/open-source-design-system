@@ -54,9 +54,10 @@ storiesOf("Forms", module)
       label={text("Display Text", "Name")}
       disabled={boolean("Disabled", false)}
       onChange={action("Value Change")}
-      multiLine={boolean("MultiLine", false)}
       id="example"
       type="text"
+      icon="search"
+      border="all"
     />
   ))
   .add("Form Radio", () => (

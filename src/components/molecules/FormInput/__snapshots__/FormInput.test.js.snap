@@ -1,19 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FormInput test multi line input matches the last snapshot 1`] = `
-<Container>
-  <Input
-    name="firstName"
-    onChange={[Function]}
-    type="text"
-    value="Bob"
-  />
-  <Label>
-    Label
-  </Label>
-</Container>
-`;
-
 exports[`FormInput test single line input matches the last snapshot 1`] = `
 <Container>
   <Input
