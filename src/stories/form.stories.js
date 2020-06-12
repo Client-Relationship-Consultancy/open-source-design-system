@@ -56,6 +56,8 @@ storiesOf("Forms", module)
       onChange={action("Value Change")}
       id="example"
       type="text"
+      icon="search"
+      border="all"
     />
   ))
   .add("Form Radio", () => (

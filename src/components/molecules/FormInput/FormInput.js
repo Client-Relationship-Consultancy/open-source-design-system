@@ -26,6 +26,9 @@ const FormInput = props => {
     placeholder,
     label,
     disabled,
+    bgColour,
+    border,
+    icon,
   } = props
   return (
     <Container className={className}>
@@ -37,6 +40,9 @@ const FormInput = props => {
         onChange={onChange}
         placeholder={placeholder}
         disabled={disabled}
+        bgColor={bgColour}
+        border={border}
+        icons={icon}
       />
       <Label htmlFor={id}>{label}</Label>
     </Container>
@@ -62,6 +68,9 @@ FormInput.propTypes = {
   /** Needed when making controlled inputs for React */
   value: PropTypes.string.isRequired,
   className: PropTypes.string,
+  bgColour: PropTypes.string,
+  border: PropTypes.string,
+  icon: PropTypes.string,
 }
 
 export default FormInput
