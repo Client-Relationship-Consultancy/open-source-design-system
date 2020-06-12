@@ -1,10 +1,10 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from "react";
+import styled from "styled-components";
 
-import { colourPalette } from "../../../brandColours"
+import { colourPalette } from "../../../brandColours";
 
-// Decalre CSS for StyledInput with styled component
+const Container = styled.div``;
+
 const StyledInput = styled.input`
   display: block;
   box-sizing: border-box;
@@ -23,11 +23,11 @@ const StyledInput = styled.input`
       color: ${props => props.theme.primary.main.hex};
     }
   }
-`
+`;
 StyledInput.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledInput.displayName = "StyledInput"
+};
+StyledInput.displayName = "StyledInput";
 
 const StyledTextArea = styled.textarea`
   display: block;
@@ -54,11 +54,17 @@ const StyledTextArea = styled.textarea`
 StyledTextArea.defaultProps = {
   theme: colourPalette.examplePalette,
 };
+
 StyledTextArea.displayName = "StyledInput";
 
-// Declare React Component Input
-const Input = (props: any) => {
-  // Refactored values out of props
+interface IInput extends React.HTMLProps<HTMLInputElement> {
+  multiLine: boolean;
+}
+interface ITextArea extends React.HTMLProps<HTMLTextAreaElement> {
+  multiLine: boolean;
+}
+
+const Input: React.FC<IInput> | React.FC<ITextArea> = (props: IInput) => {
   const {
     className,
     type,
@@ -70,11 +76,14 @@ const Input = (props: any) => {
     required,
     disabled,
     multiLine = false,
-  } = props
+  } = props;
 
-  const InputType = multiLine ? StyledTextArea : StyledInput;
+  const InputType: React.ComponentType<
+    React.HTMLProps<HTMLInputElement> | React.HTMLProps<HTMLTextAreaElement>
+  > = multiLine ? StyledTextArea : StyledInput;
   const inputClassName = className ? `Input ${className}` : "Input";
   return (
+    <Container>
       <InputType
         className={inputClassName}
         type={type}
@@ -86,27 +95,8 @@ const Input = (props: any) => {
         required={required}
         disabled={disabled}
       />
+    </Container>
   );
-}
+};
 
-// // Declare the display name of component for static build
-// // Display name should match export name
-// Input.displayName = "Input"
-// // Declare propTypes of Input
-// Input.propTypes = {
-//   id: PropTypes.string,
-//   name: PropTypes.string,
-//   type: PropTypes.string,
-//   disabled: PropTypes.bool,
-//   /** Placeholder is not a replacement for label as it is not optimal for handicapped users */
-//   placeholder: PropTypes.string,
-//   /** Needed for controlled inputs */
-//   onChange: PropTypes.func,
-//   /** Needed for controlled inputs */
-//   value: PropTypes.string,
-//   required: PropTypes.bool,
-//   className: PropTypes.string,
-//   multiLine: PropTypes.bool,
-// }
-
-export default Input
+export default Input;
