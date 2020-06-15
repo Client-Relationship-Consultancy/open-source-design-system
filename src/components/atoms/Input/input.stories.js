@@ -1,12 +1,7 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import styled from "styled-components"
 import Input from "./Input"
 import Icon from "../Icon"
-
-const NewIcon = styled(Icon)`
-  font-size: 1rem;
-`
 
 const stories = storiesOf("Input", module)
 
@@ -19,7 +14,8 @@ stories.add("With Icon", context => {
 })
 
 stories.add("With bottom border", context => {
-  return <Input border="bottom" />
+  const Placeholder = () => <span>hello</span>
+  return <Input border="bottom" placeholder={<Placeholder />} />
 })
 
 stories.add("With icon and bottom border", context => {
@@ -36,4 +32,8 @@ stories.add("With icon and all border", context => {
 
 stories.add("With custom onFocus", context => {
   return <Input bgColor="#F5F5F5" onFocus={() => console.log("hello world")} />
+})
+
+stories.add("With custom Icon", context => {
+  return <Input bgColor="#F5F5F5" icon={<Icon name="check" />} />
 })

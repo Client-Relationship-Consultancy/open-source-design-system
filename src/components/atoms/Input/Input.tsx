@@ -85,7 +85,7 @@ StyledInput.displayName = "StyledInput";
 type InputType = React.HTMLProps<HTMLInputElement> & IContainer & IStyledInput;
 
 interface IProps extends InputType {
-  icon?: IconProp;
+  icon: IconProp | React.ReactElement;
 }
 
 const Input: React.FC<IProps> = (props: IProps) => {
@@ -113,7 +113,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
 
   return (
     <Container bgColor={bgColor} border={border}>
-      {icon && <Icon name={icon} />}
+      { typeof icon === "string" ? <Icon name={icon} /> : icon}
       <StyledInput
         className={inputClassName}
         type={type}
