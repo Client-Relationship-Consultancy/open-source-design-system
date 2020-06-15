@@ -36,6 +36,7 @@ export const Container = styled.div<IContainer>`
   :focus-within {
     svg {
       color: ${props => props.theme.secondary.main.hex};
+      fill: ${props => props.theme.secondary.main.hex};
     }
     ${props => {
       switch (props.border) {
