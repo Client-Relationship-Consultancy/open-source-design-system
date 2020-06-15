@@ -30,6 +30,7 @@ exports[`<Container /> should match last snapshot 1`] = `
 
 .c0:focus-within svg {
   color: #0B466B;
+  fill: #0B466B;
 }
 
 <Container
@@ -303,6 +304,8 @@ exports[`<Container /> should match last snapshot 1`] = `
             " svg{color:",
             [Function],
             ";}> * + *{margin-left:0.25rem;}:focus-within{svg{color:",
+            [Function],
+            ";fill:",
             [Function],
             ";}",
             [Function],
@@ -927,6 +930,7 @@ exports[`Input render matches last snapshot 1`] = `
 
 .c0:focus-within svg {
   color: #0B466B;
+  fill: #0B466B;
 }
 
 .c1 {
@@ -1236,6 +1240,8 @@ exports[`Input render matches last snapshot 1`] = `
               " svg{color:",
               [Function],
               ";}> * + *{margin-left:0.25rem;}:focus-within{svg{color:",
+              [Function],
+              ";fill:",
               [Function],
               ";}",
               [Function],
