@@ -83,8 +83,6 @@ Ball.defaultProps = {
 
 Ball.displayName = "Ball";
 
-
-
 const OptionText = styled.div`
   display: flex;
   flex-direction: column;
