@@ -4,7 +4,12 @@ import styled from "styled-components"
 
 import { colourPalette } from "../../../brandColours"
 
-const Label = styled.label`
+interface ILabel {
+  width: string;
+  isDisabled: boolean;
+}
+
+const Label = styled.label<ILabel>`
   position: relative;
   display: inline-block;
   width: ${props => props.width};
@@ -62,7 +67,18 @@ CheckedSlider.defaultProps = {
 }
 CheckedSlider.displayName = "CheckedSlider"
 
-const TextToggle = props => {
+
+interface ITextToggle extends React.HTMLProps<HTMLInputElement> {
+  isDisabled: boolean;
+  width: string;
+  falseOption: React.ReactNode;
+  trueOption: React.ReactNode;
+  onBlur: () => void;
+  onChange: () => void;
+  checked: boolean;
+}
+
+const TextToggle: React.FC<ITextToggle> = (props: ITextToggle) => {
   const {
     id,
     name,
@@ -73,7 +89,7 @@ const TextToggle = props => {
     falseOption,
     width,
     isDisabled,
-    theme,
+    checked,
     ...other
   } = props
   return (
@@ -84,14 +100,14 @@ const TextToggle = props => {
         onBlur={onBlur}
         name={name}
         value={value}
-        checked={value}
+        checked={checked}
         id={id}
         disabled={isDisabled}
         {...other}
       />
       <SliderContainer>
-        <Slider theme={theme}>{falseOption}</Slider>
-        <CheckedSlider theme={theme}>{trueOption}</CheckedSlider>
+        <Slider >{falseOption}</Slider>
+        <CheckedSlider>{trueOption}</CheckedSlider>
       </SliderContainer>
     </Label>
   )
@@ -103,20 +119,6 @@ TextToggle.defaultProps = {
   falseOption: "False",
   width: "4.5rem",
   isDisabled: false,
-}
-
-TextToggle.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  value: PropTypes.any,
-  onChange: PropTypes.func,
-  onBlur: PropTypes.func,
-  trueOption: PropTypes.any,
-  falseOption: PropTypes.any,
-  width: PropTypes.string,
-  isDisabled: PropTypes.bool,
-  className: PropTypes.string,
-  theme: PropTypes.object,
 }
 
 export default TextToggle
