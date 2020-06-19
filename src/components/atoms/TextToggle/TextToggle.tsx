@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 
 interface ILabel {
-  width: string;
   isDisabled: boolean;
 }
 
@@ -78,6 +77,7 @@ const OptionText = styled.div`
   > div.trueOption {
     opacity: 0;
     transform: translateY(50%);
+    text-align: right;
     padding-right: 2rem;
     padding-left: 1rem;
   }
@@ -91,11 +91,10 @@ const OptionText = styled.div`
 
 interface ITextToggle extends React.HTMLProps<HTMLInputElement> {
   isDisabled: boolean;
-  width: string;
   falseOption: React.ReactNode;
   trueOption: React.ReactNode;
-  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  onBlur: (event: React.FocusEvent<HTMLInputElement>) => void;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur?: (event: React.FocusEvent<HTMLInputElement>) => void;
   checked: boolean;
 }
 
@@ -103,28 +102,24 @@ const TextToggle: React.FC<ITextToggle> = (props: ITextToggle) => {
   const {
     id,
     name,
-    value,
     onChange,
     onBlur,
     trueOption,
     falseOption,
-    width,
     isDisabled,
     checked,
-    ...other
   } = props;
   return (
-    <Label width={width} isDisabled={isDisabled} className="TextToggle__Label">
+    <Label isDisabled={isDisabled} className="TextToggle__Label">
       <Toggle
         type="checkbox"
         onChange={onChange}
         onBlur={onBlur}
         name={name}
-        value={value}
         checked={checked}
         id={id}
         disabled={isDisabled}
-        {...other}
+
       />
       <SliderContainer>
         <BallContainer>
