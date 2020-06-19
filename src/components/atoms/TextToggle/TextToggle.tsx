@@ -11,7 +11,6 @@ interface ILabel {
 const Label = styled.label<ILabel>`
   position: relative;
   display: inline-block;
-  width: ${props => props.width};
   height: 1.75rem;
   overflow: hidden;
   border-radius: 5px;
@@ -23,11 +22,14 @@ const Label = styled.label<ILabel>`
 Label.displayName = "Label";
 
 const SliderContainer = styled.div`
+  padding: 0 2rem;
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: ${props => props.theme.black.tint40.hex};
+  background-color: ${props => props.theme.black.tint60.hex};
   transition: 0.2s ease-out;
+  justify-content: center;
+  align-items: center;
 `;
 SliderContainer.displayName = "SliderContainer";
 
@@ -41,38 +43,20 @@ const Toggle = styled.input`
     > div {
       left: calc(100% - 1.75rem);
     }
+    .optionText:first-child {
+      opacity: 1;
+    }
+    .optionText:last-child {
+      opacity: 0;
+    }
   }
 `;
 Toggle.displayName = "Toggle";
 
-const Slider = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: calc(100% - 1.75rem);
-  height: 100%;
-
-  color: ${props => props.theme.black.main.hex};
-  font-size: 0.9rem;
-`;
-Slider.defaultProps = {
-  theme: colourPalette.examplePalette,
-};
-Slider.displayName = "Slider";
-
-const CheckedSlider = styled(Slider)`
-  color: ${props => props.theme.secondary.main.on};
-`;
-CheckedSlider.defaultProps = {
-  theme: colourPalette.examplePalette,
-};
-CheckedSlider.displayName = "CheckedSlider";
-
 const BallContainer = styled.div`
-  padding: 5px;
+  padding: 3px;
   height: 1.75rem;
   width: 1.75rem;
-  border-radius: 50%;
   position: absolute;
   transition: 0.4s ease;
   left: 0;
@@ -83,6 +67,25 @@ const Ball = styled.div`
   height: 100%;
   width: 100%;
   border-radius: 50%;
+  box-shadow: 1px 1px 5px ${props => props.theme.black.tint80.hex};
+`;
+
+const OptionText = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: ${props => props.theme.white.hex};
+  > div {
+    transition: 0.3s;
+  }
+  > div:first-child {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  > div:last-child {
+    opacity: 1;
+    transform: translateY(-50%);
+  }
 `;
 
 interface ITextToggle extends React.HTMLProps<HTMLInputElement> {
@@ -108,7 +111,7 @@ const TextToggle: React.FC<ITextToggle> = (props: ITextToggle) => {
     isDisabled,
     checked,
     ...other
-  } = props
+  } = props;
   return (
     <Label width={width} isDisabled={isDisabled} className="TextToggle__Label">
       <Toggle
@@ -120,12 +123,16 @@ const TextToggle: React.FC<ITextToggle> = (props: ITextToggle) => {
         checked={checked}
         id={id}
         disabled={isDisabled}
-        // {...other}
+        {...other}
       />
       <SliderContainer>
         <BallContainer>
           <Ball />
         </BallContainer>
+        <OptionText>
+          <div className="optionText">{trueOption}</div>
+          <div className="optionText">{falseOption}</div>
+        </OptionText>
       </SliderContainer>
     </Label>
   );
