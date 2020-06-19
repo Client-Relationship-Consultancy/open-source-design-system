@@ -23,7 +23,6 @@ stories.add("With Text", context => {
 
   return (
     <TextToggle
-      width="10rem"
       isDisabled={boolean("disabled", false)}
       trueOption={<Confirmed />}
       falseOption="Unconfirmed"

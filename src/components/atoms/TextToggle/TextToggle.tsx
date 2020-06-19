@@ -12,8 +12,8 @@ const Label = styled.label<ILabel>`
   height: 1.75rem;
   overflow: hidden;
   border-radius: 5px;
-  opacity: ${props => (props.isDisabled ? "0.4" : "1")};
-  cursor: ${props => (props.isDisabled ? "not-allowed" : "pointer")};
+  opacity: ${({isDisabled}) => (isDisabled ? "0.4" : "1")};
+  cursor: ${({isDisabled}) => (isDisabled ? "not-allowed" : "pointer")};
   border-radius: 1.5rem/1.5rem;
 `;
 
@@ -23,7 +23,7 @@ const SliderContainer = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  background-color: ${props => props.theme.black.tint60.hex};
+  background-color: ${({theme}) => theme.black.tint60.hex};
   transition: 0.2s ease-out;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ const Toggle = styled.input`
   width: 0;
   height: 0;
   :checked + div {
-    background-color: ${props => props.theme.primary.main.hex};
+    background-color: ${({theme}) => theme.primary.main.hex};
     > div {
       left: calc(100% - 1.75rem);
     }
@@ -70,11 +70,11 @@ const BallContainer = styled.div`
 `;
 
 const Ball = styled.div`
-  background-color: ${props => props.theme.white.hex};
+  background-color: ${({theme}) => theme.white.hex};
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  box-shadow: 1px 1px 5px ${props => props.theme.black.tint80.hex};
+  box-shadow: 1px 1px 5px ${({theme}) => theme.black.tint80.hex};
 `;
 
 Ball.defaultProps = {
@@ -86,7 +86,7 @@ Ball.displayName = "Ball";
 const OptionText = styled.div`
   display: flex;
   flex-direction: column;
-  color: ${props => props.theme.white.hex};
+  color: ${({theme}) => theme.white.hex};
   > div {
     transition: 0.3s;
     width: 100%;
