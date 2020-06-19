@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import { colourPalette } from "../../../brandColours";
-
 interface ILabel {
   width: string;
   isDisabled: boolean;
@@ -22,7 +20,6 @@ const Label = styled.label<ILabel>`
 Label.displayName = "Label";
 
 const SliderContainer = styled.div`
-  padding: 0 2rem;
   width: 100%;
   height: 100%;
   display: flex;
@@ -43,10 +40,10 @@ const Toggle = styled.input`
     > div {
       left: calc(100% - 1.75rem);
     }
-    .optionText:first-child {
+    .optionText.trueOption {
       opacity: 1;
     }
-    .optionText:last-child {
+    .optionText.falseOption {
       opacity: 0;
     }
   }
@@ -73,18 +70,22 @@ const Ball = styled.div`
 const OptionText = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   color: ${props => props.theme.white.hex};
   > div {
     transition: 0.3s;
+    width: 100%;
   }
-  > div:first-child {
+  > div.trueOption {
     opacity: 0;
     transform: translateY(50%);
+    padding-right: 2rem;
+    padding-left: 1rem;
   }
-  > div:last-child {
+  > div.falseOption {
     opacity: 1;
     transform: translateY(-50%);
+    padding-right: 1rem;
+    padding-left: 2rem;
   }
 `;
 
@@ -130,8 +131,8 @@ const TextToggle: React.FC<ITextToggle> = (props: ITextToggle) => {
           <Ball />
         </BallContainer>
         <OptionText>
-          <div className="optionText">{trueOption}</div>
-          <div className="optionText">{falseOption}</div>
+          <div className="optionText trueOption">{trueOption}</div>
+          <div className="optionText falseOption">{falseOption}</div>
         </OptionText>
       </SliderContainer>
     </Label>
