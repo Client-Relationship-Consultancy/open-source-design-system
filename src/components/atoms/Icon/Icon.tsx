@@ -77,7 +77,8 @@ interface IStyledFontAwesomeIcon {
 }
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)<IStyledFontAwesomeIcon>`
-  color: ${props => props.theme[props.color][props.shade].hex};
+  color: ${props =>
+    props.color === "white" ? props.theme.white.hex : props.theme[props.color][props.shade].hex};
   ${props => props.onClick && "cursor: pointer;"}
 `;
 StyledFontAwesomeIcon.displayName = "StyledFontAwesomeIcon";
