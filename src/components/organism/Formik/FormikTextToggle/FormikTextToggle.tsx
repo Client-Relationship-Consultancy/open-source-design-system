@@ -19,7 +19,7 @@ interface CustomFormikTextToggleProps {
   label?: JSX.Element | string;
   trueOption?: string;
   falseOption?: string;
-  isDisabled: boolean;
+  isDisabled?: boolean;
   id?: string;
   className?: string;
   row?: boolean;

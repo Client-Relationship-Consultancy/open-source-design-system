@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colourPalette } from "../../../brandColours";
 
 interface ILabel {
-  isDisabled: boolean;
+  isDisabled?: boolean;
 }
 
 const Label = styled.label<ILabel>`
@@ -113,7 +113,7 @@ OptionText.defaultProps = {
 OptionText.displayName = "OptionText";
 
 interface ITextToggle extends React.HTMLProps<HTMLInputElement> {
-  isDisabled: boolean;
+  isDisabled?: boolean;
   falseOption: React.ReactNode;
   trueOption: React.ReactNode;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
