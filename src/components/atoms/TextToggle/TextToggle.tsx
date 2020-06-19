@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { colourPalette } from "../../../brandColours";
 
 interface ILabel {
   isDisabled: boolean;
@@ -27,6 +28,11 @@ const SliderContainer = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+SliderContainer.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
+
 SliderContainer.displayName = "SliderContainer";
 
 const Toggle = styled.input`
@@ -47,6 +53,11 @@ const Toggle = styled.input`
     }
   }
 `;
+
+Toggle.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
+
 Toggle.displayName = "Toggle";
 
 const BallContainer = styled.div`
@@ -65,6 +76,14 @@ const Ball = styled.div`
   border-radius: 50%;
   box-shadow: 1px 1px 5px ${props => props.theme.black.tint80.hex};
 `;
+
+Ball.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
+
+Ball.displayName = "Ball";
+
+
 
 const OptionText = styled.div`
   display: flex;
@@ -88,6 +107,12 @@ const OptionText = styled.div`
     padding-left: 2rem;
   }
 `;
+
+OptionText.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
+
+OptionText.displayName = "OptionText";
 
 interface ITextToggle extends React.HTMLProps<HTMLInputElement> {
   isDisabled: boolean;

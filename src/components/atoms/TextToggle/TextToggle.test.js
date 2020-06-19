@@ -18,12 +18,6 @@ describe("TextToggle Component Testing", () => {
     expect(onChange).toHaveBeenCalled()
   })
 
-  it("should pass the width prop to the label container", () => {
-    const onChange = jest.fn()
-    const component = mount(<TextToggle onChange={onChange} width="10rem" />)
-    expect(component.find("Label")).toHaveStyleRule("width", "10rem")
-  })
-
   it("should have different styling when enabled", () => {
     const component = mount(<TextToggle />)
     expect(component.find("Label")).toHaveStyleRule("cursor", "pointer")
@@ -36,3 +30,4 @@ describe("TextToggle Component Testing", () => {
     expect(component.find("Label")).toHaveStyleRule("opacity", "0.4")
   })
 })
+
