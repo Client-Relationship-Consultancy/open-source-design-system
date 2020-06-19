@@ -7,6 +7,5 @@ exports[`Snapshot match last snapshot 1`] = `
   isDisabled={false}
   onChange={[Function]}
   trueOption="True"
-  width="4.5rem"
 />
 `;

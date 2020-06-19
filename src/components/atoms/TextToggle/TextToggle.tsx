@@ -161,7 +161,6 @@ TextToggle.displayName = "TextToggle";
 TextToggle.defaultProps = {
   trueOption: "True",
   falseOption: "False",
-  width: "4.5rem",
   isDisabled: false,
 };
 
