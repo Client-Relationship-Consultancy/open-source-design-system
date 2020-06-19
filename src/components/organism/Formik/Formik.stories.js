@@ -38,6 +38,7 @@ stories.add(
       }}
       onSubmit={(values, actions) => {
         setTimeout(() => {
+          console.log(values)
           actions.setSubmitting(false)
         }, 3000)
       }}
@@ -61,6 +62,7 @@ stories.add(
         options={titleOptions}
         name="title"
         placeholder="Please choose a title"
+        onChange={() => {}}
       />
       <Field type="text" id="name" name="name" title="Name" isValid />
       <Field type="textarea" id="productConfig" config="productConfig" title="Config" isValid />

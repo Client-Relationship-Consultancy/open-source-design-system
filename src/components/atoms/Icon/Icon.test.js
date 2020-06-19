@@ -23,6 +23,13 @@ describe("Icon test", () => {
       colourPalette.examplePalette.black.main.hex,
     )
   })
+  it("should be able to handle colors without shade", () => {
+    const component = mount(<Icon name="check" color="white" />)
+    expect(component.find("StyledFontAwesomeIcon")).toHaveStyleRule(
+      "color",
+      colourPalette.examplePalette.white.hex,
+    )
+  })
   it("should be rotated in css when rotate props is passed", () => {
     const component = mount(<Icon name="check" rotateDegrees={45} />)
     expect(component).toHaveStyleRule("transform", "rotate(45deg)")
