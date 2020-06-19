@@ -19,10 +19,9 @@ interface CustomFormikTextToggleProps {
   label?: JSX.Element | string;
   trueOption?: string;
   falseOption?: string;
-  isDisabled?: boolean;
+  isDisabled: boolean;
   id?: string;
   className?: string;
-  width?: string;
   row?: boolean;
 }
 
@@ -48,7 +47,6 @@ export class CustomFormikTextToggle extends React.PureComponent<
       falseOption,
       isDisabled,
       className,
-      width,
       row = true,
       id,
       ...other
@@ -64,13 +62,12 @@ export class CustomFormikTextToggle extends React.PureComponent<
         <TextToggle
           id={textToggleId}
           name={name}
-          value={values && values[name]}
           onChange={this.onChange}
           onBlur={handleBlur}
           trueOption={trueOption}
           falseOption={falseOption}
           isDisabled={isDisabled}
-          width={width}
+          checked={values && values[name]}
           {...other}
         />
       </Container>
