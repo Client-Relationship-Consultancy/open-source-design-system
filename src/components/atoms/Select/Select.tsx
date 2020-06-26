@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
 // Using react-select, read more here. https://github.com/JedWatson/react-select
-import ReactSelect, { ValueType } from "react-select";
+import ReactSelect, { ValueType, OptionsType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
@@ -25,7 +25,8 @@ interface ISelect {
   name?: string;
   placeholder?: React.ReactNode;
   options: IOption;
-  onChange?: (value: NonNullable<ValueType<IDropdownObject>>) => void;
+  onChange?: (value: IDropdownObject) => void;
+  onChangeMulti?: (value: IDropdownObject | OptionsType<IDropdownObject>) => void;
   onBlur?: () => void;
   value?: IDropdownObject[] | null;
   isDisabled?: boolean;
@@ -65,9 +66,12 @@ class CustomSelect extends React.Component<ISelect> {
   };
 
   onChange = (value: ValueType<IDropdownObject>): void => {
-    if (value && this.props.onChange) {
-      const option: NonNullable<ValueType<IDropdownObject>> = value;
-      this.props.onChange(option);
+    if (value ) {
+      if (this.props.isMulti && this.props.onChangeMulti) {
+        this.props.onChangeMulti(value);
+      } else if (this.props.onChange) {
+        this.props.onChange(value as IDropdownObject);
+      }
     }
   };
 
