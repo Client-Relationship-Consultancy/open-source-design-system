@@ -24,7 +24,7 @@ interface ISelect {
   title?: string;
   id?: string;
   name?: string;
-  placeholder?: any;
+  placeholder?: React.ReactNode;
   options: IOption;
   onChange?: (value: ValueType<IDropdownObject>) => void;
   onBlur?: () => void;
