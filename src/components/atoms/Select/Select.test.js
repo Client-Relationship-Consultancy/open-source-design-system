@@ -11,6 +11,22 @@ describe("Select Input test", () => {
     mouse: "Mouse",
   }
   const component = mount(<Select options={options} id="testId" isClearable />).find("CustomSelect")
+  const value = [
+    { value: "dog", label: "Dog" },
+    { value: "cat", label: "Cat" },
+  ];
+  const Blacklisted = ["cat"];
+  const componentMulti = mount(
+    <Select
+      options={options}
+      id="testId"
+      isClearable
+      isMulti
+      value={value}
+      blacklistedOptions={Blacklisted}
+    />,
+  ).find("CustomSelect")
+
   it("test render options method", () => {
     const renderedOptions = component.instance().renderOptions({ test1: "test2" })
     expect(renderedOptions[0]).toMatchObject({ value: "test1", label: "test2" })
@@ -40,6 +56,9 @@ describe("Select Input test", () => {
   })
   it("match last snapshot", () => {
     expect(component).toMatchSnapshot()
+  })
+  it("component multi match last snapshot", () => {
+    expect(componentMulti).toMatchSnapshot()
   })
   it("returns the correctly formatted default value with label when there are no options", () => {
     const newComponent = mount(<Select options={{}} id="testId" isClearable />).find("CustomSelect")
