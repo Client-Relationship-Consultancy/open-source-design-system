@@ -409,7 +409,7 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                   "$$typeof": Symbol(react.forward_ref),
                                   "attrs": Array [],
                                   "componentStyle": ComponentStyle {
-                                    "componentId": "Select__Title-sc-1k8c848-0",
+                                    "componentId": "Select__Title-tukly-0",
                                     "isStatic": false,
                                     "lastClassName": "c1",
                                     "rules": Array [
@@ -419,7 +419,7 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                   "displayName": "Title",
                                   "foldedComponentIds": Array [],
                                   "render": [Function],
-                                  "styledComponentId": "Select__Title-sc-1k8c848-0",
+                                  "styledComponentId": "Select__Title-tukly-0",
                                   "target": "div",
                                   "toString": [Function],
                                   "warnTooManyClasses": [Function],
@@ -444,16 +444,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                             options={
                               Array [
                                 Object {
-                                  "label": "Dog",
-                                  "value": "dog",
+                                  "label": "Bird",
+                                  "value": "bird",
                                 },
                                 Object {
                                   "label": "Cat",
                                   "value": "cat",
                                 },
                                 Object {
-                                  "label": "Bird",
-                                  "value": "bird",
+                                  "label": "Dog",
+                                  "value": "dog",
                                 },
                                 Object {
                                   "label": "Rabbit",
@@ -516,16 +516,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                               options={
                                 Array [
                                   Object {
-                                    "label": "Dog",
-                                    "value": "dog",
+                                    "label": "Bird",
+                                    "value": "bird",
                                   },
                                   Object {
                                     "label": "Cat",
                                     "value": "cat",
                                   },
                                   Object {
-                                    "label": "Bird",
-                                    "value": "bird",
+                                    "label": "Dog",
+                                    "value": "dog",
                                   },
                                   Object {
                                     "label": "Rabbit",
@@ -571,16 +571,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                 options={
                                   Array [
                                     Object {
-                                      "label": "Dog",
-                                      "value": "dog",
+                                      "label": "Bird",
+                                      "value": "bird",
                                     },
                                     Object {
                                       "label": "Cat",
                                       "value": "cat",
                                     },
                                     Object {
-                                      "label": "Bird",
-                                      "value": "bird",
+                                      "label": "Dog",
+                                      "value": "dog",
                                     },
                                     Object {
                                       "label": "Rabbit",
@@ -631,16 +631,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                     "openMenuOnFocus": false,
                                     "options": Array [
                                       Object {
-                                        "label": "Dog",
-                                        "value": "dog",
+                                        "label": "Bird",
+                                        "value": "bird",
                                       },
                                       Object {
                                         "label": "Cat",
                                         "value": "cat",
                                       },
                                       Object {
-                                        "label": "Bird",
-                                        "value": "bird",
+                                        "label": "Dog",
+                                        "value": "dog",
                                       },
                                       Object {
                                         "label": "Rabbit",
@@ -722,16 +722,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                     options={
                                       Array [
                                         Object {
-                                          "label": "Dog",
-                                          "value": "dog",
+                                          "label": "Bird",
+                                          "value": "bird",
                                         },
                                         Object {
                                           "label": "Cat",
                                           "value": "cat",
                                         },
                                         Object {
-                                          "label": "Bird",
-                                          "value": "bird",
+                                          "label": "Dog",
+                                          "value": "dog",
                                         },
                                         Object {
                                           "label": "Rabbit",
@@ -782,16 +782,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                         "openMenuOnFocus": false,
                                         "options": Array [
                                           Object {
-                                            "label": "Dog",
-                                            "value": "dog",
+                                            "label": "Bird",
+                                            "value": "bird",
                                           },
                                           Object {
                                             "label": "Cat",
                                             "value": "cat",
                                           },
                                           Object {
-                                            "label": "Bird",
-                                            "value": "bird",
+                                            "label": "Dog",
+                                            "value": "dog",
                                           },
                                           Object {
                                             "label": "Rabbit",
@@ -864,16 +864,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                         options={
                                           Array [
                                             Object {
-                                              "label": "Dog",
-                                              "value": "dog",
+                                              "label": "Bird",
+                                              "value": "bird",
                                             },
                                             Object {
                                               "label": "Cat",
                                               "value": "cat",
                                             },
                                             Object {
-                                              "label": "Bird",
-                                              "value": "bird",
+                                              "label": "Dog",
+                                              "value": "dog",
                                             },
                                             Object {
                                               "label": "Rabbit",
@@ -924,16 +924,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                             "openMenuOnFocus": false,
                                             "options": Array [
                                               Object {
-                                                "label": "Dog",
-                                                "value": "dog",
+                                                "label": "Bird",
+                                                "value": "bird",
                                               },
                                               Object {
                                                 "label": "Cat",
                                                 "value": "cat",
                                               },
                                               Object {
-                                                "label": "Bird",
-                                                "value": "bird",
+                                                "label": "Dog",
+                                                "value": "dog",
                                               },
                                               Object {
                                                 "label": "Rabbit",
@@ -1006,16 +1006,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                             options={
                                               Array [
                                                 Object {
-                                                  "label": "Dog",
-                                                  "value": "dog",
+                                                  "label": "Bird",
+                                                  "value": "bird",
                                                 },
                                                 Object {
                                                   "label": "Cat",
                                                   "value": "cat",
                                                 },
                                                 Object {
-                                                  "label": "Bird",
-                                                  "value": "bird",
+                                                  "label": "Dog",
+                                                  "value": "dog",
                                                 },
                                                 Object {
                                                   "label": "Rabbit",
@@ -1066,16 +1066,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                                 "openMenuOnFocus": false,
                                                 "options": Array [
                                                   Object {
-                                                    "label": "Dog",
-                                                    "value": "dog",
+                                                    "label": "Bird",
+                                                    "value": "bird",
                                                   },
                                                   Object {
                                                     "label": "Cat",
                                                     "value": "cat",
                                                   },
                                                   Object {
-                                                    "label": "Bird",
-                                                    "value": "bird",
+                                                    "label": "Dog",
+                                                    "value": "dog",
                                                   },
                                                   Object {
                                                     "label": "Rabbit",
@@ -1193,16 +1193,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                                 "openMenuOnFocus": false,
                                                 "options": Array [
                                                   Object {
-                                                    "label": "Dog",
-                                                    "value": "dog",
+                                                    "label": "Bird",
+                                                    "value": "bird",
                                                   },
                                                   Object {
                                                     "label": "Cat",
                                                     "value": "cat",
                                                   },
                                                   Object {
-                                                    "label": "Bird",
-                                                    "value": "bird",
+                                                    "label": "Dog",
+                                                    "value": "dog",
                                                   },
                                                   Object {
                                                     "label": "Rabbit",
@@ -1363,16 +1363,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                         options={
                                           Array [
                                             Object {
-                                              "label": "Dog",
-                                              "value": "dog",
+                                              "label": "Bird",
+                                              "value": "bird",
                                             },
                                             Object {
                                               "label": "Cat",
                                               "value": "cat",
                                             },
                                             Object {
-                                              "label": "Bird",
-                                              "value": "bird",
+                                              "label": "Dog",
+                                              "value": "dog",
                                             },
                                             Object {
                                               "label": "Rabbit",
@@ -1423,16 +1423,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                             "openMenuOnFocus": false,
                                             "options": Array [
                                               Object {
-                                                "label": "Dog",
-                                                "value": "dog",
+                                                "label": "Bird",
+                                                "value": "bird",
                                               },
                                               Object {
                                                 "label": "Cat",
                                                 "value": "cat",
                                               },
                                               Object {
-                                                "label": "Bird",
-                                                "value": "bird",
+                                                "label": "Dog",
+                                                "value": "dog",
                                               },
                                               Object {
                                                 "label": "Rabbit",
@@ -1504,16 +1504,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                             options={
                                               Array [
                                                 Object {
-                                                  "label": "Dog",
-                                                  "value": "dog",
+                                                  "label": "Bird",
+                                                  "value": "bird",
                                                 },
                                                 Object {
                                                   "label": "Cat",
                                                   "value": "cat",
                                                 },
                                                 Object {
-                                                  "label": "Bird",
-                                                  "value": "bird",
+                                                  "label": "Dog",
+                                                  "value": "dog",
                                                 },
                                                 Object {
                                                   "label": "Rabbit",
@@ -1564,16 +1564,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                                 "openMenuOnFocus": false,
                                                 "options": Array [
                                                   Object {
-                                                    "label": "Dog",
-                                                    "value": "dog",
+                                                    "label": "Bird",
+                                                    "value": "bird",
                                                   },
                                                   Object {
                                                     "label": "Cat",
                                                     "value": "cat",
                                                   },
                                                   Object {
-                                                    "label": "Bird",
-                                                    "value": "bird",
+                                                    "label": "Dog",
+                                                    "value": "dog",
                                                   },
                                                   Object {
                                                     "label": "Rabbit",
@@ -1653,16 +1653,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                             options={
                                               Array [
                                                 Object {
-                                                  "label": "Dog",
-                                                  "value": "dog",
+                                                  "label": "Bird",
+                                                  "value": "bird",
                                                 },
                                                 Object {
                                                   "label": "Cat",
                                                   "value": "cat",
                                                 },
                                                 Object {
-                                                  "label": "Bird",
-                                                  "value": "bird",
+                                                  "label": "Dog",
+                                                  "value": "dog",
                                                 },
                                                 Object {
                                                   "label": "Rabbit",
@@ -1713,16 +1713,16 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                                 "openMenuOnFocus": false,
                                                 "options": Array [
                                                   Object {
-                                                    "label": "Dog",
-                                                    "value": "dog",
+                                                    "label": "Bird",
+                                                    "value": "bird",
                                                   },
                                                   Object {
                                                     "label": "Cat",
                                                     "value": "cat",
                                                   },
                                                   Object {
-                                                    "label": "Bird",
-                                                    "value": "bird",
+                                                    "label": "Dog",
+                                                    "value": "dog",
                                                   },
                                                   Object {
                                                     "label": "Rabbit",

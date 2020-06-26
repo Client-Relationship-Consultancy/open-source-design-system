@@ -155,7 +155,7 @@ exports[`Select Input test match last snapshot 1`] = `
             "$$typeof": Symbol(react.forward_ref),
             "attrs": Array [],
             "componentStyle": ComponentStyle {
-              "componentId": "Select__Title-sc-1k8c848-0",
+              "componentId": "Select__Title-tukly-0",
               "isStatic": false,
               "lastClassName": "c0",
               "rules": Array [
@@ -165,7 +165,7 @@ exports[`Select Input test match last snapshot 1`] = `
             "displayName": "Title",
             "foldedComponentIds": Array [],
             "render": [Function],
-            "styledComponentId": "Select__Title-sc-1k8c848-0",
+            "styledComponentId": "Select__Title-tukly-0",
             "target": "div",
             "toString": [Function],
             "warnTooManyClasses": [Function],
@@ -188,12 +188,12 @@ exports[`Select Input test match last snapshot 1`] = `
       options={
         Array [
           Object {
-            "label": "Dogs",
-            "value": "dog",
-          },
-          Object {
             "label": "Cats",
             "value": "cat",
+          },
+          Object {
+            "label": "Dogs",
+            "value": "dog",
           },
           Object {
             "label": "Horse",
@@ -259,12 +259,12 @@ exports[`Select Input test match last snapshot 1`] = `
         options={
           Array [
             Object {
-              "label": "Dogs",
-              "value": "dog",
-            },
-            Object {
               "label": "Cats",
               "value": "cat",
+            },
+            Object {
+              "label": "Dogs",
+              "value": "dog",
             },
             Object {
               "label": "Horse",
@@ -314,12 +314,12 @@ exports[`Select Input test match last snapshot 1`] = `
           options={
             Array [
               Object {
-                "label": "Dogs",
-                "value": "dog",
-              },
-              Object {
                 "label": "Cats",
                 "value": "cat",
+              },
+              Object {
+                "label": "Dogs",
+                "value": "dog",
               },
               Object {
                 "label": "Horse",
@@ -374,12 +374,12 @@ exports[`Select Input test match last snapshot 1`] = `
               "openMenuOnFocus": false,
               "options": Array [
                 Object {
-                  "label": "Dogs",
-                  "value": "dog",
-                },
-                Object {
                   "label": "Cats",
                   "value": "cat",
+                },
+                Object {
+                  "label": "Dogs",
+                  "value": "dog",
                 },
                 Object {
                   "label": "Horse",
@@ -465,12 +465,12 @@ exports[`Select Input test match last snapshot 1`] = `
               options={
                 Array [
                   Object {
-                    "label": "Dogs",
-                    "value": "dog",
-                  },
-                  Object {
                     "label": "Cats",
                     "value": "cat",
+                  },
+                  Object {
+                    "label": "Dogs",
+                    "value": "dog",
                   },
                   Object {
                     "label": "Horse",
@@ -525,12 +525,12 @@ exports[`Select Input test match last snapshot 1`] = `
                   "openMenuOnFocus": false,
                   "options": Array [
                     Object {
-                      "label": "Dogs",
-                      "value": "dog",
-                    },
-                    Object {
                       "label": "Cats",
                       "value": "cat",
+                    },
+                    Object {
+                      "label": "Dogs",
+                      "value": "dog",
                     },
                     Object {
                       "label": "Horse",
@@ -607,12 +607,12 @@ exports[`Select Input test match last snapshot 1`] = `
                   options={
                     Array [
                       Object {
-                        "label": "Dogs",
-                        "value": "dog",
-                      },
-                      Object {
                         "label": "Cats",
                         "value": "cat",
+                      },
+                      Object {
+                        "label": "Dogs",
+                        "value": "dog",
                       },
                       Object {
                         "label": "Horse",
@@ -667,12 +667,12 @@ exports[`Select Input test match last snapshot 1`] = `
                       "openMenuOnFocus": false,
                       "options": Array [
                         Object {
-                          "label": "Dogs",
-                          "value": "dog",
-                        },
-                        Object {
                           "label": "Cats",
                           "value": "cat",
+                        },
+                        Object {
+                          "label": "Dogs",
+                          "value": "dog",
                         },
                         Object {
                           "label": "Horse",
@@ -749,12 +749,12 @@ exports[`Select Input test match last snapshot 1`] = `
                       options={
                         Array [
                           Object {
-                            "label": "Dogs",
-                            "value": "dog",
-                          },
-                          Object {
                             "label": "Cats",
                             "value": "cat",
+                          },
+                          Object {
+                            "label": "Dogs",
+                            "value": "dog",
                           },
                           Object {
                             "label": "Horse",
@@ -809,12 +809,12 @@ exports[`Select Input test match last snapshot 1`] = `
                           "openMenuOnFocus": false,
                           "options": Array [
                             Object {
-                              "label": "Dogs",
-                              "value": "dog",
-                            },
-                            Object {
                               "label": "Cats",
                               "value": "cat",
+                            },
+                            Object {
+                              "label": "Dogs",
+                              "value": "dog",
                             },
                             Object {
                               "label": "Horse",
@@ -936,12 +936,12 @@ exports[`Select Input test match last snapshot 1`] = `
                           "openMenuOnFocus": false,
                           "options": Array [
                             Object {
-                              "label": "Dogs",
-                              "value": "dog",
-                            },
-                            Object {
                               "label": "Cats",
                               "value": "cat",
+                            },
+                            Object {
+                              "label": "Dogs",
+                              "value": "dog",
                             },
                             Object {
                               "label": "Horse",
@@ -1106,12 +1106,12 @@ exports[`Select Input test match last snapshot 1`] = `
                   options={
                     Array [
                       Object {
-                        "label": "Dogs",
-                        "value": "dog",
-                      },
-                      Object {
                         "label": "Cats",
                         "value": "cat",
+                      },
+                      Object {
+                        "label": "Dogs",
+                        "value": "dog",
                       },
                       Object {
                         "label": "Horse",
@@ -1166,12 +1166,12 @@ exports[`Select Input test match last snapshot 1`] = `
                       "openMenuOnFocus": false,
                       "options": Array [
                         Object {
-                          "label": "Dogs",
-                          "value": "dog",
-                        },
-                        Object {
                           "label": "Cats",
                           "value": "cat",
+                        },
+                        Object {
+                          "label": "Dogs",
+                          "value": "dog",
                         },
                         Object {
                           "label": "Horse",
@@ -1247,12 +1247,12 @@ exports[`Select Input test match last snapshot 1`] = `
                       options={
                         Array [
                           Object {
-                            "label": "Dogs",
-                            "value": "dog",
-                          },
-                          Object {
                             "label": "Cats",
                             "value": "cat",
+                          },
+                          Object {
+                            "label": "Dogs",
+                            "value": "dog",
                           },
                           Object {
                             "label": "Horse",
@@ -1307,12 +1307,12 @@ exports[`Select Input test match last snapshot 1`] = `
                           "openMenuOnFocus": false,
                           "options": Array [
                             Object {
-                              "label": "Dogs",
-                              "value": "dog",
-                            },
-                            Object {
                               "label": "Cats",
                               "value": "cat",
+                            },
+                            Object {
+                              "label": "Dogs",
+                              "value": "dog",
                             },
                             Object {
                               "label": "Horse",
@@ -1396,12 +1396,12 @@ exports[`Select Input test match last snapshot 1`] = `
                       options={
                         Array [
                           Object {
-                            "label": "Dogs",
-                            "value": "dog",
-                          },
-                          Object {
                             "label": "Cats",
                             "value": "cat",
+                          },
+                          Object {
+                            "label": "Dogs",
+                            "value": "dog",
                           },
                           Object {
                             "label": "Horse",
@@ -1456,12 +1456,12 @@ exports[`Select Input test match last snapshot 1`] = `
                           "openMenuOnFocus": false,
                           "options": Array [
                             Object {
-                              "label": "Dogs",
-                              "value": "dog",
-                            },
-                            Object {
                               "label": "Cats",
                               "value": "cat",
+                            },
+                            Object {
+                              "label": "Dogs",
+                              "value": "dog",
                             },
                             Object {
                               "label": "Horse",

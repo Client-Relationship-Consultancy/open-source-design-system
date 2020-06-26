@@ -29,13 +29,13 @@ describe("Select Input test", () => {
     const defaultValue = component.instance().buildDefaultValue(testValue)
     expect(defaultValue).toEqual(testValue)
   })
-  it("options should be converted to correct format", () => {
+  it("options should be converted to correct format and ordered by label", () => {
     expect(component.render().text()).toEqual("Type to search from the dropdown list...")
     expect(component.instance().renderOptions(options)).toEqual([
-      { label: "Dogs", value: "dog" },
-      { label: "Cats", value: "cat" },
-      { label: "Horse", value: "horse" },
-      { label: "Mouse", value: "mouse" },
+      { value: "cat", label: "Cats" },
+      { value: "dog", label: "Dogs" },
+      { value: "horse", label: "Horse" },
+      { value: "mouse", label: "Mouse" },
     ])
   })
   it("match last snapshot", () => {

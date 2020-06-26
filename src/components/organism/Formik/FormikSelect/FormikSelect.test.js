@@ -31,16 +31,16 @@ describe("FormikSelect Component Test", () => {
     <CustomSelect name="name" onChange={mockFn} formik={formikProps} />,
   )
 
-  it("Render options into the correct format", () => {
+  it("Render options into the correct format ordered by label", () => {
     expect(
       component
         .find("Select")
         .last()
         .props().options,
     ).toEqual([
-      { value: "dog", label: "Dog" },
-      { value: "cat", label: "Cat" },
       { value: "bird", label: "Bird" },
+      { value: "cat", label: "Cat" },
+      { value: "dog", label: "Dog" },
       { value: "rabbit", label: "Rabbit" },
     ])
   })
