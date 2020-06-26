@@ -25,7 +25,7 @@ interface ISelect {
   name?: string;
   placeholder?: React.ReactNode;
   options: IOption;
-  onChange?: (value: ValueType<IDropdownObject>) => void;
+  onChange?: (value: NonNullable<ValueType<IDropdownObject>>) => void;
   onBlur?: () => void;
   value?: IDropdownObject[] | null;
   isDisabled?: boolean;
@@ -39,7 +39,7 @@ interface ISelect {
 
 class CustomSelect extends React.Component<ISelect> {
   static displayName: string;
-  
+
   static defaultProps: { [index: string]: any };
 
   // Create function to convert given options object to the correct format (objects within an array)
@@ -64,6 +64,13 @@ class CustomSelect extends React.Component<ISelect> {
     return defaultVal as IDropdownObject;
   };
 
+  onChange = (value: ValueType<IDropdownObject>): void => {
+    if (value && this.props.onChange) {
+      const option: NonNullable<ValueType<IDropdownObject>> = value;
+      this.props.onChange(option);
+    }
+  };
+
   render() {
     const {
       title,
@@ -71,7 +78,6 @@ class CustomSelect extends React.Component<ISelect> {
       name,
       placeholder,
       options,
-      onChange,
       onBlur,
       value,
       isDisabled,
@@ -97,7 +103,7 @@ class CustomSelect extends React.Component<ISelect> {
           onBlur={onBlur}
           value={filteredValue || value}
           options={this.renderOptions(options)}
-          onChange={onChange}
+          onChange={this.onChange}
           isDisabled={isDisabled}
           isClearable={isClearable}
           isMulti={isMulti}
