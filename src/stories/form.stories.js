@@ -103,7 +103,7 @@ storiesOf("Forms", module)
       />
     </Flex>
   ))
-  .add("select options", () => {
+  .add("Select options", () => {
     const options = {
       fma: "Fullmetal Alchemist",
       op: "One Piece",
@@ -112,6 +112,24 @@ storiesOf("Forms", module)
     }
     return (
       <Select
+        options={object("Options", options)}
+        isClearable={boolean("Clearable", true)}
+        isDisabled={boolean("Disabled", false)}
+        isMulti={boolean("Multiple Select", false)}
+      />
+    )
+  })
+  .add("Select options custom reverse sort", () => {
+    const options = {
+      fma: "Fullmetal Alchemist",
+      op: "One Piece",
+      naruto: "Naruto",
+      deathNote: "Death Note",
+    }
+    const customSort = (a,b)=>b.label.localeCompare(a.label)
+    return (
+      <Select
+        customSort={customSort}
         options={object("Options", options)}
         isClearable={boolean("Clearable", true)}
         isDisabled={boolean("Disabled", false)}

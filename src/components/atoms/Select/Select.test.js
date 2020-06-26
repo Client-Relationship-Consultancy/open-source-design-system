@@ -59,6 +59,18 @@ describe("Select Input test", () => {
       { value: "mouse", label: "Mouse" },
     ])
   })
+
+  it("options should be converted to correct format and ordered by custom sort function", () => {
+    const customSort = (a, b) => b.label.localeCompare(a.label)
+    const newComponent = mount(<Select options={{}} id="testId" isClearable customSort={customSort} />).find("CustomSelect")
+    expect(newComponent.render().text()).toEqual("Type to search from the dropdown list...")
+    expect(newComponent.instance().renderOptions(options)).toEqual([
+      { value: "mouse", label: "Mouse" },
+      { value: "horse", label: "Horse" },
+      { value: "dog", label: "Dogs" },
+      { value: "cat", label: "Cats" },
+    ])
+  })
   it("match last snapshot", () => {
     expect(component).toMatchSnapshot()
   })
