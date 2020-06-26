@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
-import PropTypes from "prop-types";
 // Using react-select, read more here. https://github.com/JedWatson/react-select
 import ReactSelect from "react-select";
 import { ValueType } from "react-select/lib/types";
