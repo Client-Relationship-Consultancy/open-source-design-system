@@ -41,9 +41,7 @@ interface ISelect {
 
 class CustomSelect extends React.Component<ISelect> {
   static displayName: string;
-
-  static propTypes: { [index: string]: any };
-
+  
   static defaultProps: { [index: string]: any };
 
   // Create function to convert given options object to the correct format (objects within an array)
@@ -121,27 +119,6 @@ CustomSelect.defaultProps = {
   placeholder: "Type to search from the dropdown list...",
   blacklistedOptions: [],
   theme: colourPalette.examplePalette,
-};
-
-// Declare the value types of CustomSelect Props
-CustomSelect.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
-  name: PropTypes.string,
-  placeholder: PropTypes.string,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
-  // eslint-disable-next-line react/forbid-prop-types
-  options: PropTypes.object,
-  onChange: PropTypes.func,
-  isDisabled: PropTypes.bool,
-  isClearable: PropTypes.bool,
-  onBlur: PropTypes.func,
-  isMulti: PropTypes.bool,
-  defaultValue: PropTypes.string,
-  blacklistedOptions: PropTypes.arrayOf(PropTypes.string),
-  className: PropTypes.string,
-  // eslint-disable-next-line react/forbid-prop-types
-  theme: PropTypes.object,
 };
 
 const Select = withTheme(CustomSelect);
