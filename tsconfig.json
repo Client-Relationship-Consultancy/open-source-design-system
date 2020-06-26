@@ -14,8 +14,7 @@
         "allowSyntheticDefaultImports": true,
         "forceConsistentCasingInFileNames": true,
         "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noImplicitAny": false
+        "isolatedModules": true
     },
     "include": ["src/**/*"],
     "exclude": ["**/*.test.*", "**/*.stories.*"]

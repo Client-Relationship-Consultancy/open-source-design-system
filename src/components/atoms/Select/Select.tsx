@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
 // Using react-select, read more here. https://github.com/JedWatson/react-select
-import ReactSelect from "react-select";
-import { ValueType } from "react-select/lib/types";
+import ReactSelect, { ValueType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
@@ -82,7 +81,7 @@ class CustomSelect extends React.Component<ISelect> {
       blacklistedOptions,
       className,
     } = this.props;
-    let filteredValue: boolean | IDropdownObject[] = false;
+    let filteredValue: IDropdownObject[] | undefined;
     if (isMulti && value && blacklistedOptions) {
       filteredValue = value.filter(v => !blacklistedOptions.includes(v.value));
     }
