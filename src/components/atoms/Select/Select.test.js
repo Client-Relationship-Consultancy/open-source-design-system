@@ -10,7 +10,28 @@ describe("Select Input test", () => {
     horse: "Horse",
     mouse: "Mouse",
   }
-  const component = mount(<Select options={options} id="testId" isClearable />).find("CustomSelect")
+  const onchange = jest.fn()
+  const component = mount(
+    <Select options={options} id="testId" isClearable onChange={onchange} />,
+  ).find("CustomSelect")
+  const value = [
+    { value: "dog", label: "Dog" },
+    { value: "cat", label: "Cat" },
+  ];
+  const Blacklisted = ["cat"];
+  const onchangeMulti = jest.fn()
+  const componentMulti = mount(
+    <Select
+      options={options}
+      id="testId"
+      isClearable
+      isMulti
+      onChangeMulti={onchangeMulti}
+      value={value}
+      blacklistedOptions={Blacklisted}
+    />,
+  ).find("CustomSelect")
+
   it("test render options method", () => {
     const renderedOptions = component.instance().renderOptions({ test1: "test2" })
     expect(renderedOptions[0]).toMatchObject({ value: "test1", label: "test2" })
@@ -29,21 +50,38 @@ describe("Select Input test", () => {
     const defaultValue = component.instance().buildDefaultValue(testValue)
     expect(defaultValue).toEqual(testValue)
   })
-  it("options should be converted to correct format", () => {
+  it("options should be converted to correct format and ordered by label", () => {
     expect(component.render().text()).toEqual("Type to search from the dropdown list...")
     expect(component.instance().renderOptions(options)).toEqual([
-      { label: "Dogs", value: "dog" },
-      { label: "Cats", value: "cat" },
-      { label: "Horse", value: "horse" },
-      { label: "Mouse", value: "mouse" },
+      { value: "cat", label: "Cats" },
+      { value: "dog", label: "Dogs" },
+      { value: "horse", label: "Horse" },
+      { value: "mouse", label: "Mouse" },
     ])
   })
   it("match last snapshot", () => {
     expect(component).toMatchSnapshot()
   })
+  it("component multi match last snapshot", () => {
+    expect(componentMulti).toMatchSnapshot()
+  })
   it("returns the correctly formatted default value with label when there are no options", () => {
     const newComponent = mount(<Select options={{}} id="testId" isClearable />).find("CustomSelect")
     const defaultValueObject = newComponent.instance().buildDefaultValue("cat")
     expect(defaultValueObject).toMatchObject({ value: "cat", label: "cat" })
+  })
+
+  it("should call the correct onchange",()=>{
+    component.instance().onChange({ value: "cat", label: "cat" })
+    expect(onchange).toBeCalledWith({ value: "cat", label: "cat" })
+
+    componentMulti.instance().onChange([
+      { value: "cat", label: "Cat" },
+      { value: "dog", label: "Dog" },
+    ])
+    expect(onchangeMulti).toBeCalledWith([
+      { value: "cat", label: "Cat" },
+      { value: "dog", label: "Dog" },
+    ])
   })
 })
