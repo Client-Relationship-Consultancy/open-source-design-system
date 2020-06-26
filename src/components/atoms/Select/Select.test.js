@@ -10,18 +10,23 @@ describe("Select Input test", () => {
     horse: "Horse",
     mouse: "Mouse",
   }
-  const component = mount(<Select options={options} id="testId" isClearable />).find("CustomSelect")
+  const onchange = jest.fn()
+  const component = mount(
+    <Select options={options} id="testId" isClearable onChange={onchange} />,
+  ).find("CustomSelect")
   const value = [
     { value: "dog", label: "Dog" },
     { value: "cat", label: "Cat" },
   ];
   const Blacklisted = ["cat"];
+  const onchangeMulti = jest.fn()
   const componentMulti = mount(
     <Select
       options={options}
       id="testId"
       isClearable
       isMulti
+      onChangeMulti={onchangeMulti}
       value={value}
       blacklistedOptions={Blacklisted}
     />,
@@ -64,5 +69,19 @@ describe("Select Input test", () => {
     const newComponent = mount(<Select options={{}} id="testId" isClearable />).find("CustomSelect")
     const defaultValueObject = newComponent.instance().buildDefaultValue("cat")
     expect(defaultValueObject).toMatchObject({ value: "cat", label: "cat" })
+  })
+
+  it("should call the correct onchange",()=>{
+    component.instance().onChange({ value: "cat", label: "cat" })
+    expect(onchange).toBeCalledWith({ value: "cat", label: "cat" })
+
+    componentMulti.instance().onChange([
+      { value: "cat", label: "Cat" },
+      { value: "dog", label: "Dog" },
+    ])
+    expect(onchangeMulti).toBeCalledWith([
+      { value: "cat", label: "Cat" },
+      { value: "dog", label: "Dog" },
+    ])
   })
 })

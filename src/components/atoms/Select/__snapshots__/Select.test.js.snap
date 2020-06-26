@@ -14,6 +14,7 @@ exports[`Select Input test component multi match last snapshot 1`] = `
   id="testId"
   isClearable={true}
   isMulti={true}
+  onChangeMulti={[MockFunction]}
   options={
     Object {
       "cat": "Cats",
@@ -203,6 +204,7 @@ exports[`Select Input test component multi match last snapshot 1`] = `
       id="testId-select"
       isClearable={true}
       isMulti={true}
+      onChange={[Function]}
       options={
         Array [
           Object {
@@ -2156,6 +2158,7 @@ exports[`Select Input test match last snapshot 1`] = `
   blacklistedOptions={Array []}
   id="testId"
   isClearable={true}
+  onChange={[MockFunction]}
   options={
     Object {
       "cat": "Cats",
@@ -2332,6 +2335,7 @@ exports[`Select Input test match last snapshot 1`] = `
       defaultValue={null}
       id="testId-select"
       isClearable={true}
+      onChange={[Function]}
       options={
         Array [
           Object {
