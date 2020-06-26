@@ -36,6 +36,7 @@ interface ISelect {
   blacklistedOptions?: string[];
   className?: string;
   theme?: string;
+  customSort?: (a: IDropdownObject, b: IDropdownObject) => number;
 }
 
 class CustomSelect extends React.Component<ISelect> {
@@ -49,7 +50,11 @@ class CustomSelect extends React.Component<ISelect> {
       value: key,
       label: value,
     }));
-    options.sort((a, b) => a.label.localeCompare(b.label));
+    if (this.props.customSort) {
+      options.sort(this.props.customSort);
+    } else {
+      options.sort((a, b) => a.label.localeCompare(b.label));
+    }
     return options;
   };
 
@@ -66,7 +71,7 @@ class CustomSelect extends React.Component<ISelect> {
   };
 
   onChange = (value: ValueType<IDropdownObject>): void => {
-    if (value ) {
+    if (value) {
       if (this.props.isMulti && this.props.onChangeMulti) {
         this.props.onChangeMulti(value);
       } else if (this.props.onChange) {
