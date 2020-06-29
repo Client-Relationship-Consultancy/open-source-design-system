@@ -27,6 +27,7 @@ export class CustomSelect extends React.PureComponent {
           {...this.props}
           id={id}
           onChange={this.onChange}
+          onChangeMulti={this.onChange}
           value={values && values[name]}
           onBlur={this.onBlur}
         />

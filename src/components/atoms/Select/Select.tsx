@@ -26,7 +26,7 @@ interface ISelect {
   placeholder?: React.ReactNode;
   options: IOption;
   onChange?: (value: IDropdownObject) => void;
-  onChangeMulti?: (value: IDropdownObject | OptionsType<IDropdownObject>) => void;
+  onChangeMulti?: (value: OptionsType<IDropdownObject>) => void;
   onBlur?: () => void;
   value?: IDropdownObject[] | null;
   isDisabled?: boolean;
@@ -77,7 +77,7 @@ class CustomSelect extends React.Component<ISelect> {
   onChange = (value: ValueType<IDropdownObject>): void => {
     if (value) {
       if (this.props.isMulti && this.props.onChangeMulti) {
-        this.props.onChangeMulti(value);
+        this.props.onChangeMulti(value as OptionsType<IDropdownObject>);
       } else if (this.props.onChange) {
         this.props.onChange(value as IDropdownObject);
       }
