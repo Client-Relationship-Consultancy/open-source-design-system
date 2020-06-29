@@ -93,6 +93,7 @@ class TimezoneSelect extends React.Component {
         placeholder={placeholder}
         name={name}
         onBlur={onBlur}
+        custonSort={this.props.customSort}
         options={this.renderOptions()}
         onChange={onChange}
         isClearable={isClearable}
@@ -121,6 +122,7 @@ TimezoneSelect.propTypes = {
   onBlur: PropTypes.func,
   className: PropTypes.string,
   useFormik: PropTypes.bool,
+  customSort: PropTypes.func,
 }
 
 export default TimezoneSelect

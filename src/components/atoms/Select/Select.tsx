@@ -53,7 +53,11 @@ class CustomSelect extends React.Component<ISelect> {
     if (this.props.customSort) {
       options.sort(this.props.customSort);
     } else {
-      options.sort((a, b) => a.label.localeCompare(b.label));
+      options.sort((a, b) =>
+        typeof a.label === "string" && typeof b.label === "string"
+          ? a.label.localeCompare(b.label)
+          : 0,
+      );
     }
     return options;
   };
