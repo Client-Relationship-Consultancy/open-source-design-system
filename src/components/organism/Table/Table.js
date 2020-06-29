@@ -16,6 +16,43 @@ export const Container = styled.div`
   position: relative;
   .ag-cell {
     overflow: visible;
+    display: flex;
+    align-items: center;
+  }
+  .select {
+
+    > div {
+      width: 100%;
+    }
+
+    /* TODO: ideally we'd want a better arrow to use, so we don't need to do transforms
+    or if we can get svg url to work, that would be easier */
+    &:not(.ag-cell-inline-editing) {
+      > div > div {
+        ::after {
+          content: "⌄";
+          position: absolute;
+          right: 0.75rem;
+          font-size: 1.5rem;
+          /* TODO: will need to account for when there is no value selected (it currently aligns to bottom as no height on div) */
+          transform: scale(1.2, 0.75) translateY(-25%);
+          transition: opacity 0.15s;
+          opacity: 0;
+        }
+      }
+
+      :hover {
+        cursor: pointer;
+      }
+
+      :hover, :focus {
+        > div > div {
+          ::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
   .ag-cell-wrapper {
     display: flex;
