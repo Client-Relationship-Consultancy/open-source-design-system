@@ -93,7 +93,7 @@ class TimezoneSelect extends React.Component {
         placeholder={placeholder}
         name={name}
         onBlur={onBlur}
-        custonSort={this.props.customSort}
+        customSort={this.props.customSort}
         options={this.renderOptions()}
         onChange={onChange}
         isClearable={isClearable}
