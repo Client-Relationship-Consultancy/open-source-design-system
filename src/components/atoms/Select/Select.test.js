@@ -10,6 +10,13 @@ describe("Select Input test", () => {
     horse: "Horse",
     mouse: "Mouse",
   }
+
+  const optionsElements = {
+    dog: <span>Dog</span>,
+    cat: <span>Cats</span>,
+    horse: <span>Horse</span>,
+    mouse: <span>Mouse</span>,
+  }
   const onchange = jest.fn()
   const component = mount(
     <Select options={options} id="testId" isClearable onChange={onchange} />,
@@ -31,6 +38,7 @@ describe("Select Input test", () => {
       blacklistedOptions={Blacklisted}
     />,
   ).find("CustomSelect")
+
 
   it("test render options method", () => {
     const renderedOptions = component.instance().renderOptions({ test1: "test2" })
@@ -57,6 +65,16 @@ describe("Select Input test", () => {
       { value: "dog", label: "Dogs" },
       { value: "horse", label: "Horse" },
       { value: "mouse", label: "Mouse" },
+    ])
+  })
+
+  it("options should be converted to correct format  with jsx elements", () => {
+    expect(component.render().text()).toEqual("Type to search from the dropdown list...")
+    expect(component.instance().renderOptions(optionsElements)).toEqual([
+      { value: "dog", label: <span>Dog</span> },
+      { value: "cat", label: <span>Cats</span> },
+      { value: "horse", label: <span>Horse</span> },
+      { value: "mouse", label: <span>Mouse</span> },
     ])
   })
 
