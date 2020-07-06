@@ -22,7 +22,8 @@ export const Container = styled.div`
     align-items: center;
   }
   .select {
-    > div {
+    /* the following ensures the select element still fills full width, without affecting drag handle */
+    div:first-child {
       width: 100%;
     }
     &:not(.ag-cell-inline-editing) {
@@ -141,6 +142,7 @@ export class TableWithTheme extends React.PureComponent {
 
   render() {
     const { rows, onCellValueChanged, suppressDragLeaveHidesColumns, isDisabled } = this.props
+    console.log(this.props.gridOptions);
     return (
       <Container className={`ag-theme-balham${isDisabled ? " ag-disabled" : ""}`}>
         <AgGridReact
