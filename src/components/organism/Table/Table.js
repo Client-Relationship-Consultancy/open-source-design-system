@@ -4,6 +4,8 @@ import styled, { withTheme } from "styled-components"
 import PropTypes from "prop-types"
 import { colourPalette } from "../../../brandColours"
 
+import SelectArrowIcon from "../../../assets/select-arrow-icon.svg"
+
 import CellRenderers from "./CellRenderers"
 import HeaderComponents from "./HeaderComponents"
 
@@ -16,6 +18,38 @@ export const Container = styled.div`
   position: relative;
   .ag-cell {
     overflow: visible;
+    display: flex;
+    align-items: center;
+  }
+  .select {
+    /* the following ensures the select element still fills full width, without affecting drag handle */
+    div:first-child {
+      width: 100%;
+    }
+    &:not(.ag-cell-inline-editing) {
+      > div > div {
+        display: flex;
+        align-items: center;
+        ::after {
+          content: url("${SelectArrowIcon}");
+          position: absolute;
+          top: 0.55rem;
+          right: 0.55rem;
+          transition: opacity 0.15s;
+          opacity: 0;
+        }
+      }
+      :hover {
+        cursor: pointer;
+      }
+      :hover, :focus {
+        > div > div {
+          ::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
   .ag-cell-wrapper {
     display: flex;

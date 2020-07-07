@@ -239,6 +239,7 @@ storiesOf("Table", module)
         },
         resizable: true,
         cellRenderer: "selectValueRenderer",
+        cellClass: "select",
       },
       {
         headerName: "Compulsory",
@@ -346,6 +347,7 @@ storiesOf("Table", module)
         },
         resizable: true,
         cellRenderer: "selectValueRenderer",
+        cellClass: "select",
       },
       {
         headerName: "Compulsory",
