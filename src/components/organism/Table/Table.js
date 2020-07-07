@@ -141,7 +141,6 @@ export class TableWithTheme extends React.PureComponent {
 
   render() {
     const { rows, onCellValueChanged, suppressDragLeaveHidesColumns, isDisabled } = this.props
-    console.log(this.props.gridOptions);
     return (
       <Container className={`ag-theme-balham${isDisabled ? " ag-disabled" : ""}`}>
         <AgGridReact
