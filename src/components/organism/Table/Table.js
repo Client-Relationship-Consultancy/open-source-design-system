@@ -33,9 +33,8 @@ export const Container = styled.div`
         ::after {
           content: url("${SelectArrowIcon}");
           position: absolute;
-          right: 0.75rem;
-          width: 1rem;
-          height: 1rem;
+          top: 0.55rem;
+          right: 0.55rem;
           transition: opacity 0.15s;
           opacity: 0;
         }
