@@ -20,6 +20,10 @@ export const Container = styled.div`
     overflow: visible;
     display: flex;
     align-items: center;
+    
+    .ag-react-container {
+      width:100%;
+    }
   }
   .select {
     /* the following ensures the select element still fills full width, without affecting drag handle */
