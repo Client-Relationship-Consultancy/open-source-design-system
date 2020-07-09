@@ -2,11 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { colourPalette } from "../../../brandColours"
 
-interface IStyledBoxProps {
-  onClick: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void;
-}
-
-const StyledBox = styled.div<IStyledBoxProps>`
+const StyledBox = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -59,9 +55,8 @@ Body.defaultProps = {
 Body.displayName = "Body";
 
 type DivProps = React.HTMLProps<HTMLDivElement>;
-type BoxProps = DivType & IStyledBoxProps;
 
-const Box: React.FC<BoxProps> = ({ title, children, id, className, onClick }) => {
+const Box: React.FC<DivProps> = ({ title, children, id, className, onClick }) => {
   return (
     <StyledBox id={id} className={className} onClick={onClick}>
       {title && (
