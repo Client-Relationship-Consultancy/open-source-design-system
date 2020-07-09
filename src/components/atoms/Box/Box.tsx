@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import PropTypes from "prop-types"
 import { colourPalette } from "../../../brandColours"
 
 const StyledBox = styled.div`
@@ -18,7 +17,8 @@ const StyledBox = styled.div`
       cursor: pointer;
     }
   `}
-`
+`;
+
 StyledBox.displayName = "StyledBox"
 
 const Title = styled.div`
@@ -30,26 +30,35 @@ const Title = styled.div`
     color: ${props => props.theme.primary.main.on};
     font-size: 1.2rem;
   }
-`
+`;
+
 Title.defaultProps = {
   theme: colourPalette.examplePalette,
 }
-Title.displayName = "Title"
 
-const Body = styled.div`
+Title.displayName = "Title";
+
+interface IBodyProps {
+  flatTop: boolean;
+}
+
+const Body = styled.div<IBodyProps>`
   background-color: ${props => props.theme.surface.hex};
   border-radius: ${props => (props.flatTop ? "0 0 10px 10px" : "10px")};
   border: 1px solid ${props => props.theme.primary.main.hex};
-`
+`;
+
 Body.defaultProps = {
   theme: colourPalette.examplePalette,
 }
-Body.displayName = "Body"
 
-const Box = props => {
-  const { title, children, id, className, ...other } = props
+Body.displayName = "Body";
+
+type DivProps = React.HTMLProps<HTMLDivElement>;
+
+const Box: React.FC<DivProps> = ({ title, children, id, className, onClick }) => {
   return (
-    <StyledBox id={id} className={className} {...other}>
+    <StyledBox id={id} className={className} onClick={onClick}>
       {title && (
         <Title>
           <h4>{title}</h4>
@@ -59,14 +68,7 @@ const Box = props => {
     </StyledBox>
   )
 }
-Box.displayName = "Box"
 
-Box.propTypes = {
-  title: PropTypes.any,
-  children: PropTypes.node,
-  id: PropTypes.string,
-  className: PropTypes.string,
-  onClick: PropTypes.func,
-}
+Box.displayName = "Box";
 
-export default Box
+export default Box;

@@ -787,7 +787,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "Label__StyledLabel-b5w2ve-0",
+                    "componentId": "Label__StyledLabel-sc-1zfkq3-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -799,7 +799,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                   "displayName": "StyledLabel",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "Label__StyledLabel-b5w2ve-0",
+                  "styledComponentId": "Label__StyledLabel-sc-1zfkq3-0",
                   "target": "label",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -1737,7 +1737,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                   },
                   "attrs": Array [],
                   "componentStyle": ComponentStyle {
-                    "componentId": "Label__StyledLabel-b5w2ve-0",
+                    "componentId": "Label__StyledLabel-sc-1zfkq3-0",
                     "isStatic": false,
                     "lastClassName": "c2",
                     "rules": Array [
@@ -1749,7 +1749,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                   "displayName": "StyledLabel",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "Label__StyledLabel-b5w2ve-0",
+                  "styledComponentId": "Label__StyledLabel-sc-1zfkq3-0",
                   "target": "label",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
