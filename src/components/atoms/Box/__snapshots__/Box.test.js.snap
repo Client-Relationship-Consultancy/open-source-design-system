@@ -55,7 +55,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "Box__StyledBox-sc-1hhoqar-0",
+            "componentId": "Box__StyledBox-sc-1ylrdjn-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -66,7 +66,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
           "displayName": "StyledBox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "Box__StyledBox-sc-1hhoqar-0",
+          "styledComponentId": "Box__StyledBox-sc-1ylrdjn-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -338,7 +338,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
                 },
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "Box__Title-sc-1hhoqar-1",
+                  "componentId": "Box__Title-sc-1ylrdjn-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -352,7 +352,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
                 "displayName": "Title",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "Box__Title-sc-1hhoqar-1",
+                "styledComponentId": "Box__Title-sc-1ylrdjn-1",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -755,7 +755,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
                 },
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "Box__Body-sc-1hhoqar-2",
+                  "componentId": "Box__Body-sc-1ylrdjn-2",
                   "isStatic": false,
                   "lastClassName": "c2",
                   "rules": Array [
@@ -771,7 +771,7 @@ exports[`Box test should match last snapshot with a title 1`] = `
                 "displayName": "Body",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "Box__Body-sc-1hhoqar-2",
+                "styledComponentId": "Box__Body-sc-1ylrdjn-2",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],

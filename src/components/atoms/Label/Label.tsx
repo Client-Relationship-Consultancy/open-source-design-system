@@ -18,9 +18,9 @@ StyledLabel.defaultProps = {
 
 StyledLabel.displayName = "StyledLabel";
 
-type Props = HTMLLabelElement;
+type LabelProps = React.HTMLProps<HTMLLabelElement>;
 
-const Label: React.FC<Props> = ({className, id, htmlFor, children}) => {
+const Label: React.FC<LabelProps> = ({className, id, htmlFor, children}) => {
   return (
     <StyledLabel className={className} id={id} htmlFor={htmlFor}>
       {children}
