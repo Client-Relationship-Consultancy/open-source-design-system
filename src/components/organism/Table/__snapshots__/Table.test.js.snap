@@ -10,7 +10,7 @@ exports[`Container component should snapshot the container 1`] = `
         "componentId": "Table__Container-dsnb06-0",
         "isStatic": false,
         "rules": Array [
-          "width:100%;height:500px;position:relative;.ag-cell{overflow:visible;display:flex;align-items:center;}.select{div:first-child{width:100%;}&:not(.ag-cell-inline-editing){> div > div{display:flex;align-items:center;::after{content:url(\\"",
+          "width:100%;height:500px;position:relative;.ag-cell{overflow:visible;display:flex;align-items:center;.ag-react-container{width:100%;}}.select{div:first-child{width:100%;}&:not(.ag-cell-inline-editing){> div > div{display:flex;align-items:center;::after{content:url(\\"",
           ".styledComponentId",
           "\\");position:absolute;top:0.55rem;right:0.55rem;transition:opacity 0.15s;opacity:0;}}:hover{cursor:pointer;}:hover,:focus{> div > div{::after{opacity:1;}}}}}.ag-cell-wrapper{display:flex;height:100%;width:100%;.ag-cell-value{width:80%;}}&.ag-theme-balham .ag-cell-inline-editing{height:100%;}&.ag-disabled{background:",
           [Function],
