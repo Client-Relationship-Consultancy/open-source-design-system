@@ -5,7 +5,11 @@ import ReactSelect, { ValueType, OptionsType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
-const LabelStyle = styled.label`
+interface IlabelStyle {
+  autosizeBasedOnPlaceholder?: boolean;
+}
+
+const LabelStyle = styled.label<IlabelStyle>`
   & div[class$="placeholder"] {
     ${(props): string =>
       props.autosizeBasedOnPlaceholder
@@ -17,7 +21,6 @@ const LabelStyle = styled.label`
         : ""}
   }
 `;
-
 
 const Title = styled.div`
   margin-bottom: 0.25rem;
