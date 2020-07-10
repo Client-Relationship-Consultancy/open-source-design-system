@@ -5,14 +5,25 @@ import ReactSelect, { ValueType, OptionsType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
-
+const LabelStyle = styled.label`
+  & div[class$="placeholder"] {
+    ${(props): string =>
+      props.autosizeBasedOnPlaceholder
+        ? `
+    transform: none;
+    position: relative;
+    margin-right: calc(-100% + 8px);
+    `
+        : ""}
+  }
+`;
 
 const InlineSizer = styled.div`
   position: relative;
   height: 0;
   visibility: hidden;
   padding: 0 1.8rem;
-  opacity:0;
+  opacity: 0;
 `;
 InlineSizer.displayName = "InlineSizer";
 
@@ -118,7 +129,12 @@ class CustomSelect extends React.Component<ISelect> {
     }
     const selectId = id ? `${id}-select` : "";
     return (
-      <labed id={id} htmlFor={selectId} className={className}>
+      <LabelStyle
+        autosizeBasedOnPlaceholder={this.props.autosizeBasedOnPlaceholder}
+        id={id}
+        htmlFor={selectId}
+        className={className}
+      >
         <Title>{title}</Title>
         <ReactSelect
           id={selectId}
@@ -134,9 +150,7 @@ class CustomSelect extends React.Component<ISelect> {
           isMulti={isMulti}
           defaultValue={this.buildDefaultValue(defaultValue)}
         />
-        {/* this  */}
-        {this.props.autosizeBasedOnPlaceholder && <InlineSizer>{placeholder}</InlineSizer>}
-      </labed>
+      </LabelStyle>
     );
   }
 }
