@@ -445,7 +445,7 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                       "$$typeof": Symbol(react.forward_ref),
                                       "attrs": Array [],
                                       "componentStyle": ComponentStyle {
-                                        "componentId": "Select__Title-tukly-2",
+                                        "componentId": "Select__Title-tukly-1",
                                         "isStatic": false,
                                         "lastClassName": "c1",
                                         "rules": Array [
@@ -455,7 +455,7 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                                       "displayName": "Title",
                                       "foldedComponentIds": Array [],
                                       "render": [Function],
-                                      "styledComponentId": "Select__Title-tukly-2",
+                                      "styledComponentId": "Select__Title-tukly-1",
                                       "target": "div",
                                       "toString": [Function],
                                       "warnTooManyClasses": [Function],

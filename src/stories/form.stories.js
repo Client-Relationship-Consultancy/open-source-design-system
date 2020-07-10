@@ -160,7 +160,7 @@ storiesOf("Forms", module)
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
           isMulti={boolean("Multiple Select", false)}
-          placeholder={text("placeholder 1", "heros")}
+          placeholder={text("placeholder 1", "Heroes")}
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select
@@ -168,7 +168,7 @@ storiesOf("Forms", module)
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
           isMulti={boolean("Multiple Select", false)}
-          placeholder={text("placeholder 2", "hero superpowers")}
+          placeholder={text("placeholder 2", "Heroes superpowers")}
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select

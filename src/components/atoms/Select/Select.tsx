@@ -18,14 +18,6 @@ const LabelStyle = styled.label`
   }
 `;
 
-const InlineSizer = styled.div`
-  position: relative;
-  height: 0;
-  visibility: hidden;
-  padding: 0 1.8rem;
-  opacity: 0;
-`;
-InlineSizer.displayName = "InlineSizer";
 
 const Title = styled.div`
   margin-bottom: 0.25rem;
