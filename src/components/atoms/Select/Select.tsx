@@ -5,6 +5,17 @@ import ReactSelect, { ValueType, OptionsType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
+
+
+const InlineSizer = styled.div`
+  position: relative;
+  height: 0;
+  visibility: hidden;
+  padding: 0 1.8rem;
+  opacity:0;
+`;
+InlineSizer.displayName = "InlineSizer";
+
 const Title = styled.div`
   margin-bottom: 0.25rem;
 `;
@@ -37,6 +48,7 @@ interface ISelect {
   className?: string;
   theme?: string;
   customSort?: (a: IDropdownObject, b: IDropdownObject) => number;
+  autosizeBasedOnPlaceholder?: boolean;
 }
 
 class CustomSelect extends React.Component<ISelect> {
@@ -106,7 +118,7 @@ class CustomSelect extends React.Component<ISelect> {
     }
     const selectId = id ? `${id}-select` : "";
     return (
-      <label id={id} htmlFor={selectId} className={className}>
+      <labed id={id} htmlFor={selectId} className={className}>
         <Title>{title}</Title>
         <ReactSelect
           id={selectId}
@@ -122,7 +134,9 @@ class CustomSelect extends React.Component<ISelect> {
           isMulti={isMulti}
           defaultValue={this.buildDefaultValue(defaultValue)}
         />
-      </label>
+        {/* this  */}
+        {this.props.autosizeBasedOnPlaceholder && <InlineSizer>{placeholder}</InlineSizer>}
+      </labed>
     );
   }
 }

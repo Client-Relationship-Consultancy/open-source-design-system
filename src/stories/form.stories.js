@@ -24,6 +24,15 @@ const Flex = styled.div`
 `
 Flex.displayName = "Flex"
 
+const DivInline = styled.div`
+  & > * {
+    display: inline-block;
+    width: auto;
+    margin-right: 1rem;
+  }
+`
+DivInline.displayName = "DivInline"
+
 class ExampleFormikDateTimePicker extends React.PureComponent {
   state = {
     selectedDate: new Date(),
@@ -126,7 +135,7 @@ storiesOf("Forms", module)
       naruto: "Naruto",
       deathNote: "Death Note",
     }
-    const customSort = (a,b)=>b.label.localeCompare(a.label)
+    const customSort = (a, b) => b.label.localeCompare(a.label)
     return (
       <Select
         customSort={customSort}
@@ -135,6 +144,42 @@ storiesOf("Forms", module)
         isDisabled={boolean("Disabled", false)}
         isMulti={boolean("Multiple Select", false)}
       />
+    )
+  })
+  .add("Select options autosize based on placeholder", () => {
+    const options = {
+      fma: "Fullmetal Alchemist",
+      op: "One Piece",
+      naruto: "Naruto",
+      deathNote: "Death Note",
+    }
+    return (
+      <DivInline>
+        <Select
+          options={object("Options", options)}
+          isClearable={boolean("Clearable", true)}
+          isDisabled={boolean("Disabled", false)}
+          isMulti={boolean("Multiple Select", false)}
+          placeholder={text("placeholder 1", "heros")}
+          autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
+        />
+        <Select
+          options={object("Options", options)}
+          isClearable={boolean("Clearable", true)}
+          isDisabled={boolean("Disabled", false)}
+          isMulti={boolean("Multiple Select", false)}
+          placeholder={text("placeholder 2", "hero superpowers")}
+          autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
+        />
+        <Select
+          options={object("Options", options)}
+          isClearable={boolean("Clearable", true)}
+          isDisabled={boolean("Disabled", false)}
+          isMulti={boolean("Multiple Select", false)}
+          placeholder={text("placeholder 3", "wooow")}
+          autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
+        />
+      </DivInline>
     )
   })
   .add("Formik Date Time Picker", () => <ExampleFormikDateTimePicker />)
