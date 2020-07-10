@@ -5,6 +5,23 @@ import ReactSelect, { ValueType, OptionsType } from "react-select";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
+interface IlabelStyle {
+  autosizeBasedOnPlaceholder?: boolean;
+}
+
+const LabelStyle = styled.label<IlabelStyle>`
+  & div[class$="placeholder"] {
+    ${(props): string =>
+      props.autosizeBasedOnPlaceholder
+        ? `
+    transform: none;
+    position: relative;
+    margin-right: calc(-100% + 8px);
+    `
+        : ""}
+  }
+`;
+
 const Title = styled.div`
   margin-bottom: 0.25rem;
 `;
@@ -37,6 +54,7 @@ interface ISelect {
   className?: string;
   theme?: string;
   customSort?: (a: IDropdownObject, b: IDropdownObject) => number;
+  autosizeBasedOnPlaceholder?: boolean;
 }
 
 class CustomSelect extends React.Component<ISelect> {
@@ -106,7 +124,12 @@ class CustomSelect extends React.Component<ISelect> {
     }
     const selectId = id ? `${id}-select` : "";
     return (
-      <label id={id} htmlFor={selectId} className={className}>
+      <LabelStyle
+        autosizeBasedOnPlaceholder={this.props.autosizeBasedOnPlaceholder}
+        id={id}
+        htmlFor={selectId}
+        className={className}
+      >
         <Title>{title}</Title>
         <ReactSelect
           id={selectId}
@@ -122,7 +145,7 @@ class CustomSelect extends React.Component<ISelect> {
           isMulti={isMulti}
           defaultValue={this.buildDefaultValue(defaultValue)}
         />
-      </label>
+      </LabelStyle>
     );
   }
 }
