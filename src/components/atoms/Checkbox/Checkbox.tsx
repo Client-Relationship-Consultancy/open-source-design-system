@@ -54,7 +54,7 @@ type Props = ICheckBoxProps & React.HTMLProps<HTMLInputElement>;
 const Checkbox: React.FC<Props> = props => {
   const { id, className, name, checked, disabled, onChange, theme } = props;
   
-  const styledCheckboxClassName = className
+  const styledCheckboxClassName: string = className
   ? `Checkbox__StyledCheckbox ${className}`
   : "Checkbox__StyledCheckbox";
 
