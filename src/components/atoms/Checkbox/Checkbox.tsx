@@ -1,7 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-import { colourPalette } from "../../../brandColours"
+import React from "react";
+import styled from "styled-components";
+import { colourPalette, IColourPalette } from "../../../brandColours";
 
 const StyledCheckbox = styled.input.attrs({
   type: "checkbox",
@@ -38,17 +37,27 @@ const StyledCheckbox = styled.input.attrs({
       color: ${props => props.theme.secondary.dark.hex};
     }
   }
-`
+`;
+
 StyledCheckbox.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledCheckbox.displayName = "StyledCheckbox"
+};
 
-const Checkbox = props => {
-  const { id, className, name, checked, disabled, onChange, theme } = props
+StyledCheckbox.displayName = "StyledCheckbox";
+
+interface ICheckBoxProps {
+  theme?: IColourPalette;
+}
+
+type Props = ICheckBoxProps & React.HTMLProps<HTMLInputElement>;
+
+const Checkbox: React.FC<Props> = props => {
+  const { id, className, name, checked, disabled, onChange, theme } = props;
+  
   const styledCheckboxClassName = className
-    ? `Checkbox__StyledCheckbox ${className}`
-    : "Checkbox__StyledCheckbox"
+  ? `Checkbox__StyledCheckbox ${className}`
+  : "Checkbox__StyledCheckbox";
+
   return (
     <StyledCheckbox
       id={id}
@@ -59,22 +68,9 @@ const Checkbox = props => {
       onChange={onChange}
       theme={theme}
     />
-  )
-}
+  );
+};
 
-// Declare the display name of component for static build
-// Display name should match export name
-Checkbox.displayName = "Checkbox"
+Checkbox.displayName = "Checkbox";
 
-// Declare Checkbox propType values
-Checkbox.propTypes = {
-  id: PropTypes.string,
-  className: PropTypes.string,
-  name: PropTypes.string,
-  checked: PropTypes.bool,
-  disabled: PropTypes.bool,
-  onChange: PropTypes.func,
-  theme: PropTypes.object,
-}
-
-export default Checkbox
+export default Checkbox;

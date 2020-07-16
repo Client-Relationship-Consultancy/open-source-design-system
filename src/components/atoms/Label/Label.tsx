@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { colourPalette } from "../../../brandColours"
+import React from "react";
+import styled from "styled-components";
+import { colourPalette } from "../../../brandColours";
 
 const StyledLabel = styled.label`
   display: block;
@@ -14,7 +14,7 @@ const StyledLabel = styled.label`
 
 StyledLabel.defaultProps = {
   theme: colourPalette.examplePalette,
-}
+};
 
 StyledLabel.displayName = "StyledLabel";
 
@@ -26,7 +26,7 @@ const Label: React.FC<LabelProps> = ({className, id, htmlFor, children}) => {
       {children}
     </StyledLabel>
   );
-}
+};
 
 Label.displayName = "Label";
 

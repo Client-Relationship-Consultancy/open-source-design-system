@@ -1,6 +1,6 @@
-import React from "react"
-import styled from "styled-components"
-import { colourPalette } from "../../../brandColours"
+import React from "react";
+import styled from "styled-components";
+import { colourPalette } from "../../../brandColours";
 
 const StyledBox = styled.div`
   border-radius: 10px;
@@ -19,7 +19,7 @@ const StyledBox = styled.div`
   `}
 `;
 
-StyledBox.displayName = "StyledBox"
+StyledBox.displayName = "StyledBox";
 
 const Title = styled.div`
   background-color: ${props => props.theme.primary.main.hex};
@@ -34,7 +34,7 @@ const Title = styled.div`
 
 Title.defaultProps = {
   theme: colourPalette.examplePalette,
-}
+};
 
 Title.displayName = "Title";
 
@@ -50,7 +50,7 @@ const Body = styled.div<IBodyProps>`
 
 Body.defaultProps = {
   theme: colourPalette.examplePalette,
-}
+};
 
 Body.displayName = "Body";
 
@@ -67,7 +67,7 @@ const Box: React.FC<DivProps> = ({ title, children, id, className, onClick }) =>
       <Body flatTop={!!title}>{children}</Body>
     </StyledBox>
   )
-}
+};
 
 Box.displayName = "Box";
 
