@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Paragraph should match snapshot 1`] = `
-<Paragraph__StyledParagraph
+<StyledParagraph
   lastParagraph={false}
   theme={
     Object {
@@ -130,5 +130,5 @@ exports[`Paragraph should match snapshot 1`] = `
   }
 >
   Hello
-</Paragraph__StyledParagraph>
+</StyledParagraph>
 `;

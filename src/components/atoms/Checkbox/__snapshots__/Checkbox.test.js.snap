@@ -312,7 +312,7 @@ exports[`Input Checkbox match previous snapshot 1`] = `
             },
           ],
           "componentStyle": ComponentStyle {
-            "componentId": "Checkbox__StyledCheckbox-s241no-0",
+            "componentId": "Checkbox__StyledCheckbox-sc-8ptvpl-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -340,7 +340,7 @@ exports[`Input Checkbox match previous snapshot 1`] = `
           "displayName": "StyledCheckbox",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "Checkbox__StyledCheckbox-s241no-0",
+          "styledComponentId": "Checkbox__StyledCheckbox-sc-8ptvpl-0",
           "target": "input",
           "toString": [Function],
           "warnTooManyClasses": [Function],
