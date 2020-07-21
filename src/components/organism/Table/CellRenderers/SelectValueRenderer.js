@@ -1,5 +1,29 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styled from "styled-components"
+import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
+
+const Wrapper = styled.div`
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 25px);
+  :after {
+    content: url("${SelectArrowIcon}");
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    transition: opacity 0.15s;
+    opacity: 0;
+  }
+  :hover, :focus {
+    cursor: pointer;
+    :after {
+      opacity: 1;
+    }
+  }
+`
+
+Wrapper.displayName = "Wrapper"
 
 class SelectValueRenderer extends React.Component {
   renderValue = () => {
@@ -11,7 +35,7 @@ class SelectValueRenderer extends React.Component {
     return fullOption ? fullOption.label : this.props.value
   }
 
-  render = () => <div>{this.renderValue()}</div>
+  render = () => <Wrapper>{this.renderValue()}</Wrapper>
 }
 
 SelectValueRenderer.displayName = "SelectValueRenderer"
