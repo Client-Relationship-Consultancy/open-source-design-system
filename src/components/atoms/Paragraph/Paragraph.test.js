@@ -16,8 +16,8 @@ describe("Paragraph", () => {
   })
   it("should by default not be the last paragraph with the correct styling", () => {
     const component = mount(<Paragraph>Hello</Paragraph>)
-    expect(component.props().lastParagraph).toEqual(false)
     expect(component).toHaveStyleRule("margin", "0 0 0.5rem")
+    expect(component.find("StyledParagraph").props().lastParagraph).toEqual(false)
   })
   it("should be the last paragraph with the correct styling", () => {
     const component = mount(<Paragraph lastParagraph>Hello</Paragraph>)

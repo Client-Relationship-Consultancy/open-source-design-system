@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components"
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import AnimateHeight from "react-animate-height";
 import { colourPalette } from "../../../brandColours"
 
 import Icon from "../../atoms/Icon"
@@ -83,7 +84,9 @@ class Panel extends React.PureComponent<IPanelProps, IPanelState> {
                     {this.props.label}
                     <ArrowIcon name="chevron-down" size="1x" flipped={this.state.open} />
                 </PanelButton>
-                {this.state.open && this.props.children}
+                <AnimateHeight height={this.state.open ? "auto" : 0} duration={250}>
+                    {this.props.children}
+                </AnimateHeight>
             </>
         );
     }

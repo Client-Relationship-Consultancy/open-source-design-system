@@ -20,17 +20,13 @@ StyledParagraph.defaultProps = {
 StyledParagraph.displayName = "StyledParagraph";
 
 interface IParagraphProps {
-  lastParagraph: boolean;
+  lastParagraph?: boolean;
 }
 
 type Props = IParagraphProps & React.HTMLProps<HTMLParagraphElement>;
 
-const Paragraph: React.FC<Props> = ({lastParagraph, children}) => {
+const Paragraph: React.FC<Props> = ({lastParagraph = false, children}) => {
   return <StyledParagraph lastParagraph={lastParagraph}>{children}</StyledParagraph>
-};
-
-Paragraph.defaultProps = {
-  lastParagraph: false,
 };
 
 Paragraph.displayName = "Paragraph";

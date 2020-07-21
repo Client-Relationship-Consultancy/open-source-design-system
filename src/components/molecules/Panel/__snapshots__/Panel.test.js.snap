@@ -141,10 +141,37 @@ exports[`Panel should match the snapshot when icon passed 1`] = `
       size="1x"
     />
   </PanelButton>
+  <AnimateHeight
+    animateOpacity={false}
+    animationStateClasses={
+      Object {
+        "animating": "rah-animating",
+        "animatingDown": "rah-animating--down",
+        "animatingToHeightAuto": "rah-animating--to-height-auto",
+        "animatingToHeightSpecific": "rah-animating--to-height-specific",
+        "animatingToHeightZero": "rah-animating--to-height-zero",
+        "animatingUp": "rah-animating--up",
+        "static": "rah-static",
+        "staticHeightAuto": "rah-static--height-auto",
+        "staticHeightSpecific": "rah-static--height-specific",
+        "staticHeightZero": "rah-static--height-zero",
+      }
+    }
+    applyInlineTransitions={true}
+    delay={0}
+    duration={250}
+    easing="ease"
+    height={0}
+    style={Object {}}
+  >
+    <p>
+      Mock Content
+    </p>
+  </AnimateHeight>
 </Fragment>
 `;
 
-exports[`Panel should match the snapshot when no children or icon passed 1`] = `
+exports[`Panel should match the snapshot when no icon passed 1`] = `
 <Fragment>
   <PanelButton
     onClick={[Function]}
@@ -281,5 +308,32 @@ exports[`Panel should match the snapshot when no children or icon passed 1`] = `
       size="1x"
     />
   </PanelButton>
+  <AnimateHeight
+    animateOpacity={false}
+    animationStateClasses={
+      Object {
+        "animating": "rah-animating",
+        "animatingDown": "rah-animating--down",
+        "animatingToHeightAuto": "rah-animating--to-height-auto",
+        "animatingToHeightSpecific": "rah-animating--to-height-specific",
+        "animatingToHeightZero": "rah-animating--to-height-zero",
+        "animatingUp": "rah-animating--up",
+        "static": "rah-static",
+        "staticHeightAuto": "rah-static--height-auto",
+        "staticHeightSpecific": "rah-static--height-specific",
+        "staticHeightZero": "rah-static--height-zero",
+      }
+    }
+    applyInlineTransitions={true}
+    delay={0}
+    duration={250}
+    easing="ease"
+    height={0}
+    style={Object {}}
+  >
+    <p>
+      Mock Content
+    </p>
+  </AnimateHeight>
 </Fragment>
 `;

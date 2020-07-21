@@ -9,23 +9,23 @@ describe("Panel", () => {
         defaultOpen: false,
         label: "open/close",
     }
-    it("should match the snapshot when no children or icon passed", () => {
-        const componentWithoutChild = shallow(<Panel {...commonProps}/>)
+    const childProp = <p>Mock Content</p>;
+    
+    it("should match the snapshot when no icon passed", () => {
+        const componentWithoutChild = shallow(<Panel {...commonProps}>{childProp}</Panel>)
         const tree = toJson(componentWithoutChild)
         expect(tree).toMatchSnapshot()
     })
     it("should match the snapshot when icon passed", () => {
         const customProps = {...commonProps, icon: "check"}
-        const componentWithoutChild = shallow(<Panel {...customProps}/>)
+        const componentWithoutChild = shallow(<Panel {...customProps}>{childProp}</Panel>)
         const tree = toJson(componentWithoutChild)
         expect(tree).toMatchSnapshot()
     })
-    it("should show child content when the button is clicked", () => {
+    it("should open when the button is clicked", () => {
         const customProps = {...commonProps, icon: "check"}
-        const childProp = <p>Mock Content</p>;
         const componentWithChild = shallow(<Panel {...customProps}>{childProp}</Panel>)
         expect(componentWithChild.state().open).toEqual(false)
-        expect(componentWithChild.find("p").exists()).toEqual(false)
         componentWithChild.find("PanelButton").simulate("click")
         expect(componentWithChild.state().open).toEqual(true)
         expect(componentWithChild.find("p").exists()).toEqual(true)
