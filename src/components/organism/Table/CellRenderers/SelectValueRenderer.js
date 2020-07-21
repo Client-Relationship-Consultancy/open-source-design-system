@@ -6,7 +6,7 @@ import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
 export const Wrapper = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
-  width: calc(100% - 25px);
+  width: calc(100% - 20px);
   :after {
     content: url("${SelectArrowIcon}");
     position: absolute;
