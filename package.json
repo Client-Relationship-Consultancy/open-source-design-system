@@ -1,6 +1,6 @@
 {
   "name": "@crcdevops/open-source-design-system",
-  "version": "1.5.1", 
+  "version": "1.5.2",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
@@ -17,6 +17,7 @@
     "jest": "^25.2.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
+    "react-animate-height": "^2.0.22",
     "react-datepicker": "^2.1.0",
     "react-dom": "^16.6.3",
     "react-modal": "^3.8.1",
