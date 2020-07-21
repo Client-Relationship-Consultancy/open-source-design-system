@@ -27,9 +27,9 @@ describe("SelectValueRenderer", () => {
     expect(component.instance().renderValue()).toEqual("girls")
   })
 
-  it("should render the given falsy value", () => {
+  it("should render a string with a space when given a falsy value to ensure the cursor is still a pointer on hover", () => {
     const component = shallow(<SelectValueRenderer {...commonProps} value={null} />)
-    expect(component.instance().renderValue()).toBeFalsy()
+    expect(component.instance().renderValue()).toEqual(" ")
   })
 
   it("should render the label of the given value from the options", () => {

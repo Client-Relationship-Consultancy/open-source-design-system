@@ -4,6 +4,7 @@ import styled from "styled-components"
 import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
 
 export const Wrapper = styled.div`
+  white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 20px);
@@ -32,7 +33,7 @@ class SelectValueRenderer extends React.Component {
       this.props.colDef.cellEditorParams.values &&
       this.props.colDef.cellEditorParams.values.find(option => option.value === this.props.value)
 
-    return fullOption ? fullOption.label : this.props.value
+    return (fullOption ? fullOption.label : this.props.value) || " "
   }
 
   render = () => <Wrapper>{this.renderValue()}</Wrapper>
