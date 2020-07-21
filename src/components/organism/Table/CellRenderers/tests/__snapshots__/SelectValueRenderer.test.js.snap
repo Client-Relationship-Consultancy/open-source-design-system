@@ -1,7 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`SelectValueRenderer should match snapshot 1`] = `
-<div>
+<Wrapper>
   girls
-</div>
+</Wrapper>
+`;
+
+exports[`Wrapper should match snapshot 1`] = `
+.c0 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 25px);
+}
+
+.c0:after {
+  content: url(".styledComponentId");
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  -webkit-transition: opacity 0.15s;
+  transition: opacity 0.15s;
+  opacity: 0;
+}
+
+.c0:hover,
+.c0:focus {
+  cursor: pointer;
+}
+
+.c0:hover:after,
+.c0:focus:after {
+  opacity: 1;
+}
+
+<Wrapper>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "overflow:hidden;text-overflow:ellipsis;width:calc(100% - 25px);:after{content:url(\\"",
+            ".styledComponentId",
+            "\\");position:absolute;top:0.55rem;right:0.55rem;transition:opacity 0.15s;opacity:0;}:hover,:focus{cursor:pointer;:after{opacity:1;}}",
+          ],
+        },
+        "displayName": "Wrapper",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</Wrapper>
 `;

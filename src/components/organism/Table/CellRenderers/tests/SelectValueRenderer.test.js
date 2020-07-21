@@ -1,7 +1,14 @@
 import React from "react"
-import { shallow } from "enzyme"
+import { shallow, mount } from "enzyme"
 
-import SelectValueRenderer from "../SelectValueRenderer"
+import SelectValueRenderer, {Wrapper} from "../SelectValueRenderer"
+
+describe("Wrapper", () => {
+  it("should match snapshot", () => {
+    const component = mount(<Wrapper />)
+    expect(component).toMatchSnapshot()
+  })
+})
 
 describe("SelectValueRenderer", () => {
   const commonProps = {
