@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 25px);
