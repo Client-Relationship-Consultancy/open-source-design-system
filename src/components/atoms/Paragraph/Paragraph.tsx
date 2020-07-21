@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { colourPalette } from "../../../brandColours";
 
 interface IStyledParagraph {
-  lastParagraph?: boolean;
+  lastParagraph: boolean;
 }
 
 const StyledParagraph = styled.p<IStyledParagraph>`
@@ -25,12 +25,8 @@ interface IParagraphProps {
 
 type Props = IParagraphProps & React.HTMLProps<HTMLParagraphElement>;
 
-const Paragraph: React.FC<Props> = ({lastParagraph, children}) => {
+const Paragraph: React.FC<Props> = ({lastParagraph = false, children}) => {
   return <StyledParagraph lastParagraph={lastParagraph}>{children}</StyledParagraph>
-};
-
-Paragraph.defaultProps = {
-  lastParagraph: false,
 };
 
 Paragraph.displayName = "Paragraph";
