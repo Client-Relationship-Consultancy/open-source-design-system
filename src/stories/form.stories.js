@@ -25,10 +25,11 @@ const Flex = styled.div`
 Flex.displayName = "Flex"
 
 const DivInline = styled.div`
-  & > * {
-    display: inline-block;
-    width: auto;
-    margin-right: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > * + * {
+    margin-left: 0.5rem;
   }
 `
 DivInline.displayName = "DivInline"
@@ -154,8 +155,9 @@ storiesOf("Forms", module)
       deathNote: "Death Note",
     }
     return (
-      <DivInline>
+      <DivInline id="test">
         <Select
+          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
@@ -164,6 +166,7 @@ storiesOf("Forms", module)
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select
+          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
@@ -172,6 +175,7 @@ storiesOf("Forms", module)
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select
+          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
