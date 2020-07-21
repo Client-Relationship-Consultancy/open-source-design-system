@@ -10,7 +10,7 @@ exports[`Wrapper should match snapshot 1`] = `
 .c0 {
   overflow: hidden;
   text-overflow: ellipsis;
-  width: calc(100% - 25px);
+  width: calc(100% - 20px);
 }
 
 .c0:after {
@@ -44,7 +44,7 @@ exports[`Wrapper should match snapshot 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "overflow:hidden;text-overflow:ellipsis;width:calc(100% - 25px);:after{content:url(\\"",
+            "overflow:hidden;text-overflow:ellipsis;width:calc(100% - 20px);:after{content:url(\\"",
             ".styledComponentId",
             "\\");position:absolute;top:0.55rem;right:0.55rem;transition:opacity 0.15s;opacity:0;}:hover,:focus{cursor:pointer;:after{opacity:1;}}",
           ],
