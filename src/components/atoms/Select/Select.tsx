@@ -11,7 +11,7 @@ interface IlabelStyle {
   width?: number;
 }
 
-const LabelStyle = styled.label<IlabelStyle>`
+export const LabelStyle = styled.label<IlabelStyle>`
   width: ${(props): string => (props.width ? `${props.width}px` : "auto")};
   div[class$="placeholder"] {
     ${(props): string =>
@@ -64,7 +64,7 @@ interface IState {
   componentWidth?: number;
 }
 
-class CustomSelect extends React.Component<ISelect, IState> {
+export class CustomSelect extends React.Component<ISelect, IState> {
   static displayName: string;
 
   static defaultProps: { [index: string]: any };
@@ -148,7 +148,7 @@ class CustomSelect extends React.Component<ISelect, IState> {
         className={className}
         width={this.state.componentWidth}
       >
-        <SizeMe>
+        <SizeMe noPlaceholder>
           {({ size }) => {
             if (this.props.autosizeBasedOnPlaceholder) this.setWidth(size.width);
             return (
