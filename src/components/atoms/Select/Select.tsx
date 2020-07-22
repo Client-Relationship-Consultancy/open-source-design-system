@@ -39,7 +39,7 @@ interface IDropdownObject {
   label: string;
 }
 
-interface ISelect {
+interface IProps {
   title?: string;
   id?: string;
   name?: string;
@@ -64,7 +64,7 @@ interface IState {
   componentWidth?: number;
 }
 
-export class CustomSelect extends React.Component<ISelect, IState> {
+export class CustomSelect extends React.Component<IProps, IState> {
   static displayName: string;
 
   static defaultProps: { [index: string]: any };

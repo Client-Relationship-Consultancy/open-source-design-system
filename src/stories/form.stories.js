@@ -155,9 +155,8 @@ storiesOf("Forms", module)
       deathNote: "Death Note",
     }
     return (
-      <DivInline id="test">
+      <DivInline>
         <Select
-          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
@@ -166,7 +165,6 @@ storiesOf("Forms", module)
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select
-          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
@@ -175,7 +173,6 @@ storiesOf("Forms", module)
           autosizeBasedOnPlaceholder={boolean("autosizeBasedOnPlaceholder", true)}
         />
         <Select
-          hide={boolean("Hide", true)}
           options={object("Options", options)}
           isClearable={boolean("Clearable", true)}
           isDisabled={boolean("Disabled", false)}
