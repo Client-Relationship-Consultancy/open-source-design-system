@@ -25,10 +25,11 @@ const Flex = styled.div`
 Flex.displayName = "Flex"
 
 const DivInline = styled.div`
-  & > * {
-    display: inline-block;
-    width: auto;
-    margin-right: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  > * + * {
+    margin-left: 0.5rem;
   }
 `
 DivInline.displayName = "DivInline"

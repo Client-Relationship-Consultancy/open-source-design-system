@@ -2,15 +2,18 @@ import React from "react";
 import styled, { withTheme } from "styled-components";
 // Using react-select, read more here. https://github.com/JedWatson/react-select
 import ReactSelect, { ValueType, OptionsType } from "react-select";
+import { SizeMe } from "react-sizeme";
 import { colourPalette } from "../../../brandColours";
 import styles from "./SelectStyles";
 
 interface IlabelStyle {
   autosizeBasedOnPlaceholder?: boolean;
+  width?: number;
 }
 
-const LabelStyle = styled.label<IlabelStyle>`
-  & div[class$="placeholder"] {
+export const LabelStyle = styled.label<IlabelStyle>`
+  width: ${(props): string => (props.width ? `${props.width}px` : "auto")};
+  div[class$="placeholder"] {
     ${(props): string =>
       props.autosizeBasedOnPlaceholder
         ? `
@@ -36,7 +39,7 @@ interface IDropdownObject {
   label: string;
 }
 
-interface ISelect {
+interface IProps {
   title?: string;
   id?: string;
   name?: string;
@@ -57,10 +60,18 @@ interface ISelect {
   autosizeBasedOnPlaceholder?: boolean;
 }
 
-class CustomSelect extends React.Component<ISelect> {
+interface IState {
+  componentWidth?: number;
+}
+
+export class CustomSelect extends React.Component<IProps, IState> {
   static displayName: string;
 
   static defaultProps: { [index: string]: any };
+
+  state: IState = {
+    componentWidth: undefined,
+  };
 
   // Create function to convert given options object to the correct format (objects within an array)
   renderOptions = (optionsObject: IOption): IDropdownObject[] => {
@@ -102,6 +113,12 @@ class CustomSelect extends React.Component<ISelect> {
     }
   };
 
+  setWidth = (width: number | null) => {
+    if (width && width > 0 && !this.state.componentWidth) {
+      this.setState({ componentWidth: width });
+    }
+  };
+
   render() {
     const {
       title,
@@ -129,22 +146,32 @@ class CustomSelect extends React.Component<ISelect> {
         id={id}
         htmlFor={selectId}
         className={className}
+        width={this.state.componentWidth}
       >
-        <Title>{title}</Title>
-        <ReactSelect
-          id={selectId}
-          styles={styles(this.props.theme)}
-          placeholder={placeholder}
-          name={name}
-          onBlur={onBlur}
-          value={filteredValue || value}
-          options={this.renderOptions(options)}
-          onChange={this.onChange}
-          isDisabled={isDisabled}
-          isClearable={isClearable}
-          isMulti={isMulti}
-          defaultValue={this.buildDefaultValue(defaultValue)}
-        />
+        <SizeMe noPlaceholder>
+          {({ size }) => {
+            if (this.props.autosizeBasedOnPlaceholder) this.setWidth(size.width);
+            return (
+              <>
+                <Title>{title}</Title>
+                <ReactSelect
+                  id={selectId}
+                  styles={styles(this.props.theme)}
+                  placeholder={placeholder}
+                  name={name}
+                  onBlur={onBlur}
+                  value={filteredValue || value}
+                  options={this.renderOptions(options)}
+                  onChange={this.onChange}
+                  isDisabled={isDisabled}
+                  isClearable={isClearable}
+                  isMulti={isMulti}
+                  defaultValue={this.buildDefaultValue(defaultValue)}
+                />
+              </>
+            );
+          }}
+        </SizeMe>
       </LabelStyle>
     );
   }
