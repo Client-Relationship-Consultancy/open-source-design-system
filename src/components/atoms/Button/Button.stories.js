@@ -5,6 +5,7 @@ import { action } from "@storybook/addon-actions"
 import { text, number, boolean, select } from "@storybook/addon-knobs"
 
 import { Button } from "../../../index"
+import NewButton from "./Buttons"
 
 const stories = storiesOf("Buttons", module)
 
@@ -27,4 +28,16 @@ stories.add("Save icon button", () => (
   >
     {text("Button Description", "Save")}
   </Button>
+))
+
+const buttonSizes = {
+  Small: "small",
+  Medium: "medium",
+  Large: "large",
+}
+
+stories.add("Button styles", () => (
+  <NewButton size={select("Size", buttonSizes, "medium")}>
+    {text("Button Description", "Save")}
+  </NewButton>
 ))
