@@ -11,14 +11,16 @@ describe("<CheckRenderer />", () => {
 
   it("should render a check if the value is true", () => {
     const component = shallow(<CheckRenderer value />)
-    expect(component.find("Icon").props().name).toEqual("check")
-    expect(component.find("Icon").props().color).toEqual("primary")
+    const iconProps = component.find("Icon").props()
+    expect(iconProps.name).toEqual("check")
+    expect(iconProps.color).toEqual("primary")
   })
 
   it("should render a cross/times if the value is false", () => {
     const component = shallow(<CheckRenderer value={false} />)
-    expect(component.find("Icon").props().name).toEqual("times")
-    expect(component.find("Icon").props().color).toEqual("error")
+    const iconProps = component.find("Icon").props()
+    expect(iconProps.name).toEqual("times")
+    expect(iconProps.color).toEqual("error")
   })
 
   it("should render nothing if the value is not a true or false", () => {
