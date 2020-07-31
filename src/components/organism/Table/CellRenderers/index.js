@@ -5,6 +5,7 @@ import SelectRenderer from "./SelectRenderer"
 import TimezoneRenderer from "./TimezoneRenderer"
 import DefaultTextEditor from "./DefaultTextEditor"
 import SelectValueRenderer from "./SelectValueRenderer"
+import CheckRenderer from "./CheckRenderer"
 
 export default {
   ActionCellRenderer,
@@ -14,4 +15,5 @@ export default {
   TimezoneRenderer,
   DefaultTextEditor,
   SelectValueRenderer,
+  CheckRenderer,
 }

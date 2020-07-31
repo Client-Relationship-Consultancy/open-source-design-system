@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CheckRenderer /> should match snapshot 1`] = `
+<IconWrapper>
+  <Icon
+    color="primary"
+    name="check"
+  />
+</IconWrapper>
+`;
+
+exports[`<IconWrapper /> should match snapshot 1`] = `
+.c0 {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+<IconWrapper>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "CheckRenderer__IconWrapper-sc-1wvjnyh-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "width:100%;display:flex;justify-content:center;align-items:center;font-size:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "IconWrapper",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "CheckRenderer__IconWrapper-sc-1wvjnyh-0",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</IconWrapper>
+`;
