@@ -19,6 +19,21 @@ storiesOf("Table", module)
         field: "mandatory",
         cellRenderer: "toggleRenderer",
       },
+      {
+        headerName: "Confirmed",
+        field: "confirmed",
+        cellRenderer: "checkRenderer",
+        width: 100,
+      },
+      {
+        headerName: "Attending",
+        field: "attending",
+        width: 100,
+        cellRenderer: "checkRenderer",
+        cellRendererParams: {
+          size: "1rem",
+        },
+      },
       { headerName: "Default", field: "default" },
       { headerName: "Type", field: "type" },
     ]
@@ -32,6 +47,8 @@ storiesOf("Table", module)
         type: "short text",
         highlighted: `${text("Highlight 1st Row Color", "#8BC53F")}`,
         key: 1,
+        confirmed: true,
+        attending: true,
       },
       {
         name: "Survey Name",
@@ -40,6 +57,8 @@ storiesOf("Table", module)
         default: "Epic survey",
         type: "short text",
         key: 2,
+        confirmed: false,
+        attending: true,
       },
       {
         name: "Income",
@@ -48,6 +67,7 @@ storiesOf("Table", module)
         default: 200000,
         type: "number",
         key: 3,
+        attending: false,
       },
     ]
 

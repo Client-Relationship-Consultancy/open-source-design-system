@@ -5,7 +5,7 @@ import { AgGridReact } from "ag-grid-react"
 import "jest-styled-components"
 import { colourPalette } from "../../../brandColours"
 
-import { TableWithTheme, gridOptions, Container } from "./Table"
+import { TableWithTheme, gridOptions, Container, frameworkComponents } from "./Table"
 
 const columns = [
   {
@@ -226,5 +226,11 @@ describe("Container component", () => {
     expect(component).toHaveStyleRule("background", "#ECECEC", {
       modifier: "&.ag-disabled",
     })
+  })
+})
+
+describe("Table frameworkComponents", () => {
+  it("should match snapshot", () => {
+    expect(frameworkComponents).toMatchSnapshot()
   })
 })
