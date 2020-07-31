@@ -21,7 +21,7 @@ export interface IProps {
 }
 
 const CheckRenderer: React.FC<IProps> = ({ value, size }: IProps) => {
-  if (value === true || value === false) {
+  if (typeof value === "boolean") {
     return (
       <IconWrapper size={size}>
         {value === true ? (
