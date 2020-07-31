@@ -15,7 +15,7 @@ export const IconWrapper = styled.div<IIconWrapper>`
 `;
 IconWrapper.displayName = "IconWrapper";
 
-interface IProps {
+export interface IProps {
   value: boolean;
   size?: string;
 }
