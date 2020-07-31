@@ -10,10 +10,10 @@ import CheckRenderer from "./CheckRenderer"
 export default {
   ActionCellRenderer,
   CheckboxRenderer,
-  ToggleRenderer,
-  SelectRenderer,
-  TimezoneRenderer,
-  DefaultTextEditor,
-  SelectValueRenderer,
   CheckRenderer,
+  DefaultTextEditor,
+  SelectRenderer,
+  SelectValueRenderer,
+  TimezoneRenderer,
+  ToggleRenderer,
 }

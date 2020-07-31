@@ -50,13 +50,13 @@ AgGridReact.prototype.areEquivalent = (a, b) => a === b
 export const frameworkComponents = {
   actionCellRenderer: CellRenderers.ActionCellRenderer,
   checkboxRenderer: CellRenderers.CheckboxRenderer,
-  toggleRenderer: CellRenderers.ToggleRenderer,
-  selectRenderer: CellRenderers.SelectRenderer,
-  timezoneRenderer: CellRenderers.TimezoneRenderer,
-  tooltipHeader: HeaderComponents.TooltipHeader,
-  defaultTextEditor: CellRenderers.DefaultTextEditor,
-  selectValueRenderer: CellRenderers.SelectValueRenderer,
   checkRenderer: CellRenderers.CheckRenderer,
+  defaultTextEditor: CellRenderers.DefaultTextEditor,
+  selectRenderer: CellRenderers.SelectRenderer,
+  selectValueRenderer: CellRenderers.SelectValueRenderer,
+  timezoneRenderer: CellRenderers.TimezoneRenderer,
+  toggleRenderer: CellRenderers.ToggleRenderer,
+  tooltipHeader: HeaderComponents.TooltipHeader,
 }
 
 export const gridOptions = {
