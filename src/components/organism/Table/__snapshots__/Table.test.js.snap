@@ -31,6 +31,20 @@ exports[`Container component should snapshot the container 1`] = `
 </StyledComponent>
 `;
 
+exports[`Table frameworkComponents should match snapshot 1`] = `
+Object {
+  "actionCellRenderer": [Function],
+  "checkRenderer": [Function],
+  "checkboxRenderer": [Function],
+  "defaultTextEditor": [Function],
+  "selectRenderer": [Function],
+  "selectValueRenderer": [Function],
+  "timezoneRenderer": [Function],
+  "toggleRenderer": [Function],
+  "tooltipHeader": [Function],
+}
+`;
+
 exports[`TableWithTheme Component Testing Should match the snapshot of <TableWithTheme /> 1`] = `
 <Table__Container
   className="ag-theme-balham"
@@ -586,6 +600,7 @@ exports[`TableWithTheme Component Testing Should match the snapshot of <TableWit
     frameworkComponents={
       Object {
         "actionCellRenderer": [Function],
+        "checkRenderer": [Function],
         "checkboxRenderer": [Function],
         "defaultTextEditor": [Function],
         "selectRenderer": [Function],
@@ -1333,6 +1348,7 @@ exports[`TableWithTheme Component Testing highlights rows if specified 1`] = `
     frameworkComponents={
       Object {
         "actionCellRenderer": [Function],
+        "checkRenderer": [Function],
         "checkboxRenderer": [Function],
         "defaultTextEditor": [Function],
         "selectRenderer": [Function],

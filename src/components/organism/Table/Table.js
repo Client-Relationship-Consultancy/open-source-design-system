@@ -19,7 +19,7 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     .ag-react-container {
-      width:100%;
+      width: 100%;
     }
   }
   .ag-cell-wrapper {
@@ -47,7 +47,7 @@ export const Container = styled.div`
 
 AgGridReact.prototype.areEquivalent = (a, b) => a === b
 
-const frameworkComponents = {
+export const frameworkComponents = {
   actionCellRenderer: CellRenderers.ActionCellRenderer,
   checkboxRenderer: CellRenderers.CheckboxRenderer,
   toggleRenderer: CellRenderers.ToggleRenderer,
@@ -56,6 +56,7 @@ const frameworkComponents = {
   tooltipHeader: HeaderComponents.TooltipHeader,
   defaultTextEditor: CellRenderers.DefaultTextEditor,
   selectValueRenderer: CellRenderers.SelectValueRenderer,
+  checkRenderer: CellRenderers.CheckRenderer,
 }
 
 export const gridOptions = {
