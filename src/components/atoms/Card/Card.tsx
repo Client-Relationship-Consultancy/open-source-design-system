@@ -7,16 +7,16 @@ interface ICardCollapsibleContainerProps {
 }
 
 interface ICardBodyProps {
-  bodyPadding?: string;
+  bodyPadding?: boolean;
 }
 
 interface ICardContainerProps extends ICardCollapsibleContainerProps {
-  boxShadow?: string;
+  boxShadow?: boolean;
 }
 
 interface ICardProps extends ICardContainerProps, ICardBodyProps {
-  title: string | JSX.Element;
-  footer?: JSX.Element;
+  title?: string | React.ReactNode;
+  footer?: React.ReactNode;
   id?: string;
   className?: string;
 }
