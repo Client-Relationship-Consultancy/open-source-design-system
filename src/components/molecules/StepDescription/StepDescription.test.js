@@ -21,8 +21,7 @@ describe("StepDescription Component Testing", () => {
     const componentStyleWithProp = mount(
       <StepDescription steps={steps} stepTopFlexAlignment="center" />,
     )
-
-    expect(componentStyleWithProp).toMatchSnapshot()
+    expect(componentStyleWithProp.find("StepWrapper")).toHaveStyleRule("align-items", "center")
   })
 
   it("should match snapshot for styling", () => {
