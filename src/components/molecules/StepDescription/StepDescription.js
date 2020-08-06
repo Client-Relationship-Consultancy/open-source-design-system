@@ -5,7 +5,7 @@ import { colourPalette } from "../../../brandColours"
 
 const StepWrapper = styled.div`
   display: flex;
-  align-items: center;
+  align-items: ${props => props.stepTopFlexAlignment || "flex-start"};
   margin: 0.5rem 0;
   flex: 1 1 0;
 `
@@ -55,15 +55,17 @@ const StepsContainer = styled.div`
 StepsContainer.displayName = "StepsContainer"
 
 class StepDescription extends React.PureComponent {
-  renderTotalSteps = stepNames =>
-    stepNames.map(step => (
+  renderTotalSteps = stepNames => {
+    const { stepTopFlexAlignment } = this.props
+    return stepNames.map(step => (
       <React.Fragment key={step.order}>
-        <StepWrapper>
+        <StepWrapper stepTopFlexAlignment={stepTopFlexAlignment}>
           <StepNumber>{step.order}</StepNumber>
           <StepName>{step.text}</StepName>
         </StepWrapper>
       </React.Fragment>
     ))
+  }
 
   render() {
     const { steps, id, className } = this.props
@@ -78,6 +80,7 @@ class StepDescription extends React.PureComponent {
 StepDescription.displayName = "StepDescription"
 StepDescription.propTypes = {
   steps: PropTypes.array,
+  stepTopFlexAlignment: PropTypes.string,
   id: PropTypes.string,
   className: PropTypes.string,
 }
