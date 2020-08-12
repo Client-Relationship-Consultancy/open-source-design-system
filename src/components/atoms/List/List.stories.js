@@ -12,8 +12,6 @@ import Paragraph from "../Paragraph"
 const stories = storiesOf("List", module)
 
 stories.add("Basic List", () => {
-  const options = ["ul", "ol"]
-
   return (
     <>
       <Heading level={3}>A list</Heading>
@@ -22,7 +20,23 @@ stories.add("Basic List", () => {
         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
         laboris nisi ut aliquip ex ea commodo consequat.
       </Paragraph>
-      <List listType={select("List type", options, "ul")}>
+
+      <h3>Default (unordered) list</h3>
+      <List>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+      </List>
+
+      <h3>Unordered list</h3>
+      <List listType="ul">
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+      </List>
+
+      <h3>Ordered list</h3>
+      <List listType="ol">
         <li>List 1</li>
         <li>List 2</li>
         <li>List 3</li>
