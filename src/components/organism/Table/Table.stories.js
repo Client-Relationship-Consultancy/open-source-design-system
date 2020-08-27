@@ -301,6 +301,7 @@ storiesOf("Table", module)
         displayDeleteButton
         columns={columns}
         rows={rows}
+        stopEditingWhenGridLosesFocus
       />
     )
   })

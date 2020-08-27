@@ -3,7 +3,7 @@
 exports[`Select match last snapshot 1`] = `
 <StateManager
   defaultInputValue=""
-  defaultMenuIsOpen={false}
+  defaultMenuIsOpen={true}
   defaultValue={null}
   id="SelectEditor"
   isClearable={true}
