@@ -37,7 +37,7 @@ export class Select extends React.PureComponent {
       isDisabled={this.props.isDisabled}
       isClearable={this.props.isClearable}
       isMulti={false}
-      menuIsOpen
+      defaultMenuIsOpen
     />
   )
 }
