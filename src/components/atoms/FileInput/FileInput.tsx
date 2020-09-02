@@ -10,7 +10,7 @@ interface IContainer {
   selectedFile: File | null;
 }
 
-export const Container = styled.div<IContainer>`
+const Container = styled.div<IContainer>`
   display: flex;
   align-items: center;
   .inputFile {
