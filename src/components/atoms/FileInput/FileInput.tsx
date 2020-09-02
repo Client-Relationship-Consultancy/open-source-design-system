@@ -5,12 +5,6 @@
 import React from "react";
 import styled from "styled-components";
 import Button from "../Button";
-import { InputType } from "zlib";
-
-/*
-  WANT TO CHECK IF THIS IS NEEDED
-import { colourPalette } from "../../../brandColours";
-*/
 
 interface IContainer {
   selectedFile: File | null;
@@ -30,17 +24,10 @@ export const Container = styled.div<IContainer>`
   button {
     pointer-events: ${props => (props.selectedFile ? "auto" : "none")};
   }
-  .inputFile + label {
+  label {
     cursor: pointer;
   }
 `;
-
-/*
-  WANT TO CHECK IF THIS IS NEEDED
-  Container.defaultProps = {
-    theme: colourPalette.examplePalette,
-  };
-*/
 
 Container.displayName = "Container";
 
@@ -51,16 +38,11 @@ const ButtonContainer = styled.div`
 
 ButtonContainer.displayName = "ButtonContainer";
 
-/*
-  NEEDS REVIEW AFTER EVERYTHING IN
-*/
-interface IProps {
+interface IProps extends React.HTMLProps<HTMLInputElement> {
   chooseFileMessage: string;
   uploadMessage: string;
-  handleUpload: (file: File | null) => void; // will this work with defaultprop????
-  theme: string; //hmmmm. is there a type that we can use here to be more specific?
-  id?: string; //needed?
-  className?: string; //needed?
+  handleUpload: (file: File | null) => void;
+  theme: string;
 }
 
 interface IState {
@@ -79,16 +61,16 @@ class FileInput extends React.PureComponent<IProps, IState> {
 
   state: IState = { selectedFile: null };
 
-  fileChangedHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+  fileChangedHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     const file = event.target.files ? event.target.files[0] : null;
     this.setState({ selectedFile: file });
   };
 
-  resetFile = () => this.setState({ selectedFile: null });
+  resetFile = (): void => this.setState({ selectedFile: null });
 
-  handleUpload = () => this.props.handleUpload(this.state.selectedFile);
+  handleUpload = (): void => this.props.handleUpload(this.state.selectedFile);
 
-  render() {
+  render(): JSX.Element {
     return (
       <Container
         selectedFile={this.state.selectedFile}

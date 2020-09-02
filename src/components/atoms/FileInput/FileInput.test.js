@@ -31,18 +31,30 @@ describe("FileInput test", () => {
     component.instance().resetFile()
     expect(component.instance().state).toEqual({ selectedFile: null })
   })
+
+  it("doesn't change the selectedFile in the state if event contains no files", () => {
+    expect(component.instance().state).toEqual({ selectedFile: null })
+    component.instance().fileChangedHandler({ target: {} })
+    expect(component.instance().state).toEqual({ selectedFile: null })
+  })
+
+  it("uses empty handleUpload function when not given one as a prop", () => {
+    const componentWithoutHandleUpload = shallow(<FileInput />)
+    const emptyReturn = componentWithoutHandleUpload.instance().handleUpload()
+    expect(emptyReturn).toEqual(undefined)
+  })
 })
 
 describe("Container", () => {
   it("has pointer events auto", () => {
-    const container = mount(<Container upload />)
+    const container = mount(<Container selectedFile />)
     expect(container).toHaveStyleRule("pointer-events", "auto", {
       modifier: "button",
     })
   })
 
   it("has pointer events set to none", () => {
-    const container = mount(<Container upload={false} />)
+    const container = mount(<Container selectedFile={null} />)
     expect(container).toHaveStyleRule("pointer-events", "none", {
       modifier: "button",
     })

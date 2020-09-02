@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileInput test match last snapshot 1`] = `
-<FileInput__Container
-  upload={null}
+<Container
+  selectedFile={null}
 >
   <input
     className="inputFile"
@@ -10,7 +10,7 @@ exports[`FileInput test match last snapshot 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <FileInput__ButtonContainer>
+  <ButtonContainer>
     <label
       htmlFor="fileInput"
     >
@@ -24,13 +24,13 @@ exports[`FileInput test match last snapshot 1`] = `
         Choose file
       </Button>
     </label>
-  </FileInput__ButtonContainer>
-</FileInput__Container>
+  </ButtonContainer>
+</Container>
 `;
 
 exports[`FileInput test match last snapshot with a file selected 1`] = `
-<FileInput__Container
-  upload="hello"
+<Container
+  selectedFile="hello"
 >
   <input
     className="inputFile"
@@ -38,7 +38,7 @@ exports[`FileInput test match last snapshot with a file selected 1`] = `
     onChange={[Function]}
     type="file"
   />
-  <FileInput__ButtonContainer>
+  <ButtonContainer>
     <label
       htmlFor="fileInput"
     >
@@ -58,6 +58,6 @@ exports[`FileInput test match last snapshot with a file selected 1`] = `
       onClickIcon={[Function]}
       type="button"
     />
-  </FileInput__ButtonContainer>
-</FileInput__Container>
+  </ButtonContainer>
+</Container>
 `;
