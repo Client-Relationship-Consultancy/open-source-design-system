@@ -5,21 +5,23 @@ import { text, select } from "@storybook/addon-knobs"
 
 import { FileInput } from "../../../index"
 
-const themeDropdown = {
-  default: "default",
-  ghost: "ghost",
-  outline: "outline",
-}
+const stories = storiesOf("FileInput", module)
 
-const FileInputWrapper = () => (
-  <div>
+stories.add("Logo or file input", () => {
+  const themeDropdown = {
+    default: "default",
+    ghost: "ghost",
+    outline: "outline",
+    error: "error",
+    complimentary: "complimentary",
+  }
+
+  return (
     <FileInput
       handleUpload={() => console.warn("Uploading file...")} // eslint-disable-line no-console
       uploadMessage={text("Upload Message", "Upload")}
       chooseFileMessage={text("Choose File Message", "Choose file...")}
-      buttonType={select("button type", themeDropdown, "outline")}
+      theme={select("button type", themeDropdown, "outline")}
     />
-  </div>
-)
-
-storiesOf("FileInput", module).add("Logo or file input", () => <FileInputWrapper />)
+  )
+})
