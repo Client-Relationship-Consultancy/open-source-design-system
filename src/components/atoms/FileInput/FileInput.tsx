@@ -41,7 +41,7 @@ ButtonContainer.displayName = "ButtonContainer";
 interface IProps extends React.HTMLProps<HTMLInputElement> {
   chooseFileMessage: string;
   uploadMessage: string;
-  handleUpload: (file: File | null) => void;
+  handleUpload: (file: File) => void;
   theme: string;
 }
 
@@ -49,14 +49,13 @@ interface IState {
   selectedFile: File | null;
 }
 
-type DefaultProps = Pick<IProps, "chooseFileMessage" | "uploadMessage" | "handleUpload" | "theme">;
+type DefaultProps = Pick<IProps, "chooseFileMessage" | "uploadMessage" | "theme">;
 
 class FileInput extends React.PureComponent<IProps, IState> {
   static defaultProps: DefaultProps = {
     chooseFileMessage: "Choose file",
     uploadMessage: "Upload file",
     theme: "outline",
-    handleUpload: () => undefined, // remove this default once all FileInputs pass handleUpload prop
   };
 
   state: IState = { selectedFile: null };
@@ -68,7 +67,9 @@ class FileInput extends React.PureComponent<IProps, IState> {
 
   resetFile = (): void => this.setState({ selectedFile: null });
 
-  handleUpload = (): void => this.props.handleUpload(this.state.selectedFile);
+  handleUpload = (): void => {
+    if (this.state.selectedFile !== null) this.props.handleUpload(this.state.selectedFile);
+  };
 
   render(): JSX.Element {
     return (
