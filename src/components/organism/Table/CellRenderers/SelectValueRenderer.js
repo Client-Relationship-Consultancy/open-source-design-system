@@ -1,27 +1,35 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
+import { ArrowIcon } from "../../../molecules/Panel"
 
 export const Wrapper = styled.div`
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 20px);
-  
+
   button {
-    /* background-image: ${SelectArrowIcon}; */
-    background-color: red;
+    position: absolute;
+    top: 0.55rem;
+    right: 0.55rem;
+    background-color: transparent;
     transition: opacity 0.15s;
     opacity: 0;
+    border: none;
+    color: ${props => props.theme.action.main.hex};
+    path {
+      fill: ${props => props.theme.action.main.hex};
+    }
   }
   :hover,
   :focus {
     cursor: default;
-    
+
     button {
       opacity: 1;
       cursor: pointer;
+      outline: none;
     }
   }
 `
@@ -52,7 +60,7 @@ class SelectValueRenderer extends React.Component {
       <Wrapper>
         {this.renderValue()}
         <button type="button" onClick={this.startEditingCell}>
-          Button
+          <ArrowIcon name="chevron-down" size="1x" flipped={false} />
         </button>
       </Wrapper>
     )
