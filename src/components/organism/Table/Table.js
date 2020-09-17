@@ -21,6 +21,13 @@ export const Container = styled.div`
     .ag-react-container {
       width: 100%;
     }
+    :focus {
+      button {
+        opacity: 1;
+        cursor: pointer;
+        outline: none;
+      }
+    }
   }
   .ag-cell-wrapper {
     display: flex;

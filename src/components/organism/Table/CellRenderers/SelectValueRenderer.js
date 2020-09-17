@@ -22,8 +22,7 @@ export const Wrapper = styled.div`
       fill: ${props => props.theme.action.main.hex};
     }
   }
-  :hover,
-  :focus {
+  :hover {
     cursor: default;
 
     button {
