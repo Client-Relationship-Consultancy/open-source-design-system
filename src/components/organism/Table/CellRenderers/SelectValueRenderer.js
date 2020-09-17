@@ -8,18 +8,20 @@ export const Wrapper = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 20px);
-  :after {
-    content: url("${SelectArrowIcon}");
-    position: absolute;
-    top: 0.55rem;
-    right: 0.55rem;
+  
+  button {
+    /* background-image: ${SelectArrowIcon}; */
+    background-color: red;
     transition: opacity 0.15s;
     opacity: 0;
   }
-  :hover, :focus {
-    cursor: pointer;
-    :after {
+  :hover,
+  :focus {
+    cursor: default;
+    
+    button {
       opacity: 1;
+      cursor: pointer;
     }
   }
 `
@@ -36,7 +38,25 @@ class SelectValueRenderer extends React.Component {
     return (fullOption ? fullOption.label : this.props.value) || " "
   }
 
-  render = () => <Wrapper>{this.renderValue()}</Wrapper>
+  startEditingCell = () => {
+    const {
+      rowIndex,
+      colDef: { field },
+    } = this.props
+
+    this.props.api.startEditingCell({ rowIndex, colKey: field })
+  }
+
+  render = () => {
+    return (
+      <Wrapper>
+        {this.renderValue()}
+        <button type="button" onClick={this.startEditingCell}>
+          Button
+        </button>
+      </Wrapper>
+    )
+  }
 }
 
 SelectValueRenderer.displayName = "SelectValueRenderer"
@@ -46,6 +66,11 @@ SelectValueRenderer.propTypes = {
     cellEditorParams: PropTypes.shape({
       values: PropTypes.array,
     }),
+    field: PropTypes.string,
+  }),
+  rowIndex: PropTypes.number,
+  api: PropTypes.shape({
+    startEditingCell: PropTypes.func,
   }),
   value: PropTypes.string,
 }

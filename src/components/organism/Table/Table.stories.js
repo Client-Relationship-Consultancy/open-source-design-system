@@ -294,7 +294,7 @@ storiesOf("Table", module)
 
     return (
       <Table
-        singleClickEdit={boolean("Single click edit", true)}
+        singleClickEdit={boolean("Single click edit", false)}
         addNewButtonMessage="Add New"
         deleteButtonMessage="Delete Selected"
         displayAddNewButton
