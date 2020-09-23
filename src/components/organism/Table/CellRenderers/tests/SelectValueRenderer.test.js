@@ -41,9 +41,17 @@ describe("SelectValueRenderer", () => {
   })
 
   it("should fire the startEditingCell function when the dropdown button is clicked a single time", () => {
-    const component = shallow(<SelectValueRenderer {...commonProps} value={null} />)
+    const component = shallow(
+      <SelectValueRenderer
+        {...commonProps}
+        value={null}
+        rowIndex={1}
+        colDef={{ field: "testCol" }}
+      />,
+    )
     component.find("button").simulate("click")
     expect(startEditingCellMock).toBeCalledTimes(1)
+    expect(startEditingCellMock).toBeCalledWith({ colKey: "testCol", rowIndex: 1 })
   })
 
   it("should render the label of the given value from the options", () => {
