@@ -18,6 +18,14 @@ describe("TextToggle Component Testing", () => {
     expect(onChange).toHaveBeenCalled()
   })
 
+  it("default values for the TextToggle are set correctly if props are not provided", () => {
+    const component = shallow(<TextToggle />)
+
+    expect(component.find(".trueOption").contains("True")).toBeTruthy()
+    expect(component.find(".falseOption").contains("False")).toBeTruthy()
+    expect(component.find("Toggle").props().disabled).toEqual(false)
+  })
+
   it("should have different styling when enabled", () => {
     const component = mount(<TextToggle />)
     expect(component.find("Label")).toHaveStyleRule("cursor", "pointer")
@@ -30,4 +38,3 @@ describe("TextToggle Component Testing", () => {
     expect(component.find("Label")).toHaveStyleRule("opacity", "0.4")
   })
 })
-

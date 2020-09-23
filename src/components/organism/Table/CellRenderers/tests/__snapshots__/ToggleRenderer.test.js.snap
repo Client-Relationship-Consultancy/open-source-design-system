@@ -3,9 +3,6 @@
 exports[`Snapshot match last snapshot 1`] = `
 <TextToggle
   checked={true}
-  falseOption="False"
-  isDisabled={false}
   onChange={[Function]}
-  trueOption="True"
 />
 `;
