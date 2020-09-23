@@ -44,7 +44,7 @@ jobs:
             - project
   Cypress-Tests:
     docker:
-      - image: cypress/base:8
+      - image: cypress/base:10
     steps:
       - checkout
       - restore_cache:

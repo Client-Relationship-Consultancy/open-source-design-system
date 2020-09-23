@@ -1,25 +1,34 @@
 import React from "react"
 import PropTypes from "prop-types"
 import styled from "styled-components"
-import SelectArrowIcon from "../../../../assets/select-arrow-icon.svg"
+import { ArrowIcon } from "../../../molecules/Panel"
 
 export const Wrapper = styled.div`
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
   width: calc(100% - 20px);
-  :after {
-    content: url("${SelectArrowIcon}");
+
+  button {
     position: absolute;
     top: 0.55rem;
     right: 0.55rem;
+    background-color: transparent;
     transition: opacity 0.15s;
     opacity: 0;
+    border: none;
+    color: ${props => props.theme.action.main.hex};
+    path {
+      fill: ${props => props.theme.action.main.hex};
+    }
   }
-  :hover, :focus {
-    cursor: pointer;
-    :after {
+  :hover {
+    cursor: default;
+
+    button {
       opacity: 1;
+      cursor: pointer;
+      outline: none;
     }
   }
 `
@@ -36,7 +45,25 @@ class SelectValueRenderer extends React.Component {
     return (fullOption ? fullOption.label : this.props.value) || " "
   }
 
-  render = () => <Wrapper>{this.renderValue()}</Wrapper>
+  startEditingCell = () => {
+    const {
+      rowIndex,
+      colDef: { field },
+    } = this.props
+
+    this.props.api.startEditingCell({ rowIndex, colKey: field })
+  }
+
+  render = () => {
+    return (
+      <Wrapper>
+        {this.renderValue()}
+        <button type="button" onClick={this.startEditingCell}>
+          <ArrowIcon name="chevron-down" size="1x" flipped={false} />
+        </button>
+      </Wrapper>
+    )
+  }
 }
 
 SelectValueRenderer.displayName = "SelectValueRenderer"
@@ -46,6 +73,11 @@ SelectValueRenderer.propTypes = {
     cellEditorParams: PropTypes.shape({
       values: PropTypes.array,
     }),
+    field: PropTypes.string,
+  }),
+  rowIndex: PropTypes.number,
+  api: PropTypes.shape({
+    startEditingCell: PropTypes.func,
   }),
   value: PropTypes.string,
 }

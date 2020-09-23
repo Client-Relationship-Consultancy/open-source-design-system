@@ -4,13 +4,16 @@ exports[`DateTimePicker Component Testing should match latest snapshot 1`] = `
 <DateTimePickerContainer
   className="DateTimePicker"
 >
-  <t
+  <o
     allowSameDay={false}
+    customTimeInput={null}
     dateFormat="do MMM yyyy HH:mm"
     dateFormatCalendar="LLLL yyyy"
     disabled={false}
     disabledKeyboardNavigation={false}
     dropdownMode="scroll"
+    enableTabLoop={true}
+    excludeScrollbar={true}
     inlineFocusSelectedMonth={false}
     maxDate={1996-01-01T12:45:00.000Z}
     minDate={1995-12-11T12:45:00.000Z}
@@ -48,6 +51,7 @@ exports[`DateTimePicker Component Testing should match latest snapshot 1`] = `
     renderDayContents={[Function]}
     selected={1995-12-12T12:45:00.000Z}
     shouldCloseOnSelect={true}
+    showFullMonthYearPicker={false}
     showMonthYearPicker={false}
     showPopperArrow={true}
     showPreviousMonths={false}
@@ -55,6 +59,7 @@ exports[`DateTimePicker Component Testing should match latest snapshot 1`] = `
     showTimeInput={false}
     showTimeSelect={true}
     showYearDropdown={true}
+    showYearPicker={false}
     strictParsing={false}
     timeCaption="time"
     timeFormat="HH:mm"

@@ -1,17 +1,25 @@
 import React from "react"
 import { shallow, mount } from "enzyme"
+import { ThemeProvider } from "styled-components"
 
-import SelectValueRenderer, {Wrapper} from "../SelectValueRenderer"
+import { colourPalette } from "../../../../../brandColours"
+import SelectValueRenderer, { Wrapper } from "../SelectValueRenderer"
 
 describe("Wrapper", () => {
   it("should match snapshot", () => {
-    const component = mount(<Wrapper />)
+    const component = mount(
+      <ThemeProvider theme={colourPalette.examplePalette}>
+        <Wrapper />
+      </ThemeProvider>,
+    )
     expect(component).toMatchSnapshot()
   })
 })
 
 describe("SelectValueRenderer", () => {
+  const startEditingCellMock = jest.fn()
   const commonProps = {
+    api: { startEditingCell: startEditingCellMock },
     value: "girls",
     colDef: {
       cellEditorParams: { values: ["alpha", "bravo", "charlie"] },
@@ -30,6 +38,20 @@ describe("SelectValueRenderer", () => {
   it("should render a string with a space when given a falsy value to ensure the cursor is still a pointer on hover", () => {
     const component = shallow(<SelectValueRenderer {...commonProps} value={null} />)
     expect(component.instance().renderValue()).toEqual(" ")
+  })
+
+  it("should fire the startEditingCell function when the dropdown button is clicked a single time", () => {
+    const component = shallow(
+      <SelectValueRenderer
+        {...commonProps}
+        value={null}
+        rowIndex={1}
+        colDef={{ field: "testCol" }}
+      />,
+    )
+    component.find("button").simulate("click")
+    expect(startEditingCellMock).toBeCalledTimes(1)
+    expect(startEditingCellMock).toBeCalledWith({ colKey: "testCol", rowIndex: 1 })
   })
 
   it("should render the label of the given value from the options", () => {

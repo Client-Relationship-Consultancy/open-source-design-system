@@ -3,6 +3,16 @@
 exports[`SelectValueRenderer should match snapshot 1`] = `
 <Wrapper>
   girls
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    <ArrowIcon
+      flipped={false}
+      name="chevron-down"
+      size="1x"
+    />
+  </button>
 </Wrapper>
 `;
 
@@ -14,57 +24,193 @@ exports[`Wrapper should match snapshot 1`] = `
   width: calc(100% - 20px);
 }
 
-.c0:after {
-  content: url(".styledComponentId");
+.c0 button {
   position: absolute;
   top: 0.55rem;
   right: 0.55rem;
+  background-color: transparent;
   -webkit-transition: opacity 0.15s;
   transition: opacity 0.15s;
   opacity: 0;
+  border: none;
+  color: #743C8F;
 }
 
-.c0:hover,
-.c0:focus {
-  cursor: pointer;
+.c0 button path {
+  fill: #743C8F;
 }
 
-.c0:hover:after,
-.c0:focus:after {
+.c0:hover {
+  cursor: default;
+}
+
+.c0:hover button {
   opacity: 1;
+  cursor: pointer;
+  outline: none;
 }
 
-<Wrapper>
-  <StyledComponent
-    forwardedComponent={
-      Object {
-        "$$typeof": Symbol(react.forward_ref),
-        "attrs": Array [],
-        "componentStyle": ComponentStyle {
-          "componentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
-          "isStatic": false,
-          "lastClassName": "c0",
-          "rules": Array [
-            "white-space:pre;overflow:hidden;text-overflow:ellipsis;width:calc(100% - 20px);:after{content:url(\\"",
-            ".styledComponentId",
-            "\\");position:absolute;top:0.55rem;right:0.55rem;transition:opacity 0.15s;opacity:0;}:hover,:focus{cursor:pointer;:after{opacity:1;}}",
-          ],
+<ThemeProvider
+  theme={
+    Object {
+      "action": Object {
+        "dark": Object {
+          "RGB": "79,38,98",
+          "hex": "#4E2662",
+          "on": "#FFFFFF",
         },
-        "displayName": "Wrapper",
-        "foldedComponentIds": Array [],
-        "render": [Function],
-        "styledComponentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
-        "target": "div",
-        "toString": [Function],
-        "warnTooManyClasses": [Function],
-        "withComponent": [Function],
-      }
+        "light": Object {
+          "RGB": "173,101,207",
+          "hex": "#AD65CF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "116,60,143",
+          "hex": "#743C8F",
+          "on": "#FFFFFF",
+        },
+      },
+      "background": Object {
+        "RGB": "246,246,246",
+        "hex": "#F6F6F6",
+      },
+      "black": Object {
+        "main": Object {
+          "RGB": "39,39,39",
+          "hex": "#272727",
+          "on": "#FFFFFF",
+        },
+        "tint20": Object {
+          "RGB": "236,236,236",
+          "hex": "#ECECEC",
+          "on": "#272727",
+        },
+        "tint40": Object {
+          "RGB": "199,199,199",
+          "hex": "#C7C7C7",
+          "on": "#272727",
+        },
+        "tint60": Object {
+          "RGB": "160,160,160",
+          "hex": "#A0A0A0",
+          "on": "#FFFFFF",
+        },
+        "tint80": Object {
+          "RGB": "105,105,105",
+          "hex": "#696969",
+          "on": "#FFFFFF",
+        },
+      },
+      "complimentary": Object {
+        "dark": Object {
+          "RGB": "206,185,0",
+          "hex": "#CEB900",
+          "on": "#272727",
+        },
+        "light": Object {
+          "RGB": "255,245,157",
+          "hex": "#FFF59D",
+          "on": "#272727",
+        },
+        "main": Object {
+          "RGB": "255,238,82",
+          "hex": "#FFEE52",
+          "on": "#272727",
+        },
+      },
+      "error": Object {
+        "dark": Object {
+          "RGB": "197,73,1",
+          "hex": "#C54901",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "255,115,32",
+          "hex": "#FF7320",
+          "on": "#FFFFFF",
+        },
+      },
+      "primary": Object {
+        "dark": Object {
+          "RGB": "102,22,20",
+          "hex": "#661614",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "218,52,47",
+          "hex": "#DA342F",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "164,40,36",
+          "hex": "#A42824",
+          "on": "#FFFFFF",
+        },
+      },
+      "secondary": Object {
+        "dark": Object {
+          "RGB": "5,38,59",
+          "hex": "#05263B",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "89,156,175",
+          "hex": "#599CAF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "11,70,107",
+          "hex": "#0B466B",
+          "on": "#FFFFFF",
+        },
+      },
+      "surface": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
+      "white": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
     }
-    forwardedRef={null}
-  >
-    <div
-      className="c0"
-    />
-  </StyledComponent>
-</Wrapper>
+  }
+>
+  <Wrapper>
+    <StyledComponent
+      forwardedComponent={
+        Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "attrs": Array [],
+          "componentStyle": ComponentStyle {
+            "componentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
+            "isStatic": false,
+            "lastClassName": "c0",
+            "rules": Array [
+              "white-space:pre;overflow:hidden;text-overflow:ellipsis;width:calc(100% - 20px);button{position:absolute;top:0.55rem;right:0.55rem;background-color:transparent;transition:opacity 0.15s;opacity:0;border:none;color:",
+              [Function],
+              ";path{fill:",
+              [Function],
+              ";}}:hover{cursor:default;button{opacity:1;cursor:pointer;outline:none;}}",
+            ],
+          },
+          "displayName": "Wrapper",
+          "foldedComponentIds": Array [],
+          "render": [Function],
+          "styledComponentId": "SelectValueRenderer__Wrapper-sc-1ccrjb7-0",
+          "target": "div",
+          "toString": [Function],
+          "warnTooManyClasses": [Function],
+          "withComponent": [Function],
+        }
+      }
+      forwardedRef={null}
+    >
+      <div
+        className="c0"
+      />
+    </StyledComponent>
+  </Wrapper>
+</ThemeProvider>
 `;

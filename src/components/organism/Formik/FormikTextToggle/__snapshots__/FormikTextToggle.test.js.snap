@@ -403,7 +403,6 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                             }
                           }
                           id="testId-textToggle"
-                          isDisabled={false}
                           name="test"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -2574,7 +2573,6 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                             }
                           }
                           id="testId-textToggle"
-                          isDisabled={false}
                           name="test"
                           onBlur={[Function]}
                           onChange={[Function]}
@@ -4745,7 +4743,6 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                             }
                           }
                           id="testId-textToggle"
-                          isDisabled={false}
                           name="test"
                           onBlur={[Function]}
                           onChange={[Function]}
