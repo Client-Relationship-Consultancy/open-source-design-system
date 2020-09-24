@@ -1,9 +1,8 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from "react";
+import styled from "styled-components";
 
-import { colourPalette } from "../../../brandColours"
-import Icon from "../Icon"
+import { colourPalette } from "../../../brandColours";
+import Icon from "../Icon";
 
 const StyledLuggageLabel = styled.div`
   display: inline-block;
@@ -31,11 +30,13 @@ const StyledLuggageLabel = styled.div`
     border-bottom: none;
     border-top: 0.95rem solid ${props => props.theme.secondary.main.hex};
   }
-`
+`;
+
 StyledLuggageLabel.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledLuggageLabel.displayName = "StyledLuggageLabel"
+};
+
+StyledLuggageLabel.displayName = "StyledLuggageLabel";
 
 const StyledLabel = styled.label`
   display: flex;
@@ -49,15 +50,33 @@ const StyledLabel = styled.label`
     vertical-align: text-bottom;
     margin-left: 0.5rem;
   }
-`
+`;
+
 StyledLabel.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledLabel.displayName = "StyledLabel"
+};
 
-const LuggageLabel = props => {
-  const { editMode, children, onClick, iconColour, iconColourShade, id, className } = props
-  const luggageLabelClassName = className ? `LuggageLabel ${className}` : "LuggageLabel"
+StyledLabel.displayName = "StyledLabel";
+
+interface ILuggageLabelProps {
+  editMode?: boolean;
+  children: React.ReactNode;
+  onClick: () => void;
+  iconColour?: string;
+  iconColourShade?: string;
+}
+
+type Props = ILuggageLabelProps & React.HTMLProps<HTMLDivElement>;
+
+const LuggageLabel: React.FC<Props> = ({
+  editMode = false,
+  iconColour = "complimentary",
+  ...otherProps
+}: Props) => {
+  const { children, onClick, iconColourShade, id, className } = otherProps;
+
+  const luggageLabelClassName = className ? `LuggageLabel ${className}` : "LuggageLabel";
+
   return (
     <StyledLuggageLabel id={id} className={luggageLabelClassName}>
       <StyledLabel>
@@ -71,22 +90,7 @@ const LuggageLabel = props => {
         />
       </StyledLabel>
     </StyledLuggageLabel>
-  )
-}
+  );
+};
 
-LuggageLabel.defaultProps = {
-  editMode: false,
-  iconColour: "complimentary",
-}
-
-LuggageLabel.propTypes = {
-  editMode: PropTypes.bool,
-  children: PropTypes.node,
-  onClick: PropTypes.func,
-  id: PropTypes.string,
-  className: PropTypes.string,
-  iconColour: PropTypes.string,
-  iconColourShade: PropTypes.string,
-}
-
-export default LuggageLabel
+export default LuggageLabel;
