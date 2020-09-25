@@ -118,7 +118,7 @@
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-plugin-styled-components": "^1.8.0",
     "css-loader": "^3.4.1",
-    "cypress": "^4.1.0",
+    "cypress": "^5.2.0",
     "cypress-cucumber-preprocessor": "^1.16.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
