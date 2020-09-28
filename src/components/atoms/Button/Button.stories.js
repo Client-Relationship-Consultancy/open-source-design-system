@@ -36,8 +36,19 @@ const buttonSizes = {
   Large: "large",
 }
 
+const buttonTypes = {
+  Default: "default",
+  Outline: "outline",
+  Complimentary: "complimentary",
+  Ghost: "ghost",
+  Error: "error",
+}
+
 stories.add("Button styles", () => (
-  <NewButton size={select("Size", buttonSizes, "medium")}>
+  <NewButton
+    buttonType={select("Type", buttonTypes, "default")}
+    size={select("Size", buttonSizes, "medium")}
+  >
     {text("Button Description", "Save")}
   </NewButton>
 ))

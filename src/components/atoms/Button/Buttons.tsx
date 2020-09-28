@@ -1,36 +1,37 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
+import { colourPalette, IColourPalette } from "../../../brandColours";
+import { buttonStyles, IButtonStyle } from "./buttonStyles";
 
 interface IStyledButton {
   fontSize: string;
   padding: string;
+  buttonStyle: IButtonStyle;
 }
 
 const StyledButton = styled.button<IStyledButton>`
   outline: none;
-  border: 1px solid ${props => props.theme.action.main.hex};
+  border: 1px solid ${props => props.buttonStyle.border};
   padding: ${props => props.padding};
-  background-color: ${props => props.theme.action.main.hex};
-  color: ${props => props.theme.white.hex};
+  color: ${props => props.buttonStyle.color};
+  background-color: ${props => props.buttonStyle.background};
   border-radius: 0.25rem;
   font-size: ${props => props.fontSize};
   line-height: ${props => props.fontSize};
+  font-weight: ${props => props.buttonStyle.fontWeight};
   transition: all 0.3s ease;
   :hover:enabled {
     cursor: pointer;
-    background-color: ${props => props.theme.action.dark.hex};
-    border: 1px solid ${props => props.theme.action.dark.hex};
-    :focus {
-      background-color: ${props => props.theme.action.dark.hex};
-      border: 1px solid ${props => props.theme.white.hex};
-      box-shadow: 0 0 0 1px ${props => props.theme.action.dark.hex};
-    }
+    color: ${props => props.buttonStyle.hover.color};
+    background-color: ${props => props.buttonStyle.hover.background};
+    border: 1px solid ${props => props.buttonStyle.hover.border};
   }
   :active,
   :focus {
-    background-color: ${props => props.theme.action.main.hex};
-    border: 1px solid ${props => props.theme.white.hex};
-    box-shadow: 0 0 0 1px ${props => props.theme.action.main.hex};
+    color: ${props => props.buttonStyle.focus.color};
+    background-color: ${props => props.buttonStyle.focus.background};
+    border: 1px solid ${props => props.buttonStyle.focus.border};
+    box-shadow: 0 0 0 1px ${props => props.buttonStyle.focus.boxShadow};
   }
   :disabled {
     opacity: 0.4;
@@ -38,11 +39,21 @@ const StyledButton = styled.button<IStyledButton>`
   }
 `;
 
+type ButtonType = "default" | "outline" | "complimentary" | "ghost" | "error";
+
 interface IProps {
   size?: "small" | "medium" | "large";
+  buttonType: ButtonType;
+  theme: IColourPalette;
 }
 
-class PureButton extends React.PureComponent<IProps> {
+class BasicButton extends React.PureComponent<IProps> {
+  static defaultProps = {
+    theme: colourPalette.examplePalette,
+    buttonType: "default",
+    size: "medium",
+  };
+
   getFontSize = (): string => {
     if (this.props.size === "large") {
       return "1rem";
@@ -63,15 +74,23 @@ class PureButton extends React.PureComponent<IProps> {
     }
   };
 
+  getButtonStyle = (): IButtonStyle => {
+    return buttonStyles(this.props.theme)[this.props.buttonType];
+  };
+
   render = () => {
     return (
-      <StyledButton fontSize={this.getFontSize()} padding={this.getPadding()} type="button">
+      <StyledButton
+        buttonStyle={this.getButtonStyle()}
+        fontSize={this.getFontSize()}
+        padding={this.getPadding()}
+      >
         {this.props.children}
       </StyledButton>
     );
   };
 }
 
-const Button = PureButton;
+const Button = withTheme(BasicButton);
 
 export default Button;
