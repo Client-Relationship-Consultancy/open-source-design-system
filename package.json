@@ -137,7 +137,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest-styled-components": "^6.3.1",
     "lint-staged": "^10.0.8",
-    "prettier": "^1.15.3",
+    "prettier": "^2.1.2",
     "typescript": "^3.7.4"
   },
   "description": "",
