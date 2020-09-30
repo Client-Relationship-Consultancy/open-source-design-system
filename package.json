@@ -14,7 +14,7 @@
     "ag-grid-react": "^23.1.1",
     "codecov": "^3.1.0",
     "formik": "^1.4.1",
-    "jest": "^25.2.0",
+    "jest": "^26.4.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-animate-height": "^2.0.22",
