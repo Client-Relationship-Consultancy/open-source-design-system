@@ -63,8 +63,6 @@ exports[`LuggageLabel Component Test render snapshot 1`] = `
 }
 
 <LuggageLabel
-  editMode={false}
-  iconColour="complimentary"
   onClick={[MockFunction]}
 >
   <StyledLuggageLabel
@@ -327,7 +325,7 @@ exports[`LuggageLabel Component Test render snapshot 1`] = `
           },
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "LuggageLabel__StyledLuggageLabel-sc-1uhmfic-0",
+            "componentId": "LuggageLabel__StyledLuggageLabel-mi000g-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -345,7 +343,7 @@ exports[`LuggageLabel Component Test render snapshot 1`] = `
           "displayName": "StyledLuggageLabel",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "LuggageLabel__StyledLuggageLabel-sc-1uhmfic-0",
+          "styledComponentId": "LuggageLabel__StyledLuggageLabel-mi000g-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -740,7 +738,7 @@ exports[`LuggageLabel Component Test render snapshot 1`] = `
                 },
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "LuggageLabel__StyledLabel-sc-1uhmfic-1",
+                  "componentId": "LuggageLabel__StyledLabel-mi000g-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -752,7 +750,7 @@ exports[`LuggageLabel Component Test render snapshot 1`] = `
                 "displayName": "StyledLabel",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "LuggageLabel__StyledLabel-sc-1uhmfic-1",
+                "styledComponentId": "LuggageLabel__StyledLabel-mi000g-1",
                 "target": "label",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],

@@ -1,18 +1,18 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
-import { boolean } from "@storybook/addon-knobs"
+import { boolean, text } from "@storybook/addon-knobs"
 import LuggageLabel from "./LuggageLabel"
 
 const stories = storiesOf("LuggageLabel", module)
 stories.add("Default Style", context => {
-  const text = {
+  const info = {
     description: "A luggage label which has a view and edit mode.",
     dos: ["Use this for unit policies"],
     donts: [
       "The indentation on the left isn't displayed properly if text wraps across more than one line (so avoid this scenario).",
     ],
   }
-  Object.assign(context, text)
+  Object.assign(context, info)
 
   return (
     <LuggageLabel
@@ -21,7 +21,7 @@ stories.add("Default Style", context => {
       }}
       editMode={boolean("Toggle edit mode", false)}
     >
-      hello
+      {text("Label", "Luggage")}
     </LuggageLabel>
   )
 })
