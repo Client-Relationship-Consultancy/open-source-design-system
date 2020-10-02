@@ -44,6 +44,8 @@ const buttonTypes = {
   Error: "error",
 }
 
+//TODO: Display the four states for the button, then use nob to update style / add icons etc
+
 stories.add("Button styles", () => (
   <NewButton
     buttonType={select("Type", buttonTypes, "default")}
