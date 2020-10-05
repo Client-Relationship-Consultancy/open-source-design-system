@@ -53,9 +53,9 @@ export const buttonStyles = (theme: IColourPalette) => ({
       border: theme.secondary.dark?.hex,
     },
     focus: {
-      background: theme.complimentary.main.hex,
-      color: theme.complimentary.main.on,
-      border: theme.complimentary.main.hex,
+      background: theme.secondary.main.hex,
+      color: theme.secondary.main.on,
+      border: theme.secondary.main.hex,
     },
   },
   danger: {

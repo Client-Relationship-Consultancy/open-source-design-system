@@ -11,6 +11,7 @@ const InnerBorder = styled.div`
   height: calc(100% - 2px);
   box-shadow: inset 0px 0px 0 1px white;
   border-radius: 0.25rem;
+  transition: opacity 0.3s;
 `;
 interface IStyledButton {
   fontSize: string;
@@ -31,7 +32,8 @@ const StyledButton = styled.button<IStyledButton>`
   border-radius: 0.25rem;
   font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.fontSize};
-  transition: all 0.3s ease;
+  transition-property: color, background-color, border;
+  transition-duration: 0.3s;
   ${InnerBorder} {
     opacity: 0;
   }
@@ -39,17 +41,16 @@ const StyledButton = styled.button<IStyledButton>`
     &:hover {
       cursor: pointer;
       background-color: ${({ buttonStyle }) =>
-        buttonStyle.hover.background && buttonStyle.hover.background};
-      color: ${({ buttonStyle }) => buttonStyle.hover.color && buttonStyle.hover.color};
-      border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border && buttonStyle.hover.border};
+        buttonStyle.hover.background ?? buttonStyle.background};
+      color: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border ?? buttonStyle.border};
     }
-
     &:active,
     &:focus {
       background-color: ${({ buttonStyle }) =>
-        buttonStyle.focus.background && buttonStyle.focus.background};
-      color: ${({ buttonStyle }) => buttonStyle.focus.color && buttonStyle.focus.color};
-      border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border && buttonStyle.focus.border};
+        buttonStyle.focus.background ?? buttonStyle.background};
+      color: ${({ buttonStyle }) => buttonStyle.focus.color ?? buttonStyle.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border ?? buttonStyle.border};
 
       ${InnerBorder} {
         opacity: 1;
