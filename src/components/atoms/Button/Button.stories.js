@@ -50,6 +50,7 @@ stories.add("Button styles", () => (
   <NewButton
     buttonType={select("Type", buttonTypes, "primary")}
     size={select("Size", buttonSizes, "medium")}
+    disabled={boolean("Disabled", false)}
   >
     {text("Button Description", "Save")}
   </NewButton>

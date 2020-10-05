@@ -3,6 +3,15 @@ import styled, { withTheme } from "styled-components";
 import { colourPalette, IColourPalette } from "../../../brandColours";
 import { buttonStyles, IButtonStyle } from "./buttonStyles";
 
+const InnerBorder = styled.div`
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  box-shadow: inset 0px 0px 0 1px white;
+  border-radius: 0.25rem;
+`;
 interface IStyledButton {
   fontSize: string;
   padding: string;
@@ -23,34 +32,35 @@ const StyledButton = styled.button<IStyledButton>`
   font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.fontSize};
   transition: all 0.3s ease;
-  :hover:enabled {
-    cursor: pointer;
-    background-color: ${({ buttonStyle }) =>
-      buttonStyle.hover.background && buttonStyle.hover.background};
-    color: ${({ buttonStyle }) => buttonStyle.hover.color && buttonStyle.hover.color};
-    border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border && buttonStyle.hover.border};
+  ${InnerBorder} {
+    opacity: 0;
   }
-  :active,
-  :focus {
-    background-color: ${({ buttonStyle }) =>
-      buttonStyle.focus.background && buttonStyle.focus.background};
-    color: ${({ buttonStyle }) => buttonStyle.focus.color && buttonStyle.focus.color};
-    border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border && buttonStyle.focus.border};
+  :enabled {
+    &:hover {
+      cursor: pointer;
+      background-color: ${({ buttonStyle }) =>
+        buttonStyle.hover.background && buttonStyle.hover.background};
+      color: ${({ buttonStyle }) => buttonStyle.hover.color && buttonStyle.hover.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border && buttonStyle.hover.border};
+    }
+
+    &:active,
+    &:focus {
+      background-color: ${({ buttonStyle }) =>
+        buttonStyle.focus.background && buttonStyle.focus.background};
+      color: ${({ buttonStyle }) => buttonStyle.focus.color && buttonStyle.focus.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border && buttonStyle.focus.border};
+
+      ${InnerBorder} {
+        opacity: 1;
+      }
+    }
   }
+
   :disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
   }
-`;
-
-const InnerBorder = styled.div`
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  box-shadow: inset 0px 0px 0 1px white;
-  border-radius: 0.25rem;
 `;
 
 type ButtonType = "primary" | "primaryOutline" | "secondaryOutline" | "danger" | "ghost";
@@ -59,6 +69,7 @@ interface IProps {
   size?: "small" | "medium" | "large";
   buttonType: ButtonType;
   theme: IColourPalette;
+  disabled?: boolean;
 }
 
 class BasicButton extends React.PureComponent<IProps> {
@@ -66,6 +77,7 @@ class BasicButton extends React.PureComponent<IProps> {
     theme: colourPalette.examplePalette,
     buttonType: "primary",
     size: "medium",
+    disabled: false,
   };
 
   getFontSize = (): string => {
@@ -106,12 +118,15 @@ class BasicButton extends React.PureComponent<IProps> {
   };
 
   render = () => {
+    const { disabled } = this.props;
+
     return (
       <StyledButton
         buttonStyle={this.getButtonStyle()}
         fontSize={this.getFontSize()}
         padding={this.getPadding()}
         height={this.getHeight()}
+        disabled={disabled}
       >
         <InnerBorder />
         {this.props.children}
