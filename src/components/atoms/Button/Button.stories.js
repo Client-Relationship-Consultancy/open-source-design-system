@@ -37,18 +37,18 @@ const buttonSizes = {
 }
 
 const buttonTypes = {
-  Default: "default",
-  Outline: "outline",
-  Complimentary: "complimentary",
+  Primary: "primary",
+  PrimaryOutline: "primaryOutline",
+  SecondaryOutline: "secondaryOutline",
+  Danger: "danger",
   Ghost: "ghost",
-  Error: "error",
 }
 
-//TODO: Display the four states for the button, then use nob to update style / add icons etc
+// TODO: Display the four states for the button, then use nob to update style / add icons etc
 
 stories.add("Button styles", () => (
   <NewButton
-    buttonType={select("Type", buttonTypes, "default")}
+    buttonType={select("Type", buttonTypes, "primary")}
     size={select("Size", buttonSizes, "medium")}
   >
     {text("Button Description", "Save")}

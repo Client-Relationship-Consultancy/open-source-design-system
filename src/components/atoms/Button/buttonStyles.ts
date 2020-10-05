@@ -1,101 +1,88 @@
 import { IColourPalette } from "../../../brandColours";
 
 interface IButtonStyleOptions {
-  border?: string;
-  background?: string;
-  color?: string;
-  iconColor?: string;
-  fontWeight?: string;
-  textDecoration?: string;
-  boxShadow?: string;
-  shadow?: string;
+  background: string;
+  color: string;
+  border: string;
 }
 
 export interface IButtonStyle extends IButtonStyleOptions {
-  hover: IButtonStyleOptions;
-  focus: IButtonStyleOptions;
+  hover: Partial<IButtonStyleOptions>;
+  focus: Partial<IButtonStyleOptions>;
 }
 
+// TODO:
+// needs focus -> show inner border
+// needs disabled opacity
+// disabled interacting/or not with other mouse selectors (I.E. hover while disabled)
+// text-decoration
+
 export const buttonStyles = (theme: IColourPalette) => ({
-  default: {
-    border: theme.action.main.hex,
+  primary: {
     background: theme.action.main.hex,
     color: theme.action.main.on,
-    iconColor: theme.action.main.on,
+    border: theme.action.main.hex,
     hover: {
       background: theme.action.dark?.hex,
       color: theme.action.dark?.on,
       border: theme.action.dark?.hex,
     },
-    focus: {
-      border: theme.white.hex,
-      boxShadow: `0 0 0 0.1rem  ${theme.action.main.hex}`,
-    },
+    focus: {},
   },
-  outline: {
-    border: theme.action.main.hex,
+  primaryOutline: {
     background: "transparent",
     color: theme.action.main.hex,
-    iconColor: theme.action.main.hex,
-    fontWeight: "700",
+    border: theme.action.main.hex,
     hover: {
-      background: "transparent",
-      color: theme.action.dark?.hex,
-      border: `0.1rem solid ${theme.action.dark?.hex}`,
-      iconColor: theme.action.dark?.hex,
+      background: theme.action.main.hex,
+      color: theme.action.main.on,
+      border: theme.action.main.hex,
     },
     focus: {
-      border: theme.action.main.hex,
-      textDecoration: "underline",
+      background: theme.action.light?.hex,
+      border: theme.action.light?.hex,
     },
   },
-  complimentary: {
-    background: theme.complimentary.main.hex,
-    border: theme.complimentary.main.hex,
-    color: theme.white.hex,
+  secondaryOutline: {
+    background: "transparent",
+    color: theme.secondary.main.hex,
+    border: theme.secondary.main.hex,
     hover: {
-      background: theme.complimentary.dark?.hex,
-      border: theme.complimentary.dark?.hex,
-      color: theme.white.hex,
+      background: theme.secondary.dark?.hex,
+      color: theme.secondary.dark?.on,
+      border: theme.secondary.dark?.hex,
     },
     focus: {
-      background: theme.complimentary.dark?.hex,
-      border: theme.white.hex,
-      shadow: theme.complimentary.dark?.hex, // is this a thing, or should it be boxshadow?
-      color: theme.white.hex,
+      background: theme.complimentary.main.hex,
+      color: theme.complimentary.main.on,
+      border: theme.complimentary.main.hex,
+    },
+  },
+  danger: {
+    background: theme.error.main.hex,
+    color: theme.error.main.on,
+    border: theme.error.main.hex,
+    hover: {
+      background: theme.error.dark?.hex,
+      color: theme.error.dark?.on,
+      border: theme.error.dark?.hex,
+    },
+    focus: {
+      background: theme.error.main.hex,
+      color: theme.error.main.on,
+      border: theme.error.main.hex,
     },
   },
   ghost: {
-    border: "transparent",
     background: "transparent",
     color: theme.action.main.hex,
-    iconColor: theme.action.main.hex,
-    fontWeight: "700",
+    border: "transparent",
     hover: {
-      background: "transparent",
-      color: theme.action.dark?.hex,
-      iconColor: theme.action.dark?.hex,
-      border: "transparent",
+      background: theme.background.hex,
     },
     focus: {
-      border: "transparent",
-      textDecoration: "underline",
-    },
-  },
-  error: {
-    background: theme.error.main.hex,
-    border: theme.error.main.hex,
-    color: theme.white.hex,
-    hover: {
-      background: theme.error.dark?.hex,
-      border: theme.error.dark?.hex,
-      color: theme.white.hex,
-    },
-    focus: {
-      background: theme.error.dark?.hex,
-      border: theme.white.hex,
-      shadow: theme.error.dark?.hex,
-      color: theme.white.hex,
+      background: theme.background.hex,
+      border: theme.action.main.hex,
     },
   },
 });

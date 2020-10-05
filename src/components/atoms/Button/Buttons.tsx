@@ -15,27 +15,27 @@ const StyledButton = styled.button<IStyledButton>`
   outline: none;
   height: ${(props) => props.height};
   width: auto;
-  border: 1px solid ${(props) => props.buttonStyle.border};
   padding: ${(props) => props.padding};
-  color: ${(props) => props.buttonStyle.color};
   background-color: ${(props) => props.buttonStyle.background};
+  color: ${(props) => props.buttonStyle.color};
+  border: 1px solid ${(props) => props.buttonStyle.border};
   border-radius: 0.25rem;
   font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.fontSize};
-  font-weight: ${(props) => props.buttonStyle.fontWeight};
   transition: all 0.3s ease;
   :hover:enabled {
     cursor: pointer;
-    color: ${(props) => props.buttonStyle.hover.color};
-    background-color: ${(props) => props.buttonStyle.hover.background};
-    border: 1px solid ${(props) => props.buttonStyle.hover.border};
+    background-color: ${({ buttonStyle }) =>
+      buttonStyle.hover.background && buttonStyle.hover.background};
+    color: ${({ buttonStyle }) => buttonStyle.hover.color && buttonStyle.hover.color};
+    border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border && buttonStyle.hover.border};
   }
   :active,
   :focus {
-    color: ${(props) => props.buttonStyle.focus.color};
-    background-color: ${(props) => props.buttonStyle.focus.background};
-    border: 1px solid ${(props) => props.buttonStyle.focus.border};
-    box-shadow: 0 0 0 1px ${(props) => props.buttonStyle.focus.boxShadow};
+    background-color: ${({ buttonStyle }) =>
+      buttonStyle.focus.background && buttonStyle.focus.background};
+    color: ${({ buttonStyle }) => buttonStyle.focus.color && buttonStyle.focus.color};
+    border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border && buttonStyle.focus.border};
   }
   :disabled {
     opacity: 0.4;
@@ -53,7 +53,7 @@ const InnerBorder = styled.div`
   border-radius: 0.25rem;
 `;
 
-type ButtonType = "default" | "outline" | "complimentary" | "ghost" | "error";
+type ButtonType = "primary" | "primaryOutline" | "secondaryOutline" | "danger" | "ghost";
 
 interface IProps {
   size?: "small" | "medium" | "large";
@@ -64,7 +64,7 @@ interface IProps {
 class BasicButton extends React.PureComponent<IProps> {
   static defaultProps = {
     theme: colourPalette.examplePalette,
-    buttonType: "default",
+    buttonType: "primary",
     size: "medium",
   };
 
