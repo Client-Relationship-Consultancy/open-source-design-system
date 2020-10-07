@@ -1,8 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from "react";
+import styled from "styled-components";
 
-import { colourPalette } from "../../../brandColours"
+import { colourPalette } from "../../../brandColours";
+
+type InputType = React.HTMLProps<HTMLInputElement>;
+
+interface IProps extends InputType {
+  className?: string;
+}
 
 // Declare StyledRadio as an input with type=radio with CSS
 const StyledRadio = styled.input.attrs({
@@ -30,16 +35,14 @@ const StyledRadio = styled.input.attrs({
       color: ${props => props.theme.secondary.dark.hex};
     }
   }
-`
+`;
 StyledRadio.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-StyledRadio.displayName = "StyledRadio"
+};
+StyledRadio.displayName = "StyledRadio";
 
-// Declared Radio React Component
-const Radio = props => {
-  // Refactor values out of props (ES6)
-  const { className, id, name, onChange, checked, required } = props
+const Radio: React.FunctionComponent<IProps> = props => {
+  const { className, id, name, onChange, checked, required } = props;
   return (
     <StyledRadio
       className={className}
@@ -49,21 +52,9 @@ const Radio = props => {
       checked={checked}
       required={required}
     />
-  )
-}
+  );
+};
 
-// Declare the display name of component for static build
-// Display name should match export name
-Radio.displayName = "Radio"
+Radio.displayName = "Radio";
 
-// Declare propTypes of Radio
-Radio.propTypes = {
-  className: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
-  onChange: PropTypes.func,
-  checked: PropTypes.bool,
-  required: PropTypes.bool,
-}
-
-export default Radio
+export default Radio;
