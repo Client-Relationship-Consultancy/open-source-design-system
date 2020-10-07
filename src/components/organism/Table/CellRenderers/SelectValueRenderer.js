@@ -17,9 +17,9 @@ export const Wrapper = styled.div`
     transition: opacity 0.15s;
     opacity: 0;
     border: none;
-    color: ${props => props.theme.action.main.hex};
+    color: ${(props) => props.theme.action.main.hex};
     path {
-      fill: ${props => props.theme.action.main.hex};
+      fill: ${(props) => props.theme.action.main.hex};
     }
   }
   :hover {
@@ -40,14 +40,14 @@ class SelectValueRenderer extends React.Component {
     const fullOption =
       this.props.colDef.cellEditorParams &&
       this.props.colDef.cellEditorParams.values &&
-      this.props.colDef.cellEditorParams.values.find(option => option.value === this.props.value)
+      this.props.colDef.cellEditorParams.values.find((option) => option.value === this.props.value)
 
     return (fullOption ? fullOption.label : this.props.value) || " "
   }
 
   startEditingCell = () => {
     const {
-      rowIndex,
+      node: { rowIndex },
       colDef: { field },
     } = this.props
 
@@ -75,7 +75,9 @@ SelectValueRenderer.propTypes = {
     }),
     field: PropTypes.string,
   }),
-  rowIndex: PropTypes.number,
+  node: PropTypes.shape({
+    rowIndex: PropTypes.number,
+  }),
   api: PropTypes.shape({
     startEditingCell: PropTypes.func,
   }),
