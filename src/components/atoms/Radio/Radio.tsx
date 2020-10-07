@@ -3,13 +3,8 @@ import styled from "styled-components";
 
 import { colourPalette } from "../../../brandColours";
 
-type InputType = React.HTMLProps<HTMLInputElement>;
+type InputPropsType = React.HTMLProps<HTMLInputElement>;
 
-interface IProps extends InputType {
-  className?: string;
-}
-
-// Declare StyledRadio as an input with type=radio with CSS
 const StyledRadio = styled.input.attrs({
   type: "radio",
 })`
@@ -41,7 +36,7 @@ StyledRadio.defaultProps = {
 };
 StyledRadio.displayName = "StyledRadio";
 
-const Radio: React.FunctionComponent<IProps> = props => {
+const Radio: React.FunctionComponent<InputPropsType> = props => {
   const { className, id, name, onChange, checked, required } = props;
   return (
     <StyledRadio
