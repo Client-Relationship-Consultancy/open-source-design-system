@@ -46,12 +46,13 @@ describe("SelectValueRenderer", () => {
         {...commonProps}
         value={null}
         rowIndex={1}
+        node={{ rowIndex: 5 }}
         colDef={{ field: "testCol" }}
       />,
     )
     component.find("button").simulate("click")
     expect(startEditingCellMock).toBeCalledTimes(1)
-    expect(startEditingCellMock).toBeCalledWith({ colKey: "testCol", rowIndex: 1 })
+    expect(startEditingCellMock).toBeCalledWith({ colKey: "testCol", rowIndex: 5 })
   })
 
   it("should render the label of the given value from the options", () => {
