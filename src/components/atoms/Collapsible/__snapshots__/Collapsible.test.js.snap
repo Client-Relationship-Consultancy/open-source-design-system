@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Collapsible Component Test Match last snapshot 1`] = `
+<CollapsiblePanel
+  locked={false}
+  open={true}
+>
+  <Collapsible__CollapsibleIcon
+    name="chevron-down"
+    onClick={[Function]}
+    open={true}
+    size="1x"
+  />
+  <CollapsedContentContainer>
+    <h1>
+      Mock Panel Header
+    </h1>
+    <p>
+      Mock text that explains what this panel does
+    </p>
+  </CollapsedContentContainer>
+  <OpenContentContainer
+    open={true}
+  >
+    <p>
+      Mock text that is shown/hidden
+    </p>
+    <p>
+      Mock text that is shown/hidden
+    </p>
+    <p>
+      Mock text that is shown/hidden
+    </p>
+    <p>
+      Mock text that is shown/hidden
+    </p>
+    <p>
+      Mock text that is shown/hidden
+    </p>
+  </OpenContentContainer>
+</CollapsiblePanel>
+`;

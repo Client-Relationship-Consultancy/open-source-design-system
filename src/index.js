@@ -4,6 +4,7 @@ import "./index.css"
 import Box from "./components/atoms/Box"
 import Card from "./components/atoms/Card"
 import Checkbox from "./components/atoms/Checkbox"
+import Collapsible from "./components/atoms/Collapsible"
 import FileInput from "./components/atoms/FileInput"
 import Icon from "./components/atoms/Icon"
 import Button from "./components/atoms/Button"
@@ -62,6 +63,7 @@ export {
   Button,
   Card,
   Checkbox,
+  Collapsible,
   FileInput,
   Heading,
   Icon,
