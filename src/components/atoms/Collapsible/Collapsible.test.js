@@ -21,7 +21,12 @@ describe("Collapsible Component Test", () => {
   )
 
   const component = shallow(
-    <Collapsible initialOpen locked={false} collapsedContent={mockCollapsedContent}>
+    <Collapsible
+      open
+      locked={false}
+      collapsedContent={mockCollapsedContent}
+      clickHandler={() => null}
+    >
       {mockOpenContent}
     </Collapsible>,
   )

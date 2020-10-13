@@ -51,46 +51,35 @@ const OpenContentContainer = styled.div<IOpenContentContainerProps>`
 
 OpenContentContainer.displayName = "OpenContentContainer";
 
-interface ICollapsibleState {
-  open: boolean;
-}
-
 interface ICollapsibleProps {
-  initialOpen: boolean;
+  open: boolean;
   locked?: boolean;
   children: React.ReactNode;
   collapsedContent?: React.ReactNode;
   width?: number;
+  index: number;
+  clickHandler: () => void;
 }
 
-class Collapsible extends React.Component<ICollapsibleProps, ICollapsibleState> {
-  static displayName: string;
+const Collapsible: React.FC<ICollapsibleProps> = (props) => {
+  const { locked = false, open, children, collapsedContent, width, clickHandler, index } = props;
 
-  state = { open: this.props.initialOpen };
-
-  toggleOpen = (locked: boolean) => {
-    if (!locked) this.setState((prevState) => ({ open: !prevState.open }));
-  };
-
-  render() {
-    const { locked = false, children, collapsedContent, width } = this.props;
-
-    return (
-      <CollapsiblePanel open={this.state.open} locked={locked} width={width}>
-        <CollapsibleIcon
-          name="chevron-down"
-          size="1x"
-          open={this.state.open}
-          onClick={() => this.toggleOpen(locked)}
-        />
-        {collapsedContent && (
-          <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
-        )}
-        <OpenContentContainer open={this.state.open}>{children}</OpenContentContainer>
-      </CollapsiblePanel>
-    );
-  }
-}
+  return (
+    <CollapsiblePanel open={open} locked={locked} width={width}>
+      <CollapsibleIcon
+        data-index={index}
+        name="chevron-down"
+        size="1x"
+        open={open}
+        onClick={clickHandler}
+      />
+      {collapsedContent && (
+        <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
+      )}
+      <OpenContentContainer open={open}>{children}</OpenContentContainer>
+    </CollapsiblePanel>
+  );
+};
 
 Collapsible.displayName = "Collapsible";
 

@@ -28,10 +28,16 @@ const openContent = (
 )
 
 stories.add("Collapsible", () => {
+  const open = boolean("Open", false)
   const locked = boolean("Locked", false)
 
   return (
-    <Collapsible locked={locked} collapsedContent={collapsedContent}>
+    <Collapsible
+      open={open}
+      locked={locked}
+      collapsedContent={collapsedContent}
+      clickHandler={() => console.log("clicked!")}
+    >
       {openContent}
     </Collapsible>
   )
