@@ -36,7 +36,7 @@ stories.add("Collapsible", () => {
       open={open}
       locked={locked}
       collapsedContent={collapsedContent}
-      clickHandler={() => console.log("clicked!")}
+      clickHandler={() => null}
     >
       {openContent}
     </Collapsible>

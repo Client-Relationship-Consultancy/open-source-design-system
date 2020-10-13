@@ -22,6 +22,7 @@ import Theme from "./components/atoms/Theme"
 import Tooltip from "./components/atoms/Tooltip"
 
 // Molecule components
+import Accordion from "./components/molecules/Accordion"
 import { ConfirmationModal, IConfirmationModal } from "./components/molecules/ConfirmationModal"
 import { DateTimePicker, IDateTimePicker } from "./components/molecules/DateTimePicker"
 import FormCheckbox from "./components/molecules/FormCheckbox"
@@ -81,6 +82,7 @@ export {
   // ==================
   // Molecule components
   // ==================
+  Accordion,
   ConfirmationModal,
   IConfirmationModal,
   DateTimePicker,

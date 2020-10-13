@@ -3,9 +3,17 @@ import styled from "styled-components";
 
 import Icon from "../Icon";
 
+const StyledButton = styled.button`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+`;
+
 interface ICollapsiblePanelProps {
-  open: boolean;
-  locked: boolean;
   width?: number;
 }
 
@@ -23,9 +31,6 @@ interface ICollapsibleIconProps {
 }
 
 const CollapsibleIcon = styled(Icon)<ICollapsibleIconProps>`
-  position: absolute;
-  top: 0;
-  right: 0;
   svg {
     transform: ${({ open }) => (open ? "rotateZ(180deg)" : "rotateZ(0deg)")};
     transition: transform 0.5s;
@@ -65,14 +70,10 @@ const Collapsible: React.FC<ICollapsibleProps> = (props) => {
   const { locked = false, open, children, collapsedContent, width, clickHandler, index } = props;
 
   return (
-    <CollapsiblePanel open={open} locked={locked} width={width}>
-      <CollapsibleIcon
-        data-index={index}
-        name="chevron-down"
-        size="1x"
-        open={open}
-        onClick={clickHandler}
-      />
+    <CollapsiblePanel width={width}>
+      <StyledButton type="button" data-index={index} onClick={clickHandler}>
+        <CollapsibleIcon name="chevron-down" size="1x" open={open} />
+      </StyledButton>
       {collapsedContent && (
         <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
       )}
