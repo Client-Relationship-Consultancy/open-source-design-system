@@ -13,15 +13,11 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-interface ICollapsiblePanelProps {
-  width?: number;
-}
-
-const CollapsiblePanel = styled.div<ICollapsiblePanelProps>`
+const CollapsiblePanel = styled.div`
   position: relative;
   font-size: 1rem;
   min-height: 2em;
-  width: ${({ width }) => (width ? `${width}em` : "100%")};
+  width: 100%;
 `;
 
 CollapsiblePanel.displayName = "CollapsiblePanel";
@@ -63,14 +59,14 @@ interface ICollapsibleProps {
   collapsedContent?: React.ReactNode;
   width?: number;
   index: number;
-  clickHandler: () => void;
+  clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const Collapsible: React.FC<ICollapsibleProps> = (props) => {
-  const { locked = false, open, children, collapsedContent, width, clickHandler, index } = props;
+  const { locked = false, open, children, collapsedContent, clickHandler, index } = props;
 
   return (
-    <CollapsiblePanel width={width}>
+    <CollapsiblePanel>
       <StyledButton type="button" data-index={index} onClick={clickHandler}>
         <CollapsibleIcon name="chevron-down" size="1x" open={open} />
       </StyledButton>

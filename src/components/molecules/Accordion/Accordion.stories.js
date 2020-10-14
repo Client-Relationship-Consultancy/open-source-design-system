@@ -6,32 +6,69 @@ import { Accordion } from "../../../index"
 
 const stories = storiesOf("Accordion", module)
 
+const openContent = (
+  <>
+    <h2>Open Content</h2>
+    <p>This is some high quality open content</p>
+    <p>It&apos;s even got a button:</p>
+    <button type="button" onClick={() => null}>
+      I don&apos;t actually do anything though :)
+    </button>
+  </>
+)
+
 const content = [
   {
-    collapsedContent: <h1>Collapsed Content 1</h1>,
-    openContent: <p>Open Content 1</p>,
+    collapsedContent: (
+      <>
+        <h1>Collapsed Content 1</h1>
+        <p>If you click the arrow on the right, you&apos;ll see the hidden content!</p>
+      </>
+    ),
+    openContent,
   },
   {
-    collapsedContent: <h1>Collapsed Content 2</h1>,
-    openContent: <p>Open Content 2</p>,
+    collapsedContent: (
+      <>
+        <h1>Collapsed Content 2</h1>
+        <p>If you click the arrow on the right, you&apos;ll see the hidden content!</p>
+      </>
+    ),
+    openContent,
   },
   {
-    collapsedContent: <h1>Collapsed Content 3</h1>,
-    openContent: <p>Open Content 3</p>,
+    collapsedContent: (
+      <>
+        <h1>Collapsed Content 3</h1>
+        <p>Clicking the arrow won&apos;t open me unless you unlock me first</p>
+      </>
+    ),
+    openContent,
   },
 ]
 
-stories.add("Accordion with three panels", () => {
-  const open = [0]
-  const locked = [2]
-
-  const clickHandler = (event) => {
-    const { index } = event.currentTarget.dataset
-    const existingIndex = open.findIndex((val) => val === index)
-
-    if (existingIndex > -1) open.splice(index, 1)
-    else if (!locked.includes(index)) open.push(index)
+class MockAccordionParent extends React.Component {
+  state = {
+    openPanels: [0],
+    lockedPanels: [2],
   }
 
-  return <Accordion open={open} locked={locked} content={content} clickHandler={clickHandler} />
+  updateOpenAccordionPanels = (updatedOpenPanels) => {
+    this.setState({ openPanels: updatedOpenPanels })
+  }
+
+  render() {
+    return (
+      <Accordion
+        open={this.state.openPanels}
+        locked={this.state.lockedPanels}
+        content={content}
+        updateOpenPanels={this.updateOpenAccordionPanels}
+      />
+    )
+  }
+}
+
+stories.add("Accordion with three panels", () => {
+  return <MockAccordionParent />
 })
