@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { colourPalette } from "../../../brandColours";
 
 import Collapsible from "../../atoms/Collapsible";
 
@@ -10,8 +11,13 @@ interface IAccordionContainerProps {
 }
 
 const AccordionContainer = styled.div<IAccordionContainerProps>`
-  width: ${({ width }) => (width ? `${width}em` : "100%")};
+  width: ${({ width }) => (width ? `${width}rem` : "100%")};
+  background-color: ${({ theme }) => theme.background.hex};
 `;
+
+AccordionContainer.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
 
 interface IAccordionProps {
   open: number[];

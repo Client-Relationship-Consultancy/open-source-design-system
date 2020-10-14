@@ -1,39 +1,51 @@
 import React from "react";
 import styled from "styled-components";
+import { colourPalette } from "../../../brandColours";
 
 import Icon from "../Icon";
 
-const StyledButton = styled.button`
+const CollapsiblePanelButton = styled.button`
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 0.25rem;
+  right: 0.25rem;
   background-color: transparent;
   border: 0;
   outline: none;
   cursor: pointer;
 `;
 
+CollapsiblePanelButton.displayName = "CollapsiblePanelButton";
+
 const CollapsiblePanel = styled.div`
   position: relative;
-  font-size: 1rem;
-  min-height: 2em;
   width: 100%;
+  margin-bottom: 2rem;
 `;
 
 CollapsiblePanel.displayName = "CollapsiblePanel";
 
 interface ICollapsibleIconProps {
   open: boolean;
+  locked: boolean;
 }
 
 const CollapsibleIcon = styled(Icon)<ICollapsibleIconProps>`
   svg {
-    transform: ${({ open }) => (open ? "rotateZ(180deg)" : "rotateZ(0deg)")};
-    transition: transform 0.5s;
+    color: ${({ locked, theme }) => (locked ? theme.black.tint60.hex : theme.secondary.dark.hex)};
+    transform: ${({ open }) => (open ? "rotateZ(-180deg)" : "rotateZ(0deg)")};
+    transition: transform 0.5s 0s ease-out;
   }
 `;
 
-const CollapsedContentContainer = styled.div``;
+CollapsibleIcon.displayName = "CollapsibleIcon";
+
+CollapsibleIcon.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
+
+const CollapsedContentContainer = styled.div`
+  min-height: 2.25rem;
+`;
 
 CollapsedContentContainer.displayName = "CollapsedContentContainer";
 
@@ -43,11 +55,12 @@ interface IOpenContentContainerProps {
 
 const OpenContentContainer = styled.div<IOpenContentContainerProps>`
   visibility: ${({ open }) => (open ? "visible" : "hidden")};
-  height: ${({ open }) => (open ? "100%" : "0%")};
+  max-height: ${({ open }) => (open ? "50rem" : "0rem")};
   opacity: ${({ open }) => (open ? 1 : 0)};
-  transition-duration: 0s, 1s, 1s;
-  transition-delay: ${({ open }) => (open ? "0s" : "1s")}, 0s, 0s;
-  transition-property: visibility, height, opacity;
+  transition-property: visibility, max-height, opacity;
+  transition-duration: 0s, ${({ open }) => (open ? "0.5s" : "0.5s")}, 0.5s;
+  transition-delay: ${({ open }) => (open ? "0" : "0.5s")}, 0s, 0s;
+  transition-timing-function: ${({ open }) => (open ? "ease-in" : "ease-out")};
 `;
 
 OpenContentContainer.displayName = "OpenContentContainer";
@@ -67,12 +80,10 @@ const Collapsible: React.FC<ICollapsibleProps> = (props) => {
 
   return (
     <CollapsiblePanel>
-      <StyledButton type="button" data-index={index} onClick={clickHandler}>
-        <CollapsibleIcon name="chevron-down" size="1x" open={open} />
-      </StyledButton>
-      {collapsedContent && (
-        <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
-      )}
+      <CollapsiblePanelButton type="button" data-index={index} onClick={clickHandler}>
+        <CollapsibleIcon name="chevron-down" size="2x" open={open} locked={locked} />
+      </CollapsiblePanelButton>
+      <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
       <OpenContentContainer open={open}>{children}</OpenContentContainer>
     </CollapsiblePanel>
   );
