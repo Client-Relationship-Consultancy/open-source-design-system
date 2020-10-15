@@ -367,7 +367,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                     },
                   ],
                   "componentStyle": ComponentStyle {
-                    "componentId": "Radio__StyledRadio-sc-1037grk-0",
+                    "componentId": "Radio__StyledRadio-sc-17vyaum-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -387,7 +387,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                   "displayName": "StyledRadio",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "Radio__StyledRadio-sc-1037grk-0",
+                  "styledComponentId": "Radio__StyledRadio-sc-17vyaum-0",
                   "target": "input",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],
@@ -1317,7 +1317,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                     },
                   ],
                   "componentStyle": ComponentStyle {
-                    "componentId": "Radio__StyledRadio-sc-1037grk-0",
+                    "componentId": "Radio__StyledRadio-sc-17vyaum-0",
                     "isStatic": false,
                     "lastClassName": "c1",
                     "rules": Array [
@@ -1337,7 +1337,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                   "displayName": "StyledRadio",
                   "foldedComponentIds": Array [],
                   "render": [Function],
-                  "styledComponentId": "Radio__StyledRadio-sc-1037grk-0",
+                  "styledComponentId": "Radio__StyledRadio-sc-17vyaum-0",
                   "target": "input",
                   "toString": [Function],
                   "warnTooManyClasses": [Function],

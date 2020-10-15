@@ -1,21 +1,26 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import ReactTooltip from "react-tooltip"
-import TooltipIcon from "../../../assets/tooltip-icon.svg"
+import React from "react";
+import styled from "styled-components";
+import ReactTooltip from "react-tooltip";
+import TooltipIcon from "../../../assets/tooltip-icon.svg";
 
+interface IProps {
+  showIcon?: boolean;
+  id: string;
+  className?: string;
+  tooltipContent?: React.ReactNode;
+}
 const Container = styled.div`
   display: inline-flex;
   flex-direction: row;
   flex-basis: content;
   align-items: center;
-`
+`;
 
 const Icon = styled.img`
   width: 18px;
   height: 18px;
   margin-left: 5px;
-`
+`;
 
 const ToolTipContainer = styled.div`
   > div.visible-on-hover {
@@ -24,9 +29,9 @@ const ToolTipContainer = styled.div`
       visibility: visible !important;
     }
   }
-`
+`;
 
-const Tooltip = props => (
+const Tooltip: React.FunctionComponent<IProps> = props => (
   <>
     <Container data-tip data-for={props.id}>
       {props.children}
@@ -40,23 +45,14 @@ const Tooltip = props => (
         type="success"
         id={props.id}
       >
-        {props.tooltipContent}
+        {props.tooltipContent || null}
       </ReactTooltip>
     </ToolTipContainer>
   </>
-)
+);
 
 Tooltip.defaultProps = {
   showIcon: true,
-  tooltipContent: () => null,
-}
+};
 
-Tooltip.propTypes = {
-  children: PropTypes.node,
-  tooltipContent: PropTypes.node,
-  showIcon: PropTypes.bool,
-  id: PropTypes.string,
-  className: PropTypes.string,
-}
-
-export default Tooltip
+export default Tooltip;
