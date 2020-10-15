@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { colourPalette } from "../../../brandColours";
 
 import Collapsible from "../../atoms/Collapsible";
 
@@ -12,12 +11,7 @@ interface IAccordionContainerProps {
 
 const AccordionContainer = styled.div<IAccordionContainerProps>`
   width: ${({ width }) => (width ? `${width}rem` : "100%")};
-  background-color: ${({ theme }) => theme.background.hex};
 `;
-
-AccordionContainer.defaultProps = {
-  theme: colourPalette.examplePalette,
-};
 
 interface IAccordionProps {
   open: number[];
@@ -35,6 +29,8 @@ class Accordion extends React.Component<IAccordionProps> {
 
     if (event.currentTarget.dataset.index) {
       const index = parseInt(event.currentTarget.dataset.index, 10);
+
+      // We check if the panel index (i.e. 0) is locked. If not, we add or remove it from open
 
       if (!locked.includes(index)) {
         const existingIndex = updatedOpen.findIndex((val) => val === index);

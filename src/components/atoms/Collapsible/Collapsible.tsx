@@ -4,14 +4,18 @@ import { colourPalette } from "../../../brandColours";
 
 import Icon from "../Icon";
 
-const CollapsiblePanelButton = styled.button`
+interface ICollapsiblePanelButton {
+  locked: boolean;
+}
+
+const CollapsiblePanelButton = styled.button<ICollapsiblePanelButton>`
   position: absolute;
   top: 0.25rem;
-  right: 0.25rem;
+  right: 0.5rem;
   background-color: transparent;
   border: 0;
   outline: none;
-  cursor: pointer;
+  cursor: ${({ locked }) => (locked ? "not-allowed" : "pointer")};
 `;
 
 CollapsiblePanelButton.displayName = "CollapsiblePanelButton";
@@ -19,7 +23,6 @@ CollapsiblePanelButton.displayName = "CollapsiblePanelButton";
 const CollapsiblePanel = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: 2rem;
 `;
 
 CollapsiblePanel.displayName = "CollapsiblePanel";
@@ -80,7 +83,12 @@ const Collapsible: React.FC<ICollapsibleProps> = (props) => {
 
   return (
     <CollapsiblePanel>
-      <CollapsiblePanelButton type="button" data-index={index} onClick={clickHandler}>
+      <CollapsiblePanelButton
+        locked={locked}
+        type="button"
+        data-index={index}
+        onClick={clickHandler}
+      >
         <CollapsibleIcon name="chevron-down" size="2x" open={open} locked={locked} />
       </CollapsiblePanelButton>
       <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
