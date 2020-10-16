@@ -51,22 +51,23 @@ class Accordion extends React.Component<IAccordionProps> {
   renderPanels = (): JSX.Element[] => {
     const { content, updateOpenPanels, open = [], locked = [] } = this.props;
 
-    const panels = content.map((item: AccordionContent, index: number) => (
-      <Collapsible
-        /* eslint-disable react/no-array-index-key */
-        key={`collapsible-${index}`}
-        index={index}
-        open={open.includes(index)}
-        locked={locked.includes(index)}
-        collapsedContent={item.collapsedContent}
-        clickHandler={(event) => {
-          updateOpenPanels(this.handleOnClick(event));
-        }}
-      >
-        {item.openContent}
-      </Collapsible>
-    ));
-
+    const panels = content.map((item: AccordionContent, index: number) => {
+      const key = `collapsible-${index}`;
+      return (
+        <Collapsible
+          key={key}
+          index={index}
+          open={open.includes(index)}
+          locked={locked.includes(index)}
+          collapsedContent={item.collapsedContent}
+          clickHandler={(event) => {
+            updateOpenPanels(this.handleOnClick(event));
+          }}
+        >
+          {item.openContent}
+        </Collapsible>
+      )
+    });
     return panels;
   };
 
