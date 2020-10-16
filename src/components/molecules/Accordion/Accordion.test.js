@@ -32,7 +32,7 @@ describe("Accordion", () => {
     expect(accordionWidthCalculator({ width: 10 })).toBe("10rem")
     expect(accordionWidthCalculator({ })).toBe("100%")
   })
-  
+
   it("should return the correct open panel array when the handleOnClick is triggered", () => {
     const component = shallow(
       <Accordion
@@ -90,16 +90,4 @@ describe("Accordion", () => {
     )
     expect(component.find(Collapsible).get(2).props.children).toBe(mockContent[2].openContent)
   })
-  //   it("should not render the content if it's not valid", () => {
-  //     const component = shallow(
-  //       <Accordion
-  //         open={[0]}
-  //         locked={[2]}
-  //         content={{ name: "Frank" }}
-  //         updateOpenPanels={mockUpdateOpenPanels}
-  //       />,
-  //     )
-
-  //     expect(component.children().length).toBe(0)
-  //   })
 })
