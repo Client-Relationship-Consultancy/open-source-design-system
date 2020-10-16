@@ -32,7 +32,7 @@ interface ICollapsibleIconProps {
   locked: boolean;
 }
 
-export const CollapsibleIconTransition=(props:ICollapsibleIconProps):string => (props.open ? "rotateZ(-180deg)" : "rotateZ(0deg)")
+export const CollapsibleIconTransition=(props: ICollapsibleIconProps): string => (props.open ? "rotateZ(-180deg)" : "rotateZ(0deg)")
 
 const CollapsibleIcon = styled(Icon)<ICollapsibleIconProps>`
   svg {
