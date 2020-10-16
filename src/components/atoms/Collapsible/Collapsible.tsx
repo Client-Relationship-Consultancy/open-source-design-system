@@ -32,10 +32,12 @@ interface ICollapsibleIconProps {
   locked: boolean;
 }
 
+export const CollapsibleIconTransition=(props:ICollapsibleIconProps):string => (props.open ? "rotateZ(-180deg)" : "rotateZ(0deg)")
+
 const CollapsibleIcon = styled(Icon)<ICollapsibleIconProps>`
   svg {
     color: ${({ locked, theme }) => (locked ? theme.black.tint60.hex : theme.secondary.dark.hex)};
-    transform: ${({ open }) => (open ? "rotateZ(-180deg)" : "rotateZ(0deg)")};
+    transform: ${CollapsibleIconTransition};
     transition: transform 0.5s 0s ease-out;
   }
 `;
@@ -56,14 +58,28 @@ interface IOpenContentContainerProps {
   open: boolean;
 }
 
+export const OpenContentContainerVisibility = (props: IOpenContentContainerProps): string =>
+  props.open ? "visible" : "hidden";
+export const OpenContentContainerMaxheight = (props: IOpenContentContainerProps): string =>
+  props.open ? "50rem" : "0rem";
+export const OpenContentContainerOpacity = (props: IOpenContentContainerProps): 1 | 0 =>
+  props.open ? 1 : 0;
+export const OpenContentContainerTransitionduration = (props: IOpenContentContainerProps): string =>
+  props.open ? "0.5s" : "0.5s";
+export const OpenContentContainerTransitiondelay = (props: IOpenContentContainerProps): string =>
+  props.open ? "0" : "0.5s";
+export const OpenContentContainerTransitiontimingfunction = (
+  props: IOpenContentContainerProps,
+): string => (props.open ? "ease-in" : "ease-out");
+
 const OpenContentContainer = styled.div<IOpenContentContainerProps>`
-  visibility: ${({ open }) => (open ? "visible" : "hidden")};
-  max-height: ${({ open }) => (open ? "50rem" : "0rem")};
-  opacity: ${({ open }) => (open ? 1 : 0)};
+  visibility: ${OpenContentContainerVisibility};
+  max-height: ${OpenContentContainerMaxheight};
+  opacity: ${OpenContentContainerOpacity};
   transition-property: visibility, max-height, opacity;
-  transition-duration: 0s, ${({ open }) => (open ? "0.5s" : "0.5s")}, 0.5s;
-  transition-delay: ${({ open }) => (open ? "0" : "0.5s")}, 0s, 0s;
-  transition-timing-function: ${({ open }) => (open ? "ease-in" : "ease-out")};
+  transition-duration: 0s, ${OpenContentContainerTransitionduration}, 0.5s;
+  transition-delay: ${OpenContentContainerTransitiondelay}, 0s, 0s;
+  transition-timing-function: ${OpenContentContainerTransitiontimingfunction};
 `;
 
 OpenContentContainer.displayName = "OpenContentContainer";
@@ -78,7 +94,7 @@ interface ICollapsibleProps {
   clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Collapsible: React.FC<ICollapsibleProps> = (props) => {
+const Collapsible: React.FC<ICollapsibleProps> = props => {
   const { locked = false, open, children, collapsedContent, clickHandler, index } = props;
 
   return (

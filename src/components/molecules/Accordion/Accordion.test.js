@@ -1,6 +1,6 @@
 import React from "react"
 import { shallow } from "enzyme"
-import Accordion from "./Accordion"
+import Accordion , { accordionWidthCalculator } from "./Accordion"
 import Collapsible from "../../atoms/Collapsible"
 
 const mockContent = [
@@ -27,6 +27,12 @@ describe("Accordion", () => {
     )
     expect(component).toMatchSnapshot()
   })
+
+  it("test helper functions for style",()=>{
+    expect(accordionWidthCalculator({ width: 10 })).toBe("10rem")
+    expect(accordionWidthCalculator({ })).toBe("100%")
+  })
+  
   it("should return the correct open panel array when the handleOnClick is triggered", () => {
     const component = shallow(
       <Accordion
@@ -43,6 +49,9 @@ describe("Accordion", () => {
     expect(result).toEqual([0, 1])
 
     result = component.instance().handleOnClick({ currentTarget: { dataset: { index: "2" } } })
+    expect(result).toEqual([0])
+
+    result = component.instance().handleOnClick({ currentTarget: { dataset: {  } } })
     expect(result).toEqual([0])
   })
   it("should render the the collapsibles correctly based on the content passed", () => {

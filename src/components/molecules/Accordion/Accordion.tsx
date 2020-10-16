@@ -9,8 +9,11 @@ interface IAccordionContainerProps {
   width?: number;
 }
 
+export const accordionWidthCalculator = (props: IAccordionContainerProps): string =>
+  props.width ? `${props.width}rem` : "100%";
+
 const AccordionContainer = styled.div<IAccordionContainerProps>`
-  width: ${({ width }) => (width ? `${width}rem` : "100%")};
+  width: ${accordionWidthCalculator};
 `;
 
 interface IAccordionProps {
