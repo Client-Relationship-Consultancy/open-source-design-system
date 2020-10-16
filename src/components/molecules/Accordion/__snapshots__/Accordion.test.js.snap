@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should match last snaphot when default open & closed used 1`] = `
+<Accordion__AccordionContainer>
+  <Collapsible
+    clickHandler={[Function]}
+    collapsedContent={
+      <h1>
+        Mock Collapsed Content 1
+      </h1>
+    }
+    index={0}
+    key="collapsible-0"
+    locked={false}
+    open={false}
+  >
+    <p>
+      Mock open content 1
+    </p>
+  </Collapsible>
+  <Collapsible
+    clickHandler={[Function]}
+    collapsedContent={
+      <h1>
+        Mock Collapsed Content 2
+      </h1>
+    }
+    index={1}
+    key="collapsible-1"
+    locked={false}
+    open={false}
+  >
+    <p>
+      Mock open content 2
+    </p>
+  </Collapsible>
+  <Collapsible
+    clickHandler={[Function]}
+    collapsedContent={
+      <h1>
+        Mock Collapsed Content 3
+      </h1>
+    }
+    index={2}
+    key="collapsible-2"
+    locked={false}
+    open={false}
+  >
+    <p>
+      Mock open content 3
+    </p>
+  </Collapsible>
+</Accordion__AccordionContainer>
+`;

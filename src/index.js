@@ -4,6 +4,7 @@ import "./index.css"
 import Box from "./components/atoms/Box"
 import Card from "./components/atoms/Card"
 import Checkbox from "./components/atoms/Checkbox"
+import Collapsible from "./components/atoms/Collapsible"
 import FileInput from "./components/atoms/FileInput"
 import Icon from "./components/atoms/Icon"
 import Button from "./components/atoms/Button"
@@ -21,6 +22,7 @@ import Theme from "./components/atoms/Theme"
 import Tooltip from "./components/atoms/Tooltip"
 
 // Molecule components
+import Accordion from "./components/molecules/Accordion"
 import { ConfirmationModal, IConfirmationModal } from "./components/molecules/ConfirmationModal"
 import { DateTimePicker, IDateTimePicker } from "./components/molecules/DateTimePicker"
 import FormCheckbox from "./components/molecules/FormCheckbox"
@@ -62,6 +64,7 @@ export {
   Button,
   Card,
   Checkbox,
+  Collapsible,
   FileInput,
   Heading,
   Icon,
@@ -79,6 +82,7 @@ export {
   // ==================
   // Molecule components
   // ==================
+  Accordion,
   ConfirmationModal,
   IConfirmationModal,
   DateTimePicker,
