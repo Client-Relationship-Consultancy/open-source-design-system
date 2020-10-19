@@ -23,7 +23,7 @@ addDecorator(
     maxPropsIntoLine: 5, // Maximum nummber of props in a line in source code
     TableComponent, // Apply new template for the prop table
     // Add custom styling
-    styles: stylesheet => {
+    styles: (stylesheet) => {
       return {
         // Pull in existing stylesheet
         ...stylesheet,
@@ -77,7 +77,7 @@ addDecorator(
 )
 
 // Add a global wrapper to the stories
-addDecorator(storybook => {
+addDecorator((storybook) => {
   // Grabs the values from the individual stories
   // 'kind' and 'story' are default values
   // The other values are set in the stories
@@ -102,8 +102,8 @@ const stories = require.context("../src/stories", true, /\.stories\.(js|tsx)$/)
 
 // Loads the stories into storybook
 function loadStories() {
-  components.keys().forEach(filename => components(filename))
-  stories.keys().forEach(filename => stories(filename))
+  components.keys().forEach((filename) => components(filename))
+  stories.keys().forEach((filename) => stories(filename))
 }
 
 configure(loadStories, module)
