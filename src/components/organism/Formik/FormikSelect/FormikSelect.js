@@ -10,8 +10,12 @@ export class CustomSelect extends React.PureComponent {
   }
 
   onChange = value => {
-    this.props.onChange(this.props.name, value)
-    this.props.formik.setFieldValue(this.props.name, value)
+    let newValue = value
+    this.props.onChange(this.props.name, newValue)
+    if (newValue === null) {
+      newValue = ""
+    }
+    this.props.formik.setFieldValue(this.props.name, newValue)
   }
 
   onBlur = () => {

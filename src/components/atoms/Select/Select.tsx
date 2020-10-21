@@ -104,12 +104,10 @@ export class CustomSelect extends React.Component<IProps, IState> {
   };
 
   onChange = (value: ValueType<IDropdownObject>): void => {
-    if (value) {
-      if (this.props.isMulti && this.props.onChangeMulti) {
-        this.props.onChangeMulti(value as OptionsType<IDropdownObject>);
-      } else if (this.props.onChange) {
-        this.props.onChange(value as IDropdownObject);
-      }
+    if (this.props.isMulti && this.props.onChangeMulti) {
+      this.props.onChangeMulti(value as OptionsType<IDropdownObject>);
+    } else if (this.props.onChange) {
+      this.props.onChange(value as IDropdownObject);
     }
   };
 

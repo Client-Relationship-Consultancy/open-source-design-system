@@ -63,6 +63,7 @@ stories.add(
         name="title"
         placeholder="Please choose a title"
         onChange={() => {}}
+        isClearable
       />
       <Field type="text" id="name" name="name" title="Name" isValid />
       <Field type="textarea" id="productConfig" config="productConfig" title="Config" isValid />
