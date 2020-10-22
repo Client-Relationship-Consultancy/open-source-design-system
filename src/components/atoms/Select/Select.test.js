@@ -136,6 +136,18 @@ describe("Select Input test", () => {
     ])
   })
 
+  it("should call the onChange with null", () => {
+    const component = mount(<Select {...commonProps} />).find("CustomSelect")
+    component.instance().onChange(null)
+    expect(onChange).toBeCalledWith(null)
+  })
+
+  it("should call the onChange with null when it is multi", () => {
+    const component = mount(<Select {...multiCommonProps} />).find("CustomSelect")
+    component.instance().onChange(null)
+    expect(onChangeMulti).toBeCalledWith(null)
+  })
+
   it("should set width into the state if a number greater than 0 is passed as an argument", () => {
     const component = mount(<Select {...commonProps} />).find("CustomSelect")
     expect(component.state().componentWidth).toEqual(undefined)

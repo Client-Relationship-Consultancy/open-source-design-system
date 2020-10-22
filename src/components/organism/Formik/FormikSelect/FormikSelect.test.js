@@ -55,6 +55,12 @@ describe("FormikSelect Component Test", () => {
     expect(formikMockFn).toHaveBeenCalledWith("name", "hello")
   })
 
+  it("should set the value as an empty string when the value is null", () => {
+    componentSelect.instance().onChange(null)
+    expect(mockFn).toHaveBeenCalledWith("name", null)
+    expect(formikMockFn).toHaveBeenCalledWith("name", "")
+  })
+
   it("check onBlur function", () => {
     componentSelect.instance().onBlur()
     expect(componentSelect.state().touched).toBeTruthy()
