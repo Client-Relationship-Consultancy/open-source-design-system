@@ -8,16 +8,16 @@ import Radio from "../../atoms/Radio"
 const Container = styled.div`
   display: flex;
   flex-wrap: no-wrap;
-  flex-direction: ${props => (props.row ? "row" : "column")};
+  flex-direction: ${(props) => (props.row ? "row" : "column")};
   justify-content: center;
   align-items: center;
   > input {
-    ${props => (props.row ? "margin-right: 0.5rem" : "margin-bottom:0.5rem")}
+    ${(props) => (props.row ? "margin-right: 0.5rem" : "margin-bottom:0.5rem")}
   }
 `
 Container.displayName = "Container"
 
-const FormRadio = props => {
+const FormRadio = (props) => {
   const { row, id, className, name, onChange, checked, required, label } = props
 
   return (
