@@ -14,10 +14,10 @@ export const Container = styled.div<IContainer>`
   display: inline-flex;
   align-items: center;
   padding: 0.25rem 0.5rem;
-  ${props => (props.border === "bottom" ? "padding-left: 0;" : "")}
-  background-color: ${props => props.bgColor || "transparent"};
+  ${(props) => (props.border === "bottom" ? "padding-left: 0;" : "")}
+  background-color: ${(props) => props.bgColor || "transparent"};
   width: 100%;
-  ${props => {
+  ${(props) => {
     switch (props.border) {
       case "all":
         return `border: 1px solid ${props.theme.black.tint60.hex};`;
@@ -28,17 +28,17 @@ export const Container = styled.div<IContainer>`
     }
   }}
   svg {
-    color: ${props => props.theme.black.tint80.hex};
+    color: ${(props) => props.theme.black.tint80.hex};
   }
   > * + * {
     margin-left: 0.25rem;
   }
   :focus-within {
     svg {
-      color: ${props => props.theme.secondary.main.hex};
-      fill: ${props => props.theme.secondary.main.hex};
+      color: ${(props) => props.theme.secondary.main.hex};
+      fill: ${(props) => props.theme.secondary.main.hex};
     }
-    ${props => {
+    ${(props) => {
       switch (props.border) {
         case "all":
           return `border: 1px solid ${props.theme.secondary.main.hex};`;
@@ -71,9 +71,9 @@ export const StyledInput = styled.input<IStyledInput>`
   font-size: 1rem;
   font-family: "Gentona", "Montserrat";
   transition: 0.3s ease all;
-  color: ${props => props.color || props.theme.black.main.hex};
+  color: ${(props) => props.color || props.theme.black.main.hex};
   ::placeholder {
-    color: ${props => props.theme.black.tint80.hex};
+    color: ${(props) => props.theme.black.tint80.hex};
   }
 `;
 
@@ -85,11 +85,11 @@ StyledInput.displayName = "StyledInput";
 
 type InputType = React.HTMLProps<HTMLInputElement> & IContainer & IStyledInput;
 
-interface IProps extends InputType {
+export interface IInputProps extends InputType {
   icon?: IconProp | React.ReactElement;
 }
 
-const Input: React.FC<IProps> = (props: IProps) => {
+const Input: React.FC<IInputProps> = (props) => {
   const {
     className,
     type,
@@ -104,7 +104,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
     onFocus,
     bgColor,
     border,
-    color
+    color,
   } = props;
 
   const handleFocus =
@@ -114,7 +114,7 @@ const Input: React.FC<IProps> = (props: IProps) => {
 
   return (
     <Container bgColor={bgColor} border={border}>
-      { typeof icon === "string" ? <Icon name={icon} /> : icon}
+      {typeof icon === "string" ? <Icon name={icon} /> : icon}
       <StyledInput
         className={inputClassName}
         type={type}
