@@ -95,7 +95,7 @@ exports[`FormCheckbox test Disabled to match last snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "FormCheckbox__Container-sc-177vp9d-0",
+            "componentId": "FormCheckbox__Container-sc-196iqnb-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -109,7 +109,7 @@ exports[`FormCheckbox test Disabled to match last snapshot 1`] = `
           "displayName": "Container",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "FormCheckbox__Container-sc-177vp9d-0",
+          "styledComponentId": "FormCheckbox__Container-sc-196iqnb-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1072,7 +1072,7 @@ exports[`FormCheckbox test match last snapshot 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "FormCheckbox__Container-sc-177vp9d-0",
+            "componentId": "FormCheckbox__Container-sc-196iqnb-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1086,7 +1086,7 @@ exports[`FormCheckbox test match last snapshot 1`] = `
           "displayName": "Container",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "FormCheckbox__Container-sc-177vp9d-0",
+          "styledComponentId": "FormCheckbox__Container-sc-196iqnb-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
