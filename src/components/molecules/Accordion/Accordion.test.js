@@ -1,6 +1,6 @@
 import React from "react"
 import { shallow } from "enzyme"
-import Accordion , { accordionWidthCalculator } from "./Accordion"
+import Accordion, { accordionWidthCalculator } from "./Accordion"
 import Collapsible from "../../atoms/Collapsible"
 
 const mockContent = [
@@ -28,9 +28,9 @@ describe("Accordion", () => {
     expect(component).toMatchSnapshot()
   })
 
-  it("test helper functions for style",()=>{
+  it("test helper functions for style", () => {
     expect(accordionWidthCalculator({ width: 10 })).toBe("10rem")
-    expect(accordionWidthCalculator({ })).toBe("100%")
+    expect(accordionWidthCalculator({})).toBe("100%")
   })
 
   it("should return the correct open panel array when the handleOnClick is triggered", () => {
@@ -51,7 +51,7 @@ describe("Accordion", () => {
     result = component.instance().handleOnClick({ currentTarget: { dataset: { index: "2" } } })
     expect(result).toEqual([0])
 
-    result = component.instance().handleOnClick({ currentTarget: { dataset: {  } } })
+    result = component.instance().handleOnClick({ currentTarget: { dataset: {} } })
     expect(result).toEqual([0])
   })
   it("should render the the collapsibles correctly based on the content passed", () => {
@@ -61,12 +61,14 @@ describe("Accordion", () => {
         locked={[2]}
         content={mockContent}
         updateOpenPanels={mockUpdateOpenPanels}
+        maxHeight="300rem"
       />,
     )
     const collapsibles = component.instance().renderPanels()
     expect(collapsibles).toHaveLength(3)
 
     expect(component.find(Collapsible).get(0).props.open).toBe(true)
+    expect(component.find(Collapsible).get(0).props.maxHeight).toBe("300rem")
     expect(component.find(Collapsible).get(0).props.locked).toBe(false)
     expect(component.find(Collapsible).get(0).props.index).toBe(0)
     expect(component.find(Collapsible).get(0).props.collapsedContent).toBe(
@@ -75,6 +77,7 @@ describe("Accordion", () => {
     expect(component.find(Collapsible).get(0).props.children).toBe(mockContent[0].openContent)
 
     expect(component.find(Collapsible).get(1).props.open).toBe(false)
+    expect(component.find(Collapsible).get(1).props.maxHeight).toBe("300rem")
     expect(component.find(Collapsible).get(1).props.locked).toBe(false)
     expect(component.find(Collapsible).get(1).props.index).toBe(1)
     expect(component.find(Collapsible).get(1).props.collapsedContent).toBe(
@@ -83,6 +86,7 @@ describe("Accordion", () => {
     expect(component.find(Collapsible).get(1).props.children).toBe(mockContent[1].openContent)
 
     expect(component.find(Collapsible).get(2).props.open).toBe(false)
+    expect(component.find(Collapsible).get(2).props.maxHeight).toBe("300rem")
     expect(component.find(Collapsible).get(2).props.locked).toBe(true)
     expect(component.find(Collapsible).get(2).props.index).toBe(2)
     expect(component.find(Collapsible).get(2).props.collapsedContent).toBe(

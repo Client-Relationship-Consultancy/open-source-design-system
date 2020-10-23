@@ -22,6 +22,7 @@ interface IAccordionProps {
   updateOpenPanels: (updatedOpenPanels: number[]) => void;
   content: AccordionContent[];
   width?: number;
+  maxHeight?: string;
 }
 
 class Accordion extends React.Component<IAccordionProps> {
@@ -49,7 +50,7 @@ class Accordion extends React.Component<IAccordionProps> {
   };
 
   renderPanels = (): JSX.Element[] => {
-    const { content, updateOpenPanels, open = [], locked = [] } = this.props;
+    const { content, updateOpenPanels, open = [], locked = [], maxHeight } = this.props;
 
     const panels = content.map((item: AccordionContent, index: number) => {
       const key = `collapsible-${index}`;
@@ -63,10 +64,11 @@ class Accordion extends React.Component<IAccordionProps> {
           clickHandler={(event) => {
             updateOpenPanels(this.handleOnClick(event));
           }}
+          maxHeight={maxHeight}
         >
           {item.openContent}
         </Collapsible>
-      )
+      );
     });
     return panels;
   };
