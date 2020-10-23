@@ -32,7 +32,8 @@ interface ICollapsibleIconProps {
   locked: boolean;
 }
 
-export const CollapsibleIconTransition=(props: ICollapsibleIconProps): string => (props.open ? "rotateZ(-180deg)" : "rotateZ(0deg)")
+export const CollapsibleIconTransition = (props: ICollapsibleIconProps): string =>
+  props.open ? "rotateZ(-180deg)" : "rotateZ(0deg)";
 
 const CollapsibleIcon = styled(Icon)<ICollapsibleIconProps>`
   svg {
@@ -56,12 +57,15 @@ CollapsedContentContainer.displayName = "CollapsedContentContainer";
 
 interface IOpenContentContainerProps {
   open: boolean;
+  maxHeight?: string;
 }
 
 export const OpenContentContainerVisibility = (props: IOpenContentContainerProps): string =>
   props.open ? "visible" : "hidden";
-export const OpenContentContainerMaxheight = (props: IOpenContentContainerProps): string =>
-  props.open ? "50rem" : "0rem";
+export const OpenContentContainerMaxheight = (props: IOpenContentContainerProps): string => {
+  const maxHeight = props.maxHeight ? props.maxHeight : "50rem";
+  return props.open ? maxHeight : "0rem";
+};
 export const OpenContentContainerOpacity = (props: IOpenContentContainerProps): 1 | 0 =>
   props.open ? 1 : 0;
 export const OpenContentContainerTransitionduration = (props: IOpenContentContainerProps): string =>
@@ -92,10 +96,19 @@ interface ICollapsibleProps {
   width?: number;
   index: number;
   clickHandler: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  maxHeight?: string;
 }
 
-const Collapsible: React.FC<ICollapsibleProps> = props => {
-  const { locked = false, open, children, collapsedContent, clickHandler, index } = props;
+const Collapsible: React.FC<ICollapsibleProps> = (props) => {
+  const {
+    locked = false,
+    open,
+    children,
+    collapsedContent,
+    clickHandler,
+    maxHeight,
+    index,
+  } = props;
 
   return (
     <CollapsiblePanel>
@@ -108,7 +121,9 @@ const Collapsible: React.FC<ICollapsibleProps> = props => {
         <CollapsibleIcon name="chevron-down" size="2x" open={open} locked={locked} />
       </CollapsiblePanelButton>
       <CollapsedContentContainer>{collapsedContent}</CollapsedContentContainer>
-      <OpenContentContainer open={open}>{children}</OpenContentContainer>
+      <OpenContentContainer open={open} maxHeight={maxHeight}>
+        {children}
+      </OpenContentContainer>
     </CollapsiblePanel>
   );
 };

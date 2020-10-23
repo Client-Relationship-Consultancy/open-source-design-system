@@ -46,6 +46,7 @@ describe("Collapsible Component Test", () => {
   it("test helper functions for style", () => {
     expect(OpenContentContainerVisibility({ open: true })).toBe("visible")
     expect(OpenContentContainerMaxheight({ open: true })).toBe("50rem")
+    expect(OpenContentContainerMaxheight({ open: true, maxHeight: "300rem" })).toBe("300rem")
     expect(OpenContentContainerOpacity({ open: true })).toBe(1)
     expect(OpenContentContainerTransitionduration({ open: true })).toBe("0.5s")
     expect(OpenContentContainerTransitiondelay({ open: true })).toBe("0")
