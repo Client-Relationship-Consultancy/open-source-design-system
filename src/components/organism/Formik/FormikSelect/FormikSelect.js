@@ -2,14 +2,14 @@ import React from "react"
 import { connect } from "formik"
 import PropTypes from "prop-types"
 import Select from "../../../atoms/Select"
-import { StyledErrorMessage } from "../ErrorMessage/ErrorMessage"
+import ErrorMessage from "../ErrorMessage"
 
 export class CustomSelect extends React.PureComponent {
   state = {
     touched: false,
   }
 
-  onChange = value => {
+  onChange = (value) => {
     let newValue = value
     this.props.onChange(this.props.name, newValue)
     if (newValue === null) {
@@ -23,7 +23,7 @@ export class CustomSelect extends React.PureComponent {
   }
 
   render() {
-    const { name, id } = this.props
+    const { name, id, caption } = this.props
     const { values, errors } = this.props.formik
     return (
       <div>
@@ -35,9 +35,7 @@ export class CustomSelect extends React.PureComponent {
           value={values && values[name]}
           onBlur={this.onBlur}
         />
-        {errors && errors[name] && this.state.touched ? (
-          <StyledErrorMessage>{errors[name]}</StyledErrorMessage>
-        ) : null}
+        <ErrorMessage error={errors[name]} caption={caption} isError={errors[name] && this.state.touched} />
       </div>
     )
   }
@@ -51,6 +49,7 @@ CustomSelect.propTypes = {
   options: PropTypes.object,
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.object]),
   placeholder: PropTypes.string,
+  caption: PropTypes.string,
   isDisabled: PropTypes.bool,
   isClearable: PropTypes.bool,
   blacklistedOptions: PropTypes.arrayOf(PropTypes.string),

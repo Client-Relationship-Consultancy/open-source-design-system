@@ -5,8 +5,8 @@ import ErrorMessage, { StyledErrorMessage } from "./ErrorMessage"
 import "jest-styled-components"
 
 describe("ErrorMessage Component Test", () => {
-  const component = mount(<ErrorMessage name="email" />)
-  const componentStyled = mount(<StyledErrorMessage name="email" />)
+  const component = mount(<ErrorMessage error="email" />)
+  const componentStyled = mount(<StyledErrorMessage error="email" />)
 
   it("ErrorMessage sould match last snapshot", () => {
     const tree = toJson(component)
