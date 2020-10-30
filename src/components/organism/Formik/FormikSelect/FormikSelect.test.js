@@ -2,7 +2,7 @@ import React from "react"
 import { mount, shallow } from "enzyme"
 import FormikSelect, { CustomSelect } from "./FormikSelect"
 import Form from "../Form"
-import { StyledErrorMessage } from "../ErrorMessage/ErrorMessage"
+import ErrorMessage from "../ErrorMessage/ErrorMessage"
 
 describe("FormikSelect Component Test", () => {
   const petOptions = {
@@ -74,6 +74,8 @@ describe("FormikSelect Component Test", () => {
     }
     componentSelect.setProps({ formik: formikErrorProps })
     componentSelect.instance().onBlur()
-    expect(componentSelect.contains(<StyledErrorMessage>error</StyledErrorMessage>)).toBeTruthy()
+    expect(
+      componentSelect.contains(<ErrorMessage error="error" caption={undefined} isError />),
+    ).toBeTruthy()
   })
 })

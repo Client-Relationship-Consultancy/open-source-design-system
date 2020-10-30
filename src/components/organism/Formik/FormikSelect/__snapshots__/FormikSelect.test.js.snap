@@ -1897,6 +1897,7 @@ exports[`FormikSelect Component Test Match last snapshot 1`] = `
                         </Select__LabelStyle>
                       </CustomSelect>
                     </Select>
+                    <ErrorMessage />
                   </div>
                 </CustomSelect>
               </FormikSelect>
