@@ -1,3 +1,3 @@
-import ErrorMessage from "./ErrorMessage.tsx"
+import ErrorMessage from "./ErrorMessage"
 
 export default ErrorMessage
