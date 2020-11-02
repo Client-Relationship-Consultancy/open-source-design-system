@@ -5,6 +5,7 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
   font-weight: bold;
   color: #FF7320;
   margin-top: 0.5rem;
+  font-size: 0.875rem;
 }
 
 <StyledErrorMessage
@@ -271,7 +272,7 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
           "rules": Array [
             "font-weight:bold;color:",
             [Function],
-            ";margin-top:0.5rem;",
+            ";margin-top:0.5rem;font-size:0.875rem;",
           ],
         },
         "displayName": "StyledErrorMessage",
@@ -422,8 +423,10 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
 
 exports[`HelperErrorMessage Component Test StyledHelperCaption should match last snapshot 1`] = `
 .c0 {
-  color: #0B466B;
+  color: #696969;
   margin-top: 0.5rem;
+  font-weight: 100;
+  font-size: 0.875rem;
 }
 
 <StyledHelperCaption
@@ -690,7 +693,7 @@ exports[`HelperErrorMessage Component Test StyledHelperCaption should match last
           "rules": Array [
             "color:",
             [Function],
-            ";margin-top:0.5rem;",
+            ";margin-top:0.5rem;font-weight:100;font-size:0.875rem;",
           ],
         },
         "displayName": "StyledHelperCaption",

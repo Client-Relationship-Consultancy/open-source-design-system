@@ -6,6 +6,7 @@ export const StyledErrorMessage = styled.div`
   font-weight: bold;
   color: ${(props) => props.theme.error.main.hex};
   margin-top: 0.5rem;
+  font-size: 0.875rem;
 `;
 StyledErrorMessage.defaultProps = {
   theme: colourPalette.examplePalette,
@@ -13,8 +14,10 @@ StyledErrorMessage.defaultProps = {
 StyledErrorMessage.displayName = "StyledErrorMessage";
 
 export const StyledHelperCaption = styled.div`
-  color: ${(props) => props.theme.secondary.main.hex};
+  color: ${(props) => props.theme.black.tint80.hex};
   margin-top: 0.5rem;
+  font-weight: 100;
+  font-size: 0.875rem;
 `;
 StyledHelperCaption.defaultProps = {
   theme: colourPalette.examplePalette,
