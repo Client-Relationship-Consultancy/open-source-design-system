@@ -3,72 +3,109 @@ import styled from "styled-components"
 import { Field as FormikField, connect } from "formik"
 import PropTypes from "prop-types"
 import { colourPalette } from "../../../../brandColours"
-import ErrorMessage from "../ErrorMessage"
+import HelperErrorMessage from "../HelperErrorMessage"
 
 const InputWrapper = styled.div`
   display: flex;
-  flex-direction: ${props => (props.row ? "row" : "column")};
-  align-items: ${props => (props.row ? "center" : "stretch")};
+  flex-direction: ${(props) => (props.row ? "row" : "column")};
+  align-items: ${(props) => (props.row ? "center" : "stretch")};
 `
 InputWrapper.displayName = "InputWrapper"
 
 const Label = styled.label`
   font-size: 1rem;
   line-height: 100%;
+  margin-bottom: 0.1rem;
 `
 Label.displayName = "Label"
 
 const StyledFormikField = styled(FormikField)`
-  border: none;
-  border-bottom: 1px solid ${props => props.theme.black.tint40.hex};
+  border: 1px solid ${(props) => props.theme.black.tint40.hex};
   padding: 0.5rem 0.25rem 0.25rem;
+  border-radius: 0.3rem;
   outline: none;
   font-size: 1rem;
-  color: ${props => props.theme.black.main.hex};
+  color: ${(props) => props.theme.black.main.hex};
   order: 2;
-  margin: ${props => (props.type === "checkbox" || props.type === "radio" ? "0 0 0 0.5rem" : "0")};
-  cursor: ${props => (props.type === "checkbox" || props.type === "radio" ? "pointer" : "text")};
+  margin: ${(props) =>
+    props.type === "checkbox" || props.type === "radio" ? "0 0 0 0.5rem" : "0"};
+  cursor: ${(props) => (props.type === "checkbox" || props.type === "radio" ? "pointer" : "text")};
   :active,
   :focus {
-    ${props =>
+    border-color: ${(props) => props.theme.secondary.dark.hex};
+    box-shadow: 0px 0px 3px 0px ${(props) => props.theme.secondary.dark.hex};
+    ${(props) =>
       props.type !== "textarea" && `border-bottom: solid 1px ${props.theme.secondary.dark.hex}`};
     + label {
       order: 1;
-      color: ${props => props.theme.secondary.dark.hex};
+      color: ${(props) => props.theme.secondary.dark.hex};
       font-weight: bold;
     }
   }
-  ${props => props.type === "textarea" && "height: 10rem"};
-  ${props => props.type === "textarea" && `border: 1px solid ${props.theme.black.tint40.hex};`};
-  ${props => props.type === "textarea" && "margin-top: 0.5rem;"};
-  ${props => props.type === "textarea" && "border-radius: 5px;"};
+  ${(props) => props.type === "textarea" && "height: 10rem"};
+  ${(props) => props.type === "textarea" && `border: 1px solid ${props.theme.black.tint40.hex};`};
+  ${(props) => props.type === "textarea" && "margin-top: 0.5rem;"};
+  ${(props) => props.type === "textarea" && "border-radius: 5px;"};
 `
 StyledFormikField.defaultProps = {
   theme: colourPalette.examplePalette,
 }
 StyledFormikField.displayName = "StyledFormikField"
 
-const CustomField = props => {
-  const { values, handleChange, handleBlur, errors, touched } = props.formik
-  const { name, children, isValid, row, title, type, id, className, ...other } = props
-  return (
-    <div className={className}>
-      <InputWrapper row={row} type={type}>
-        <StyledFormikField
-          id={id}
-          type={type}
-          component={type === "textarea" ? "textarea" : undefined}
-          name={name}
-          value={values && values[name] ? values[name] : ""}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          {...other}
+export class CustomField extends React.PureComponent {
+  state = {
+    focus: false,
+  }
+
+  onBlur = (...args) => {
+    const { handleBlur } = this.props.formik
+    this.setState({ focus: false })
+    handleBlur(...args)
+  }
+
+  onFocus = () => {
+    this.setState({ focus: true })
+  }
+
+  render() {
+    const { values, handleChange, errors, touched } = this.props.formik
+    const {
+      name,
+      children,
+      isValid,
+      row,
+      title,
+      type,
+      id,
+      className,
+      caption,
+      ...other
+    } = this.props
+    return (
+      <div className={className}>
+        <InputWrapper row={row} type={type}>
+          <StyledFormikField
+            id={id}
+            type={type}
+            component={type === "textarea" ? "textarea" : undefined}
+            name={name}
+            value={values && values[name] ? values[name] : ""}
+            onChange={handleChange}
+            onBlur={this.onBlur}
+            onFocus={this.onFocus}
+            {...other}
+          />
+          <Label htmlFor={id}>{title}</Label>
+        </InputWrapper>
+        <HelperErrorMessage
+          error={errors[name]}
+          caption={caption}
+          isError={errors[name] && touched[name]}
+          isFocus={this.state.focus}
         />
-        <Label htmlFor={id}>{title}</Label>
-      </InputWrapper>
-      {errors && errors[name] && touched && touched[name] ? <ErrorMessage name={name} /> : null}
-    </div>
-  )
+      </div>
+    )
+  }
 }
 CustomField.displayName = "CustomField"
 
@@ -80,6 +117,7 @@ CustomField.propTypes = {
   id: PropTypes.string,
   type: PropTypes.string,
   name: PropTypes.string,
+  caption: PropTypes.string,
   /** Set as true to have label and input on the same row (useful for radio and checkboxes) */
   row: PropTypes.bool,
   /** Set as true to have validation available on this field */

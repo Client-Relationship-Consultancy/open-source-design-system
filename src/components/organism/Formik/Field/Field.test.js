@@ -1,8 +1,9 @@
 import React from "react"
-import { mount } from "enzyme"
+import { mount, shallow } from "enzyme"
 import "jest-styled-components"
 import Form from "../Form"
-import Field from "./Field"
+import Field, {CustomField} from "./Field"
+import HelperErrorMessage from "../HelperErrorMessage"
 
 const testForm = (
   <Form>
@@ -38,5 +39,49 @@ describe("Testing default field layout", () => {
 
   it("Match last snapshot", () => {
     expect(component).toMatchSnapshot()
+  })
+})
+
+describe("Testing Error and Caption messages", () => {
+  it("should show error message", () => {
+    const formkitProps = {
+      values: { name: "" },
+      handleChange: jest.fn(),
+      errors: { name: "error" },
+      touched: { name: true },
+    }
+    const component = shallow(
+      <Field name="name" type="text" formik={formkitProps} caption="test caption" />,
+    )
+    expect(
+      component.contains(
+        <HelperErrorMessage error="error" caption="test caption" isError isFocus={false} />,
+      ),
+    )
+  })
+  it("should show caption message", () => {
+    const formkitProps = {
+      values: { name: "" },
+      handleChange: jest.fn(),
+      handleBlur: jest.fn(),
+      errors: {},
+      touched: { name: false },
+    }
+    const component = shallow(
+      <CustomField name="name" type="text" formik={formkitProps} caption="test caption" />,
+    )
+    component.instance().onFocus()
+    expect(
+      component.contains(
+        <HelperErrorMessage error={undefined} caption="test caption" isError={undefined} isFocus />,
+      ),
+    ).toBeTruthy()
+    component.instance().onBlur()
+    expect(formkitProps.handleBlur).toBeCalled()
+    expect(
+      component.contains(
+        <HelperErrorMessage error={undefined} caption="test caption" isError={undefined} isFocus />,
+      ),
+    ).toBeFalsy()
   })
 })

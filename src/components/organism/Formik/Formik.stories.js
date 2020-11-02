@@ -43,7 +43,7 @@ stories.add(
         }, 3000)
       }}
       // Validation rules - places error into errors object of Field[name]
-      validate={values => {
+      validate={(values) => {
         const errors = {}
         if (!values.name) {
           errors.name = "Name is required"
@@ -62,10 +62,11 @@ stories.add(
         options={titleOptions}
         name="title"
         placeholder="Please choose a title"
+        caption="test caption"
         onChange={() => {}}
         isClearable
       />
-      <Field type="text" id="name" name="name" title="Name" isValid />
+      <Field type="text" id="name" name="name" title="Name" isValid caption="test caption" />
       <Field type="textarea" id="productConfig" config="productConfig" title="Config" isValid />
       <Field type="email" name="email" id="email" title="Email" isValid />
       <FormikSelect
@@ -74,6 +75,7 @@ stories.add(
         name="pet"
         placeholder="What pets do you like to have?"
         isValid
+        caption="test caption"
       />
       <TimezoneSelect id="timezone" title="Timezone" name="timezone" />
       <p>Teabag in or out?</p>

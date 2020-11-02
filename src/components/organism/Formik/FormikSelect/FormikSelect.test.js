@@ -2,7 +2,7 @@ import React from "react"
 import { mount, shallow } from "enzyme"
 import FormikSelect, { CustomSelect } from "./FormikSelect"
 import Form from "../Form"
-import { StyledErrorMessage } from "../ErrorMessage/ErrorMessage"
+import HelperErrorMessage from "../HelperErrorMessage/HelperErrorMessage"
 
 describe("FormikSelect Component Test", () => {
   const petOptions = {
@@ -23,21 +23,22 @@ describe("FormikSelect Component Test", () => {
 
   const component = mount(
     <Form>
-      <FormikSelect name="name" options={petOptions} id="testId" onChange={mockFn} />
+      <FormikSelect
+        name="name"
+        options={petOptions}
+        id="testId"
+        onChange={mockFn}
+        caption="test caption"
+      />
     </Form>,
   )
 
   const componentSelect = shallow(
-    <CustomSelect name="name" onChange={mockFn} formik={formikProps} />,
+    <CustomSelect name="name" onChange={mockFn} formik={formikProps} caption="test caption" />,
   )
 
   it("Render options into the correct format ordered by label", () => {
-    expect(
-      component
-        .find("Select")
-        .last()
-        .props().options,
-    ).toEqual([
+    expect(component.find("Select").last().props().options).toEqual([
       { value: "bird", label: "Bird" },
       { value: "cat", label: "Cat" },
       { value: "dog", label: "Dog" },
@@ -66,7 +67,7 @@ describe("FormikSelect Component Test", () => {
     expect(componentSelect.state().touched).toBeTruthy()
   })
 
-  it("render error message", () => {
+  it("render error message and caption message", () => {
     const formikErrorProps = {
       values: { name: "" },
       errors: { name: "error" },
@@ -74,6 +75,22 @@ describe("FormikSelect Component Test", () => {
     }
     componentSelect.setProps({ formik: formikErrorProps })
     componentSelect.instance().onBlur()
-    expect(componentSelect.contains(<StyledErrorMessage>error</StyledErrorMessage>)).toBeTruthy()
+    expect(
+      componentSelect.contains(
+        <HelperErrorMessage error="error" caption="test caption" isError isFocus={false} />,
+      ),
+    ).toBeTruthy()
+    const NewformikErrorProps = {
+      values: { name: "" },
+      errors: {},
+      setFieldValue: formikMockFn,
+    }
+    componentSelect.setProps({ formik: NewformikErrorProps })
+    componentSelect.instance().onFocus()
+    expect(
+      componentSelect.contains(
+        <HelperErrorMessage error={undefined} caption="test caption" isError={undefined} isFocus />,
+      ),
+    ).toBeTruthy()
   })
 })
