@@ -11,7 +11,10 @@ describe("HelperErrorMessage Component Test", () => {
     isError: false,
     isFocus: false,
   }
-  const component = mount(<HelperErrorMessage {...propsMock} />)
+  let component = mount(<HelperErrorMessage {...propsMock} />)
+  beforeEach(()=>{
+    component = mount(<HelperErrorMessage {...propsMock} />)
+  })
 
   it("HelperErrorMessage should should show a caption message when isFocus is true", () => {
     expect(
@@ -31,6 +34,16 @@ describe("HelperErrorMessage Component Test", () => {
       component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
     ).toBeFalsy()
     component.setProps({ ...propsMock, isError: true })
+    expect(
+      component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
+    ).toBeTruthy()
+  })
+
+  it("HelperErrorMessage should show an error message when isError is true and isFocus is true", () => {
+    expect(
+      component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
+    ).toBeFalsy()
+    component.setProps({ ...propsMock, isError: true, isFocus: true })
     expect(
       component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
     ).toBeTruthy()
