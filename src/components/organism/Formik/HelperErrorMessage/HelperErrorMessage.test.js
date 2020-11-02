@@ -12,17 +12,12 @@ describe("HelperErrorMessage Component Test", () => {
     isFocus: false,
   }
   const component = mount(<HelperErrorMessage {...propsMock} />)
-  const StyledErrorMessageComponent = mount(<StyledErrorMessage>test</StyledErrorMessage>)
-  const StyledHelperCaptionComponent = mount(<StyledHelperCaption>test</StyledHelperCaption>)
 
-  it("HelperErrorMessage sould match last snapshot", () => {
+  it("HelperErrorMessage should should show a caption message when isFocus is true", () => {
     expect(
       component.contains(
         <StyledHelperCaption className="ErrorMessage">caption</StyledHelperCaption>,
       ),
-    ).toBeFalsy()
-    expect(
-      component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
     ).toBeFalsy()
     component.setProps({ ...propsMock, isFocus: true })
     expect(
@@ -30,6 +25,11 @@ describe("HelperErrorMessage Component Test", () => {
         <StyledHelperCaption className="ErrorMessage">caption</StyledHelperCaption>,
       ),
     ).toBeTruthy()
+  })
+  it("HelperErrorMessage should show an error message when isError is true", () => {
+    expect(
+      component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
+    ).toBeFalsy()
     component.setProps({ ...propsMock, isError: true })
     expect(
       component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
@@ -37,11 +37,13 @@ describe("HelperErrorMessage Component Test", () => {
   })
 
   it("StyledErrorMessage should match last snapshot", () => {
+    const StyledErrorMessageComponent = mount(<StyledErrorMessage>test</StyledErrorMessage>)
     const tree = toJson(StyledErrorMessageComponent)
     expect(tree).toMatchSnapshot()
   })
 
   it("StyledHelperCaption should match last snapshot", () => {
+    const StyledHelperCaptionComponent = mount(<StyledHelperCaption>test</StyledHelperCaption>)
     const tree = toJson(StyledHelperCaptionComponent)
     expect(tree).toMatchSnapshot()
   })
