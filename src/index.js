@@ -41,7 +41,7 @@ import FilterableApprovalList from "./components/organism/FilterableApprovalList
 import FilterableGrid from "./components/organism/FilterableGrid"
 import FilterableList from "./components/organism/FilterableList/FilterableList"
 import {
-  ErrorMessage,
+  HelperErrorMessage,
   Field,
   Form,
   FormikCheckbox,
@@ -105,7 +105,7 @@ export {
   FilterableApprovalList,
   FilterableGrid,
   FilterableList,
-  ErrorMessage,
+  HelperErrorMessage,
   Field,
   Form,
   FormikCheckbox,
