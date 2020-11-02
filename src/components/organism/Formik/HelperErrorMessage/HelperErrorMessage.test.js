@@ -39,7 +39,7 @@ describe("HelperErrorMessage Component Test", () => {
     ).toBeTruthy()
   })
 
-  it("HelperErrorMessage should show an error message when isError is true and isFocus is true", () => {
+  it("HelperErrorMessage should show an error message while not showing the caption when isError is true and isFocus is true", () => {
     expect(
       component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
     ).toBeFalsy()
@@ -47,6 +47,11 @@ describe("HelperErrorMessage Component Test", () => {
     expect(
       component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
     ).toBeTruthy()
+    expect(
+      component.contains(
+        <StyledHelperCaption className="ErrorMessage">caption</StyledHelperCaption>,
+      ),
+    ).toBeFalsy()
   })
 
   it("StyledErrorMessage should match last snapshot", () => {
