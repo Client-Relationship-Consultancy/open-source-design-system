@@ -27,9 +27,18 @@ export class CustomSelect extends React.PureComponent {
     this.setState({ focus: true })
   }
 
+  getInitialValue = () => {
+    const { name } = this.props
+    const { values } = this.props.formik
+    return values[name] && typeof values[name] === "string"
+      ? { value: values[name], label: this.props.options[values[name]] }
+      : values[name]
+  }
+
   render() {
     const { name, id, caption } = this.props
-    const { values, errors } = this.props.formik
+    const { errors } = this.props.formik
+
     return (
       <div>
         <Select
@@ -37,7 +46,7 @@ export class CustomSelect extends React.PureComponent {
           id={id}
           onChange={this.onChange}
           onChangeMulti={this.onChange}
-          value={values && values[name]}
+          value={this.getInitialValue()}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
         />
