@@ -1,20 +1,30 @@
 import React from "react"
 import { mount } from "enzyme"
 import toJson from "enzyme-to-json"
-import ErrorMessage, { StyledErrorMessage, StyledHelperCaption } from "./ErrorMessage"
+import HelperErrorMessage, { StyledErrorMessage, StyledHelperCaption } from "./HelperErrorMessage"
 import "jest-styled-components"
 
-describe("ErrorMessage Component Test", () => {
+describe("HelperErrorMessage Component Test", () => {
   const propsMock = {
     error: "error",
     caption: "caption",
     isError: false,
+    isFocus: false,
   }
-  const component = mount(<ErrorMessage {...propsMock} />)
+  const component = mount(<HelperErrorMessage {...propsMock} />)
   const StyledErrorMessageComponent = mount(<StyledErrorMessage>test</StyledErrorMessage>)
   const StyledHelperCaptionComponent = mount(<StyledHelperCaption>test</StyledHelperCaption>)
 
-  it("ErrorMessage sould match last snapshot", () => {
+  it("HelperErrorMessage sould match last snapshot", () => {
+    expect(
+      component.contains(
+        <StyledHelperCaption className="ErrorMessage">caption</StyledHelperCaption>,
+      ),
+    ).toBeFalsy()
+    expect(
+      component.contains(<StyledErrorMessage className="ErrorMessage">error</StyledErrorMessage>),
+    ).toBeFalsy()
+    component.setProps({ ...propsMock, isFocus: true })
     expect(
       component.contains(
         <StyledHelperCaption className="ErrorMessage">caption</StyledHelperCaption>,

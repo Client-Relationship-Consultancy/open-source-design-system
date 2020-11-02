@@ -351,6 +351,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                             name="name"
                             onBlur={[Function]}
                             onChange={[Function]}
+                            onFocus={[Function]}
                             theme={
                               Object {
                                 "action": Object {
@@ -694,6 +695,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                               name="name"
                               onBlur={[Function]}
                               onChange={[Function]}
+                              onFocus={[Function]}
                               theme={
                                 Object {
                                   "action": Object {
@@ -865,6 +867,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                 name="name"
                                 onBlur={[Function]}
                                 onChange={[Function]}
+                                onFocus={[Function]}
                                 theme={
                                   Object {
                                     "action": Object {
@@ -1036,6 +1039,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                   name="name"
                                   onBlur={[Function]}
                                   onChange={[Function]}
+                                  onFocus={[Function]}
                                   theme={
                                     Object {
                                       "action": Object {
@@ -1169,6 +1173,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                     name="name"
                                     onBlur={[Function]}
                                     onChange={[Function]}
+                                    onFocus={[Function]}
                                     theme={
                                       Object {
                                         "action": Object {
@@ -1335,7 +1340,9 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                         </div>
                       </StyledComponent>
                     </InputWrapper>
-                    <ErrorMessage />
+                    <HelperErrorMessage
+                      isFocus={false}
+                    />
                   </div>
                 </CustomField>
               </Field>
@@ -1469,6 +1476,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                             name="location"
                             onBlur={[Function]}
                             onChange={[Function]}
+                            onFocus={[Function]}
                             theme={
                               Object {
                                 "action": Object {
@@ -1812,6 +1820,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                               name="location"
                               onBlur={[Function]}
                               onChange={[Function]}
+                              onFocus={[Function]}
                               theme={
                                 Object {
                                   "action": Object {
@@ -1983,6 +1992,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                 name="location"
                                 onBlur={[Function]}
                                 onChange={[Function]}
+                                onFocus={[Function]}
                                 theme={
                                   Object {
                                     "action": Object {
@@ -2154,6 +2164,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                   name="location"
                                   onBlur={[Function]}
                                   onChange={[Function]}
+                                  onFocus={[Function]}
                                   theme={
                                     Object {
                                       "action": Object {
@@ -2287,6 +2298,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                     name="location"
                                     onBlur={[Function]}
                                     onChange={[Function]}
+                                    onFocus={[Function]}
                                     theme={
                                       Object {
                                         "action": Object {
@@ -2453,7 +2465,9 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                         </div>
                       </StyledComponent>
                     </InputWrapper>
-                    <ErrorMessage />
+                    <HelperErrorMessage
+                      isFocus={false}
+                    />
                   </div>
                 </CustomField>
               </Field>
@@ -2587,6 +2601,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                             name="subscribe"
                             onBlur={[Function]}
                             onChange={[Function]}
+                            onFocus={[Function]}
                             theme={
                               Object {
                                 "action": Object {
@@ -2930,6 +2945,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                               name="subscribe"
                               onBlur={[Function]}
                               onChange={[Function]}
+                              onFocus={[Function]}
                               theme={
                                 Object {
                                   "action": Object {
@@ -3101,6 +3117,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                 name="subscribe"
                                 onBlur={[Function]}
                                 onChange={[Function]}
+                                onFocus={[Function]}
                                 theme={
                                   Object {
                                     "action": Object {
@@ -3272,6 +3289,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                   name="subscribe"
                                   onBlur={[Function]}
                                   onChange={[Function]}
+                                  onFocus={[Function]}
                                   theme={
                                     Object {
                                       "action": Object {
@@ -3405,6 +3423,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                     name="subscribe"
                                     onBlur={[Function]}
                                     onChange={[Function]}
+                                    onFocus={[Function]}
                                     theme={
                                       Object {
                                         "action": Object {
@@ -3571,7 +3590,9 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                         </div>
                       </StyledComponent>
                     </InputWrapper>
-                    <ErrorMessage />
+                    <HelperErrorMessage
+                      isFocus={false}
+                    />
                   </div>
                 </CustomField>
               </Field>
@@ -3706,6 +3727,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                             name="config"
                             onBlur={[Function]}
                             onChange={[Function]}
+                            onFocus={[Function]}
                             theme={
                               Object {
                                 "action": Object {
@@ -4050,6 +4072,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                               name="config"
                               onBlur={[Function]}
                               onChange={[Function]}
+                              onFocus={[Function]}
                               theme={
                                 Object {
                                   "action": Object {
@@ -4222,6 +4245,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                 name="config"
                                 onBlur={[Function]}
                                 onChange={[Function]}
+                                onFocus={[Function]}
                                 theme={
                                   Object {
                                     "action": Object {
@@ -4394,6 +4418,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                   name="config"
                                   onBlur={[Function]}
                                   onChange={[Function]}
+                                  onFocus={[Function]}
                                   theme={
                                     Object {
                                       "action": Object {
@@ -4527,6 +4552,7 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                                     name="config"
                                     onBlur={[Function]}
                                     onChange={[Function]}
+                                    onFocus={[Function]}
                                     theme={
                                       Object {
                                         "action": Object {
@@ -4693,7 +4719,9 @@ exports[`Testing default field layout Match last snapshot 1`] = `
                         </div>
                       </StyledComponent>
                     </InputWrapper>
-                    <ErrorMessage />
+                    <HelperErrorMessage
+                      isFocus={false}
+                    />
                   </div>
                 </CustomField>
               </Field>
