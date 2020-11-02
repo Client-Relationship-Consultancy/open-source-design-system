@@ -1,4 +1,4 @@
-import ErrorMessage from "./ErrorMessage"
+import HelperErrorMessage from "./HelperErrorMessage"
 import Field from "./Field"
 import Form from "./Form"
 import FormikCheckbox from "./FormikCheckbox"
@@ -8,7 +8,7 @@ import FormikTextToggle from "./FormikTextToggle"
 import Submit from "./Submit"
 
 export {
-  ErrorMessage,
+  HelperErrorMessage,
   Field,
   Form,
   FormikCheckbox,

@@ -27,11 +27,12 @@ interface IProps {
   className: string;
   caption?: string;
   isError: boolean;
+  isFocus: boolean;
 }
 
-export class ErrorMessage extends React.PureComponent<IProps> {
+export class HelperErrorMessage extends React.PureComponent<IProps> {
   render() {
-    const { error, id, className, caption, isError } = this.props;
+    const { error, id, className, caption, isError, isFocus } = this.props;
     const errorClassName = className ? `ErrorMessage ${className}` : "ErrorMessage";
     return (
       <>
@@ -40,7 +41,7 @@ export class ErrorMessage extends React.PureComponent<IProps> {
             {error}
           </StyledErrorMessage>
         ) : (
-          caption && (
+          caption && isFocus && (
             <StyledHelperCaption id={id} className={errorClassName}>
               {caption}
             </StyledHelperCaption>
@@ -51,4 +52,4 @@ export class ErrorMessage extends React.PureComponent<IProps> {
   }
 }
 
-export default ErrorMessage;
+export default HelperErrorMessage;

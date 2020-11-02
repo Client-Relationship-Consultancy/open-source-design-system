@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Field as FormikField, connect } from "formik"
 import PropTypes from "prop-types"
 import { colourPalette } from "../../../../brandColours"
-import ErrorMessage from "../ErrorMessage"
+import HelperErrorMessage from "../HelperErrorMessage"
 
 const InputWrapper = styled.div`
   display: flex;
@@ -15,10 +15,9 @@ InputWrapper.displayName = "InputWrapper"
 const Label = styled.label`
   font-size: 1rem;
   line-height: 100%;
-  margin-bottom:0.1rem;
+  margin-bottom: 0.1rem;
 `
 Label.displayName = "Label"
-
 
 const StyledFormikField = styled(FormikField)`
   border: 1px solid ${(props) => props.theme.black.tint40.hex};
@@ -53,27 +52,60 @@ StyledFormikField.defaultProps = {
 }
 StyledFormikField.displayName = "StyledFormikField"
 
-const CustomField = (props) => {
-  const { values, handleChange, handleBlur, errors, touched } = props.formik
-  const { name, children, isValid, row, title, type, id, className, caption, ...other } = props
-  return (
-    <div className={className}>
-      <InputWrapper row={row} type={type}>
-        <StyledFormikField
-          id={id}
-          type={type}
-          component={type === "textarea" ? "textarea" : undefined}
-          name={name}
-          value={values && values[name] ? values[name] : ""}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          {...other}
+export class CustomField extends React.PureComponent {
+  state = {
+    focus: false,
+  }
+
+  onBlur = (...args) => {
+    const { handleBlur } = this.props.formik
+    this.setState({ focus: false })
+    handleBlur(...args)
+  }
+
+  onFocus = () => {
+    this.setState({ focus: true })
+  }
+
+  render() {
+    const { values, handleChange, errors, touched } = this.props.formik
+    const {
+      name,
+      children,
+      isValid,
+      row,
+      title,
+      type,
+      id,
+      className,
+      caption,
+      ...other
+    } = this.props
+    return (
+      <div className={className}>
+        <InputWrapper row={row} type={type}>
+          <StyledFormikField
+            id={id}
+            type={type}
+            component={type === "textarea" ? "textarea" : undefined}
+            name={name}
+            value={values && values[name] ? values[name] : ""}
+            onChange={handleChange}
+            onBlur={this.onBlur}
+            onFocus={this.onFocus}
+            {...other}
+          />
+          <Label htmlFor={id}>{title}</Label>
+        </InputWrapper>
+        <HelperErrorMessage
+          error={errors[name]}
+          caption={caption}
+          isError={errors[name] && touched[name]}
+          isFocus={this.state.focus}
         />
-        <Label htmlFor={id}>{title}</Label>
-      </InputWrapper>
-      <ErrorMessage error={errors[name]} caption={caption} isError={errors[name] && touched[name]} />
-    </div>
-  )
+      </div>
+    )
+  }
 }
 CustomField.displayName = "CustomField"
 

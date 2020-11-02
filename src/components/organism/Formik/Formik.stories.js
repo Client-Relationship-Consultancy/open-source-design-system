@@ -75,6 +75,7 @@ stories.add(
         name="pet"
         placeholder="What pets do you like to have?"
         isValid
+        caption="test caption"
       />
       <TimezoneSelect id="timezone" title="Timezone" name="timezone" />
       <p>Teabag in or out?</p>

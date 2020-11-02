@@ -48,6 +48,7 @@ interface IProps {
   onChange?: (value: IDropdownObject) => void;
   onChangeMulti?: (value: OptionsType<IDropdownObject>) => void;
   onBlur?: () => void;
+  onFocus?: () => void;
   value?: IDropdownObject[] | null;
   isDisabled?: boolean;
   isClearable?: boolean;
@@ -125,6 +126,7 @@ export class CustomSelect extends React.Component<IProps, IState> {
       placeholder,
       options,
       onBlur,
+      onFocus,
       value,
       isDisabled,
       isClearable,
@@ -158,6 +160,7 @@ export class CustomSelect extends React.Component<IProps, IState> {
                   placeholder={placeholder}
                   name={name}
                   onBlur={onBlur}
+                  onFocus={onFocus}
                   value={filteredValue || value}
                   options={this.renderOptions(options)}
                   onChange={this.onChange}
