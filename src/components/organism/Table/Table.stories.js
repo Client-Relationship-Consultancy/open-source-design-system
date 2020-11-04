@@ -260,6 +260,16 @@ storiesOf("Table", module)
         resizable: true,
         cellRenderer: "selectValueRenderer",
         cellClass: "select",
+        onCellValueChanged:(params)=>{
+          if(params.newValue === "list"){
+            // eslint-disable-next-line no-restricted-globals
+            const changeIt = confirm("are you sure you want to change the value to List?")
+            if(!changeIt){
+              // reset the value to the prevoius one
+              params.node.setDataValue(params.column.colId, params.oldValue)
+            }
+          }
+        }
       },
       {
         headerName: "Compulsory",
