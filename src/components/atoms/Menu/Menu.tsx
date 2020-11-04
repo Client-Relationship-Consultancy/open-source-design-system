@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import Icon from "../Icon";
 import { colourPalette } from "../../../brandColours";
 
 const defaultPalette = colourPalette.examplePalette;
@@ -57,11 +59,18 @@ const SubMenuItems = styled.button`
     cursor: pointer;
     background-color: ${({ theme }) => theme.black.tint20.hex};
   }
+  > * + * {
+    margin-left: 0.5rem;
+  }
+  svg {
+    max-width: 1rem;
+  }
 `;
 
 interface IMenuItem {
   id?: string;
   label: string;
+  icon: IconProp | SVGElement;
   onClick?: () => void;
   children?: IMenuItem[]; // This is if we plan to do another sub menu for the sub menu
 }
@@ -82,6 +91,7 @@ export class Menu extends React.Component<IProps, IState> {
     return this.props.items.map((item) => {
       return (
         <SubMenuItems key={item.id} onClick={item.onClick}>
+          {item.icon && typeof item?.icon === "string" ? <Icon name={item.icon} /> : item.icon}
           <span>{item.label}</span>
         </SubMenuItems>
       );
@@ -97,6 +107,7 @@ export class Menu extends React.Component<IProps, IState> {
       <StyledMenu showSubMenu={this.state.showSubMenu} onClick={this.openSubMenu}>
         <MenuLabel>
           <span>Bulk Actions</span>
+          <Icon name="chevron-down" color="action" />
         </MenuLabel>
         <SubMenu showSubMenu={this.state.showSubMenu} className="subMenu">
           {this.renderSubMenuItems()}
