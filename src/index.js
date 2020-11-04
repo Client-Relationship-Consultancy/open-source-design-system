@@ -20,6 +20,7 @@ import Select from "./components/atoms/Select"
 import TextToggle from "./components/atoms/TextToggle"
 import Theme from "./components/atoms/Theme"
 import Tooltip from "./components/atoms/Tooltip"
+import { Menu } from "./components/atoms/Menu"
 
 // Molecule components
 import Accordion from "./components/molecules/Accordion"
@@ -79,6 +80,7 @@ export {
   TextToggle,
   Theme,
   Tooltip,
+  Menu,
   // ==================
   // Molecule components
   // ==================
