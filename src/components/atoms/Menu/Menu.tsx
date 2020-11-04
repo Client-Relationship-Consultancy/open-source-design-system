@@ -83,8 +83,24 @@ interface IState {
   showSubMenu: boolean;
 }
 export class Menu extends React.Component<IProps, IState> {
+  private componentRef = React.createRef<HTMLButtonElement>();
+
   state = {
     showSubMenu: false,
+  };
+
+  componentDidMount = () => {
+    document.addEventListener("mousedown", this.handleClickOutside);
+  };
+
+  componentWillUnmount = () => {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  };
+
+  handleClickOutside = (event: any) => {
+    if (this.componentRef.current && !this.componentRef.current.contains(event.target)) {
+      this.setState({ showSubMenu: false });
+    }
   };
 
   renderSubMenuItems = () => {
@@ -104,7 +120,11 @@ export class Menu extends React.Component<IProps, IState> {
 
   render = () => {
     return (
-      <StyledMenu showSubMenu={this.state.showSubMenu} onClick={this.openSubMenu}>
+      <StyledMenu
+        showSubMenu={this.state.showSubMenu}
+        onClick={this.openSubMenu}
+        ref={this.componentRef}
+      >
         <MenuLabel>
           <span>Bulk Actions</span>
           <Icon name="chevron-down" color="action" />
