@@ -3,6 +3,7 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
+import { text, boolean } from "@storybook/addon-knobs"
 
 import { Menu } from "./Menu"
 
@@ -21,23 +22,26 @@ stories.add("Menu", () => {
   return (
     <div style={{ paddingBottom: "5rem" }}>
       <Menu
+        showMenuArrow={boolean("Show dropdown icon", true)}
         items={[
           {
-            label: "Exclude",
+            label: text("Sub-menu 1", "Exclude"),
             icon: "users",
-            onClick: () => console.log("Exclude me"),
+            onClick: () => console.log("Sub-menu 1 clicked"),
           },
           {
-            label: "Remove",
-            onClick: () => console.log("remove me"),
+            label: text("Sub-menu 2", "Remove"),
+            onClick: () => console.log("Sub-menu 2 clicked"),
             icon,
           },
           {
-            label: "Make Active",
-            onClick: () => console.log("activate me"),
+            label: text("Sub-menu 3", "Make active"),
+            onClick: () => console.log("Sub-menu 3 clicked"),
           },
         ]}
-      />
+      >
+        {text("Menu label", "Bulk Actions")}
+      </Menu>
     </div>
   )
 })

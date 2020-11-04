@@ -36,7 +36,7 @@ const SubMenu = styled.div<{ showSubMenu: boolean }>`
   position: absolute;
   max-width: 500%;
   white-space: nowrap;
-  background-color: white;
+  background-color: ${({ theme }) => theme.surface.hex};
   box-shadow: 0.1rem 0.1rem 0.5rem ${({ theme }) => theme.black.tint40.hex};
   display: flex;
   flex-direction: column;
@@ -77,6 +77,7 @@ interface IMenuItem {
 
 interface IProps {
   items: IMenuItem[];
+  showMenuArrow: boolean;
 }
 
 interface IState {
@@ -90,49 +91,44 @@ export class Menu extends React.Component<IProps, IState> {
   };
 
   componentDidMount = () => {
-    document.addEventListener("mousedown", this.handleClickOutside);
+    document.addEventListener("mousedown", this.closeMenuWhenClickedOutside);
   };
 
   componentWillUnmount = () => {
-    document.removeEventListener("mousedown", this.handleClickOutside);
+    document.removeEventListener("mousedown", this.closeMenuWhenClickedOutside);
   };
 
-  handleClickOutside = (event: any) => {
+  closeMenuWhenClickedOutside = (event: any) => {
     if (this.componentRef.current && !this.componentRef.current.contains(event.target)) {
       this.setState({ showSubMenu: false });
     }
   };
 
-  renderSubMenuItems = () => {
-    return this.props.items.map((item) => {
-      return (
-        <SubMenuItems key={item.id} onClick={item.onClick}>
-          {item.icon && typeof item?.icon === "string" ? <Icon name={item.icon} /> : item.icon}
-          <span>{item.label}</span>
-        </SubMenuItems>
-      );
-    });
-  };
+  renderSubMenuItems = () =>
+    this.props.items.map((item) => (
+      <SubMenuItems key={item.id} onClick={item.onClick}>
+        {item.icon && typeof item?.icon === "string" ? <Icon name={item.icon} /> : item.icon}
+        <span>{item.label}</span>
+      </SubMenuItems>
+    ));
 
   openSubMenu = () => {
     this.setState((prevState) => ({ showSubMenu: !prevState.showSubMenu }));
   };
 
-  render = () => {
-    return (
-      <StyledMenu
-        showSubMenu={this.state.showSubMenu}
-        onClick={this.openSubMenu}
-        ref={this.componentRef}
-      >
-        <MenuLabel>
-          <span>Bulk Actions</span>
-          <Icon name="chevron-down" color="action" />
-        </MenuLabel>
-        <SubMenu showSubMenu={this.state.showSubMenu} className="subMenu">
-          {this.renderSubMenuItems()}
-        </SubMenu>
-      </StyledMenu>
-    );
-  };
+  render = () => (
+    <StyledMenu
+      showSubMenu={this.state.showSubMenu}
+      onClick={this.openSubMenu}
+      ref={this.componentRef}
+    >
+      <MenuLabel>
+        <span>{this.props.children}</span>
+        {this.props.showMenuArrow ? <Icon name="chevron-down" color="action" /> : null}
+      </MenuLabel>
+      <SubMenu showSubMenu={this.state.showSubMenu} className="subMenu">
+        {this.renderSubMenuItems()}
+      </SubMenu>
+    </StyledMenu>
+  );
 }
