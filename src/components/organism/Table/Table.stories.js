@@ -254,17 +254,19 @@ storiesOf("Table", module)
         editable: true,
         cellEditor: "selectRenderer",
         cellEditorParams: {
-          values: ["short text", "number", "list"],
+          values: ["short text", "number", "list", "this value needs confirmation"],
           isClearable: boolean("Enable select clearing", true),
         },
         resizable: true,
         cellRenderer: "selectValueRenderer",
         cellClass: "select",
         onCellValueChanged:(params)=>{
-          if(params.newValue === "list"){
+          if (params.newValue === "this value needs confirmation") {
             // eslint-disable-next-line no-restricted-globals
-            const changeIt = confirm("are you sure you want to change the value to List?")
-            if(!changeIt){
+            const changeIt = confirm(
+              "are you sure you want to change the value to 'this value needs confirmation'?",
+            )
+            if (!changeIt) {
               // reset the value to the prevoius one
               params.node.setDataValue(params.column.colId, params.oldValue)
             }
