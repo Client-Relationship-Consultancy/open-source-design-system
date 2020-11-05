@@ -16,7 +16,7 @@ export class Select extends React.PureComponent {
     // the issue is closed and claims to be resolved with newer version but ElioS tryed to update it and still experienced the problem
     setTimeout(() => {
       this.setState({ menuOpen: true })
-    }, 1)
+    }, 100)
   }
 
   renderOptions = () =>
