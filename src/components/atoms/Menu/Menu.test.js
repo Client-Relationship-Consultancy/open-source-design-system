@@ -10,7 +10,6 @@ describe("Menu Component", () => {
       { label: "Remove me", onClick: jest.fn(), icon: <svg /> },
       { label: "Activate me", id: "activate", onClick: jest.fn() },
     ],
-    showMenuArrow: true,
   }
 
   let component
@@ -115,6 +114,24 @@ describe("Menu Component", () => {
     const eventListener = component.instance().closeMenuWhenClickedOutside
     component.unmount()
     expect(document.removeEventListener).toHaveBeenCalledWith("mousedown", eventListener)
+  })
+
+  it("should use the ref prop when useInnerRef prop is false", () => {
+    component.setProps({
+      useInnerRef: false,
+    })
+    expect(component.instance().createRefProp()).toEqual({
+      ref: component.instance().componentRef,
+    })
+  })
+
+  it("should use the innerRef prop when useInnerRef prop is true", () => {
+    component.setProps({
+      useInnerRef: true,
+    })
+    expect(component.instance().createRefProp()).toEqual({
+      innerRef: component.instance().componentRef,
+    })
   })
 })
 

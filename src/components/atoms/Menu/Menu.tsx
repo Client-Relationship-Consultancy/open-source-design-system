@@ -79,13 +79,22 @@ interface IMenuItem {
 interface IProps {
   items: IMenuItem[];
   showMenuArrow: boolean;
+  useInnerRef: boolean;
 }
 
 interface IState {
   showSubMenu: boolean;
 }
+
+type DefaultProps = Pick<IProps, "showMenuArrow" | "useInnerRef">;
+
 export class Menu extends React.Component<IProps, IState> {
-  private componentRef = React.createRef<HTMLButtonElement>();
+  componentRef = React.createRef<HTMLButtonElement>();
+
+  static defaultProps: DefaultProps = {
+    useInnerRef: false,
+    showMenuArrow: true,
+  };
 
   state = {
     showSubMenu: false,
@@ -120,19 +129,26 @@ export class Menu extends React.Component<IProps, IState> {
     this.setState((prevState) => ({ showSubMenu: !prevState.showSubMenu }));
   };
 
-  render = () => (
-    <StyledMenu
-      showSubMenu={this.state.showSubMenu}
-      onClick={this.openSubMenu}
-      ref={this.componentRef}
-    >
-      <MenuLabel>
-        <span>{this.props.children}</span>
-        {this.props.showMenuArrow ? <Icon name="chevron-down" color="action" /> : null}
-      </MenuLabel>
-      <SubMenu showSubMenu={this.state.showSubMenu} className="subMenu">
-        {this.renderSubMenuItems()}
-      </SubMenu>
-    </StyledMenu>
-  );
+  // innerRef is deprecated in Styled Components v4. Uses ref instead.
+  // This is to allow backward compatibility for older Styled Components.
+  createRefProp = () =>
+    this.props.useInnerRef ? { innerRef: this.componentRef } : { ref: this.componentRef };
+
+  render = () => {
+    return (
+      <StyledMenu
+        showSubMenu={this.state.showSubMenu}
+        onClick={this.openSubMenu}
+        {...this.createRefProp()}
+      >
+        <MenuLabel>
+          <span>{this.props.children}</span>
+          {this.props.showMenuArrow ? <Icon name="chevron-down" color="action" /> : null}
+        </MenuLabel>
+        <SubMenu showSubMenu={this.state.showSubMenu} className="subMenu">
+          {this.renderSubMenuItems()}
+        </SubMenu>
+      </StyledMenu>
+    );
+  };
 }
