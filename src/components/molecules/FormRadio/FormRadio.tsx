@@ -5,7 +5,7 @@ import Label from "../../atoms/Label"
 import Radio from "../../atoms/Radio"
 
 interface IRadioContainer {
-  row: boolean;
+  row?: boolean;
 }
 
 const Container = styled.div<IRadioContainer>`
@@ -22,13 +22,13 @@ Container.displayName = "Container"
 
 
 export interface IRadioProps{
-  row: boolean;
-  id: string;
-  className: string;
+  row?: boolean;
+  id?: string;
+  className?: string;
   name: string;
   onChange: () => void;
-  checked: boolean;
-  required: boolean;
+  checked?: boolean;
+  required?: boolean;
   label: string;
 };
 
