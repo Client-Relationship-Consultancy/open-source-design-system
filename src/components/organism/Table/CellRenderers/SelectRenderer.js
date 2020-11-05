@@ -13,7 +13,7 @@ export class Select extends React.PureComponent {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ menuOpen: true })
-    }, 10)
+    }, 1)
   }
 
   renderOptions = () =>
@@ -70,20 +70,24 @@ export default class SelectRenderer extends React.Component {
 
   getValue = () => this.state.value
 
-  render() {
-    const direction =
-      this.props.node.rowTop -
-        this.props.agGridReact.eGridDiv.querySelector(".ag-body-viewport").scrollTop >
-      this.props.agGridReact.eGridDiv.querySelector(".ag-body-viewport").getBoundingClientRect()
-        .height /
-        2
-        ? "top"
-        : "bottom"
+  calculateDirection = () => {
+    const distanceFromTop = this.props.node.rowTop
+    const scrolledDistanceFromTop = this.props.agGridReact.eGridDiv.querySelector(
+      ".ag-body-viewport",
+    ).scrollTop
+    const tableBodyHeight = this.props.agGridReact.eGridDiv
+      .querySelector(".ag-body-viewport")
+      .getBoundingClientRect().height
+    const RelativeDistance = distanceFromTop - scrolledDistanceFromTop
+    const isRowNearBottom = RelativeDistance > tableBodyHeight / 2
+    return isRowNearBottom ? "top" : "bottom"
+  }
 
+  render() {
     return (
       <Select
         rowNode-={this.props.node}
-        direction={direction}
+        direction={this.calculateDirection()}
         rowHeight={this.props.rowHeight}
         value={this.state.value}
         values={this.props.values}
