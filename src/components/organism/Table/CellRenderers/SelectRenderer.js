@@ -12,6 +12,8 @@ export class Select extends React.PureComponent {
 
   componentDidMount() {
     // this is needed due to a bug of react-select that doesn't consider menuPlacement before is fully rendered
+    // here is the issue https://github.com/JedWatson/react-select/issues/3421
+    // the issue is closed and claims to be resolved with newer version but ElioS tryed to update it and still experienced the problem
     setTimeout(() => {
       this.setState({ menuOpen: true })
     }, 1)
