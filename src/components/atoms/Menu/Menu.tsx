@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import Icon from "../Icon";
-import { colourPalette } from "../../../brandColours";
 
-const defaultPalette = colourPalette.examplePalette;
+interface IShowSubMenu {
+  showSubMenu: boolean;
+}
 
-const StyledMenu = styled.button<{ showSubMenu: boolean }>`
+export const StyledMenu = styled.button<IShowSubMenu>`
   color: ${({ theme }) => theme.action.main.hex};
   font-family: "Gentona", "Montserrat";
   font-size: 0.875rem;
@@ -18,7 +19,7 @@ const StyledMenu = styled.button<{ showSubMenu: boolean }>`
   overflow: ${({ showSubMenu }) => (showSubMenu ? "visible" : "hidden")};
 `;
 
-const MenuLabel = styled.div`
+export const MenuLabel = styled.div`
   display: flex;
   padding: 0.5rem;
   > * + * {
@@ -29,7 +30,7 @@ const MenuLabel = styled.div`
   }
 `;
 
-const SubMenu = styled.div<{ showSubMenu: boolean }>`
+export const SubMenu = styled.div<IShowSubMenu>`
   min-width: 110%;
   margin-top: 0.1rem;
   opacity: ${({ showSubMenu }) => (showSubMenu ? 1 : 0)};
@@ -45,7 +46,7 @@ const SubMenu = styled.div<{ showSubMenu: boolean }>`
   padding: 0.25rem 0;
 `;
 
-const SubMenuItems = styled.button`
+export const SubMenuItems = styled.button`
   background-color: transparent;
   outline: none;
   border: none;
@@ -70,7 +71,7 @@ const SubMenuItems = styled.button`
 interface IMenuItem {
   id?: string;
   label: string;
-  icon: IconProp | SVGElement;
+  icon?: IconProp | SVGElement;
   onClick?: () => void;
   children?: IMenuItem[]; // This is if we plan to do another sub menu for the sub menu
 }
@@ -98,16 +99,19 @@ export class Menu extends React.Component<IProps, IState> {
     document.removeEventListener("mousedown", this.closeMenuWhenClickedOutside);
   };
 
-  closeMenuWhenClickedOutside = (event: any) => {
-    if (this.componentRef.current && !this.componentRef.current.contains(event.target)) {
+  closeMenuWhenClickedOutside = (event: MouseEvent) => {
+    // Have to type cast here as MouseEvent has event.target as type EventTarget
+    // But React expects it to be Node instead
+    const clickedArea = event.target as Node | null;
+    if (this.componentRef.current && !this.componentRef.current.contains(clickedArea)) {
       this.setState({ showSubMenu: false });
     }
   };
 
   renderSubMenuItems = () =>
     this.props.items.map((item) => (
-      <SubMenuItems key={item.id} onClick={item.onClick}>
-        {item.icon && typeof item?.icon === "string" ? <Icon name={item.icon} /> : item.icon}
+      <SubMenuItems key={item.id || item.label} onClick={item.onClick}>
+        {item.icon && (typeof item.icon === "string" ? <Icon name={item.icon} /> : item.icon)}
         <span>{item.label}</span>
       </SubMenuItems>
     ));

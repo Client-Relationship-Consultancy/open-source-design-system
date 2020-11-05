@@ -1,0 +1,356 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu Component should match snapshot 1`] = `
+<Menu__StyledMenu
+  onClick={[Function]}
+  showSubMenu={false}
+>
+  <Menu__MenuLabel>
+    <span>
+      Hello
+    </span>
+    <Icon
+      color="action"
+      name="chevron-down"
+    />
+  </Menu__MenuLabel>
+  <Menu__SubMenu
+    className="subMenu"
+    showSubMenu={false}
+  >
+    <Menu__SubMenuItems
+      key="exclude"
+      onClick={[MockFunction]}
+    >
+      <Icon
+        name="users"
+      />
+      <span>
+        Exclude me
+      </span>
+    </Menu__SubMenuItems>
+    <Menu__SubMenuItems
+      key="Remove me"
+      onClick={[MockFunction]}
+    >
+      <svg />
+      <span>
+        Remove me
+      </span>
+    </Menu__SubMenuItems>
+    <Menu__SubMenuItems
+      key="activate"
+      onClick={[MockFunction]}
+    >
+      <span>
+        Activate me
+      </span>
+    </Menu__SubMenuItems>
+  </Menu__SubMenu>
+</Menu__StyledMenu>
+`;
+
+exports[`MenuLabel component should match snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.c0 > * + * {
+  margin-left: 0.75rem;
+}
+
+.c0:hover {
+  cursor: pointer;
+}
+
+<Menu__MenuLabel>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Menu__MenuLabel-wb6ftp-1",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;padding:0.5rem;> * + *{margin-left:0.75rem;}:hover{cursor:pointer;}",
+          ],
+        },
+        "displayName": "Menu__MenuLabel",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Menu__MenuLabel-wb6ftp-1",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</Menu__MenuLabel>
+`;
+
+exports[`StyledMenu component should match snapshot 1`] = `
+.c0 {
+  color: mockHexValue;
+  font-family: "Gentona","Montserrat";
+  font-size: 0.875rem;
+  position: relative;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  overflow: visible;
+}
+
+<Menu__StyledMenu
+  showSubMenu={true}
+  theme={
+    Object {
+      "action": Object {
+        "main": Object {
+          "hex": "mockHexValue",
+        },
+      },
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Menu__StyledMenu-wb6ftp-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "color:",
+            [Function],
+            ";font-family:\\"Gentona\\",\\"Montserrat\\";font-size:0.875rem;position:relative;background-color:transparent;border:none;outline:none;transition:all 0.3s ease;overflow:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "Menu__StyledMenu",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Menu__StyledMenu-wb6ftp-0",
+        "target": "button",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    showSubMenu={true}
+    theme={
+      Object {
+        "action": Object {
+          "main": Object {
+            "hex": "mockHexValue",
+          },
+        },
+      }
+    }
+  >
+    <button
+      className="c0"
+    />
+  </StyledComponent>
+</Menu__StyledMenu>
+`;
+
+exports[`SubMenu component should match snapshot 1`] = `
+.c0 {
+  min-width: 110%;
+  margin-top: 0.1rem;
+  opacity: 1;
+  position: absolute;
+  max-width: 500%;
+  white-space: nowrap;
+  background-color: mockSurfaceHex;
+  box-shadow: 0.1rem 0.1rem 0.5rem mockBlackTint40;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 0.2rem;
+  padding: 0.25rem 0;
+}
+
+<Menu__SubMenu
+  showSubMenu={true}
+  theme={
+    Object {
+      "black": Object {
+        "tint40": Object {
+          "hex": "mockBlackTint40",
+        },
+      },
+      "surface": Object {
+        "hex": "mockSurfaceHex",
+      },
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Menu__SubMenu-wb6ftp-2",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "min-width:110%;margin-top:0.1rem;opacity:",
+            [Function],
+            ";position:absolute;max-width:500%;white-space:nowrap;background-color:",
+            [Function],
+            ";box-shadow:0.1rem 0.1rem 0.5rem ",
+            [Function],
+            ";display:flex;flex-direction:column;transition:all 0.3s ease;border-radius:0.2rem;padding:0.25rem 0;",
+          ],
+        },
+        "displayName": "Menu__SubMenu",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Menu__SubMenu-wb6ftp-2",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    showSubMenu={true}
+    theme={
+      Object {
+        "black": Object {
+          "tint40": Object {
+            "hex": "mockBlackTint40",
+          },
+        },
+        "surface": Object {
+          "hex": "mockSurfaceHex",
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</Menu__SubMenu>
+`;
+
+exports[`SubMenuItems component should match snapshot 1`] = `
+.c0 {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  width: 100%;
+  color: mockBlackTint80;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.c0:hover {
+  cursor: pointer;
+  background-color: mockBlackTint20;
+}
+
+.c0 > * + * {
+  margin-left: 0.5rem;
+}
+
+.c0 svg {
+  max-width: 1rem;
+}
+
+<Menu__SubMenuItems
+  showSubMenu={true}
+  theme={
+    Object {
+      "black": Object {
+        "tint20": Object {
+          "hex": "mockBlackTint20",
+        },
+        "tint80": Object {
+          "hex": "mockBlackTint80",
+        },
+      },
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Menu__SubMenuItems-wb6ftp-3",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "background-color:transparent;outline:none;border:none;padding:0.5rem 0.75rem;width:100%;color:",
+            [Function],
+            ";display:flex;text-align:left;transition:all 0.3s ease;:hover{cursor:pointer;background-color:",
+            [Function],
+            ";}> * + *{margin-left:0.5rem;}svg{max-width:1rem;}",
+          ],
+        },
+        "displayName": "Menu__SubMenuItems",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Menu__SubMenuItems-wb6ftp-3",
+        "target": "button",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    showSubMenu={true}
+    theme={
+      Object {
+        "black": Object {
+          "tint20": Object {
+            "hex": "mockBlackTint20",
+          },
+          "tint80": Object {
+            "hex": "mockBlackTint80",
+          },
+        },
+      }
+    }
+  >
+    <button
+      className="c0"
+    />
+  </StyledComponent>
+</Menu__SubMenuItems>
+`;
