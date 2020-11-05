@@ -48,9 +48,6 @@ export class Select extends React.PureComponent {
         isDisabled={false}
         isClearable={this.props.isClearable}
         isMulti={false}
-        defaultMenuIsOpen={false}
-        autoFocus
-        openMenuOnFocus
         onBlur={() => {
           this.setState({ menuOpen: false })
         }}
