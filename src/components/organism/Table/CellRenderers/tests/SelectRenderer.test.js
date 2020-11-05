@@ -19,6 +19,23 @@ const commonOptions = [
   { label: "Option 3", value: "option-3" },
 ]
 
+const tableBodyElementMock = {
+  getBoundingClientRect: jest.fn(() => ({
+    height: 300,
+  })),
+  scrollTop: 10,
+}
+const agGridApiMock = {
+  node: {
+    rowTop: 180,
+  },
+  agGridReact: {
+    eGridDiv: {
+      querySelector: jest.fn(() => tableBodyElementMock),
+    },
+  },
+}
+
 describe("Test handle Change", () => {
   let component
   beforeEach(() => {
@@ -30,6 +47,7 @@ describe("Test handle Change", () => {
         isClearable
         node={{ fromTop: 140 }}
         api={api}
+        {...agGridApiMock}
       />,
     )
   })
@@ -64,12 +82,10 @@ describe("Test handle Change", () => {
         value={null}
         isClearable
         node={{ fromTop: 140 }}
+        {...agGridApiMock}
       />,
     )
-    const select = tree
-      .dive()
-      .dive()
-      .find("Select")
+    const select = tree.dive().dive().find("Select")
     expect(select.props().value).toBeFalsy()
   })
 })
@@ -133,31 +149,63 @@ describe("Select", () => {
     expect(component.instance().renderValue()).toBeFalsy()
   })
 
-  it("should render top when it is more than 250px from the top", () => {
+  it("should render bottom when it is closer to the top", () => {
+    const newTableBodyElementMock = {
+      getBoundingClientRect: jest.fn(() => ({
+        height: 300,
+      })),
+      scrollTop: 10,
+    }
+    const newAgGridApiMock = {
+      node: {
+        rowTop: 50,
+      },
+      agGridReact: {
+        eGridDiv: {
+          querySelector: jest.fn(() => newTableBodyElementMock),
+        },
+      },
+    }
     const component = shallow(
-      <Select agGridReact={theme} isClearable values={commonOptions} value={null} fromTop={251} />,
+      <SelectRenderer
+        agGridReact={theme}
+        values={["option 1", "option 2"]}
+        value={null}
+        isClearable
+        node={{ fromTop: 140 }}
+        {...newAgGridApiMock}
+      />,
     )
-    expect(component.instance().menuPlacement()).toEqual("top")
+    expect(component.instance().calculateDirection()).toEqual("bottom")
   })
 
-  it("should render bottom when it is less than 250px from the top", () => {
+  it("should render top when it is closer to the bottom", () => {
+    const newTableBodyElementMock = {
+      getBoundingClientRect: jest.fn(() => ({
+        height: 300,
+      })),
+      scrollTop: 10,
+    }
+    const newAgGridApiMock = {
+      node: {
+        rowTop: 180,
+      },
+      agGridReact: {
+        eGridDiv: {
+          querySelector: jest.fn(() => newTableBodyElementMock),
+        },
+      },
+    }
     const component = shallow(
-      <Select agGridReact={theme} isClearable values={commonOptions} value={null} fromTop={249} />,
+      <SelectRenderer
+        agGridReact={theme}
+        values={["option 1", "option 2"]}
+        value={null}
+        isClearable
+        node={{ fromTop: 140 }}
+        {...newAgGridApiMock}
+      />,
     )
-    expect(component.instance().menuPlacement()).toEqual("bottom")
-  })
-
-  it("should render bottom when it is 250px from the top", () => {
-    const component = shallow(
-      <Select agGridReact={theme} isClearable values={commonOptions} value={null} fromTop={250} />,
-    )
-    expect(component.instance().menuPlacement()).toEqual("bottom")
-  })
-
-  it("should render bottom when fromTop is not passed", () => {
-    const component = shallow(
-      <Select agGridReact={theme} isClearable values={commonOptions} value={null} />,
-    )
-    expect(component.instance().menuPlacement()).toEqual("bottom")
+    expect(component.instance().calculateDirection()).toEqual("top")
   })
 })

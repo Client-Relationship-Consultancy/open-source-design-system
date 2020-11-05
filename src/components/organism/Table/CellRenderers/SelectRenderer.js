@@ -6,8 +6,21 @@ import ReactSelect from "react-select"
 import styles from "../../../atoms/Select/SelectStyles"
 
 export class Select extends React.PureComponent {
+  state = {
+    menuOpen: false,
+  }
+
+  componentDidMount() {
+    // this is needed due to a bug of react-select that doesn't consider menuPlacement before is fully rendered
+    // here is the issue https://github.com/JedWatson/react-select/issues/3421
+    // the issue is closed and claims to be resolved with newer version but ElioS tryed to update it and still experienced the problem
+    setTimeout(() => {
+      this.setState({ menuOpen: true })
+    }, 1)
+  }
+
   renderOptions = () =>
-    this.props.values.map(value => {
+    this.props.values.map((value) => {
       return typeof value === "string"
         ? {
             value,
@@ -19,27 +32,28 @@ export class Select extends React.PureComponent {
   renderValue = () => {
     if (!this.props.value) return null
 
-    return this.renderOptions().find(option => option.value && option.value === this.props.value)
+    return this.renderOptions().find((option) => option.value && option.value === this.props.value)
   }
 
-  menuPlacement = () => {
-    return this.props.fromTop > 250 ? "top" : "bottom"
+  render = () => {
+    return (
+      <ReactSelect
+        id="SelectEditor"
+        styles={styles(this.props.theme)}
+        menuPlacement={this.props.direction}
+        value={this.renderValue()}
+        options={this.renderOptions()}
+        onChange={this.props.onChange}
+        isDisabled={false}
+        isClearable={this.props.isClearable}
+        isMulti={false}
+        onBlur={() => {
+          this.setState({ menuOpen: false })
+        }}
+        menuIsOpen={this.state.menuOpen}
+      />
+    )
   }
-
-  render = () => (
-    <ReactSelect
-      id="SelectEditor"
-      styles={styles(this.props.theme)}
-      menuPlacement={this.menuPlacement()}
-      value={this.renderValue()}
-      options={this.renderOptions()}
-      onChange={this.props.onChange}
-      isDisabled={this.props.isDisabled}
-      isClearable={this.props.isClearable}
-      isMulti={false}
-      defaultMenuIsOpen
-    />
-  )
 }
 
 export default class SelectRenderer extends React.Component {
@@ -47,7 +61,7 @@ export default class SelectRenderer extends React.Component {
     value: this.props.value,
   }
 
-  handleChange = selectedOption => {
+  handleChange = (selectedOption) => {
     this.setState({ value: selectedOption ? selectedOption.value : selectedOption }, () =>
       this.props.api.stopEditing(false),
     )
@@ -55,10 +69,26 @@ export default class SelectRenderer extends React.Component {
 
   getValue = () => this.state.value
 
+  calculateDirection = () => {
+    // get the distance from the top of the body without considering scroll
+    const distanceFromTop = this.props.node.rowTop
+    // get the body html element
+    const tableBodyElement = this.props.agGridReact.eGridDiv.querySelector(".ag-body-viewport")
+    // get the amount scrolled inside the table
+    const scrolledDistanceFromTop = tableBodyElement.scrollTop
+    // get the height of the table without considering the content
+    const tableBodyHeight = tableBodyElement.getBoundingClientRect().height
+    // calculate the distance of the row from the top of the table considering the scroll
+    const relativeDistance = distanceFromTop - scrolledDistanceFromTop
+    // check if the row is closer to the bottom
+    const isRowNearBottom = relativeDistance > tableBodyHeight / 2
+    return isRowNearBottom ? "top" : "bottom"
+  }
+
   render() {
     return (
       <Select
-        fromTop={this.props.node.rowTop}
+        direction={this.calculateDirection()}
         value={this.state.value}
         values={this.props.values}
         isDisabled={this.props.isDisabled}
@@ -84,7 +114,6 @@ SelectRenderer.propTypes = {
 Select.propTypes = {
   ...SelectRenderer.propTypes,
   values: PropTypes.array.isRequired,
-  fromTop: PropTypes.number,
 }
 
 SelectRenderer.displayName = "SelectRenderer"

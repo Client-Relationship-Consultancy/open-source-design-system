@@ -290,6 +290,22 @@ storiesOf("Table", module)
         type: "short text",
       },
       { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
+      { name: "Income", compulsory: false, mandatory: true, default: 200000, type: "number" },
     ]
 
     return (
