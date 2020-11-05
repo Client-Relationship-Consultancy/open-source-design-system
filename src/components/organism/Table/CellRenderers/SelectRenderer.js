@@ -68,14 +68,17 @@ export default class SelectRenderer extends React.Component {
   getValue = () => this.state.value
 
   calculateDirection = () => {
+    // get the distance from the top of the body without considering scroll
     const distanceFromTop = this.props.node.rowTop
-    const scrolledDistanceFromTop = this.props.agGridReact.eGridDiv.querySelector(
-      ".ag-body-viewport",
-    ).scrollTop
-    const tableBodyHeight = this.props.agGridReact.eGridDiv
-      .querySelector(".ag-body-viewport")
-      .getBoundingClientRect().height
+    // get the body html element
+    const tableBodyElement = this.props.agGridReact.eGridDiv.querySelector(".ag-body-viewport")
+    // get the ammount scrolled inside the table
+    const scrolledDistanceFromTop = tableBodyElement.scrollTop
+    // get the height of the table without considering the content
+    const tableBodyHeight = tableBodyElement.getBoundingClientRect().height
+    // calculate the distance of the row from the top of the table considering the scroll
     const RelativeDistance = distanceFromTop - scrolledDistanceFromTop
+    // check if the row is closer to the bottom
     const isRowNearBottom = RelativeDistance > tableBodyHeight / 2
     return isRowNearBottom ? "top" : "bottom"
   }

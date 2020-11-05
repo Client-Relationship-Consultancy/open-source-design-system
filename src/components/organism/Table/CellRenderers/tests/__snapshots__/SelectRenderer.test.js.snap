@@ -3,12 +3,14 @@
 exports[`Select match last snapshot 1`] = `
 <StateManager
   defaultInputValue=""
-  defaultMenuIsOpen={true}
+  defaultMenuIsOpen={false}
   defaultValue={null}
   id="SelectEditor"
   isClearable={true}
+  isDisabled={false}
   isMulti={false}
-  menuPlacement="bottom"
+  menuIsOpen={false}
+  onBlur={[Function]}
   options={
     Array [
       Object {
@@ -44,6 +46,7 @@ exports[`Select match last snapshot 1`] = `
 
 exports[`Test handle Change match last snapshot 1`] = `
 <Select
+  direction="top"
   isClearable={true}
   onChange={[Function]}
   value="option 1"
