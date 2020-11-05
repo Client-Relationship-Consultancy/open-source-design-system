@@ -1,15 +1,20 @@
 import { IColourPalette } from "../../../brandColours";
 
-interface IButtonStyleOptions {
+export type ButtonStyle = {
   background: string;
   color: string;
   border: string;
-}
-
-export interface IButtonStyle extends IButtonStyleOptions {
-  hover: Partial<IButtonStyleOptions>;
-  focus: Partial<IButtonStyleOptions>;
-}
+  hover?: {
+    background?: string;
+    color?: string;
+    border?: string;
+  };
+  focus?: {
+    background?: string;
+    color?: string;
+    border?: string;
+  };
+};
 
 // TODO:
 // needs focus -> show inner border
@@ -27,7 +32,6 @@ export const buttonStyles = (theme: IColourPalette) => ({
       color: theme.action.dark?.on,
       border: theme.action.dark?.hex,
     },
-    focus: {},
   },
   primaryOutline: {
     background: "transparent",

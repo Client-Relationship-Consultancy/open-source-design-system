@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
 import { colourPalette, IColourPalette } from "../../../brandColours";
-import { buttonStyles, IButtonStyle } from "./buttonStyles";
+import { buttonStyles, ButtonStyle } from "./buttonStyles";
 
 const InnerBorder = styled.div`
   position: absolute;
@@ -114,8 +114,9 @@ class BasicButton extends React.PureComponent<IProps> {
     }
   };
 
-  getButtonStyle = (): IButtonStyle => {
-    return buttonStyles(this.props.theme)[this.props.buttonType];
+  getButtonStyle = (): ButtonStyle => {
+    const styles = buttonStyles(this.props.theme);
+    return styles[this.props.buttonType];
   };
 
   render = () => {
