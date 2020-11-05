@@ -73,7 +73,6 @@ interface IMenuItem {
   label: string;
   icon?: IconProp | SVGElement;
   onClick?: () => void;
-  children?: IMenuItem[]; // This is if we plan to do another sub menu for the sub menu
 }
 
 interface IProps {
