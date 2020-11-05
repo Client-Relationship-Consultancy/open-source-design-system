@@ -78,7 +78,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "FormRadio__Container-sc-16fxvar-0",
+            "componentId": "FormRadio__Container-sc-1x64b55-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -92,7 +92,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
           "displayName": "Container",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "FormRadio__Container-sc-16fxvar-0",
+          "styledComponentId": "FormRadio__Container-sc-1x64b55-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -1027,7 +1027,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "FormRadio__Container-sc-16fxvar-0",
+            "componentId": "FormRadio__Container-sc-1x64b55-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -1041,7 +1041,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
           "displayName": "Container",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "FormRadio__Container-sc-16fxvar-0",
+          "styledComponentId": "FormRadio__Container-sc-1x64b55-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
