@@ -11,6 +11,7 @@ export class Select extends React.PureComponent {
   }
 
   componentDidMount() {
+    // this is needed due to a bug of react-select that doesn't consider menuPlacement before is fully rendered
     setTimeout(() => {
       this.setState({ menuOpen: true })
     }, 1)
@@ -30,10 +31,6 @@ export class Select extends React.PureComponent {
     if (!this.props.value) return null
 
     return this.renderOptions().find((option) => option.value && option.value === this.props.value)
-  }
-
-  menuPlacement = () => {
-    return this.props.fromTop > 250 ? "top" : "bottom" // 250 because the table is 500 tall
   }
 
   render = () => {
@@ -86,9 +83,7 @@ export default class SelectRenderer extends React.Component {
   render() {
     return (
       <Select
-        rowNode-={this.props.node}
         direction={this.calculateDirection()}
-        rowHeight={this.props.rowHeight}
         value={this.state.value}
         values={this.props.values}
         isDisabled={this.props.isDisabled}
@@ -114,7 +109,6 @@ SelectRenderer.propTypes = {
 Select.propTypes = {
   ...SelectRenderer.propTypes,
   values: PropTypes.array.isRequired,
-  fromTop: PropTypes.number,
 }
 
 SelectRenderer.displayName = "SelectRenderer"
