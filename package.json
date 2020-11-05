@@ -22,7 +22,7 @@
     "react-dom": "^16.6.3",
     "react-modal": "^3.8.1",
     "react-scripts": "^3.0.1",
-    "react-select": "^2.1.2",
+    "react-select": "^2.4.1",
     "react-sizeme": "^2.6.12",
     "react-tooltip": "^4.0.5",
     "styled-components": "^4.3.1",
