@@ -27,16 +27,16 @@ stories.add("Menu", () => {
           {
             label: text("Sub-menu 1", "Exclude"),
             icon: "users",
-            onClick: () => console.log("Sub-menu 1 clicked"),
+            onClick: () => alert("Sub-menu 1 clicked"),
           },
           {
             label: text("Sub-menu 2", "Remove"),
-            onClick: () => console.log("Sub-menu 2 clicked"),
+            onClick: () => alert("Sub-menu 2 clicked"),
             icon,
           },
           {
             label: text("Sub-menu 3", "Make active"),
-            onClick: () => console.log("Sub-menu 3 clicked"),
+            onClick: () => alert("Sub-menu 3 clicked"),
           },
         ]}
       >
