@@ -71,7 +71,7 @@ export const SubMenuItems = styled.button`
 interface IMenuItem {
   id?: string;
   label: string;
-  icon?: IconProp | SVGElement;
+  icon?: IconProp | SVGElement | React.ReactElement;
   onClick?: () => void;
 }
 
