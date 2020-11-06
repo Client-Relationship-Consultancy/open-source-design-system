@@ -7,13 +7,12 @@ import { buttonStyles, ButtonStyle } from "./buttonStyles";
 
 const InnerBorder = styled.div`
   position: absolute;
-  top: 1px;
-  left: 1px;
-  width: calc(100% - 2px);
-  height: calc(100% - 2px);
-  box-shadow: inset 0px 0px 0 1px white;
-  border-radius: 0.25rem;
-  transition: opacity 0.3s;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  border: 1px white solid;
+  border-radius: 5px;
+  transition: opacity 0.15s;
 `;
 
 interface IStyledButton {
@@ -38,11 +37,11 @@ export const StyledButton = styled.button<IStyledButton>`
   background-color: ${(props) => props.buttonStyle.background};
   color: ${(props) => props.buttonStyle.color};
   border: 1px solid ${(props) => props.buttonStyle.border};
-  border-radius: 0.25em;
+  border-radius: 5px;
   font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.fontSize};
   transition-property: color, background-color, border;
-  transition-duration: 0.3s;
+  transition-duration: 0.15s;
   .dsButtonIcon {
     width:  ${(props) => (props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em")};
     height: 1.5em;
