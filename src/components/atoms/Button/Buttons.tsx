@@ -5,6 +5,12 @@ import { colourPalette, IColourPalette } from "../../../brandColours";
 import Icon from "../Icon/Icon";
 import { buttonStyles, ButtonStyle } from "./buttonStyles";
 
+export type ButtonType = "primary" | "primaryOutline" | "secondaryOutline" | "danger" | "ghost";
+type IconType = IconProp | SVGElement | React.ReactElement;
+type IconPosition = "before" | "after";
+type IconSize = "medium" | "large";
+type ButtonSize = "small" | "medium" | "large";
+
 const InnerBorder = styled.div`
   position: absolute;
   left: 0px;
@@ -20,9 +26,9 @@ interface IStyledButton {
   padding: string;
   buttonStyle: ButtonStyle;
   height: string;
-  size: "small" | "medium" | "large";
-  iconSize: "medium" | "large";
-  iconPosition: "before" | "after";
+  buttonSize: ButtonSize;
+  iconSize: IconSize;
+  iconPosition: IconPosition;
 }
 
 export const StyledButton = styled.button<IStyledButton>`
@@ -31,33 +37,37 @@ export const StyledButton = styled.button<IStyledButton>`
   align-items: center;
   position: relative;
   outline: none;
-  height: ${(props) => props.height};
+  height: ${({ height }) => height};
   width: auto;
-  padding: ${(props) => props.padding};
-  background-color: ${(props) => props.buttonStyle.background};
-  color: ${(props) => props.buttonStyle.color};
-  border: 1px solid ${(props) => props.buttonStyle.border};
+  padding: ${({ padding }) => padding};
+  background-color: ${({ buttonStyle }) => buttonStyle.background};
+  color: ${({ buttonStyle }) => buttonStyle.color};
+  border: 1px solid ${({ buttonStyle }) => buttonStyle.border};
   border-radius: 5px;
-  font-size: ${(props) => props.fontSize};
-  line-height: ${(props) => props.fontSize};
+  font-size: ${({ fontSize }) => fontSize};
+  line-height: ${({ fontSize }) => fontSize};
   transition-property: color, background-color, border;
   transition-duration: 0.15s;
   .dsButtonIcon {
-    width:  ${(props) => (props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em")};
+    width: ${({ iconSize, buttonSize }) =>
+      iconSize === "large" && buttonSize === "large" ? "1.5em" : "1em"};
     height: 1.5em;
     display: flex;
     align-items: center;
     margin: ${({ iconPosition }) => (iconPosition === "before" ? "0 0.25em 0 0" : "0 0 0 0.25em")};
-    }
     svg {
-      font-size: ${(props) => props.fontSize};
-      height: ${(props) =>
-        props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em"} !important;
-      width: ${(props) =>
-        props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em"} !important;
-      color: ${(props) => props.buttonStyle.color};
-      fill: ${(props) => props.buttonStyle.color};
-      stroke: ${(props) => props.buttonStyle.color};
+      font-size: ${({ fontSize }) => fontSize};
+      height: ${({ iconSize, buttonSize }) =>
+        iconSize === "large" && buttonSize === "large"
+          ? "1.5em"
+          : "1em"} !important; // stops fontawesome override
+      width: ${({ iconSize, buttonSize }) =>
+        iconSize === "large" && buttonSize === "large"
+          ? "1.5em"
+          : "1em"} !important; // stops fontawesome override
+      color: ${({ buttonStyle }) => buttonStyle.color};
+      fill: ${({ buttonStyle }) => buttonStyle.color};
+      stroke: ${({ buttonStyle }) => buttonStyle.color};
     }
   }
   ${InnerBorder} {
@@ -96,35 +106,30 @@ export const StyledButton = styled.button<IStyledButton>`
   }
 `;
 
-type ButtonType = "primary" | "primaryOutline" | "secondaryOutline" | "danger" | "ghost";
-
 interface IProps {
-  size?: "small" | "medium" | "large";
+  buttonSize?: ButtonSize;
   buttonType: ButtonType;
   theme: IColourPalette;
   disabled?: boolean;
-  icon?: IconProp | SVGElement;
-  iconSize?: "medium" | "large";
-  iconPosition?: "before" | "after";
+  icon?: IconType;
+  iconSize?: IconSize;
+  iconPosition?: IconPosition;
 }
 
 class BasicButton extends React.PureComponent<IProps> {
   static defaultProps = {
     theme: colourPalette.examplePalette,
-    buttonType: "primary",
-    size: "medium",
-    disabled: false,
   };
 
   getFontSize = (): string => {
-    if (this.props.size === "large") {
+    if (this.props.buttonSize === "large") {
       return "1rem";
     }
     return "0.875rem";
   };
 
   getHeight = (): string => {
-    switch (this.props.size) {
+    switch (this.props.buttonSize) {
       case "large":
         return "2.5rem";
       case "medium":
@@ -137,9 +142,9 @@ class BasicButton extends React.PureComponent<IProps> {
   };
 
   getPadding = (): string => {
-    switch (this.props.size) {
+    switch (this.props.buttonSize) {
       case "large":
-        if (this.props.icon && this.props.size === "large" && this.props.iconSize === "large")
+        if (this.props.icon && this.props.buttonSize === "large" && this.props.iconSize === "large")
           return "0.75rem 0.5rem";
         return "0.75rem 1rem";
       case "medium":
@@ -157,8 +162,8 @@ class BasicButton extends React.PureComponent<IProps> {
 
   render = () => {
     const {
-      disabled,
-      size = "medium",
+      disabled = false,
+      buttonSize = "medium",
       icon,
       iconPosition = "before",
       iconSize = "medium",
@@ -171,7 +176,7 @@ class BasicButton extends React.PureComponent<IProps> {
         padding={this.getPadding()}
         height={this.getHeight()}
         disabled={disabled}
-        size={size}
+        buttonSize={buttonSize}
         iconPosition={iconPosition}
         iconSize={iconSize}
       >
