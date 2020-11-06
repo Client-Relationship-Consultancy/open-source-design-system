@@ -44,6 +44,22 @@ const buttonTypes = {
   Ghost: "ghost",
 }
 
+const iconPositions = {
+  Before: "before",
+  After: "after",
+}
+
+const iconSizes = {
+  Medium: "medium",
+  Large: "large",
+}
+
+const iconTypes = {
+  Check: "check",
+  DownArrow: "chevron-down",
+  Times: "times",
+}
+
 // TODO: Display the four states for the button, then use nob to update style / add icons etc
 
 stories.add("Button styles", () => (
@@ -53,5 +69,37 @@ stories.add("Button styles", () => (
     disabled={boolean("Disabled", false)}
   >
     {text("Button Description", "Save")}
+  </NewButton>
+))
+
+stories.add("Button using icon library", () => (
+  <NewButton
+    buttonType={select("Type", buttonTypes, "secondaryOutline")}
+    size={select("Size", buttonSizes, "large")}
+    disabled={boolean("Disabled", false)}
+    icon={select("Icon Type", iconTypes, "chevron-down")}
+    iconPosition={select("Icon Position", iconPositions, "before")}
+    iconSize={select("Icon Size", iconSizes, "large")}
+  >
+    {text("Button Description", "Icon")}
+  </NewButton>
+))
+
+const selectArrowSvg = (
+  <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="40" strokeWidth="5" />
+  </svg>
+)
+
+stories.add("Button passing SVG icon", () => (
+  <NewButton
+    buttonType={select("Type", buttonTypes, "secondaryOutline")}
+    size={select("Size", buttonSizes, "large")}
+    disabled={boolean("Disabled", false)}
+    icon={selectArrowSvg}
+    iconPosition={select("Icon Position", iconPositions, "before")}
+    iconSize={select("Icon Size", iconSizes, "large")}
+  >
+    {text("Button Description", "Icon")}
   </NewButton>
 ))

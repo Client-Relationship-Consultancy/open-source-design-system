@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { withTheme } from "styled-components";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { colourPalette, IColourPalette } from "../../../brandColours";
+import Icon from "../Icon/Icon";
 import { buttonStyles, ButtonStyle } from "./buttonStyles";
 
 const InnerBorder = styled.div`
@@ -13,14 +15,21 @@ const InnerBorder = styled.div`
   border-radius: 0.25rem;
   transition: opacity 0.3s;
 `;
+
 interface IStyledButton {
   fontSize: string;
   padding: string;
-  buttonStyle: IButtonStyle;
+  buttonStyle: ButtonStyle;
   height: string;
+  size: "small" | "medium" | "large";
+  iconSize: "medium" | "large";
+  iconPosition: "before" | "after";
 }
 
-const StyledButton = styled.button<IStyledButton>`
+export const StyledButton = styled.button<IStyledButton>`
+  display: flex;
+  flex-direction: ${({ iconPosition }) => (iconPosition === "before" ? "row" : "row-reverse")};
+  align-items: center;
   position: relative;
   outline: none;
   height: ${(props) => props.height};
@@ -29,11 +38,29 @@ const StyledButton = styled.button<IStyledButton>`
   background-color: ${(props) => props.buttonStyle.background};
   color: ${(props) => props.buttonStyle.color};
   border: 1px solid ${(props) => props.buttonStyle.border};
-  border-radius: 0.25rem;
+  border-radius: 0.25em;
   font-size: ${(props) => props.fontSize};
   line-height: ${(props) => props.fontSize};
   transition-property: color, background-color, border;
   transition-duration: 0.3s;
+  .dsButtonIcon {
+    width:  ${(props) => (props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em")};
+    height: 1.5em;
+    display: flex;
+    align-items: center;
+    margin: ${({ iconPosition }) => (iconPosition === "before" ? "0 0.25em 0 0" : "0 0 0 0.25em")};
+    }
+    svg {
+      font-size: ${(props) => props.fontSize};
+      height: ${(props) =>
+        props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em"} !important;
+      width: ${(props) =>
+        props.iconSize === "large" && props.size === "large" ? "1.5em" : "1em"} !important;
+      color: ${(props) => props.buttonStyle.color};
+      fill: ${(props) => props.buttonStyle.color};
+      stroke: ${(props) => props.buttonStyle.color};
+    }
+  }
   ${InnerBorder} {
     opacity: 0;
   }
@@ -44,6 +71,12 @@ const StyledButton = styled.button<IStyledButton>`
         buttonStyle.hover.background ?? buttonStyle.background};
       color: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
       border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border ?? buttonStyle.border};
+
+      svg {
+        color: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
+        fill: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
+        stroke: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
+      }
     }
     &:active,
     &:focus {
@@ -71,6 +104,9 @@ interface IProps {
   buttonType: ButtonType;
   theme: IColourPalette;
   disabled?: boolean;
+  icon?: IconProp | SVGElement;
+  iconSize?: "medium" | "large";
+  iconPosition?: "before" | "after";
 }
 
 class BasicButton extends React.PureComponent<IProps> {
@@ -104,6 +140,7 @@ class BasicButton extends React.PureComponent<IProps> {
   getPadding = (): string => {
     switch (this.props.size) {
       case "large":
+        if (this.props.size === "large" && this.props.iconSize === "large") return "0.75rem 0.5rem";
         return "0.75rem 1rem";
       case "medium":
         return "0.5rem 1rem";
@@ -115,12 +152,17 @@ class BasicButton extends React.PureComponent<IProps> {
   };
 
   getButtonStyle = (): ButtonStyle => {
-    const styles = buttonStyles(this.props.theme);
-    return styles[this.props.buttonType];
+    return buttonStyles(this.props.theme)[this.props.buttonType];
   };
 
   render = () => {
-    const { disabled } = this.props;
+    const {
+      disabled,
+      size = "medium",
+      icon,
+      iconPosition = "before",
+      iconSize = "medium",
+    } = this.props;
 
     return (
       <StyledButton
@@ -129,8 +171,17 @@ class BasicButton extends React.PureComponent<IProps> {
         padding={this.getPadding()}
         height={this.getHeight()}
         disabled={disabled}
+        size={size}
+        iconPosition={iconPosition}
+        iconSize={iconSize}
       >
         <InnerBorder />
+        {icon &&
+          (typeof icon === "string" ? (
+            <Icon name={icon} className="dsButtonIcon" />
+          ) : (
+            <div className="dsButtonIcon">{icon}</div>
+          ))}
         {this.props.children}
       </StyledButton>
     );

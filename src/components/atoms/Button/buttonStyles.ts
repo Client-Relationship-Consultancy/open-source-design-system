@@ -32,6 +32,7 @@ export const buttonStyles = (theme: IColourPalette) => ({
       color: theme.action.dark?.on,
       border: theme.action.dark?.hex,
     },
+    focus: {},
   },
   primaryOutline: {
     background: "transparent",
