@@ -68,22 +68,22 @@ export const StyledButton = styled.button<IStyledButton>`
     &:hover {
       cursor: pointer;
       background-color: ${({ buttonStyle }) =>
-        buttonStyle.hover.background ?? buttonStyle.background};
-      color: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
-      border: 1px solid ${({ buttonStyle }) => buttonStyle.hover.border ?? buttonStyle.border};
+        buttonStyle.hover?.background ?? buttonStyle.background};
+      color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.hover?.border ?? buttonStyle.border};
 
       svg {
-        color: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
-        fill: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
-        stroke: ${({ buttonStyle }) => buttonStyle.hover.color ?? buttonStyle.color};
+        color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+        fill: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+        stroke: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
       }
     }
     &:active,
     &:focus {
       background-color: ${({ buttonStyle }) =>
-        buttonStyle.focus.background ?? buttonStyle.background};
-      color: ${({ buttonStyle }) => buttonStyle.focus.color ?? buttonStyle.color};
-      border: 1px solid ${({ buttonStyle }) => buttonStyle.focus.border ?? buttonStyle.border};
+        buttonStyle.focus?.background ?? buttonStyle.background};
+      color: ${({ buttonStyle }) => buttonStyle.focus?.color ?? buttonStyle.color};
+      border: 1px solid ${({ buttonStyle }) => buttonStyle.focus?.border ?? buttonStyle.border};
 
       ${InnerBorder} {
         opacity: 1;
@@ -140,7 +140,8 @@ class BasicButton extends React.PureComponent<IProps> {
   getPadding = (): string => {
     switch (this.props.size) {
       case "large":
-        if (this.props.size === "large" && this.props.iconSize === "large") return "0.75rem 0.5rem";
+        if (this.props.icon && this.props.size === "large" && this.props.iconSize === "large")
+          return "0.75rem 0.5rem";
         return "0.75rem 1rem";
       case "medium":
         return "0.5rem 1rem";

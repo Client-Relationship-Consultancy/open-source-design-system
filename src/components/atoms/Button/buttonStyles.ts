@@ -39,13 +39,14 @@ export const buttonStyles = (theme: IColourPalette) => ({
     color: theme.action.main.hex,
     border: theme.action.main.hex,
     hover: {
-      background: theme.action.main.hex,
-      color: theme.action.main.on,
-      border: theme.action.main.hex,
+      background: theme.action.dark?.hex,
+      color: theme.action.dark?.on,
+      border: theme.action.dark?.hex,
     },
     focus: {
-      background: theme.action.light?.hex,
-      border: theme.action.light?.hex,
+      background: theme.action.main.hex,
+      border: theme.action.main.hex,
+      color: theme.action.main.on,
     },
   },
   secondaryOutline: {

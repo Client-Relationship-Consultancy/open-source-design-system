@@ -58,30 +58,19 @@ const iconTypes = {
   Check: "check",
   DownArrow: "chevron-down",
   Times: "times",
+  None: "",
 }
-
-// TODO: Display the four states for the button, then use nob to update style / add icons etc
-
-stories.add("Button styles", () => (
-  <NewButton
-    buttonType={select("Type", buttonTypes, "primary")}
-    size={select("Size", buttonSizes, "medium")}
-    disabled={boolean("Disabled", false)}
-  >
-    {text("Button Description", "Save")}
-  </NewButton>
-))
 
 stories.add("Button using icon library", () => (
   <NewButton
     buttonType={select("Type", buttonTypes, "secondaryOutline")}
     size={select("Size", buttonSizes, "large")}
     disabled={boolean("Disabled", false)}
-    icon={select("Icon Type", iconTypes, "chevron-down")}
+    icon={select("Icon Type", iconTypes, "")}
     iconPosition={select("Icon Position", iconPositions, "before")}
     iconSize={select("Icon Size", iconSizes, "large")}
   >
-    {text("Button Description", "Icon")}
+    {text("Button Description", "Button")}
   </NewButton>
 ))
 
@@ -100,6 +89,6 @@ stories.add("Button passing SVG icon", () => (
     iconPosition={select("Icon Position", iconPositions, "before")}
     iconSize={select("Icon Size", iconSizes, "large")}
   >
-    {text("Button Description", "Icon")}
+    {text("Button Description", "Button")}
   </NewButton>
 ))
