@@ -193,6 +193,7 @@ exports[`SubMenu component should match snapshot 1`] = `
   transition: all 0.3s ease;
   border-radius: 0.2rem;
   padding: 0.25rem 0;
+  z-index: 10;
 }
 
 <Menu__SubMenu
@@ -226,7 +227,7 @@ exports[`SubMenu component should match snapshot 1`] = `
             [Function],
             ";box-shadow:0.1rem 0.1rem 0.5rem ",
             [Function],
-            ";display:flex;flex-direction:column;transition:all 0.3s ease;border-radius:0.2rem;padding:0.25rem 0;",
+            ";display:flex;flex-direction:column;transition:all 0.3s ease;border-radius:0.2rem;padding:0.25rem 0;z-index:10;",
           ],
         },
         "displayName": "Menu__SubMenu",

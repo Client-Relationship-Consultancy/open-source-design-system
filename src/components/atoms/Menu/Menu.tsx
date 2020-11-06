@@ -44,6 +44,7 @@ export const SubMenu = styled.div<IShowSubMenu>`
   transition: all 0.3s ease;
   border-radius: 0.2rem;
   padding: 0.25rem 0;
+  z-index: 10;
 `;
 
 export const SubMenuItems = styled.button`
