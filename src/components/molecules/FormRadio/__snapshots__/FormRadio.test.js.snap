@@ -128,6 +128,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -258,6 +259,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -417,6 +419,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -552,6 +555,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -682,6 +686,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -829,6 +834,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -1078,6 +1084,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -1208,6 +1215,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1367,6 +1375,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -1502,6 +1511,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -1632,6 +1642,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1779,6 +1790,7 @@ exports[`FormRadio Input test match last snapshot of <FormRadio /> with ThemePro
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {

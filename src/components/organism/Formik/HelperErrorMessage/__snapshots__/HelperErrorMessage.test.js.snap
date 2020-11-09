@@ -31,6 +31,7 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -161,6 +162,7 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -308,6 +310,7 @@ exports[`HelperErrorMessage Component Test StyledErrorMessage should match last 
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
@@ -452,6 +455,7 @@ exports[`HelperErrorMessage Component Test StyledHelperCaption should match last
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -582,6 +586,7 @@ exports[`HelperErrorMessage Component Test StyledHelperCaption should match last
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -729,6 +734,7 @@ exports[`HelperErrorMessage Component Test StyledHelperCaption should match last
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {

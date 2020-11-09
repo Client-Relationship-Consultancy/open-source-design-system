@@ -56,6 +56,7 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {
@@ -164,18 +165,20 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
       I am a lovely confirmation modal
     </ConfirmationModal__ContentContainer>
     <ConfirmationModal__ButtonRow>
-      <Button>
+      <WithTheme(BasicButton)
+        buttonType="primary"
+      >
         <ConfirmationModal__ButtonText>
           Yes
         </ConfirmationModal__ButtonText>
-      </Button>
-      <Button
-        buttonType="outline"
+      </WithTheme(BasicButton)>
+      <WithTheme(BasicButton)
+        buttonType="primaryOutline"
       >
         <ConfirmationModal__ButtonText>
           No
         </ConfirmationModal__ButtonText>
-      </Button>
+      </WithTheme(BasicButton)>
     </ConfirmationModal__ButtonRow>
   </ConfirmationModal__InsideContainer>
 </Modal>
@@ -211,6 +214,7 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -341,6 +345,7 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -488,6 +493,7 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {

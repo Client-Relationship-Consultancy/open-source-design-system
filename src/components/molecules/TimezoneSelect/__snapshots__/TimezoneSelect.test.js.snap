@@ -40,6 +40,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -203,6 +204,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -355,6 +357,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -501,6 +504,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -648,6 +652,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -781,6 +786,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -915,6 +921,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1050,6 +1057,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1185,6 +1193,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1318,6 +1327,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1452,6 +1462,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1588,6 +1599,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1722,6 +1734,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1856,6 +1869,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -1993,6 +2007,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2131,6 +2146,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2264,6 +2280,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2404,6 +2421,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2538,6 +2556,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2672,6 +2691,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2806,6 +2826,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -2940,6 +2961,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3073,6 +3095,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3217,6 +3240,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3351,6 +3375,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3484,6 +3509,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3617,6 +3643,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3778,6 +3805,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -3911,6 +3939,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4055,6 +4084,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4188,6 +4218,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4325,6 +4356,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4474,6 +4506,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4614,6 +4647,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4747,6 +4781,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -4885,6 +4920,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5020,6 +5056,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5153,6 +5190,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5286,6 +5324,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5422,6 +5461,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5557,6 +5597,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5691,6 +5732,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5824,6 +5866,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -5967,6 +6010,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6101,6 +6145,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6234,6 +6279,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6368,6 +6414,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6506,6 +6553,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6640,6 +6688,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6774,6 +6823,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -6907,6 +6957,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7045,6 +7096,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7178,6 +7230,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7312,6 +7365,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7445,6 +7499,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7591,6 +7646,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7724,6 +7780,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7858,6 +7915,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7992,6 +8050,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8129,6 +8188,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8262,6 +8322,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8395,6 +8456,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8532,6 +8594,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8665,6 +8728,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8801,6 +8865,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -8934,6 +8999,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9067,6 +9133,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9200,6 +9267,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9333,6 +9401,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9466,6 +9535,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9599,6 +9669,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9734,6 +9805,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -9885,6 +9957,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10018,6 +10091,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10154,6 +10228,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10287,6 +10362,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10420,6 +10496,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10557,6 +10634,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10690,6 +10768,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10847,6 +10926,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -10995,6 +11075,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11136,6 +11217,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11269,6 +11351,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11416,6 +11499,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11555,6 +11639,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11688,6 +11773,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11829,6 +11915,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -11964,6 +12051,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12101,6 +12189,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12234,6 +12323,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12370,6 +12460,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12515,6 +12606,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12662,6 +12754,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12795,6 +12888,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -12929,6 +13023,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13064,6 +13159,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13199,6 +13295,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13332,6 +13429,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13466,6 +13564,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13602,6 +13701,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13736,6 +13836,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -13870,6 +13971,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14007,6 +14109,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14145,6 +14248,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14278,6 +14382,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14418,6 +14523,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14552,6 +14658,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14686,6 +14793,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14820,6 +14928,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -14954,6 +15063,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15087,6 +15197,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15231,6 +15342,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15365,6 +15477,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15498,6 +15611,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15631,6 +15745,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15792,6 +15907,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -15925,6 +16041,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16069,6 +16186,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16202,6 +16320,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16339,6 +16458,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16488,6 +16608,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16628,6 +16749,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16761,6 +16883,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -16899,6 +17022,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17034,6 +17158,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17167,6 +17292,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17300,6 +17426,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17436,6 +17563,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17571,6 +17699,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17705,6 +17834,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17838,6 +17968,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -17981,6 +18112,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18115,6 +18247,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18248,6 +18381,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18382,6 +18516,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18520,6 +18655,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18654,6 +18790,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18788,6 +18925,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -18921,6 +19059,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19059,6 +19198,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19192,6 +19332,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19326,6 +19467,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19459,6 +19601,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19605,6 +19748,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19738,6 +19882,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -19872,6 +20017,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20006,6 +20152,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20143,6 +20290,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20276,6 +20424,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20409,6 +20558,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20546,6 +20696,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20679,6 +20830,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20815,6 +20967,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -20948,6 +21101,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21081,6 +21235,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21214,6 +21369,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21347,6 +21503,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21480,6 +21637,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21613,6 +21771,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21748,6 +21907,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -21899,6 +22059,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22032,6 +22193,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22168,6 +22330,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22301,6 +22464,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22434,6 +22598,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22571,6 +22736,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22704,6 +22870,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -22861,6 +23028,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23009,6 +23177,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23150,6 +23319,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23283,6 +23453,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23430,6 +23601,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23569,6 +23741,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23702,6 +23875,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23843,6 +24017,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -23978,6 +24153,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -24115,6 +24291,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -24248,6 +24425,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -24384,6 +24562,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {

@@ -172,6 +172,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -302,6 +303,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -451,6 +453,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -585,6 +588,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -715,6 +719,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -862,6 +867,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1030,6 +1036,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -1160,6 +1167,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -1309,6 +1317,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1443,6 +1452,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -1573,6 +1583,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -1720,6 +1731,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1888,6 +1900,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -2018,6 +2031,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -2167,6 +2181,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -2301,6 +2316,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -2431,6 +2447,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -2578,6 +2595,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {

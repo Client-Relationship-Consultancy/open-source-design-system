@@ -357,6 +357,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -490,6 +491,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -659,6 +661,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -827,6 +830,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                     "background": Object {
                                       "RGB": "246,246,246",
                                       "hex": "#F6F6F6",
+                                      "on": "#272727",
                                     },
                                     "black": Object {
                                       "main": Object {
@@ -958,6 +962,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                           "background": Object {
                                             "RGB": "246,246,246",
                                             "hex": "#F6F6F6",
+                                            "on": "#272727",
                                           },
                                           "black": Object {
                                             "main": Object {
@@ -1105,6 +1110,7 @@ exports[`FormikCheckbox Component Test Disabled chekbox to Match last snapshot 1
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -1576,6 +1582,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -1708,6 +1715,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -1877,6 +1885,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -2044,6 +2053,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                     "background": Object {
                                       "RGB": "246,246,246",
                                       "hex": "#F6F6F6",
+                                      "on": "#272727",
                                     },
                                     "black": Object {
                                       "main": Object {
@@ -2175,6 +2185,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                           "background": Object {
                                             "RGB": "246,246,246",
                                             "hex": "#F6F6F6",
+                                            "on": "#272727",
                                           },
                                           "black": Object {
                                             "main": Object {
@@ -2322,6 +2333,7 @@ exports[`FormikCheckbox Component Test Match last snapshot 1`] = `
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {

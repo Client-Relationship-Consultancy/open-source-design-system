@@ -83,6 +83,7 @@ export const colourPalette = {
     background: {
       hex: "#F6F6F6",
       RGB: "246,246,246",
+      on: "#272727",
     },
     surface: {
       hex: "#FFFFFF",
@@ -107,7 +108,7 @@ export const colourPalette = {
 interface IColourCodes {
   hex: string;
   RGB: string;
-  on?: string;
+  on: string;
 }
 interface IColourVariations {
   main: IColourCodes;

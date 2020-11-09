@@ -476,6 +476,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -609,6 +610,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -760,6 +762,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -900,6 +903,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -1030,6 +1034,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -1177,6 +1182,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -1336,6 +1342,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -1466,6 +1473,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                                         "background": Object {
                                                           "RGB": "246,246,246",
                                                           "hex": "#F6F6F6",
+                                                          "on": "#272727",
                                                         },
                                                         "black": Object {
                                                           "main": Object {
@@ -1615,6 +1623,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                                     "background": Object {
                                                       "RGB": "246,246,246",
                                                       "hex": "#F6F6F6",
+                                                      "on": "#272727",
                                                     },
                                                     "black": Object {
                                                       "main": Object {
@@ -1750,6 +1759,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -1880,6 +1890,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -2027,6 +2038,7 @@ exports[`FormikTextToggle Component Test Match last snapshot with base props 1`]
                                               "background": Object {
                                                 "RGB": "246,246,246",
                                                 "hex": "#F6F6F6",
+                                                "on": "#272727",
                                               },
                                               "black": Object {
                                                 "main": Object {
@@ -2646,6 +2658,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -2779,6 +2792,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -2930,6 +2944,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -3070,6 +3085,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -3200,6 +3216,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -3347,6 +3364,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -3506,6 +3524,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -3636,6 +3655,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                                         "background": Object {
                                                           "RGB": "246,246,246",
                                                           "hex": "#F6F6F6",
+                                                          "on": "#272727",
                                                         },
                                                         "black": Object {
                                                           "main": Object {
@@ -3785,6 +3805,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                                     "background": Object {
                                                       "RGB": "246,246,246",
                                                       "hex": "#F6F6F6",
+                                                      "on": "#272727",
                                                     },
                                                     "black": Object {
                                                       "main": Object {
@@ -3920,6 +3941,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -4050,6 +4072,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -4197,6 +4220,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with classname passed 
                                               "background": Object {
                                                 "RGB": "246,246,246",
                                                 "hex": "#F6F6F6",
+                                                "on": "#272727",
                                               },
                                               "black": Object {
                                                 "main": Object {
@@ -4816,6 +4840,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -4949,6 +4974,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -5100,6 +5126,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -5240,6 +5267,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                       "background": Object {
                                         "RGB": "246,246,246",
                                         "hex": "#F6F6F6",
+                                        "on": "#272727",
                                       },
                                       "black": Object {
                                         "main": Object {
@@ -5370,6 +5398,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -5517,6 +5546,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                         "background": Object {
                                           "RGB": "246,246,246",
                                           "hex": "#F6F6F6",
+                                          "on": "#272727",
                                         },
                                         "black": Object {
                                           "main": Object {
@@ -5676,6 +5706,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -5806,6 +5837,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                                         "background": Object {
                                                           "RGB": "246,246,246",
                                                           "hex": "#F6F6F6",
+                                                          "on": "#272727",
                                                         },
                                                         "black": Object {
                                                           "main": Object {
@@ -5955,6 +5987,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                                     "background": Object {
                                                       "RGB": "246,246,246",
                                                       "hex": "#F6F6F6",
+                                                      "on": "#272727",
                                                     },
                                                     "black": Object {
                                                       "main": Object {
@@ -6090,6 +6123,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                             "background": Object {
                                               "RGB": "246,246,246",
                                               "hex": "#F6F6F6",
+                                              "on": "#272727",
                                             },
                                             "black": Object {
                                               "main": Object {
@@ -6220,6 +6254,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                                   "background": Object {
                                                     "RGB": "246,246,246",
                                                     "hex": "#F6F6F6",
+                                                    "on": "#272727",
                                                   },
                                                   "black": Object {
                                                     "main": Object {
@@ -6367,6 +6402,7 @@ exports[`FormikTextToggle Component Test Matches snapshot with row = false 1`] =
                                               "background": Object {
                                                 "RGB": "246,246,246",
                                                 "hex": "#F6F6F6",
+                                                "on": "#272727",
                                               },
                                               "black": Object {
                                                 "main": Object {
