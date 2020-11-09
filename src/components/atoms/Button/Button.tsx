@@ -16,10 +16,14 @@ const InnerBorder = styled.div`
   left: 0px;
   width: 100%;
   height: 100%;
-  border: 1px white solid;
+  border: 1px solid ${({ theme }) => theme.white.hex};
   border-radius: 5px;
   transition: opacity 0.15s;
 `;
+
+InnerBorder.defaultProps = {
+  theme: colourPalette.examplePalette,
+};
 
 interface IStyledButton {
   fontSize: string;
@@ -119,7 +123,6 @@ interface IProps extends React.HTMLProps<HTMLButtonElement> {
   icon?: IconType;
   iconSize?: IconSize;
   iconPosition?: IconPosition;
-  onClickIcon?: () => void;
 }
 
 class BasicButton extends React.PureComponent<IProps> {
