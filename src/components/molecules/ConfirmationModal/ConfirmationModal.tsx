@@ -7,7 +7,7 @@ import { colourPalette } from "../../../brandColours";
 
 export const HeaderBar = styled.div`
   width: 100%;
-  background-color: ${props => props.theme.primary.main.hex};
+  background-color: ${(props) => props.theme.primary.main.hex};
   height: 40px;
 `;
 HeaderBar.defaultProps = {
@@ -68,16 +68,16 @@ export interface IConfirmationModal {
     container?: string;
   };
 }
-export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = props => (
+export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (props) => (
   <ReactModal isOpen={props.isOpen} style={customStyles} id={props.id} className={props.className}>
     <InsideContainer className={props.classNameHooks?.container}>
       <HeaderBar />
       <ContentContainer>{props.children}</ContentContainer>
       <ButtonRow>
-        <Button onClick={props.onYes}>
+        <Button onClick={props.onYes} buttonType="primary">
           <ButtonText>Yes</ButtonText>
         </Button>
-        <Button onClick={props.onNo} buttonType="outline">
+        <Button onClick={props.onNo} buttonType="primaryOutline">
           <ButtonText>No</ButtonText>
         </Button>
       </ButtonRow>

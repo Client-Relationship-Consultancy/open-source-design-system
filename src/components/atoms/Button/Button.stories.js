@@ -1,34 +1,11 @@
 import React from "react"
 
 import { storiesOf } from "@storybook/react"
-import { action } from "@storybook/addon-actions"
-import { text, number, boolean, select } from "@storybook/addon-knobs"
+import { text, boolean, select } from "@storybook/addon-knobs"
 
-import { Button } from "../../../index"
-import NewButton from "./Buttons"
+import Button from "./Button"
 
 const stories = storiesOf("Buttons", module)
-
-const themeDropdown = {
-  default: "default",
-  ghost: "ghost",
-  outline: "outline",
-  complimentary: "complimentary",
-  error: "error",
-}
-
-stories.add("Save icon button", () => (
-  <Button
-    className={text("", "small", "xsmall")}
-    icon={text("", "Icon Name", "plus-circle")}
-    onClick={action("clicked")}
-    size={number("Size", 1.5)}
-    buttonType={select("button type", themeDropdown, "default")}
-    isDisabled={boolean("Disabled", false)}
-  >
-    {text("Button Description", "Save")}
-  </Button>
-))
 
 const buttonSizes = {
   Small: "small",
@@ -61,18 +38,20 @@ const iconTypes = {
   None: "",
 }
 
-stories.add("Button using icon library", () => (
-  <NewButton
-    buttonType={select("Type", buttonTypes, "secondaryOutline")}
-    size={select("Size", buttonSizes, "large")}
-    disabled={boolean("Disabled", false)}
-    icon={select("Icon Type", iconTypes, "")}
-    iconPosition={select("Icon Position", iconPositions, "before")}
-    iconSize={select("Icon Size", iconSizes, "large")}
-  >
-    {text("Button Description", "Button")}
-  </NewButton>
-))
+stories.add("Button using icon library", () => {
+  return (
+    <Button
+      buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
+      buttonSize={select("Button Size", buttonSizes, "large")}
+      disabled={boolean("Disabled", false)}
+      icon={select("Icon Type", iconTypes, "")}
+      iconPosition={select("Icon Position", iconPositions, "before")}
+      iconSize={select("Icon Size", iconSizes, "large")}
+    >
+      {text("Button Description", "Button")}
+    </Button>
+  )
+})
 
 const selectArrowSvg = (
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -80,15 +59,17 @@ const selectArrowSvg = (
   </svg>
 )
 
-stories.add("Button passing SVG icon", () => (
-  <NewButton
-    buttonType={select("Type", buttonTypes, "secondaryOutline")}
-    size={select("Size", buttonSizes, "large")}
-    disabled={boolean("Disabled", false)}
-    icon={selectArrowSvg}
-    iconPosition={select("Icon Position", iconPositions, "before")}
-    iconSize={select("Icon Size", iconSizes, "large")}
-  >
-    {text("Button Description", "Button")}
-  </NewButton>
-))
+stories.add("Button passing SVG icon", () => {
+  return (
+    <Button
+      buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
+      buttonSize={select("Button Size", buttonSizes, "large")}
+      disabled={boolean("Disabled", false)}
+      icon={selectArrowSvg}
+      iconPosition={select("Icon Position", iconPositions, "before")}
+      iconSize={select("Icon Size", iconSizes, "large")}
+    >
+      {text("Button Description", "Button")}
+    </Button>
+  )
+})

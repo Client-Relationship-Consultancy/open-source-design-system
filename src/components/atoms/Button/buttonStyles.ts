@@ -16,12 +16,6 @@ export type ButtonStyle = {
   };
 };
 
-// TODO:
-// needs focus -> show inner border
-// needs disabled opacity
-// disabled interacting/or not with other mouse selectors (I.E. hover while disabled)
-// text-decoration
-
 export const buttonStyles = (theme: IColourPalette) => ({
   primary: {
     background: theme.action.main.hex,

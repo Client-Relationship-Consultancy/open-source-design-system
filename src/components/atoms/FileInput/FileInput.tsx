@@ -22,7 +22,7 @@ export const Container = styled.div<IContainer>`
     z-index: -1;
   }
   button {
-    pointer-events: ${props => (props.selectedFile ? "auto" : "none")};
+    pointer-events: ${(props) => (props.selectedFile ? "auto" : "none")};
   }
   label {
     cursor: pointer;
@@ -88,7 +88,7 @@ class FileInput extends React.PureComponent<IProps, IState> {
           <label htmlFor="fileInput">
             <Button
               onClick={this.handleUpload}
-              buttonType={this.props.theme}
+              buttonType="primaryOutline"
               icon={this.state.selectedFile ? "upload" : "file"}
               id="uploadButton"
               type="button"
@@ -97,7 +97,7 @@ class FileInput extends React.PureComponent<IProps, IState> {
             </Button>
           </label>
           {this.state.selectedFile && (
-            <Button buttonType="ghost" icon="times" onClickIcon={this.resetFile} type="button">
+            <Button buttonType="ghost" icon="times" onClick={this.resetFile} type="button">
               {this.state.selectedFile.name}
             </Button>
           )}

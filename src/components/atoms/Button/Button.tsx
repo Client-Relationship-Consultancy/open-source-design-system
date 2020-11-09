@@ -80,12 +80,6 @@ export const StyledButton = styled.button<IStyledButton>`
         buttonStyle.hover?.background ?? buttonStyle.background};
       color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
       border: 1px solid ${({ buttonStyle }) => buttonStyle.hover?.border ?? buttonStyle.border};
-
-      svg {
-        color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
-        fill: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
-        stroke: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
-      }
     }
     &:active,
     &:focus {
@@ -98,6 +92,15 @@ export const StyledButton = styled.button<IStyledButton>`
         opacity: 1;
       }
     }
+    &:hover,
+    &:active,
+    &:focus {
+      svg {
+        color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+        fill: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+        stroke: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+      }
+    }
   }
 
   :disabled {
@@ -106,7 +109,7 @@ export const StyledButton = styled.button<IStyledButton>`
   }
 `;
 
-interface IProps {
+interface IProps extends React.HTMLProps<HTMLButtonElement> {
   buttonSize?: ButtonSize;
   buttonType: ButtonType;
   theme: IColourPalette;
@@ -114,6 +117,7 @@ interface IProps {
   icon?: IconType;
   iconSize?: IconSize;
   iconPosition?: IconPosition;
+  onClickIcon?: () => void;
 }
 
 class BasicButton extends React.PureComponent<IProps> {
@@ -156,14 +160,13 @@ class BasicButton extends React.PureComponent<IProps> {
     }
   };
 
-  getButtonStyle = (): ButtonStyle => {
-    return buttonStyles(this.props.theme)[this.props.buttonType];
-  };
+  getButtonStyle = (): ButtonStyle => buttonStyles(this.props.theme)[this.props.buttonType];
 
   render = () => {
     const {
       disabled = false,
       buttonSize = "medium",
+      onClick,
       icon,
       iconPosition = "before",
       iconSize = "medium",
@@ -175,6 +178,7 @@ class BasicButton extends React.PureComponent<IProps> {
         fontSize={this.getFontSize()}
         padding={this.getPadding()}
         height={this.getHeight()}
+        onClick={onClick}
         disabled={disabled}
         buttonSize={buttonSize}
         iconPosition={iconPosition}
