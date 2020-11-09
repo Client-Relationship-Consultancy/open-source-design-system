@@ -51,6 +51,7 @@ exports[`Select Input test component multi match last snapshot 1`] = `
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -2282,6 +2283,7 @@ exports[`Select Input test match last snapshot 1`] = `
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {

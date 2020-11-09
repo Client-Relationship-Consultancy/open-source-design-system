@@ -70,6 +70,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
@@ -200,6 +201,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -353,6 +355,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {
@@ -484,6 +487,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -615,6 +619,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -764,6 +769,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -967,6 +973,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -1097,6 +1104,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -1244,6 +1252,7 @@ exports[`Card Component Renders Card with full styling 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1409,6 +1418,7 @@ exports[`Card Component Renders while collapsed 1`] = `
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
@@ -1540,6 +1550,7 @@ exports[`Card Component Renders while collapsed 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -1693,6 +1704,7 @@ exports[`Card Component Renders while collapsed 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {
@@ -1922,6 +1934,7 @@ exports[`Card Component Renders while not collapsed 1`] = `
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
@@ -2052,6 +2065,7 @@ exports[`Card Component Renders while not collapsed 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -2205,6 +2219,7 @@ exports[`Card Component Renders while not collapsed 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {

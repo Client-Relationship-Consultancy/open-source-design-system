@@ -51,6 +51,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -272,6 +273,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {
@@ -475,6 +477,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -711,6 +714,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -839,6 +843,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -1106,6 +1111,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -1234,6 +1240,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -1492,6 +1499,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                         "background": Object {
                           "RGB": "246,246,246",
                           "hex": "#F6F6F6",
+                          "on": "#272727",
                         },
                         "black": Object {
                           "main": Object {
@@ -1620,6 +1628,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -1878,6 +1887,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -2006,6 +2016,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -2246,6 +2257,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -2375,6 +2387,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -2720,6 +2733,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                         "background": Object {
                           "RGB": "246,246,246",
                           "hex": "#F6F6F6",
+                          "on": "#272727",
                         },
                         "black": Object {
                           "main": Object {
@@ -2848,6 +2862,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -3105,6 +3120,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -3233,6 +3249,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -3498,6 +3515,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -3626,6 +3644,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -3887,6 +3906,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                               "background": Object {
                                 "RGB": "246,246,246",
                                 "hex": "#F6F6F6",
+                                "on": "#272727",
                               },
                               "black": Object {
                                 "main": Object {
@@ -4015,6 +4035,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -4286,6 +4307,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -4414,6 +4436,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -4680,6 +4703,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -4808,6 +4832,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -5074,6 +5099,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                               "background": Object {
                                 "RGB": "246,246,246",
                                 "hex": "#F6F6F6",
+                                "on": "#272727",
                               },
                               "black": Object {
                                 "main": Object {
@@ -5202,6 +5228,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -5477,6 +5504,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -5605,6 +5633,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -5890,6 +5919,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -6018,6 +6048,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -6302,6 +6333,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -6430,6 +6462,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -6714,6 +6747,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -6842,6 +6876,7 @@ exports[`Filterable List chevron test With out chevron 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -7048,6 +7083,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -7264,6 +7300,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
           "background": Object {
             "RGB": "246,246,246",
             "hex": "#F6F6F6",
+            "on": "#272727",
           },
           "black": Object {
             "main": Object {
@@ -7463,6 +7500,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -7697,6 +7735,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                 "background": Object {
                   "RGB": "246,246,246",
                   "hex": "#F6F6F6",
+                  "on": "#272727",
                 },
                 "black": Object {
                   "main": Object {
@@ -7825,6 +7864,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
               "background": Object {
                 "RGB": "246,246,246",
                 "hex": "#F6F6F6",
+                "on": "#272727",
               },
               "black": Object {
                 "main": Object {
@@ -8090,6 +8130,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -8218,6 +8259,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -8474,6 +8516,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                         "background": Object {
                           "RGB": "246,246,246",
                           "hex": "#F6F6F6",
+                          "on": "#272727",
                         },
                         "black": Object {
                           "main": Object {
@@ -8602,6 +8645,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -8858,6 +8902,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -8986,6 +9031,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -9224,6 +9270,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -9353,6 +9400,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -9696,6 +9744,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                         "background": Object {
                           "RGB": "246,246,246",
                           "hex": "#F6F6F6",
+                          "on": "#272727",
                         },
                         "black": Object {
                           "main": Object {
@@ -9824,6 +9873,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -10079,6 +10129,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -10207,6 +10258,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -10470,6 +10522,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -10598,6 +10651,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                           "background": Object {
                             "RGB": "246,246,246",
                             "hex": "#F6F6F6",
+                            "on": "#272727",
                           },
                           "black": Object {
                             "main": Object {
@@ -10883,6 +10937,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -11011,6 +11066,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                   "background": Object {
                     "RGB": "246,246,246",
                     "hex": "#F6F6F6",
+                    "on": "#272727",
                   },
                   "black": Object {
                     "main": Object {
@@ -11275,6 +11331,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                       "background": Object {
                         "RGB": "246,246,246",
                         "hex": "#F6F6F6",
+                        "on": "#272727",
                       },
                       "black": Object {
                         "main": Object {
@@ -11403,6 +11460,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                     "background": Object {
                       "RGB": "246,246,246",
                       "hex": "#F6F6F6",
+                      "on": "#272727",
                     },
                     "black": Object {
                       "main": Object {
@@ -11667,6 +11725,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                               "background": Object {
                                 "RGB": "246,246,246",
                                 "hex": "#F6F6F6",
+                                "on": "#272727",
                               },
                               "black": Object {
                                 "main": Object {
@@ -11795,6 +11854,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                             "background": Object {
                               "RGB": "246,246,246",
                               "hex": "#F6F6F6",
+                              "on": "#272727",
                             },
                             "black": Object {
                               "main": Object {
@@ -12068,6 +12128,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -12196,6 +12257,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -12479,6 +12541,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -12607,6 +12670,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -12889,6 +12953,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -13017,6 +13082,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {
@@ -13299,6 +13365,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                   "background": Object {
                                     "RGB": "246,246,246",
                                     "hex": "#F6F6F6",
+                                    "on": "#272727",
                                   },
                                   "black": Object {
                                     "main": Object {
@@ -13427,6 +13494,7 @@ exports[`FilterableListWithTheme Input test match last snapshot 1`] = `
                                 "background": Object {
                                   "RGB": "246,246,246",
                                   "hex": "#F6F6F6",
+                                  "on": "#272727",
                                 },
                                 "black": Object {
                                   "main": Object {

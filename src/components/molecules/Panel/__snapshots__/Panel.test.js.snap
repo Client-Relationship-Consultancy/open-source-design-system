@@ -26,6 +26,7 @@ exports[`Panel should match the snapshot when icon passed 1`] = `
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
@@ -197,6 +198,7 @@ exports[`Panel should match the snapshot when no icon passed 1`] = `
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {

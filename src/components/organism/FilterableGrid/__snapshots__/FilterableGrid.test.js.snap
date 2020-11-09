@@ -28,6 +28,7 @@ exports[`FilterableGrid component should render no results component with correc
       "background": Object {
         "RGB": "246,246,246",
         "hex": "#F6F6F6",
+        "on": "#272727",
       },
       "black": Object {
         "main": Object {
@@ -158,6 +159,7 @@ exports[`FilterableGrid component should render no results component with correc
             "background": Object {
               "RGB": "246,246,246",
               "hex": "#F6F6F6",
+              "on": "#272727",
             },
             "black": Object {
               "main": Object {
@@ -305,6 +307,7 @@ exports[`FilterableGrid component should render no results component with correc
         "background": Object {
           "RGB": "246,246,246",
           "hex": "#F6F6F6",
+          "on": "#272727",
         },
         "black": Object {
           "main": Object {
