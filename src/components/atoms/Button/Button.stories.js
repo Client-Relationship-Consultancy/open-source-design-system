@@ -38,10 +38,10 @@ const iconTypes = {
   None: "",
 }
 
-stories.add("Button using icon library", () => {
+stories.add("Button with icon options", () => {
   return (
     <Button
-      buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
+      buttonType={select("Button Type", buttonTypes, "primary")}
       buttonSize={select("Button Size", buttonSizes, "large")}
       disabled={boolean("Disabled", false)}
       icon={select("Icon Type", iconTypes, "")}
@@ -59,7 +59,7 @@ const selectArrowSvg = (
   </svg>
 )
 
-stories.add("Button passing SVG icon", () => {
+stories.add("Button using passed SVG icon", () => {
   return (
     <Button
       buttonType={select("Button Type", buttonTypes, "secondaryOutline")}

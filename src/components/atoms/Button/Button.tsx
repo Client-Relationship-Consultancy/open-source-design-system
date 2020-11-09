@@ -109,6 +109,8 @@ export const StyledButton = styled.button<IStyledButton>`
   }
 `;
 
+StyledButton.displayName = "StyledButton";
+
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
   buttonSize?: ButtonSize;
   buttonType: ButtonType;
@@ -123,6 +125,7 @@ interface IProps extends React.HTMLProps<HTMLButtonElement> {
 class BasicButton extends React.PureComponent<IProps> {
   static defaultProps = {
     theme: colourPalette.examplePalette,
+    buttonType: "primary",
   };
 
   getFontSize = (): string => {
@@ -189,7 +192,7 @@ class BasicButton extends React.PureComponent<IProps> {
           (typeof icon === "string" ? (
             <Icon name={icon} className="dsButtonIcon" />
           ) : (
-            <div className="dsButtonIcon">{icon}</div>
+            <div className="dsButtonIcon">{icon}</div> // wrapper for SVG or react element
           ))}
         {this.props.children}
       </StyledButton>
