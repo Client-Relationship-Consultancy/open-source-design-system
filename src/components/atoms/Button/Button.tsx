@@ -6,10 +6,10 @@ import Icon from "../Icon/Icon";
 import { buttonStyles, ButtonStyle } from "./buttonStyles";
 
 export type ButtonType = "primary" | "primaryOutline" | "secondaryOutline" | "danger" | "ghost";
-type IconType = IconProp | SVGElement | React.ReactElement;
-type IconPosition = "before" | "after";
-type IconSize = "medium" | "large";
-type ButtonSize = "small" | "medium" | "large";
+export type IconType = IconProp | SVGElement | React.ReactElement;
+export type IconPosition = "before" | "after";
+export type IconSize = "medium" | "large";
+export type ButtonSize = "small" | "medium" | "large";
 
 const InnerBorder = styled.div`
   position: absolute;
