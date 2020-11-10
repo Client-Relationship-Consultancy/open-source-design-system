@@ -131,7 +131,7 @@ exports[`Button should have correct styling when buttonSize AND iconSize are lar
   cursor: not-allowed;
 }
 
-<WithTheme(BasicButton)
+<Button
   buttonSize="large"
   icon="save"
   iconPosition="before"
@@ -1583,7 +1583,7 @@ exports[`Button should have correct styling when buttonSize AND iconSize are lar
       </StyledComponent>
     </StyledButton>
   </BasicButton>
-</WithTheme(BasicButton)>
+</Button>
 `;
 
 exports[`Button should match snapshot when buttonSize is large, and no iconSize is provided 1`] = `
@@ -1708,7 +1708,7 @@ exports[`Button should match snapshot when buttonSize is large, and no iconSize 
   cursor: not-allowed;
 }
 
-<WithTheme(BasicButton)
+<Button
   buttonSize="large"
   icon="save"
   onClick={[Function]}
@@ -3156,7 +3156,7 @@ exports[`Button should match snapshot when buttonSize is large, and no iconSize 
       </StyledComponent>
     </StyledButton>
   </BasicButton>
-</WithTheme(BasicButton)>
+</Button>
 `;
 
 exports[`Button should match snapshot when buttonSize is medium 1`] = `
@@ -3263,7 +3263,7 @@ exports[`Button should match snapshot when buttonSize is medium 1`] = `
   cursor: not-allowed;
 }
 
-<WithTheme(BasicButton)
+<Button
   buttonSize="medium"
   icon="save"
   onClick={[Function]}
@@ -4711,7 +4711,7 @@ exports[`Button should match snapshot when buttonSize is medium 1`] = `
       </StyledComponent>
     </StyledButton>
   </BasicButton>
-</WithTheme(BasicButton)>
+</Button>
 `;
 
 exports[`Button should match snapshot when buttonSize is small 1`] = `
@@ -4827,7 +4827,7 @@ exports[`Button should match snapshot when buttonSize is small 1`] = `
   cursor: not-allowed;
 }
 
-<WithTheme(BasicButton)
+<Button
   buttonSize="small"
   icon="save"
   onClick={[Function]}
@@ -6275,7 +6275,7 @@ exports[`Button should match snapshot when buttonSize is small 1`] = `
       </StyledComponent>
     </StyledButton>
   </BasicButton>
-</WithTheme(BasicButton)>
+</Button>
 `;
 
 exports[`Button should match snapshot with defaults 1`] = `
@@ -6378,7 +6378,7 @@ exports[`Button should match snapshot with defaults 1`] = `
   cursor: not-allowed;
 }
 
-<WithTheme(BasicButton)>
+<Button>
   <BasicButton
     buttonType="primary"
     theme={
@@ -7052,5 +7052,5 @@ exports[`Button should match snapshot with defaults 1`] = `
       </StyledComponent>
     </StyledButton>
   </BasicButton>
-</WithTheme(BasicButton)>
+</Button>
 `;

@@ -14,7 +14,7 @@ exports[`FileInput test match last snapshot 1`] = `
     <label
       htmlFor="fileInput"
     >
-      <WithTheme(BasicButton)
+      <Button
         buttonType="primaryOutline"
         icon="file"
         id="uploadButton"
@@ -22,7 +22,7 @@ exports[`FileInput test match last snapshot 1`] = `
         type="button"
       >
         Choose file
-      </WithTheme(BasicButton)>
+      </Button>
     </label>
   </ButtonContainer>
 </Container>
@@ -42,7 +42,7 @@ exports[`FileInput test match last snapshot with a file selected 1`] = `
     <label
       htmlFor="fileInput"
     >
-      <WithTheme(BasicButton)
+      <Button
         buttonType="primaryOutline"
         icon="upload"
         id="uploadButton"
@@ -50,9 +50,9 @@ exports[`FileInput test match last snapshot with a file selected 1`] = `
         type="button"
       >
         Upload file
-      </WithTheme(BasicButton)>
+      </Button>
     </label>
-    <WithTheme(BasicButton)
+    <Button
       buttonType="ghost"
       icon="times"
       onClick={[Function]}

@@ -104,7 +104,7 @@ exports[`Test Modal Test that modal closes 1`] = `
   label="Test Label"
 >
   <div>
-    <WithTheme(BasicButton)
+    <Button
       onClick={[Function]}
     >
       <BasicButton
@@ -784,7 +784,7 @@ exports[`Test Modal Test that modal closes 1`] = `
           </StyledComponent>
         </StyledButton>
       </BasicButton>
-    </WithTheme(BasicButton)>
+    </Button>
   </div>
 </Modal>
 `;
@@ -893,7 +893,7 @@ exports[`Test Modal Test that modal is not initially visible. 1`] = `
   label="Test Label"
 >
   <div>
-    <WithTheme(BasicButton)
+    <Button
       onClick={[Function]}
     >
       <BasicButton
@@ -1573,7 +1573,7 @@ exports[`Test Modal Test that modal is not initially visible. 1`] = `
           </StyledComponent>
         </StyledButton>
       </BasicButton>
-    </WithTheme(BasicButton)>
+    </Button>
   </div>
 </Modal>
 `;
@@ -1682,7 +1682,7 @@ exports[`Test Modal Test that modal opens 1`] = `
   label="Test Label"
 >
   <div>
-    <WithTheme(BasicButton)
+    <Button
       onClick={[Function]}
     >
       <BasicButton
@@ -2362,7 +2362,7 @@ exports[`Test Modal Test that modal opens 1`] = `
           </StyledComponent>
         </StyledButton>
       </BasicButton>
-    </WithTheme(BasicButton)>
+    </Button>
   </div>
 </Modal>
 `;

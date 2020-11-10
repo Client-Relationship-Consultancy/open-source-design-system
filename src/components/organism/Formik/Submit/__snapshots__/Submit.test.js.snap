@@ -104,7 +104,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   <CustomSubmit
     formik={Object {}}
   >
-    <WithTheme(BasicButton)
+    <Button
       type="submit"
     >
       <BasicButton
@@ -781,7 +781,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
           </StyledComponent>
         </StyledButton>
       </BasicButton>
-    </WithTheme(BasicButton)>
+    </Button>
   </CustomSubmit>
 </Submit>
 `;
