@@ -1,4 +1,3 @@
-import Button, { ButtonType, IconType, IconPosition, IconSize, ButtonSize } from "./Button"
+import Button from "./Button"
 
-export { ButtonType, IconType, IconPosition, IconSize, ButtonSize }
 export default Button
