@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Submit Component Test Match last snapshot 1`] = `
-.c2 {
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.1rem;
+}
+
+.c3 {
   position: absolute;
   left: 0px;
   width: 100%;
@@ -12,7 +20,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   transition: opacity 0.15s;
 }
 
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -25,6 +33,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   position: relative;
+  white-space: nowrap;
   outline: none;
   height: 2rem;
   width: auto;
@@ -41,7 +50,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   transition-duration: 0.15s;
 }
 
-.c0 .dsButtonIcon {
+.c1 .dsButtonIcon {
   width: 1em;
   height: 1.5em;
   display: -webkit-box;
@@ -55,7 +64,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   margin: 0 0.25em 0 0;
 }
 
-.c0 .dsButtonIcon svg {
+.c1 .dsButtonIcon svg {
   font-size: 0.875rem;
   height: 1em !important;
   width: 1em !important;
@@ -64,38 +73,38 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   stroke: #FFFFFF;
 }
 
-.c0 .c1 {
+.c1 .c2 {
   opacity: 0;
 }
 
-.c0:enabled:hover {
+.c1:enabled:hover {
   cursor: pointer;
   background-color: #4E2662;
   color: #FFFFFF;
   border: 1px solid #4E2662;
 }
 
-.c0:enabled:active,
-.c0:enabled:focus {
+.c1:enabled:active,
+.c1:enabled:focus {
   background-color: #743C8F;
   color: #FFFFFF;
   border: 1px solid #743C8F;
 }
 
-.c0:enabled:active .c1,
-.c0:enabled:focus .c1 {
+.c1:enabled:active .c2,
+.c1:enabled:focus .c2 {
   opacity: 1;
 }
 
-.c0:enabled:hover svg,
-.c0:enabled:active svg,
-.c0:enabled:focus svg {
+.c1:enabled:hover svg,
+.c1:enabled:active svg,
+.c1:enabled:focus svg {
   color: #FFFFFF;
   fill: #FFFFFF;
   stroke: #FFFFFF;
 }
 
-.c0:disabled {
+.c1:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
@@ -237,267 +246,165 @@ exports[`Submit Component Test Match last snapshot 1`] = `
         }
         type="submit"
       >
-        <StyledButton
-          buttonSize="medium"
-          buttonStyle={
-            Object {
-              "background": "#743C8F",
-              "border": "#743C8F",
-              "color": "#FFFFFF",
-              "focus": Object {},
-              "hover": Object {
-                "background": "#4E2662",
-                "border": "#4E2662",
-                "color": "#FFFFFF",
-              },
-            }
-          }
-          disabled={false}
-          fontSize="0.875rem"
-          height="2rem"
-          iconPosition="before"
-          iconSize="medium"
-          padding="0.5rem 1rem"
-        >
+        <ButtonWrapper>
           <StyledComponent
-            buttonSize="medium"
-            buttonStyle={
-              Object {
-                "background": "#743C8F",
-                "border": "#743C8F",
-                "color": "#FFFFFF",
-                "focus": Object {},
-                "hover": Object {
-                  "background": "#4E2662",
-                  "border": "#4E2662",
-                  "color": "#FFFFFF",
-                },
-              }
-            }
-            disabled={false}
-            fontSize="0.875rem"
             forwardedComponent={
               Object {
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "Button__StyledButton-wjqlcn-1",
+                  "componentId": "Button__ButtonWrapper-wjqlcn-0",
                   "isStatic": false,
                   "lastClassName": "c0",
                   "rules": Array [
-                    "display:flex;flex-direction:",
-                    [Function],
-                    ";align-items:center;position:relative;outline:none;height:",
-                    [Function],
-                    ";width:auto;padding:",
-                    [Function],
-                    ";background-color:",
-                    [Function],
-                    ";color:",
-                    [Function],
-                    ";border:1px solid ",
-                    [Function],
-                    ";border-radius:5px;font-size:",
-                    [Function],
-                    ";line-height:",
-                    [Function],
-                    ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
-                    [Function],
-                    ";height:1.5em;display:flex;align-items:center;margin:",
-                    [Function],
-                    ";svg{font-size:",
-                    [Function],
-                    ";height:",
-                    [Function],
-                    " !important;width:",
-                    [Function],
-                    " !important;color:",
-                    [Function],
-                    ";fill:",
-                    [Function],
-                    ";stroke:",
-                    [Function],
-                    ";}}",
-                    ".c1",
-                    "{opacity:0;}:enabled{&:hover{cursor:pointer;background-color:",
-                    [Function],
-                    ";color:",
-                    [Function],
-                    ";border:1px solid ",
-                    [Function],
-                    ";}&:active,&:focus{background-color:",
-                    [Function],
-                    ";color:",
-                    [Function],
-                    ";border:1px solid ",
-                    [Function],
-                    ";",
-                    ".c1",
-                    "{opacity:1;}}&:hover,&:active,&:focus{svg{color:",
-                    [Function],
-                    ";fill:",
-                    [Function],
-                    ";stroke:",
-                    [Function],
-                    ";}}}:disabled{opacity:0.5;cursor:not-allowed;}",
+                    "display:inline-flex;padding:0.1rem;",
                   ],
                 },
-                "displayName": "StyledButton",
+                "displayName": "ButtonWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "Button__StyledButton-wjqlcn-1",
-                "target": "button",
+                "styledComponentId": "Button__ButtonWrapper-wjqlcn-0",
+                "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
                 "withComponent": [Function],
               }
             }
             forwardedRef={null}
-            height="2rem"
-            iconPosition="before"
-            iconSize="medium"
-            padding="0.5rem 1rem"
           >
-            <button
+            <div
               className="c0"
-              disabled={false}
-              fontSize="0.875rem"
-              height="2rem"
             >
-              <Button__InnerBorder
-                theme={
+              <StyledButton
+                buttonSize="medium"
+                buttonStyle={
                   Object {
-                    "action": Object {
-                      "dark": Object {
-                        "RGB": "79,38,98",
-                        "hex": "#4E2662",
-                        "on": "#FFFFFF",
-                      },
-                      "light": Object {
-                        "RGB": "173,101,207",
-                        "hex": "#AD65CF",
-                        "on": "#FFFFFF",
-                      },
-                      "main": Object {
-                        "RGB": "116,60,143",
-                        "hex": "#743C8F",
-                        "on": "#FFFFFF",
-                      },
-                    },
-                    "background": Object {
-                      "RGB": "246,246,246",
-                      "hex": "#F6F6F6",
-                      "on": "#272727",
-                    },
-                    "black": Object {
-                      "main": Object {
-                        "RGB": "39,39,39",
-                        "hex": "#272727",
-                        "on": "#FFFFFF",
-                      },
-                      "tint20": Object {
-                        "RGB": "236,236,236",
-                        "hex": "#ECECEC",
-                        "on": "#272727",
-                      },
-                      "tint40": Object {
-                        "RGB": "199,199,199",
-                        "hex": "#C7C7C7",
-                        "on": "#272727",
-                      },
-                      "tint60": Object {
-                        "RGB": "160,160,160",
-                        "hex": "#A0A0A0",
-                        "on": "#FFFFFF",
-                      },
-                      "tint80": Object {
-                        "RGB": "105,105,105",
-                        "hex": "#696969",
-                        "on": "#FFFFFF",
-                      },
-                    },
-                    "complimentary": Object {
-                      "dark": Object {
-                        "RGB": "206,185,0",
-                        "hex": "#CEB900",
-                        "on": "#272727",
-                      },
-                      "light": Object {
-                        "RGB": "255,245,157",
-                        "hex": "#FFF59D",
-                        "on": "#272727",
-                      },
-                      "main": Object {
-                        "RGB": "255,238,82",
-                        "hex": "#FFEE52",
-                        "on": "#272727",
-                      },
-                    },
-                    "error": Object {
-                      "dark": Object {
-                        "RGB": "197,73,1",
-                        "hex": "#C54901",
-                        "on": "#FFFFFF",
-                      },
-                      "main": Object {
-                        "RGB": "255,115,32",
-                        "hex": "#FF7320",
-                        "on": "#FFFFFF",
-                      },
-                    },
-                    "primary": Object {
-                      "dark": Object {
-                        "RGB": "102,22,20",
-                        "hex": "#661614",
-                        "on": "#FFFFFF",
-                      },
-                      "light": Object {
-                        "RGB": "218,52,47",
-                        "hex": "#DA342F",
-                        "on": "#FFFFFF",
-                      },
-                      "main": Object {
-                        "RGB": "164,40,36",
-                        "hex": "#A42824",
-                        "on": "#FFFFFF",
-                      },
-                    },
-                    "secondary": Object {
-                      "dark": Object {
-                        "RGB": "5,38,59",
-                        "hex": "#05263B",
-                        "on": "#FFFFFF",
-                      },
-                      "light": Object {
-                        "RGB": "89,156,175",
-                        "hex": "#599CAF",
-                        "on": "#FFFFFF",
-                      },
-                      "main": Object {
-                        "RGB": "11,70,107",
-                        "hex": "#0B466B",
-                        "on": "#FFFFFF",
-                      },
-                    },
-                    "surface": Object {
-                      "RGB": "255,255,255",
-                      "hex": "#FFFFFF",
-                      "on": "#272727",
-                    },
-                    "white": Object {
-                      "RGB": "255,255,255",
-                      "hex": "#FFFFFF",
-                      "on": "#272727",
+                    "background": "#743C8F",
+                    "border": "#743C8F",
+                    "color": "#FFFFFF",
+                    "focus": Object {},
+                    "hover": Object {
+                      "background": "#4E2662",
+                      "border": "#4E2662",
+                      "color": "#FFFFFF",
                     },
                   }
                 }
+                disabled={false}
+                fontSize="0.875rem"
+                height="2rem"
+                iconPosition="before"
+                iconSize="medium"
+                padding="0.5rem 1rem"
               >
                 <StyledComponent
+                  buttonSize="medium"
+                  buttonStyle={
+                    Object {
+                      "background": "#743C8F",
+                      "border": "#743C8F",
+                      "color": "#FFFFFF",
+                      "focus": Object {},
+                      "hover": Object {
+                        "background": "#4E2662",
+                        "border": "#4E2662",
+                        "color": "#FFFFFF",
+                      },
+                    }
+                  }
+                  disabled={false}
+                  fontSize="0.875rem"
                   forwardedComponent={
                     Object {
                       "$$typeof": Symbol(react.forward_ref),
-                      "_foldedDefaultProps": Object {
-                        "theme": Object {
+                      "attrs": Array [],
+                      "componentStyle": ComponentStyle {
+                        "componentId": "Button__StyledButton-wjqlcn-2",
+                        "isStatic": false,
+                        "lastClassName": "c1",
+                        "rules": Array [
+                          "display:flex;flex-direction:",
+                          [Function],
+                          ";align-items:center;position:relative;white-space:nowrap;outline:none;height:",
+                          [Function],
+                          ";width:auto;padding:",
+                          [Function],
+                          ";background-color:",
+                          [Function],
+                          ";color:",
+                          [Function],
+                          ";border:1px solid ",
+                          [Function],
+                          ";border-radius:5px;font-size:",
+                          [Function],
+                          ";line-height:",
+                          [Function],
+                          ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
+                          [Function],
+                          ";height:1.5em;display:flex;align-items:center;margin:",
+                          [Function],
+                          ";svg{font-size:",
+                          [Function],
+                          ";height:",
+                          [Function],
+                          " !important;width:",
+                          [Function],
+                          " !important;color:",
+                          [Function],
+                          ";fill:",
+                          [Function],
+                          ";stroke:",
+                          [Function],
+                          ";}}",
+                          ".c2",
+                          "{opacity:0;}:enabled{&:hover{cursor:pointer;background-color:",
+                          [Function],
+                          ";color:",
+                          [Function],
+                          ";border:1px solid ",
+                          [Function],
+                          ";}&:active,&:focus{background-color:",
+                          [Function],
+                          ";color:",
+                          [Function],
+                          ";border:1px solid ",
+                          [Function],
+                          ";",
+                          ".c2",
+                          "{opacity:1;}}&:hover,&:active,&:focus{svg{color:",
+                          [Function],
+                          ";fill:",
+                          [Function],
+                          ";stroke:",
+                          [Function],
+                          ";}}}:disabled{opacity:0.5;cursor:not-allowed;}",
+                        ],
+                      },
+                      "displayName": "StyledButton",
+                      "foldedComponentIds": Array [],
+                      "render": [Function],
+                      "styledComponentId": "Button__StyledButton-wjqlcn-2",
+                      "target": "button",
+                      "toString": [Function],
+                      "warnTooManyClasses": [Function],
+                      "withComponent": [Function],
+                    }
+                  }
+                  forwardedRef={null}
+                  height="2rem"
+                  iconPosition="before"
+                  iconSize="medium"
+                  padding="0.5rem 1rem"
+                >
+                  <button
+                    className="c1"
+                    disabled={false}
+                    fontSize="0.875rem"
+                    height="2rem"
+                  >
+                    <Button__InnerBorder
+                      theme={
+                        Object {
                           "action": Object {
                             "dark": Object {
                               "RGB": "79,38,98",
@@ -620,166 +527,300 @@ exports[`Submit Component Test Match last snapshot 1`] = `
                             "hex": "#FFFFFF",
                             "on": "#272727",
                           },
-                        },
-                      },
-                      "attrs": Array [],
-                      "componentStyle": ComponentStyle {
-                        "componentId": "c1",
-                        "isStatic": false,
-                        "lastClassName": "c2",
-                        "rules": Array [
-                          "position:absolute;left:0px;width:100%;height:100%;border:1px solid ",
-                          [Function],
-                          ";border-radius:5px;transition:opacity 0.15s;",
-                        ],
-                      },
-                      "displayName": "Button__InnerBorder",
-                      "foldedComponentIds": Array [],
-                      "render": [Function],
-                      "styledComponentId": "c1",
-                      "target": "div",
-                      "toString": [Function],
-                      "warnTooManyClasses": [Function],
-                      "withComponent": [Function],
-                    }
-                  }
-                  forwardedRef={null}
-                  theme={
-                    Object {
-                      "action": Object {
-                        "dark": Object {
-                          "RGB": "79,38,98",
-                          "hex": "#4E2662",
-                          "on": "#FFFFFF",
-                        },
-                        "light": Object {
-                          "RGB": "173,101,207",
-                          "hex": "#AD65CF",
-                          "on": "#FFFFFF",
-                        },
-                        "main": Object {
-                          "RGB": "116,60,143",
-                          "hex": "#743C8F",
-                          "on": "#FFFFFF",
-                        },
-                      },
-                      "background": Object {
-                        "RGB": "246,246,246",
-                        "hex": "#F6F6F6",
-                        "on": "#272727",
-                      },
-                      "black": Object {
-                        "main": Object {
-                          "RGB": "39,39,39",
-                          "hex": "#272727",
-                          "on": "#FFFFFF",
-                        },
-                        "tint20": Object {
-                          "RGB": "236,236,236",
-                          "hex": "#ECECEC",
-                          "on": "#272727",
-                        },
-                        "tint40": Object {
-                          "RGB": "199,199,199",
-                          "hex": "#C7C7C7",
-                          "on": "#272727",
-                        },
-                        "tint60": Object {
-                          "RGB": "160,160,160",
-                          "hex": "#A0A0A0",
-                          "on": "#FFFFFF",
-                        },
-                        "tint80": Object {
-                          "RGB": "105,105,105",
-                          "hex": "#696969",
-                          "on": "#FFFFFF",
-                        },
-                      },
-                      "complimentary": Object {
-                        "dark": Object {
-                          "RGB": "206,185,0",
-                          "hex": "#CEB900",
-                          "on": "#272727",
-                        },
-                        "light": Object {
-                          "RGB": "255,245,157",
-                          "hex": "#FFF59D",
-                          "on": "#272727",
-                        },
-                        "main": Object {
-                          "RGB": "255,238,82",
-                          "hex": "#FFEE52",
-                          "on": "#272727",
-                        },
-                      },
-                      "error": Object {
-                        "dark": Object {
-                          "RGB": "197,73,1",
-                          "hex": "#C54901",
-                          "on": "#FFFFFF",
-                        },
-                        "main": Object {
-                          "RGB": "255,115,32",
-                          "hex": "#FF7320",
-                          "on": "#FFFFFF",
-                        },
-                      },
-                      "primary": Object {
-                        "dark": Object {
-                          "RGB": "102,22,20",
-                          "hex": "#661614",
-                          "on": "#FFFFFF",
-                        },
-                        "light": Object {
-                          "RGB": "218,52,47",
-                          "hex": "#DA342F",
-                          "on": "#FFFFFF",
-                        },
-                        "main": Object {
-                          "RGB": "164,40,36",
-                          "hex": "#A42824",
-                          "on": "#FFFFFF",
-                        },
-                      },
-                      "secondary": Object {
-                        "dark": Object {
-                          "RGB": "5,38,59",
-                          "hex": "#05263B",
-                          "on": "#FFFFFF",
-                        },
-                        "light": Object {
-                          "RGB": "89,156,175",
-                          "hex": "#599CAF",
-                          "on": "#FFFFFF",
-                        },
-                        "main": Object {
-                          "RGB": "11,70,107",
-                          "hex": "#0B466B",
-                          "on": "#FFFFFF",
-                        },
-                      },
-                      "surface": Object {
-                        "RGB": "255,255,255",
-                        "hex": "#FFFFFF",
-                        "on": "#272727",
-                      },
-                      "white": Object {
-                        "RGB": "255,255,255",
-                        "hex": "#FFFFFF",
-                        "on": "#272727",
-                      },
-                    }
-                  }
-                >
-                  <div
-                    className="c1 c2"
-                  />
+                        }
+                      }
+                    >
+                      <StyledComponent
+                        forwardedComponent={
+                          Object {
+                            "$$typeof": Symbol(react.forward_ref),
+                            "_foldedDefaultProps": Object {
+                              "theme": Object {
+                                "action": Object {
+                                  "dark": Object {
+                                    "RGB": "79,38,98",
+                                    "hex": "#4E2662",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "light": Object {
+                                    "RGB": "173,101,207",
+                                    "hex": "#AD65CF",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "main": Object {
+                                    "RGB": "116,60,143",
+                                    "hex": "#743C8F",
+                                    "on": "#FFFFFF",
+                                  },
+                                },
+                                "background": Object {
+                                  "RGB": "246,246,246",
+                                  "hex": "#F6F6F6",
+                                  "on": "#272727",
+                                },
+                                "black": Object {
+                                  "main": Object {
+                                    "RGB": "39,39,39",
+                                    "hex": "#272727",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "tint20": Object {
+                                    "RGB": "236,236,236",
+                                    "hex": "#ECECEC",
+                                    "on": "#272727",
+                                  },
+                                  "tint40": Object {
+                                    "RGB": "199,199,199",
+                                    "hex": "#C7C7C7",
+                                    "on": "#272727",
+                                  },
+                                  "tint60": Object {
+                                    "RGB": "160,160,160",
+                                    "hex": "#A0A0A0",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "tint80": Object {
+                                    "RGB": "105,105,105",
+                                    "hex": "#696969",
+                                    "on": "#FFFFFF",
+                                  },
+                                },
+                                "complimentary": Object {
+                                  "dark": Object {
+                                    "RGB": "206,185,0",
+                                    "hex": "#CEB900",
+                                    "on": "#272727",
+                                  },
+                                  "light": Object {
+                                    "RGB": "255,245,157",
+                                    "hex": "#FFF59D",
+                                    "on": "#272727",
+                                  },
+                                  "main": Object {
+                                    "RGB": "255,238,82",
+                                    "hex": "#FFEE52",
+                                    "on": "#272727",
+                                  },
+                                },
+                                "error": Object {
+                                  "dark": Object {
+                                    "RGB": "197,73,1",
+                                    "hex": "#C54901",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "main": Object {
+                                    "RGB": "255,115,32",
+                                    "hex": "#FF7320",
+                                    "on": "#FFFFFF",
+                                  },
+                                },
+                                "primary": Object {
+                                  "dark": Object {
+                                    "RGB": "102,22,20",
+                                    "hex": "#661614",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "light": Object {
+                                    "RGB": "218,52,47",
+                                    "hex": "#DA342F",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "main": Object {
+                                    "RGB": "164,40,36",
+                                    "hex": "#A42824",
+                                    "on": "#FFFFFF",
+                                  },
+                                },
+                                "secondary": Object {
+                                  "dark": Object {
+                                    "RGB": "5,38,59",
+                                    "hex": "#05263B",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "light": Object {
+                                    "RGB": "89,156,175",
+                                    "hex": "#599CAF",
+                                    "on": "#FFFFFF",
+                                  },
+                                  "main": Object {
+                                    "RGB": "11,70,107",
+                                    "hex": "#0B466B",
+                                    "on": "#FFFFFF",
+                                  },
+                                },
+                                "surface": Object {
+                                  "RGB": "255,255,255",
+                                  "hex": "#FFFFFF",
+                                  "on": "#272727",
+                                },
+                                "white": Object {
+                                  "RGB": "255,255,255",
+                                  "hex": "#FFFFFF",
+                                  "on": "#272727",
+                                },
+                              },
+                            },
+                            "attrs": Array [],
+                            "componentStyle": ComponentStyle {
+                              "componentId": "c2",
+                              "isStatic": false,
+                              "lastClassName": "c3",
+                              "rules": Array [
+                                "position:absolute;left:0px;width:100%;height:100%;border:1px solid ",
+                                [Function],
+                                ";border-radius:5px;transition:opacity 0.15s;",
+                              ],
+                            },
+                            "displayName": "Button__InnerBorder",
+                            "foldedComponentIds": Array [],
+                            "render": [Function],
+                            "styledComponentId": "c2",
+                            "target": "div",
+                            "toString": [Function],
+                            "warnTooManyClasses": [Function],
+                            "withComponent": [Function],
+                          }
+                        }
+                        forwardedRef={null}
+                        theme={
+                          Object {
+                            "action": Object {
+                              "dark": Object {
+                                "RGB": "79,38,98",
+                                "hex": "#4E2662",
+                                "on": "#FFFFFF",
+                              },
+                              "light": Object {
+                                "RGB": "173,101,207",
+                                "hex": "#AD65CF",
+                                "on": "#FFFFFF",
+                              },
+                              "main": Object {
+                                "RGB": "116,60,143",
+                                "hex": "#743C8F",
+                                "on": "#FFFFFF",
+                              },
+                            },
+                            "background": Object {
+                              "RGB": "246,246,246",
+                              "hex": "#F6F6F6",
+                              "on": "#272727",
+                            },
+                            "black": Object {
+                              "main": Object {
+                                "RGB": "39,39,39",
+                                "hex": "#272727",
+                                "on": "#FFFFFF",
+                              },
+                              "tint20": Object {
+                                "RGB": "236,236,236",
+                                "hex": "#ECECEC",
+                                "on": "#272727",
+                              },
+                              "tint40": Object {
+                                "RGB": "199,199,199",
+                                "hex": "#C7C7C7",
+                                "on": "#272727",
+                              },
+                              "tint60": Object {
+                                "RGB": "160,160,160",
+                                "hex": "#A0A0A0",
+                                "on": "#FFFFFF",
+                              },
+                              "tint80": Object {
+                                "RGB": "105,105,105",
+                                "hex": "#696969",
+                                "on": "#FFFFFF",
+                              },
+                            },
+                            "complimentary": Object {
+                              "dark": Object {
+                                "RGB": "206,185,0",
+                                "hex": "#CEB900",
+                                "on": "#272727",
+                              },
+                              "light": Object {
+                                "RGB": "255,245,157",
+                                "hex": "#FFF59D",
+                                "on": "#272727",
+                              },
+                              "main": Object {
+                                "RGB": "255,238,82",
+                                "hex": "#FFEE52",
+                                "on": "#272727",
+                              },
+                            },
+                            "error": Object {
+                              "dark": Object {
+                                "RGB": "197,73,1",
+                                "hex": "#C54901",
+                                "on": "#FFFFFF",
+                              },
+                              "main": Object {
+                                "RGB": "255,115,32",
+                                "hex": "#FF7320",
+                                "on": "#FFFFFF",
+                              },
+                            },
+                            "primary": Object {
+                              "dark": Object {
+                                "RGB": "102,22,20",
+                                "hex": "#661614",
+                                "on": "#FFFFFF",
+                              },
+                              "light": Object {
+                                "RGB": "218,52,47",
+                                "hex": "#DA342F",
+                                "on": "#FFFFFF",
+                              },
+                              "main": Object {
+                                "RGB": "164,40,36",
+                                "hex": "#A42824",
+                                "on": "#FFFFFF",
+                              },
+                            },
+                            "secondary": Object {
+                              "dark": Object {
+                                "RGB": "5,38,59",
+                                "hex": "#05263B",
+                                "on": "#FFFFFF",
+                              },
+                              "light": Object {
+                                "RGB": "89,156,175",
+                                "hex": "#599CAF",
+                                "on": "#FFFFFF",
+                              },
+                              "main": Object {
+                                "RGB": "11,70,107",
+                                "hex": "#0B466B",
+                                "on": "#FFFFFF",
+                              },
+                            },
+                            "surface": Object {
+                              "RGB": "255,255,255",
+                              "hex": "#FFFFFF",
+                              "on": "#272727",
+                            },
+                            "white": Object {
+                              "RGB": "255,255,255",
+                              "hex": "#FFFFFF",
+                              "on": "#272727",
+                            },
+                          }
+                        }
+                      >
+                        <div
+                          className="c2 c3"
+                        />
+                      </StyledComponent>
+                    </Button__InnerBorder>
+                    Continue
+                  </button>
                 </StyledComponent>
-              </Button__InnerBorder>
-              Continue
-            </button>
+              </StyledButton>
+            </div>
           </StyledComponent>
-        </StyledButton>
+        </ButtonWrapper>
       </BasicButton>
     </Button>
   </CustomSubmit>
