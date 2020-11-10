@@ -165,20 +165,20 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
       I am a lovely confirmation modal
     </ConfirmationModal__ContentContainer>
     <ConfirmationModal__ButtonRow>
-      <WithTheme(BasicButton)
+      <Button
         buttonType="primary"
       >
         <ConfirmationModal__ButtonText>
           Yes
         </ConfirmationModal__ButtonText>
-      </WithTheme(BasicButton)>
-      <WithTheme(BasicButton)
+      </Button>
+      <Button
         buttonType="primaryOutline"
       >
         <ConfirmationModal__ButtonText>
           No
         </ConfirmationModal__ButtonText>
-      </WithTheme(BasicButton)>
+      </Button>
     </ConfirmationModal__ButtonRow>
   </ConfirmationModal__InsideContainer>
 </Modal>

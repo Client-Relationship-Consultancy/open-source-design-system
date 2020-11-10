@@ -204,5 +204,6 @@ class BasicButton extends React.PureComponent<IProps> {
 }
 
 const Button = withTheme(BasicButton);
+Button.displayName = "Button";
 
 export default Button;
