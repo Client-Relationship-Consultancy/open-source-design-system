@@ -8,13 +8,13 @@ export default class ActionCellRenderer extends React.Component {
     const {
       onClick,
       label,
-      buttonType = "error",
-      className = "xsmall",
+      buttonType = "danger",
+      buttonSize = "small",
       disabled = false,
     } = this.props.actionCellRendererParams
     return (
       <Button
-        className={className}
+        buttonSize={buttonSize}
         onClick={() => onClick(this.props.data)}
         // disabled if either the cell or table is disabled
         disabled={!(!disabled && !this.props.isDisabled)}
@@ -33,7 +33,7 @@ ActionCellRenderer.propTypes = {
   actionCellRendererParams: PropTypes.shape({
     onClick: PropTypes.func,
     label: PropTypes.string,
-    className: PropTypes.string,
+    buttonSize: PropTypes.string,
     buttonType: PropTypes.string,
     disabled: PropTypes.bool,
   }).isRequired,

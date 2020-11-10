@@ -2,8 +2,8 @@
 
 exports[`ActionCellRenderer test match last snapshot 1`] = `
 <Button
+  buttonSize="small"
   buttonType="error"
-  className="xsmall"
   disabled={false}
   onClick={[Function]}
 >
@@ -13,8 +13,8 @@ exports[`ActionCellRenderer test match last snapshot 1`] = `
 
 exports[`ActionCellRenderer test match snapshot with default properties 1`] = `
 <Button
-  buttonType="error"
-  className="xsmall"
+  buttonSize="small"
+  buttonType="danger"
   disabled={false}
   onClick={[Function]}
 />
