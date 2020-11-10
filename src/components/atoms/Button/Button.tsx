@@ -117,7 +117,7 @@ StyledButton.displayName = "StyledButton";
 
 interface IProps extends React.HTMLProps<HTMLButtonElement> {
   buttonSize?: ButtonSize;
-  buttonType: ButtonType;
+  buttonType?: ButtonType;
   theme: IColourPalette;
   disabled?: boolean;
   icon?: IconType;
@@ -166,7 +166,8 @@ class BasicButton extends React.PureComponent<IProps> {
     }
   };
 
-  getButtonStyle = (): ButtonStyle => buttonStyles(this.props.theme)[this.props.buttonType];
+  getButtonStyle = (): ButtonStyle =>
+    buttonStyles(this.props.theme)[this.props.buttonType ?? "primary"];
 
   render = () => {
     const {
