@@ -11,6 +11,13 @@ export type IconPosition = "before" | "after";
 export type IconSize = "medium" | "large";
 export type ButtonSize = "small" | "medium" | "large";
 
+const ButtonWrapper = styled.div`
+  display: inline-flex;
+  padding: 0.1rem;
+`;
+
+ButtonWrapper.displayName = "ButtonWrapper";
+
 const InnerBorder = styled.div`
   position: absolute;
   left: 0px;
@@ -40,6 +47,7 @@ export const StyledButton = styled.button<IStyledButton>`
   flex-direction: ${({ iconPosition }) => (iconPosition === "before" ? "row" : "row-reverse")};
   align-items: center;
   position: relative;
+  white-space: nowrap;
   outline: none;
   height: ${({ height }) => height};
   width: auto;
@@ -180,26 +188,28 @@ class BasicButton extends React.PureComponent<IProps> {
     } = this.props;
 
     return (
-      <StyledButton
-        buttonStyle={this.getButtonStyle()}
-        fontSize={this.getFontSize()}
-        padding={this.getPadding()}
-        height={this.getHeight()}
-        onClick={onClick}
-        disabled={disabled}
-        buttonSize={buttonSize}
-        iconPosition={iconPosition}
-        iconSize={iconSize}
-      >
-        <InnerBorder />
-        {icon &&
-          (typeof icon === "string" ? (
-            <Icon name={icon} className="dsButtonIcon" />
-          ) : (
-            <div className="dsButtonIcon">{icon}</div> // wrapper for SVG or react element
-          ))}
-        {this.props.children}
-      </StyledButton>
+      <ButtonWrapper>
+        <StyledButton
+          buttonStyle={this.getButtonStyle()}
+          fontSize={this.getFontSize()}
+          padding={this.getPadding()}
+          height={this.getHeight()}
+          onClick={onClick}
+          disabled={disabled}
+          buttonSize={buttonSize}
+          iconPosition={iconPosition}
+          iconSize={iconSize}
+        >
+          <InnerBorder />
+          {icon &&
+            (typeof icon === "string" ? (
+              <Icon name={icon} className="dsButtonIcon" />
+            ) : (
+              <div className="dsButtonIcon">{icon}</div> // wrapper for SVG or react element
+            ))}
+          {this.props.children}
+        </StyledButton>
+      </ButtonWrapper>
     );
   };
 }
