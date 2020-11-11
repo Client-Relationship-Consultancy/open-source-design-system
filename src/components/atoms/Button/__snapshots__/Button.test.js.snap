@@ -74,6 +74,7 @@ exports[`Button should have correct styling when buttonSize AND iconSize are lar
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -373,7 +374,7 @@ exports[`Button should have correct styling when buttonSize AND iconSize are lar
                       [Function],
                       ";border-radius:5px;font-size:",
                       [Function],
-                      ";line-height:",
+                      ";font-weight:500;line-height:",
                       [Function],
                       ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                       [Function],
@@ -1692,6 +1693,7 @@ exports[`Button should match snapshot when buttonSize is large, and no iconSize 
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 1rem;
+  font-weight: 500;
   line-height: 1rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -1987,7 +1989,7 @@ exports[`Button should match snapshot when buttonSize is large, and no iconSize 
                       [Function],
                       ";border-radius:5px;font-size:",
                       [Function],
-                      ";line-height:",
+                      ";font-weight:500;line-height:",
                       [Function],
                       ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                       [Function],
@@ -3288,6 +3290,7 @@ exports[`Button should match snapshot when buttonSize is medium 1`] = `
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 0.875rem;
+  font-weight: 500;
   line-height: 0.875rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -3583,7 +3586,7 @@ exports[`Button should match snapshot when buttonSize is medium 1`] = `
                       [Function],
                       ";border-radius:5px;font-size:",
                       [Function],
-                      ";line-height:",
+                      ";font-weight:500;line-height:",
                       [Function],
                       ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                       [Function],
@@ -4893,6 +4896,7 @@ exports[`Button should match snapshot when buttonSize is small 1`] = `
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 0.875rem;
+  font-weight: 500;
   line-height: 0.875rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -5188,7 +5192,7 @@ exports[`Button should match snapshot when buttonSize is small 1`] = `
                       [Function],
                       ";border-radius:5px;font-size:",
                       [Function],
-                      ";line-height:",
+                      ";font-weight:500;line-height:",
                       [Function],
                       ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                       [Function],
@@ -6485,6 +6489,7 @@ exports[`Button should match snapshot with defaults 1`] = `
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 0.875rem;
+  font-weight: 500;
   line-height: 0.875rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -6772,7 +6777,7 @@ exports[`Button should match snapshot with defaults 1`] = `
                       [Function],
                       ";border-radius:5px;font-size:",
                       [Function],
-                      ";line-height:",
+                      ";font-weight:500;line-height:",
                       [Function],
                       ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                       [Function],
