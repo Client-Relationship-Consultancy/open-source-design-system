@@ -1,9 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DefaultTextEditor test should match last snapshot 1`] = `
-<DefaultTextEditor__Cell
-  className="DefaultTextEditor"
->
-  This is inside the div
-</DefaultTextEditor__Cell>
-`;
+exports[`DefaultTextEditor test should match last snapshot 1`] = `"This is inside the div"`;

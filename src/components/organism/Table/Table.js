@@ -18,6 +18,11 @@ export const Container = styled.div`
     overflow: visible;
     display: flex;
     align-items: center;
+    span {
+      white-space:nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
     .ag-react-container {
       width: 100%;
     }
@@ -58,12 +63,14 @@ export const frameworkComponents = {
   actionCellRenderer: CellRenderers.ActionCellRenderer,
   checkboxRenderer: CellRenderers.CheckboxRenderer,
   checkRenderer: CellRenderers.CheckRenderer,
-  defaultTextEditor: CellRenderers.DefaultTextEditor,
   selectRenderer: CellRenderers.SelectRenderer,
   selectValueRenderer: CellRenderers.SelectValueRenderer,
   timezoneRenderer: CellRenderers.TimezoneRenderer,
   toggleRenderer: CellRenderers.ToggleRenderer,
   tooltipHeader: HeaderComponents.TooltipHeader,
+}
+export const components = {
+  defaultTextEditor: CellRenderers.DefaultTextEditor,
 }
 
 export const gridOptions = {
@@ -133,6 +140,7 @@ export class TableWithTheme extends React.PureComponent {
           onGridReady={this.props.onGridReady}
           onRowDragEnd={event => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
           frameworkComponents={frameworkComponents}
+          components={components}
           rowHeight={40}
           onRowSelected={this.props.onRowSelected}
           onCellValueChanged={onCellValueChanged}

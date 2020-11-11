@@ -1,16 +1,9 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
-
-const Cell = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-`
-
-const DefaultTextEditor = props => <Cell className="DefaultTextEditor">{props.value}</Cell>
-
-DefaultTextEditor.propTypes = {
-  value: PropTypes.any,
+/**
+ * This may seem pointless but the very act of using a renderer adds a span to the cell
+ * and applied the css to that span in table.js. Its the only way i could get it working.
+ */
+export function DefaultTextEditor (props) {
+  return props.value;
 }
 
 export default DefaultTextEditor
