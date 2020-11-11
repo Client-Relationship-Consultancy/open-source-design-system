@@ -43,6 +43,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
   border: 1px solid #743C8F;
   border-radius: 5px;
   font-size: 0.875rem;
+  font-weight: 500;
   line-height: 0.875rem;
   -webkit-transition-property: color,background-color,border;
   transition-property: color,background-color,border;
@@ -337,7 +338,7 @@ exports[`Submit Component Test Match last snapshot 1`] = `
                           [Function],
                           ";border-radius:5px;font-size:",
                           [Function],
-                          ";line-height:",
+                          ";font-weight:500;line-height:",
                           [Function],
                           ";transition-property:color,background-color,border;transition-duration:0.15s;.dsButtonIcon{width:",
                           [Function],

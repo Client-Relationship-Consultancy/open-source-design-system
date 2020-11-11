@@ -57,6 +57,7 @@ export const StyledButton = styled.button<IStyledButton>`
   border: 1px solid ${({ buttonStyle }) => buttonStyle.border};
   border-radius: 5px;
   font-size: ${({ fontSize }) => fontSize};
+  font-weight: 500;
   line-height: ${({ fontSize }) => fontSize};
   transition-property: color, background-color, border;
   transition-duration: 0.15s;
