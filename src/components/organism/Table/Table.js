@@ -75,7 +75,7 @@ export const Container = styled.div`
     height: 100%;
   }
   &.ag-disabled {
-    background: ${props => props.theme.black.tint20.hex};
+    background: ${(props) => props.theme.black.tint20.hex};
   }
   .ag-sort-order {
     display: none;
@@ -92,6 +92,7 @@ export const frameworkComponents = {
   timezoneRenderer: CellRenderers.TimezoneRenderer,
   toggleRenderer: CellRenderers.ToggleRenderer,
   tooltipHeader: HeaderComponents.TooltipHeader,
+  cellEditor: CellRenderers.CellEditor,
 }
 export const components = {
   defaultTextEditor: CellRenderers.DefaultTextEditor,
@@ -99,13 +100,13 @@ export const components = {
 }
 
 export const gridOptions = {
-  getRowStyle: params => ({ background: params.data.highlighted }),
+  getRowStyle: (params) => ({ background: params.data.highlighted }),
 }
 
 export class TableWithTheme extends React.PureComponent {
   renderColumns = () => {
     const { columns, isDisabled, theme } = this.props
-    return columns.map(column => {
+    return columns.map((column) => {
       const cellRenderer = !column.cellRendererSelector &&
         !column.cellRendererFramework && {
           cellRenderer: column.cellRenderer || "defaultTextEditor",
@@ -116,7 +117,7 @@ export class TableWithTheme extends React.PureComponent {
         ...column,
         ...cellRenderer,
         // only editable if it's not a custom cellRenderer and if the table is not disabled
-        editable: params => {
+        editable: (params) => {
           if (isDisabled) {
             return false
           }
@@ -139,7 +140,7 @@ export class TableWithTheme extends React.PureComponent {
     })
   }
 
-  getRowStyle = params => {
+  getRowStyle = (params) => {
     if (this.props.isDisabled) {
       return {
         background: this.props.theme.black.tint20.hex,
@@ -163,7 +164,7 @@ export class TableWithTheme extends React.PureComponent {
           animateRows
           rowSelection="multiple"
           onGridReady={this.props.onGridReady}
-          onRowDragEnd={event => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
+          onRowDragEnd={(event) => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
           frameworkComponents={frameworkComponents}
           components={components}
           rowHeight={40}

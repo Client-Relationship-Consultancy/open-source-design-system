@@ -8,7 +8,7 @@ import Table from "./Table"
 storiesOf("Table", module)
   .add("default table", () => {
     const columns = [
-      { headerName: "Name", field: "name" },
+      { headerName: "Name", field: "name", cellEditor: "cellEditor" },
       {
         headerName: "Compulsory",
         field: "compulsory",
@@ -99,7 +99,7 @@ storiesOf("Table", module)
       {
         headerName: "Action",
         field: "action",
-        cellRendererSelector: colParams => ({
+        cellRendererSelector: (colParams) => ({
           component: "actionCellRenderer",
           params: {
             actionCellRendererParams: {
@@ -346,7 +346,7 @@ storiesOf("Table", module)
           tooltipContent: "I am the second tooltip",
         },
       },
-    ].map(col => ({
+    ].map((col) => ({
       ...col,
       filter: true,
       sortable: true,
@@ -400,7 +400,7 @@ storiesOf("Table", module)
       {
         headerName: "Action",
         field: "action",
-        cellRendererSelector: colParams => ({
+        cellRendererSelector: (colParams) => ({
           component: "actionCellRenderer",
           params: {
             actionCellRendererParams: {
