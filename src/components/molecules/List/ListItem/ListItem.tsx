@@ -3,7 +3,11 @@ import styled from "styled-components"
 import PropTypes from "prop-types"
 import { colourPalette } from "../../../../brandColours"
 
-const StyledListItem = styled.li`
+interface IStyledListItem {
+  padding?: boolean;
+}
+
+const StyledListItem = styled.li<IStyledListItem>`
   padding: ${props => (props.padding ? "0.5rem 1rem" : "0")};
   border-bottom: 1px ${props => props.theme.black.tint20.hex} solid;
 `
@@ -12,7 +16,9 @@ StyledListItem.defaultProps = {
 }
 StyledListItem.displayName = "StyledListItem"
 
-export const ListItem = props => {
+type IListItem = React.HTMLProps<HTMLInputElement> & IStyledListItem
+
+export const ListItem: React.FC<IListItem> = (props) => {
   const { children, padding, id, className } = props
   const styledListItemClassName = className
     ? `ListItem__StyledListItem- ${className}`
@@ -26,12 +32,6 @@ export const ListItem = props => {
 ListItem.displayName = "ListItem"
 ListItem.defaultProps = {
   padding: true,
-}
-ListItem.propTypes = {
-  padding: PropTypes.bool,
-  children: PropTypes.node,
-  id: PropTypes.string,
-  className: PropTypes.string,
 }
 
 export default ListItem
