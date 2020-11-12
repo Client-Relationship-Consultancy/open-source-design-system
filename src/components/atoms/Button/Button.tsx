@@ -124,7 +124,7 @@ export const StyledButton = styled.button<IStyledButton>`
 
 StyledButton.displayName = "StyledButton";
 
-interface IProps extends React.HTMLProps<HTMLButtonElement> {
+interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonSize?: ButtonSize;
   buttonType?: ButtonType;
   theme: IColourPalette;
@@ -191,6 +191,7 @@ class BasicButton extends React.PureComponent<IProps> {
     return (
       <ButtonWrapper>
         <StyledButton
+          {...this.props}
           buttonStyle={this.getButtonStyle()}
           fontSize={this.getFontSize()}
           padding={this.getPadding()}
