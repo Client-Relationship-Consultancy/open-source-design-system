@@ -23,6 +23,31 @@ export const Container = styled.div`
       overflow: hidden;
       text-overflow: ellipsis;
     }
+    .SelectValueCell{
+      white-space: pre;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      button {
+        position: absolute;
+        top: 0.70rem;
+        right: 0.45rem;
+        background-color: transparent;
+        transition: opacity 0.15s;
+        opacity: 0;
+        border: none;
+        color: ${(props) => props.theme.secondary.main.hex};
+        path {
+          fill: ${(props) => props.theme.secondary.main.hex};
+        }
+      }
+    }:hover {
+      cursor: default;
+      button {
+        opacity: 1;
+        cursor: pointer;
+        outline: none;
+      }
+    }
     .ag-react-container {
       width: 100%;
     }
@@ -64,13 +89,13 @@ export const frameworkComponents = {
   checkboxRenderer: CellRenderers.CheckboxRenderer,
   checkRenderer: CellRenderers.CheckRenderer,
   selectRenderer: CellRenderers.SelectRenderer,
-  selectValueRenderer: CellRenderers.SelectValueRenderer,
   timezoneRenderer: CellRenderers.TimezoneRenderer,
   toggleRenderer: CellRenderers.ToggleRenderer,
   tooltipHeader: HeaderComponents.TooltipHeader,
 }
 export const components = {
   defaultTextEditor: CellRenderers.DefaultTextEditor,
+  selectValueRenderer: CellRenderers.SelectValueRenderer,
 }
 
 export const gridOptions = {
