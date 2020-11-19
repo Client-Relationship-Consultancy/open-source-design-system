@@ -1,20 +1,7 @@
 import React from "react"
-import { shallow, mount } from "enzyme"
-import { ThemeProvider } from "styled-components"
+import { mount, shallow } from "enzyme"
+import SelectValueRenderer  from "../SelectValueRenderer"
 
-import { colourPalette } from "../../../../../brandColours"
-import SelectValueRenderer, { Wrapper } from "../SelectValueRenderer"
-
-describe("Wrapper", () => {
-  it("should match snapshot", () => {
-    const component = mount(
-      <ThemeProvider theme={colourPalette.examplePalette}>
-        <Wrapper />
-      </ThemeProvider>,
-    )
-    expect(component).toMatchSnapshot()
-  })
-})
 
 describe("SelectValueRenderer", () => {
   const startEditingCellMock = jest.fn()
@@ -26,31 +13,37 @@ describe("SelectValueRenderer", () => {
     },
   }
   it("should match snapshot", () => {
-    const component = shallow(<SelectValueRenderer {...commonProps} />)
-    expect(component).toMatchSnapshot()
+    const renderer = new SelectValueRenderer();
+    renderer.init(commonProps);
+    expect(renderer.getGui()).toMatchSnapshot()
   })
 
   it("should render the given value even if it is not in the options", () => {
-    const component = shallow(<SelectValueRenderer {...commonProps} />)
-    expect(component.instance().renderValue()).toEqual("girls")
+    const renderer = new SelectValueRenderer()
+    renderer.init(commonProps);
+    expect(renderer.renderValue()).toEqual("girls")
   })
 
   it("should render a string with a space when given a falsy value to ensure the cursor is still a pointer on hover", () => {
-    const component = shallow(<SelectValueRenderer {...commonProps} value={null} />)
-    expect(component.instance().renderValue()).toEqual(" ")
+    const renderer = new SelectValueRenderer()
+    const props = {
+      ...commonProps,
+      value: ""
+    }
+    renderer.init(props);
+    expect(renderer.renderValue()).toEqual(" ")
   })
 
   it("should fire the startEditingCell function when the dropdown button is clicked a single time", () => {
-    const component = shallow(
-      <SelectValueRenderer
-        {...commonProps}
-        value={null}
-        rowIndex={1}
-        node={{ rowIndex: 5 }}
-        colDef={{ field: "testCol" }}
-      />,
-    )
-    component.find("button").simulate("click")
+    const renderer = new SelectValueRenderer()
+    renderer.init({
+      ...commonProps,
+      value:null,
+      rowIndex:1,
+      node:{rowIndex: 5 },
+      colDef:{ field: "testCol" }
+    });
+    renderer.getGui().querySelector("button").click();
     expect(startEditingCellMock).toBeCalledTimes(1)
     expect(startEditingCellMock).toBeCalledWith({ colKey: "testCol", rowIndex: 5 })
   })
@@ -62,16 +55,20 @@ describe("SelectValueRenderer", () => {
       { label: "no", value: "yes" },
       { label: "spice", value: "girls" },
     ]
-    const component = shallow(
-      <SelectValueRenderer {...commonProps} colDef={{ cellEditorParams: { values } }} />,
-    )
-    expect(component.instance().renderValue()).toEqual("spice")
+    const renderer = new SelectValueRenderer()
+    renderer.init({
+      ...commonProps,
+      colDef:{ cellEditorParams: { values }}
+    });
+    expect(renderer.renderValue()).toEqual("spice")
   })
 
   it("should render the given value if options do not exist", () => {
-    const component = shallow(
-      <SelectValueRenderer {...commonProps} colDef={{ cellEditorParams: { values: [] } }} />,
-    )
-    expect(component.instance().renderValue()).toEqual("girls")
+    const renderer = new SelectValueRenderer()
+    renderer.init({
+      ...commonProps,
+      colDef:{ cellEditorParams: {values: [] }}
+    });
+    expect(renderer.renderValue()).toEqual("girls")
   })
 })
