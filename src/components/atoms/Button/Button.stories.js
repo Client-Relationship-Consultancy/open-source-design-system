@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react"
 import { text, boolean, select } from "@storybook/addon-knobs"
 
 import Button from "./Button"
+import IconButton from "./IconButton/IconButton"
 
 const stories = storiesOf("Buttons", module)
 
@@ -71,5 +72,16 @@ stories.add("Button using passed SVG icon", () => {
     >
       {text("Button Description", "Button")}
     </Button>
+  )
+})
+
+stories.add("Button with only an Icon", () => {
+  return (
+    <IconButton
+      buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
+      buttonSize={select("Button Size", buttonSizes, "large")}
+      disabled={boolean("Disabled", false)}
+      icon={select("Icon Type", iconTypes, "")}
+    />
   )
 })
