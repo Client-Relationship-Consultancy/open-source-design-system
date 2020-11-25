@@ -13,8 +13,18 @@ describe("IconButton", () => {
     expect(component).toMatchSnapshot()
   })
 
-  it("should match snapshot when buttonSize prop is provided", () => {
+  it("should match snapshot when buttonSize is small", () => {
     const component = mount(<IconButton icon="save" buttonSize="small" />)
+    expect(component).toMatchSnapshot()
+  })
+
+  it("should match snapshot when buttonSize is medium", () => {
+    const component = mount(<IconButton icon="save" buttonSize="medium" />)
+    expect(component).toMatchSnapshot()
+  })
+
+  it("should match snapshot when buttonSize is large", () => {
+    const component = mount(<IconButton icon="save" buttonSize="large" />)
     expect(component).toMatchSnapshot()
   })
 
