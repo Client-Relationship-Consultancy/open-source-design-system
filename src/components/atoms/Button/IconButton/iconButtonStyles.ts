@@ -33,8 +33,8 @@ export const iconButtonStyles = (theme: IColourPalette) => ({
     color: theme.action.main.hex,
     border: theme.action.main.hex,
     hover: {
-      background: theme.action.dark?.hex,
-      color: theme.action.dark?.on,
+      background: "transparent",
+      color: theme.action.dark?.hex,
       border: theme.action.dark?.hex,
     },
     focus: {
@@ -48,8 +48,8 @@ export const iconButtonStyles = (theme: IColourPalette) => ({
     color: theme.secondary.main.hex,
     border: theme.secondary.main.hex,
     hover: {
-      background: theme.secondary.dark?.hex,
-      color: theme.secondary.dark?.on,
+      background: "transparent",
+      color: theme.secondary.dark?.hex,
       border: theme.secondary.dark?.hex,
     },
     focus: {
@@ -79,6 +79,7 @@ export const iconButtonStyles = (theme: IColourPalette) => ({
     border: "transparent",
     hover: {
       background: theme.background.hex,
+      color: theme.action.dark?.hex,
     },
     focus: {
       background: theme.background.hex,

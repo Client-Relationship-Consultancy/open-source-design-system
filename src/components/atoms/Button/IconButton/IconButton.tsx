@@ -83,7 +83,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonType?: ButtonType;
   theme: IColourPalette;
   disabled?: boolean;
-  icon: IconType;
+  icon?: IconType;
 }
 
 class BasicButton extends React.PureComponent<IProps> {

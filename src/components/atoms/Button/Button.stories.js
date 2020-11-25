@@ -81,7 +81,7 @@ stories.add("Button with only an Icon", () => {
       buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
       buttonSize={select("Button Size", buttonSizes, "large")}
       disabled={boolean("Disabled", false)}
-      icon={select("Icon Type", iconTypes, "")}
+      icon={select("Icon Type", iconTypes, "times")}
     />
   )
 })
