@@ -10,14 +10,14 @@ export type IconType = IconProp | SVGElement | React.ReactElement;
 export type IconPosition = "before" | "after";
 export type ButtonSize = "small" | "medium" | "large";
 
-interface IStyledButton {
+interface IStyledIconButton {
   buttonStyle: IconButtonStyle;
   buttonDimensions: string;
   iconDimensions: string;
   buttonSize: ButtonSize;
 }
 
-export const StyledButton = styled.button<IStyledButton>`
+export const StyledIconButton = styled.button<IStyledIconButton>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,7 +82,7 @@ export const StyledButton = styled.button<IStyledButton>`
   }
 `;
 
-StyledButton.displayName = "StyledButton";
+StyledIconButton.displayName = "StyledIconButton";
 
 interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   buttonSize?: ButtonSize;
@@ -92,7 +92,7 @@ interface IProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   icon?: IconType;
 }
 
-class BasicButton extends React.PureComponent<IProps> {
+class BasicIconButton extends React.PureComponent<IProps> {
   static defaultProps = {
     theme: colourPalette.examplePalette,
     buttonType: "primary",
@@ -130,8 +130,10 @@ class BasicButton extends React.PureComponent<IProps> {
   render = () => {
     const { disabled = false, buttonSize = "medium", onClick, icon } = this.props;
 
+    console.log(icon);
+
     return (
-      <StyledButton
+      <StyledIconButton
         {...this.props}
         buttonStyle={this.getButtonStyle()}
         buttonDimensions={this.getButtonDimensions()}
@@ -146,12 +148,12 @@ class BasicButton extends React.PureComponent<IProps> {
           ) : (
             <div className="dsButtonIcon">{icon}</div> // wrapper for SVG or react element
           ))}
-      </StyledButton>
+      </StyledIconButton>
     );
   };
 }
 
-const IconButton = withTheme(BasicButton);
+const IconButton = withTheme(BasicIconButton);
 IconButton.displayName = "IconButton";
 
 export default IconButton;

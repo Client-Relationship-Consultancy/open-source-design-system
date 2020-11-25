@@ -1,57 +1,20 @@
 import React from "react"
 import { mount } from "enzyme"
 import "jest-styled-components"
-import { colourPalette } from "../../../brandColours"
+import { colourPalette } from "../../../../brandColours"
 
-import Button from "./Button"
+import IconButton from "./IconButton"
 
 const { action } = colourPalette.examplePalette
 
-describe("Button", () => {
+describe("IconButton", () => {
   it("should match snapshot with defaults", () => {
-    const component = mount(<Button>Save</Button>)
+    const component = mount(<IconButton />)
     expect(component).toMatchSnapshot()
   })
 
-  it("should match snapshot when buttonSize is medium", () => {
-    const component = mount(
-      <Button icon="save" buttonSize="medium" onClick={() => {}}>
-        Save
-      </Button>,
-    )
-    expect(component).toMatchSnapshot()
-  })
-
-  it("should match snapshot when buttonSize is small", () => {
-    const component = mount(
-      <Button icon="save" buttonSize="small" onClick={() => {}}>
-        Save
-      </Button>,
-    )
-    expect(component).toMatchSnapshot()
-  })
-
-  it("should match snapshot when buttonSize is large, and no iconSize is provided", () => {
-    const component = mount(
-      <Button icon="save" buttonSize="large" onClick={() => {}}>
-        Save
-      </Button>,
-    )
-    expect(component).toMatchSnapshot()
-  })
-
-  it("should have correct styling when buttonSize AND iconSize are large", () => {
-    const component = mount(
-      <Button
-        icon="save"
-        buttonSize="large"
-        iconSize="large"
-        iconPosition="before"
-        onClick={() => {}}
-      >
-        Save
-      </Button>,
-    )
+  it("should match snapshot when buttonSize prop is provided", () => {
+    const component = mount(<IconButton icon="save" buttonSize="small" />)
     expect(component).toMatchSnapshot()
   })
 
@@ -62,34 +25,24 @@ describe("Button", () => {
       </svg>
     )
 
-    const component = mount(
-      <Button icon={selectArrowSvg} onClick={() => {}}>
-        Save
-      </Button>,
-    )
+    const component = mount(<IconButton icon={selectArrowSvg} />)
 
     expect(component.find(".dsButtonIcon")).toHaveLength(1)
     expect(component.contains(selectArrowSvg)).toEqual(true)
   })
 
-  it("should have correct flex styling when an icon is passed with position after", () => {
-    const component = mount(
-      <Button icon="save" iconPosition="after" onClick={() => {}}>
-        Save
-      </Button>,
-    )
+  it("should have the correct ghost styling when passed ghost prop", () => {
+    const component = mount(<IconButton buttonType="ghost" />)
 
-    expect(component.find("StyledButton")).toHaveStyleRule("flex-direction", "row-reverse")
+    expect(component.find("StyledIconButton")).toHaveStyleRule("color", action.main.hex)
+    expect(component.find("StyledIconButton")).toHaveStyleRule("background-color", "transparent")
+    expect(component.find("StyledIconButton")).toHaveStyleRule("border", "1px solid transparent")
   })
 
-  it("should have the correct ghost styling when passed ghost prop", () => {
-    const component = mount(
-      <Button icon="save" onClick={() => {}} buttonType="ghost">
-        Save
-      </Button>,
-    )
-    expect(component.find("StyledButton")).toHaveStyleRule("color", action.main.hex)
-    expect(component.find("StyledButton")).toHaveStyleRule("background-color", "transparent")
-    expect(component.find("StyledButton")).toHaveStyleRule("border", "1px solid transparent")
+  it("should not render text child when passed", () => {
+    const component = mount(<IconButton>Button Label</IconButton>)
+
+    expect(component.find("span")).toHaveLength(0)
+    expect(component).not.toContain("Button Label")
   })
 })
