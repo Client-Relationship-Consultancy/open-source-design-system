@@ -75,13 +75,15 @@ stories.add("Button using passed SVG icon", () => {
   )
 })
 
-stories.add("Button with only an Icon", () => {
+stories.add("Icon only button", () => {
   return (
     <IconButton
       buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
       buttonSize={select("Button Size", buttonSizes, "large")}
       disabled={boolean("Disabled", false)}
       icon={select("Icon Type", iconTypes, "times")}
-    />
+    >
+      HA! You tried passing in text, expecting it to be used as a label; what folly!
+    </IconButton>
   )
 })

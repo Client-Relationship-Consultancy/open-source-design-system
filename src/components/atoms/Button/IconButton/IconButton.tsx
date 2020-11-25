@@ -60,12 +60,18 @@ export const StyledButton = styled.button<IStyledButton>`
       border: 1px solid ${({ buttonStyle }) => buttonStyle.focus?.border ?? buttonStyle.border};
     }
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       svg {
         color: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
         fill: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
         stroke: ${({ buttonStyle }) => buttonStyle.hover?.color ?? buttonStyle.color};
+      }
+    }
+    &:focus {
+      svg {
+        color: ${({ buttonStyle }) => buttonStyle.focus?.color ?? buttonStyle.color};
+        fill: ${({ buttonStyle }) => buttonStyle.focus?.color ?? buttonStyle.color};
+        stroke: ${({ buttonStyle }) => buttonStyle.focus?.color ?? buttonStyle.color};
       }
     }
   }
