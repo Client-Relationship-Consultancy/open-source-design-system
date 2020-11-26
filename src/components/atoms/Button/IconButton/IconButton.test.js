@@ -13,19 +13,18 @@ describe("IconButton", () => {
     expect(component).toMatchSnapshot()
   })
 
-  it("should match snapshot when buttonSize is small", () => {
-    const component = mount(<IconButton icon="save" buttonSize="small" />)
-    expect(component).toMatchSnapshot()
-  })
+  it("should pass the correct icon and button dimension props to StyledIconButton based on buttonSize", () => {
+    const smallButton = mount(<IconButton buttonSize="small" />)
+    expect(smallButton.find("StyledIconButton").props().buttonDimensions).toEqual("1.5rem")
+    expect(smallButton.find("StyledIconButton").props().iconDimensions).toEqual("1rem")
 
-  it("should match snapshot when buttonSize is medium", () => {
-    const component = mount(<IconButton icon="save" buttonSize="medium" />)
-    expect(component).toMatchSnapshot()
-  })
+    const mediumButton = mount(<IconButton buttonSize="medium" />)
+    expect(mediumButton.find("StyledIconButton").props().buttonDimensions).toEqual("2rem")
+    expect(mediumButton.find("StyledIconButton").props().iconDimensions).toEqual("1.125rem")
 
-  it("should match snapshot when buttonSize is large", () => {
-    const component = mount(<IconButton icon="save" buttonSize="large" />)
-    expect(component).toMatchSnapshot()
+    const largeButton = mount(<IconButton buttonSize="large" />)
+    expect(largeButton.find("StyledIconButton").props().buttonDimensions).toEqual("2.5rem")
+    expect(largeButton.find("StyledIconButton").props().iconDimensions).toEqual("1.25rem")
   })
 
   it("should render the icon if it's passed in as a non-string (svg) value", () => {
