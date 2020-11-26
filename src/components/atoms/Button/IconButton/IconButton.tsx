@@ -130,8 +130,6 @@ class BasicIconButton extends React.PureComponent<IProps> {
   render = () => {
     const { disabled = false, buttonSize = "medium", onClick, icon } = this.props;
 
-    console.log(icon);
-
     return (
       <StyledIconButton
         {...this.props}
