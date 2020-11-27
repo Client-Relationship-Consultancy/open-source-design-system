@@ -112,6 +112,7 @@ exports[`StyledMenu component should match snapshot 1`] = `
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   text-align: center;
+  display: inline-block;
 }
 
 <Menu__StyledMenu
@@ -138,7 +139,7 @@ exports[`StyledMenu component should match snapshot 1`] = `
           "rules": Array [
             "color:",
             [Function],
-            ";font-family:\\"Gentona\\",\\"Montserrat\\";font-size:0.875rem;position:relative;background-color:transparent;border:none;outline:none;transition:all 0.3s ease;text-align:center;",
+            ";font-family:\\"Gentona\\",\\"Montserrat\\";font-size:0.875rem;position:relative;background-color:transparent;border:none;outline:none;transition:all 0.3s ease;text-align:center;display:inline-block;",
           ],
         },
         "displayName": "Menu__StyledMenu",
@@ -276,12 +277,12 @@ exports[`SubMenuItems component should match snapshot 1`] = `
   display: -ms-flexbox;
   display: flex;
   text-align: left;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .c0:hover {
-  cursor: pointer;
   background-color: mockBlackTint20;
 }
 
@@ -291,6 +292,12 @@ exports[`SubMenuItems component should match snapshot 1`] = `
 
 .c0 svg {
   max-width: 1rem;
+}
+
+.c0:disabled {
+  cursor: default;
+  opacity: 0.3;
+  background-color: transparent;
 }
 
 <Menu__SubMenuItems
@@ -320,9 +327,9 @@ exports[`SubMenuItems component should match snapshot 1`] = `
           "rules": Array [
             "background-color:transparent;outline:none;border:none;padding:0.5rem 0.75rem;width:100%;color:",
             [Function],
-            ";display:flex;text-align:left;transition:all 0.3s linear;:hover{cursor:pointer;background-color:",
+            ";display:flex;text-align:left;transition:all 0.3s ease;cursor:pointer;:hover{background-color:",
             [Function],
-            ";}> * + *{margin-left:0.5rem;}svg{max-width:1rem;}",
+            ";}> * + *{margin-left:0.5rem;}svg{max-width:1rem;}:disabled{cursor:default;opacity:0.3;background-color:transparent;}",
           ],
         },
         "displayName": "Menu__SubMenuItems",

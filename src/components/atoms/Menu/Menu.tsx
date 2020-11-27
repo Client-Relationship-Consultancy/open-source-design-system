@@ -59,8 +59,8 @@ export const SubMenuItems = styled.button`
   display: flex;
   text-align: left;
   transition: all 0.3s ease;
+  cursor: pointer;
   :hover {
-    cursor: pointer;
     background-color: ${({ theme }) => theme.black.tint20.hex};
   }
   > * + * {
@@ -69,6 +69,11 @@ export const SubMenuItems = styled.button`
   svg {
     max-width: 1rem;
   }
+  :disabled {
+    cursor: default;
+    opacity: 0.3;
+    background-color: transparent;
+  }
 `;
 
 interface IMenuItem {
@@ -76,6 +81,7 @@ interface IMenuItem {
   label: string;
   icon?: IconProp | SVGElement | React.ReactElement;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 interface IProps {
@@ -121,7 +127,7 @@ export class Menu extends React.Component<IProps, IState> {
 
   renderSubMenuItems = () =>
     this.props.items.map((item) => (
-      <SubMenuItems key={item.id || item.label} onClick={item.onClick}>
+      <SubMenuItems key={item.id || item.label} onClick={item.onClick} disabled={item.disabled}>
         {item.icon && (typeof item.icon === "string" ? <Icon name={item.icon} /> : item.icon)}
         <span>{item.label}</span>
       </SubMenuItems>

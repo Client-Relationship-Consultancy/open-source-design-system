@@ -26,6 +26,7 @@ stories.add("Menu", () => {
             label: text("Sub-menu 1", "Exclude"),
             icon: "users",
             onClick: () => alert("Sub-menu 1 clicked"),
+            disabled: true,
           },
           {
             label: text("Sub-menu 2", "Remove"),
