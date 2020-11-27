@@ -17,6 +17,7 @@ export const StyledMenu = styled.div<IShowSubMenu>`
   outline: none;
   transition: all 0.3s ease;
   text-align: center;
+  display: inline-block;
 `;
 
 export const MenuLabel = styled.div`
