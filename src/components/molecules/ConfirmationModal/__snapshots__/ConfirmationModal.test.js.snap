@@ -168,16 +168,20 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
       <Button
         buttonType="primary"
       >
-        <ConfirmationModal__ButtonText>
+        <ButtonText
+          className="yesButton"
+        >
           Yes
-        </ConfirmationModal__ButtonText>
+        </ButtonText>
       </Button>
       <Button
         buttonType="primaryOutline"
       >
-        <ConfirmationModal__ButtonText>
+        <ButtonText
+          className="noButton"
+        >
           No
-        </ConfirmationModal__ButtonText>
+        </ButtonText>
       </Button>
     </ConfirmationModal__ButtonRow>
   </ConfirmationModal__InsideContainer>
