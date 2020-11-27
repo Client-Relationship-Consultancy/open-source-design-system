@@ -16,7 +16,7 @@ describe("ConfirmationModal Component Test", () => {
     expect(headerBar).toMatchSnapshot()
   })
 
-  it("should to yes and no when no custom button label is passed", () => {
+  it("should show 'Yes' and 'No' when no custom button label is passed", () => {
     const component = shallow(
       <ConfirmationModal isOpen>I am a lovely confirmation modal</ConfirmationModal>,
     )
