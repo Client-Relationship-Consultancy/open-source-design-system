@@ -41,6 +41,8 @@ const ButtonText = styled.p`
   margin: 0 20px;
 `;
 
+ButtonText.displayName = "ButtonText";
+
 const customStyles = {
   overlay: {
     zIndex: zIndexes.modal,
@@ -67,23 +69,38 @@ export interface IConfirmationModal {
   classNameHooks?: {
     container?: string;
   };
+  yesButtonLabel?: string | React.ReactNode;
+  noButtonLabel?: string | React.ReactNode;
 }
-export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (props) => (
-  <ReactModal isOpen={props.isOpen} style={customStyles} id={props.id} className={props.className}>
-    <InsideContainer className={props.classNameHooks?.container}>
-      <HeaderBar />
-      <ContentContainer>{props.children}</ContentContainer>
-      <ButtonRow>
-        <Button onClick={props.onYes} buttonType="primary">
-          <ButtonText>Yes</ButtonText>
-        </Button>
-        <Button onClick={props.onNo} buttonType="primaryOutline">
-          <ButtonText>No</ButtonText>
-        </Button>
-      </ButtonRow>
-    </InsideContainer>
-  </ReactModal>
-);
+export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (props) => {
+  const {
+    isOpen,
+    id,
+    className,
+    children,
+    onYes,
+    onNo,
+    classNameHooks,
+    yesButtonLabel = "Yes",
+    noButtonLabel = "No",
+  } = props;
+  return (
+    <ReactModal isOpen={isOpen} style={customStyles} id={id} className={className}>
+      <InsideContainer className={classNameHooks?.container}>
+        <HeaderBar />
+        <ContentContainer>{children}</ContentContainer>
+        <ButtonRow>
+          <Button onClick={onYes} buttonType="primary">
+            <ButtonText className="yesButton">{yesButtonLabel}</ButtonText>
+          </Button>
+          <Button onClick={onNo} buttonType="primaryOutline">
+            <ButtonText className="noButton">{noButtonLabel}</ButtonText>
+          </Button>
+        </ButtonRow>
+      </InsideContainer>
+    </ReactModal>
+  );
+};
 
 ConfirmationModal.displayName = "ConfirmationModal";
 
