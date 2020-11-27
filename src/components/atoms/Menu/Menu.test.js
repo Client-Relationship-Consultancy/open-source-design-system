@@ -146,15 +146,6 @@ describe("StyledMenu component", () => {
     const tree = toJson(component)
     expect(tree).toMatchSnapshot()
   })
-
-  it("set overflow to be visible when showSubMenu is true", () => {
-    expect(component).toHaveStyleRule("overflow", "visible")
-  })
-
-  it("set overflow to be hidden when showSubMenu is false", () => {
-    component.setProps({ showSubMenu: false })
-    expect(component).toHaveStyleRule("overflow", "hidden")
-  })
 })
 
 describe("MenuLabel component", () => {
@@ -180,13 +171,15 @@ describe("SubMenu component", () => {
     expect(tree).toMatchSnapshot()
   })
 
-  it("should set opacity to be 1 when showSubMenu is true", () => {
+  it("should set opacity to be 1 and visibility to visible when showSubMenu is true", () => {
+    expect(component).toHaveStyleRule("visibility", "visible")
     expect(component).toHaveStyleRule("opacity", "1")
   })
 
-  it("should set opacity to be 1 when showSubMenu is true", () => {
+  it("should set opacity to be 1 and visibility to hidden when showSubMenu is true", () => {
     component.setProps({ showSubMenu: false })
     expect(component).toHaveStyleRule("opacity", "0")
+    expect(component).toHaveStyleRule("visibility", "hidden")
   })
 })
 

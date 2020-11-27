@@ -7,7 +7,7 @@ interface IShowSubMenu {
   showSubMenu: boolean;
 }
 
-export const StyledMenu = styled.button<IShowSubMenu>`
+export const StyledMenu = styled.div<IShowSubMenu>`
   color: ${({ theme }) => theme.action.main.hex};
   font-family: "Gentona", "Montserrat";
   font-size: 0.875rem;
@@ -16,7 +16,7 @@ export const StyledMenu = styled.button<IShowSubMenu>`
   border: none;
   outline: none;
   transition: all 0.3s ease;
-  overflow: ${({ showSubMenu }) => (showSubMenu ? "visible" : "hidden")};
+  text-align: center;
 `;
 
 export const MenuLabel = styled.div`
@@ -33,12 +33,13 @@ export const MenuLabel = styled.div`
 export const SubMenu = styled.div<IShowSubMenu>`
   min-width: 110%;
   margin-top: 0.1rem;
-  opacity: ${({ showSubMenu }) => (showSubMenu ? 1 : 0)};
   position: absolute;
   max-width: 500%;
   white-space: nowrap;
   background-color: ${({ theme }) => theme.surface.hex};
   box-shadow: 0.1rem 0.1rem 0.5rem ${({ theme }) => theme.black.tint40.hex};
+  visibility: ${({ showSubMenu }) => (showSubMenu ? "visible" : "hidden")};
+  opacity: ${({ showSubMenu }) => (showSubMenu ? "1" : "0")};
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -89,7 +90,7 @@ interface IState {
 type DefaultProps = Pick<IProps, "showMenuArrow" | "useInnerRef">;
 
 export class Menu extends React.Component<IProps, IState> {
-  componentRef = React.createRef<HTMLButtonElement>();
+  componentRef = React.createRef<HTMLDivElement>();
 
   static defaultProps: DefaultProps = {
     useInnerRef: false,

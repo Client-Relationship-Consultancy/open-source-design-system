@@ -19,7 +19,7 @@ stories.add("Menu", () => {
   return (
     <div style={{ paddingBottom: "5rem" }}>
       <Menu
-        useInnerRef={boolean("Use innerRef", true)}
+        useInnerRef={boolean("Use innerRef", false)}
         showMenuArrow={boolean("Show dropdown icon", true)}
         items={[
           {
