@@ -4,7 +4,18 @@ import styled from "styled-components";
 const CellEditor = styled.input`
   height: 100%;
   width: 100%;
-  border: 0;
+  background-color: transparent;
+  padding-left: 4px;
+  border: none;
+
+  :focus {
+    font-size: 12px;
+    outline: none;
+    border-color: #719ece;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 1px;
+  }
 `;
 
 CellEditor.displayName = "CellEditor";
@@ -40,13 +51,15 @@ export default class CellTextEditor extends React.Component<IProps> {
   render() {
     console.log(this.props);
     return (
-      <CellEditor
-        ref={this.componentRef}
-        maxLength={this.props.maxLength}
-        value={this.getValue()}
-        onChange={this.handleChange}
-        type="text"
-      />
+      <div className="ag-cell-edit-wrapper">
+        <CellEditor
+          ref={this.componentRef}
+          maxLength={this.props.maxLength}
+          value={this.getValue()}
+          onChange={this.handleChange}
+          type="text"
+        />
+      </div>
     );
   }
 }
