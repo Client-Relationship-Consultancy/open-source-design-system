@@ -8,7 +8,12 @@ import Table from "./Table"
 storiesOf("Table", module)
   .add("default table", () => {
     const columns = [
-      { headerName: "Name", field: "name", cellEditor: "cellEditor" },
+      {
+        headerName: "Name",
+        field: "name",
+        cellEditor: "cellEditor",
+        cellEditorParams: { maxLength: 5 },
+      },
       {
         headerName: "Compulsory",
         field: "compulsory",

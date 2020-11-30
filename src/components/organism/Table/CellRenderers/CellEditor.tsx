@@ -1,7 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-const Cell = styled.input``;
+const CellEditor = styled.input`
+  height: 100%;
+  width: 100%;
+  border: 0;
+`;
+
+CellEditor.displayName = "CellEditor";
 
 interface IProps {
   value: string;
@@ -9,29 +15,36 @@ interface IProps {
 }
 
 export default class CellTextEditor extends React.Component<IProps> {
+  componentRef = React.createRef<HTMLInputElement>();
+
   state = {
-    value: "",
+    value: this.props.value,
   };
-
-  handleChange = (event: any) => {
-    this.setState({ value: event.target.value });
-  };
-
-  //   afterGuiAttached() {
-  //     if (this.textInput) this.textInput.current!.focus();
-  //   }
 
   getValue() {
     return this.state.value;
   }
 
+  handleChange = (event: any) => {
+    this.setState({ value: event.target.value });
+  };
+
+  afterGuiAttached() {
+    const input = this.componentRef.current;
+    if (input) {
+      input.focus();
+      input.select();
+    }
+  }
+
   render() {
     console.log(this.props);
     return (
-      <input
+      <CellEditor
+        ref={this.componentRef}
         maxLength={this.props.maxLength}
-        value={this.props.value}
-        // onChange={this.handleChange}
+        value={this.getValue()}
+        onChange={this.handleChange}
         type="text"
       />
     );
