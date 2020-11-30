@@ -111,7 +111,8 @@ exports[`StyledMenu component should match snapshot 1`] = `
   outline: none;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  overflow: visible;
+  text-align: center;
+  display: inline-block;
 }
 
 <Menu__StyledMenu
@@ -138,16 +139,14 @@ exports[`StyledMenu component should match snapshot 1`] = `
           "rules": Array [
             "color:",
             [Function],
-            ";font-family:\\"Gentona\\",\\"Montserrat\\";font-size:0.875rem;position:relative;background-color:transparent;border:none;outline:none;transition:all 0.3s ease;overflow:",
-            [Function],
-            ";",
+            ";font-family:\\"Gentona\\",\\"Montserrat\\";font-size:0.875rem;position:relative;background-color:transparent;border:none;outline:none;transition:all 0.3s ease;text-align:center;display:inline-block;",
           ],
         },
         "displayName": "Menu__StyledMenu",
         "foldedComponentIds": Array [],
         "render": [Function],
         "styledComponentId": "Menu__StyledMenu-wb6ftp-0",
-        "target": "button",
+        "target": "div",
         "toString": [Function],
         "warnTooManyClasses": [Function],
         "withComponent": [Function],
@@ -165,7 +164,7 @@ exports[`StyledMenu component should match snapshot 1`] = `
       }
     }
   >
-    <button
+    <div
       className="c0"
     />
   </StyledComponent>
@@ -176,12 +175,13 @@ exports[`SubMenu component should match snapshot 1`] = `
 .c0 {
   min-width: 110%;
   margin-top: 0.1rem;
-  opacity: 1;
   position: absolute;
   max-width: 500%;
   white-space: nowrap;
   background-color: mockSurfaceHex;
   box-shadow: 0.1rem 0.1rem 0.5rem mockBlackTint40;
+  visibility: visible;
+  opacity: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -221,11 +221,13 @@ exports[`SubMenu component should match snapshot 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "min-width:110%;margin-top:0.1rem;opacity:",
-            [Function],
-            ";position:absolute;max-width:500%;white-space:nowrap;background-color:",
+            "min-width:110%;margin-top:0.1rem;position:absolute;max-width:500%;white-space:nowrap;background-color:",
             [Function],
             ";box-shadow:0.1rem 0.1rem 0.5rem ",
+            [Function],
+            ";visibility:",
+            [Function],
+            ";opacity:",
             [Function],
             ";display:flex;flex-direction:column;transition:all 0.3s ease;border-radius:0.2rem;padding:0.25rem 0;z-index:10;",
           ],
@@ -277,10 +279,10 @@ exports[`SubMenuItems component should match snapshot 1`] = `
   text-align: left;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .c0:hover {
-  cursor: pointer;
   background-color: mockBlackTint20;
 }
 
@@ -290,6 +292,12 @@ exports[`SubMenuItems component should match snapshot 1`] = `
 
 .c0 svg {
   max-width: 1rem;
+}
+
+.c0:disabled {
+  cursor: default;
+  opacity: 0.3;
+  background-color: transparent;
 }
 
 <Menu__SubMenuItems
@@ -319,9 +327,9 @@ exports[`SubMenuItems component should match snapshot 1`] = `
           "rules": Array [
             "background-color:transparent;outline:none;border:none;padding:0.5rem 0.75rem;width:100%;color:",
             [Function],
-            ";display:flex;text-align:left;transition:all 0.3s ease;:hover{cursor:pointer;background-color:",
+            ";display:flex;text-align:left;transition:all 0.3s ease;cursor:pointer;:hover{background-color:",
             [Function],
-            ";}> * + *{margin-left:0.5rem;}svg{max-width:1rem;}",
+            ";}> * + *{margin-left:0.5rem;}svg{max-width:1rem;}:disabled{cursor:default;opacity:0.3;background-color:transparent;}",
           ],
         },
         "displayName": "Menu__SubMenuItems",

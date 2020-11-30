@@ -7,7 +7,7 @@ interface IShowSubMenu {
   showSubMenu: boolean;
 }
 
-export const StyledMenu = styled.button<IShowSubMenu>`
+export const StyledMenu = styled.div<IShowSubMenu>`
   color: ${({ theme }) => theme.action.main.hex};
   font-family: "Gentona", "Montserrat";
   font-size: 0.875rem;
@@ -16,7 +16,8 @@ export const StyledMenu = styled.button<IShowSubMenu>`
   border: none;
   outline: none;
   transition: all 0.3s ease;
-  overflow: ${({ showSubMenu }) => (showSubMenu ? "visible" : "hidden")};
+  text-align: center;
+  display: inline-block;
 `;
 
 export const MenuLabel = styled.div`
@@ -33,12 +34,13 @@ export const MenuLabel = styled.div`
 export const SubMenu = styled.div<IShowSubMenu>`
   min-width: 110%;
   margin-top: 0.1rem;
-  opacity: ${({ showSubMenu }) => (showSubMenu ? 1 : 0)};
   position: absolute;
   max-width: 500%;
   white-space: nowrap;
   background-color: ${({ theme }) => theme.surface.hex};
   box-shadow: 0.1rem 0.1rem 0.5rem ${({ theme }) => theme.black.tint40.hex};
+  visibility: ${({ showSubMenu }) => (showSubMenu ? "visible" : "hidden")};
+  opacity: ${({ showSubMenu }) => (showSubMenu ? "1" : "0")};
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -57,8 +59,8 @@ export const SubMenuItems = styled.button`
   display: flex;
   text-align: left;
   transition: all 0.3s ease;
+  cursor: pointer;
   :hover {
-    cursor: pointer;
     background-color: ${({ theme }) => theme.black.tint20.hex};
   }
   > * + * {
@@ -67,6 +69,11 @@ export const SubMenuItems = styled.button`
   svg {
     max-width: 1rem;
   }
+  :disabled {
+    cursor: default;
+    opacity: 0.3;
+    background-color: transparent;
+  }
 `;
 
 interface IMenuItem {
@@ -74,6 +81,7 @@ interface IMenuItem {
   label: string;
   icon?: IconProp | SVGElement | React.ReactElement;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 interface IProps {
@@ -89,7 +97,7 @@ interface IState {
 type DefaultProps = Pick<IProps, "showMenuArrow" | "useInnerRef">;
 
 export class Menu extends React.Component<IProps, IState> {
-  componentRef = React.createRef<HTMLButtonElement>();
+  componentRef = React.createRef<HTMLDivElement>();
 
   static defaultProps: DefaultProps = {
     useInnerRef: false,
@@ -119,7 +127,7 @@ export class Menu extends React.Component<IProps, IState> {
 
   renderSubMenuItems = () =>
     this.props.items.map((item) => (
-      <SubMenuItems key={item.id || item.label} onClick={item.onClick}>
+      <SubMenuItems key={item.id || item.label} onClick={item.onClick} disabled={item.disabled}>
         {item.icon && (typeof item.icon === "string" ? <Icon name={item.icon} /> : item.icon)}
         <span>{item.label}</span>
       </SubMenuItems>
