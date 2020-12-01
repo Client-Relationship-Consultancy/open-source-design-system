@@ -19,17 +19,17 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     span {
-      white-space:nowrap;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .SelectValueCell{
+    .SelectValueCell {
       white-space: pre;
       overflow: hidden;
       text-overflow: ellipsis;
       button {
         position: absolute;
-        top: 0.70rem;
+        top: 0.7rem;
         right: 0.45rem;
         background-color: transparent;
         transition: opacity 0.15s;
@@ -40,7 +40,8 @@ export const Container = styled.div`
           fill: ${(props) => props.theme.secondary.main.hex};
         }
       }
-    }:hover {
+    }
+    :hover {
       cursor: default;
       button {
         opacity: 1;
@@ -53,6 +54,10 @@ export const Container = styled.div`
       align-items: center;
       width: 100%;
       height: 100%;
+
+      #SelectEditor {
+        flex-grow: 1;
+      }
     }
     :focus {
       button {

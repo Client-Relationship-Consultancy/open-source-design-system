@@ -50,15 +50,13 @@ export default class CellTextEditor extends React.Component<IProps> {
 
   render() {
     return (
-      <div className="ag-cell-edit-wrapper">
-        <CellEditor
-          ref={this.componentRef}
-          maxLength={this.props.maxLength}
-          value={this.getValue()}
-          onChange={this.handleChange}
-          type="text"
-        />
-      </div>
+      <CellEditor
+        ref={this.componentRef}
+        maxLength={this.props.maxLength}
+        value={this.getValue()}
+        onChange={this.handleChange}
+        type="text"
+      />
     );
   }
 }
