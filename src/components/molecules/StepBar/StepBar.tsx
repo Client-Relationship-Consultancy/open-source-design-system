@@ -60,7 +60,7 @@ Line.displayName = "Line";
 
 interface IStep {
   order: number;
-  name: string;
+  name: string | React.ReactNode;
 }
 
 interface IStepBar {
