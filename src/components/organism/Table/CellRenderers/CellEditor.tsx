@@ -49,7 +49,6 @@ export default class CellTextEditor extends React.Component<IProps> {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="ag-cell-edit-wrapper">
         <CellEditor

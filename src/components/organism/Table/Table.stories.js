@@ -11,8 +11,12 @@ storiesOf("Table", module)
       {
         headerName: "Name",
         field: "name",
+      },
+      {
+        headerName: "Type (10 char limit)",
+        field: "type",
         cellEditor: "cellEditor",
-        cellEditorParams: { maxLength: 5 },
+        cellEditorParams: { maxLength: 10 },
       },
       {
         headerName: "Compulsory",
@@ -40,7 +44,6 @@ storiesOf("Table", module)
         },
       },
       { headerName: "Default", field: "default" },
-      { headerName: "Type", field: "type" },
     ]
 
     const rows = [
@@ -109,7 +112,7 @@ storiesOf("Table", module)
           params: {
             actionCellRendererParams: {
               label: colParams.value ? "Add" : "Delete",
-              buttonType: colParams.value ? "complimentary" : "error",
+              buttonType: colParams.value ? "primary" : "danger",
             },
           },
         }),
