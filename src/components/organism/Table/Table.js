@@ -19,17 +19,17 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     span {
-      white-space:nowrap;
+      white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .SelectValueCell{
+    .SelectValueCell {
       white-space: pre;
       overflow: hidden;
       text-overflow: ellipsis;
       button {
         position: absolute;
-        top: 0.70rem;
+        top: 0.7rem;
         right: 0.45rem;
         background-color: transparent;
         transition: opacity 0.15s;
@@ -40,7 +40,8 @@ export const Container = styled.div`
           fill: ${(props) => props.theme.secondary.main.hex};
         }
       }
-    }:hover {
+    }
+    :hover {
       cursor: default;
       button {
         opacity: 1;
@@ -49,7 +50,14 @@ export const Container = styled.div`
       }
     }
     .ag-react-container {
+      display: flex;
+      align-items: center;
       width: 100%;
+      height: 100%;
+
+      #SelectEditor {
+        flex-grow: 1;
+      }
     }
     :focus {
       button {
@@ -75,7 +83,7 @@ export const Container = styled.div`
     height: 100%;
   }
   &.ag-disabled {
-    background: ${props => props.theme.black.tint20.hex};
+    background: ${(props) => props.theme.black.tint20.hex};
   }
   .ag-sort-order {
     display: none;
@@ -86,6 +94,7 @@ AgGridReact.prototype.areEquivalent = (a, b) => a === b
 
 export const frameworkComponents = {
   actionCellRenderer: CellRenderers.ActionCellRenderer,
+  customTextEditor: CellRenderers.CustomTextEditor,
   checkboxRenderer: CellRenderers.CheckboxRenderer,
   checkRenderer: CellRenderers.CheckRenderer,
   selectRenderer: CellRenderers.SelectRenderer,
@@ -99,13 +108,13 @@ export const components = {
 }
 
 export const gridOptions = {
-  getRowStyle: params => ({ background: params.data.highlighted }),
+  getRowStyle: (params) => ({ background: params.data.highlighted }),
 }
 
 export class TableWithTheme extends React.PureComponent {
   renderColumns = () => {
     const { columns, isDisabled, theme } = this.props
-    return columns.map(column => {
+    return columns.map((column) => {
       const cellRenderer = !column.cellRendererSelector &&
         !column.cellRendererFramework && {
           cellRenderer: column.cellRenderer || "defaultTextEditor",
@@ -116,7 +125,7 @@ export class TableWithTheme extends React.PureComponent {
         ...column,
         ...cellRenderer,
         // only editable if it's not a custom cellRenderer and if the table is not disabled
-        editable: params => {
+        editable: (params) => {
           if (isDisabled) {
             return false
           }
@@ -139,7 +148,7 @@ export class TableWithTheme extends React.PureComponent {
     })
   }
 
-  getRowStyle = params => {
+  getRowStyle = (params) => {
     if (this.props.isDisabled) {
       return {
         background: this.props.theme.black.tint20.hex,
@@ -163,7 +172,7 @@ export class TableWithTheme extends React.PureComponent {
           animateRows
           rowSelection="multiple"
           onGridReady={this.props.onGridReady}
-          onRowDragEnd={event => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
+          onRowDragEnd={(event) => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
           frameworkComponents={frameworkComponents}
           components={components}
           rowHeight={40}

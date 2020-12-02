@@ -8,7 +8,16 @@ import Table from "./Table"
 storiesOf("Table", module)
   .add("default table", () => {
     const columns = [
-      { headerName: "Name", field: "name" },
+      {
+        headerName: "Name",
+        field: "name",
+      },
+      {
+        headerName: "Type (10 char limit)",
+        field: "type",
+        cellEditor: "customTextEditor",
+        cellEditorParams: { maxLength: 10 },
+      },
       {
         headerName: "Compulsory",
         field: "compulsory",
@@ -35,7 +44,6 @@ storiesOf("Table", module)
         },
       },
       { headerName: "Default", field: "default" },
-      { headerName: "Type", field: "type" },
     ]
 
     const rows = [
@@ -99,12 +107,12 @@ storiesOf("Table", module)
       {
         headerName: "Action",
         field: "action",
-        cellRendererSelector: colParams => ({
+        cellRendererSelector: (colParams) => ({
           component: "actionCellRenderer",
           params: {
             actionCellRendererParams: {
               label: colParams.value ? "Add" : "Delete",
-              buttonType: colParams.value ? "complimentary" : "error",
+              buttonType: colParams.value ? "primary" : "danger",
             },
           },
         }),
@@ -346,7 +354,7 @@ storiesOf("Table", module)
           tooltipContent: "I am the second tooltip",
         },
       },
-    ].map(col => ({
+    ].map((col) => ({
       ...col,
       filter: true,
       sortable: true,
@@ -400,7 +408,7 @@ storiesOf("Table", module)
       {
         headerName: "Action",
         field: "action",
-        cellRendererSelector: colParams => ({
+        cellRendererSelector: (colParams) => ({
           component: "actionCellRenderer",
           params: {
             actionCellRendererParams: {
