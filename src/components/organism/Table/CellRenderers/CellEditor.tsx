@@ -23,10 +23,15 @@ CellEditor.displayName = "CellEditor";
 interface IProps {
   value: string;
   maxLength?: number;
+  useInnerRef?: boolean;
 }
 
 export default class CellTextEditor extends React.Component<IProps> {
   componentRef = React.createRef<HTMLInputElement>();
+
+  static defaultProps: Pick<IProps, "useInnerRef"> = {
+    useInnerRef: false,
+  };
 
   state = {
     value: this.props.value,
@@ -40,6 +45,11 @@ export default class CellTextEditor extends React.Component<IProps> {
     this.setState({ value: event.target.value });
   };
 
+  // innerRef is deprecated in Styled Components v4. Uses ref instead.
+  // This is to allow backward compatibility for older Styled Components.
+  createRefProp = () =>
+    this.props.useInnerRef ? { innerRef: this.componentRef } : { ref: this.componentRef };
+
   afterGuiAttached() {
     const input = this.componentRef.current;
     if (input) {
@@ -51,7 +61,7 @@ export default class CellTextEditor extends React.Component<IProps> {
   render() {
     return (
       <CellEditor
-        ref={this.componentRef}
+        {...this.createRefProp()}
         maxLength={this.props.maxLength}
         value={this.getValue()}
         onChange={this.handleChange}
