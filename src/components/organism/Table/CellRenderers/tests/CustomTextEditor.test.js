@@ -1,5 +1,5 @@
 import React from "react"
-import { shallow } from "enzyme"
+import { shallow, mount } from "enzyme"
 import "jest-styled-components"
 import CustomTextEditor from "../CustomTextEditor"
 
@@ -17,6 +17,13 @@ describe("CustomTextEditor test", () => {
     const newValue = "new mocked value"
     component.instance().handleChange({ target: { value: newValue } })
     expect(component.state().value).toEqual(newValue)
+  })
+
+  it("passes the maxLength prop to the input, which handles the char limit", () => {
+    const mComponent = mount(<CustomTextEditor maxLength={10} value="" />)
+    const input = mComponent.find("input")
+
+    expect(input.prop("maxLength")).toBe(10)
   })
 
   it("should focus and select the input ref after GUI attached", () => {
