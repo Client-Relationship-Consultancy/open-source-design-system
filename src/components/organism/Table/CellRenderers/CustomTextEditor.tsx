@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const CellEditor = styled.input`
+const TextEditor = styled.input`
   height: 100%;
   width: 100%;
   background-color: transparent;
@@ -18,7 +18,7 @@ const CellEditor = styled.input`
   }
 `;
 
-CellEditor.displayName = "CellEditor";
+TextEditor.displayName = "TextEditor";
 
 interface IProps {
   value: string;
@@ -26,7 +26,7 @@ interface IProps {
   useInnerRef?: boolean;
 }
 
-export default class CellTextEditor extends React.Component<IProps> {
+export default class CustomTextEditor extends React.Component<IProps> {
   componentRef = React.createRef<HTMLInputElement>();
 
   static defaultProps: Pick<IProps, "useInnerRef"> = {
@@ -60,7 +60,7 @@ export default class CellTextEditor extends React.Component<IProps> {
 
   render() {
     return (
-      <CellEditor
+      <TextEditor
         {...this.createRefProp()}
         maxLength={this.props.maxLength}
         value={this.getValue()}

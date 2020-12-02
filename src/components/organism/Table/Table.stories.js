@@ -15,7 +15,7 @@ storiesOf("Table", module)
       {
         headerName: "Type (10 char limit)",
         field: "type",
-        cellEditor: "cellEditor",
+        cellEditor: "customTextEditor",
         cellEditorParams: { maxLength: 10 },
       },
       {
