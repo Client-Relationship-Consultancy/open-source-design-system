@@ -19,6 +19,16 @@ describe("CustomTextEditor test", () => {
     expect(component.state().value).toEqual(newValue)
   })
 
+  it("should focus and select the input ref after GUI attached", () => {
+    component.instance().componentRef = { current: { focus: jest.fn(), select: jest.fn() } }
+    const inputRef = component.instance().componentRef.current
+
+    component.instance().afterGuiAttached()
+
+    expect(inputRef.focus).toHaveBeenCalled()
+    expect(inputRef.select).toHaveBeenCalled()
+  })
+
   it("should use the ref prop when useInnerRef prop is false", () => {
     component.setProps({
       useInnerRef: false,
