@@ -21,7 +21,7 @@ const TextEditor = styled.input`
 TextEditor.displayName = "TextEditor";
 
 interface IProps {
-  value: string;
+  value?: string;
   maxLength?: number;
   useInnerRef?: boolean;
 }
@@ -34,14 +34,14 @@ export default class CustomTextEditor extends React.Component<IProps> {
   };
 
   state = {
-    value: this.props.value,
+    value: this.props.value ?? "",
   };
 
   getValue() {
     return this.state.value;
   }
 
-  handleChange = (event: any) => {
+  handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.setState({ value: event.target.value });
   };
 
