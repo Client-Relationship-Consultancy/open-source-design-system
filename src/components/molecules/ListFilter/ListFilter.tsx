@@ -38,6 +38,7 @@ NoResults.displayName = "NoResults";
 export interface IListFilterItems {
   key: string;
   value: JSX.Element | string;
+  id: string;
 }
 
 interface IListFilter {
@@ -77,7 +78,7 @@ class ListFilter extends React.PureComponent<IListFilter> {
       .filter(item => item.key.toLowerCase().includes(this.state.value.toLowerCase()))
       .sort((a, b) => (a.key.toLowerCase() > b.key.toLowerCase() ? 1 : -1))
       .map(item => (
-        <ListItem padding={padding} key={item.key}>
+        <ListItem padding={padding} key={item.id}>
           {item.value}
         </ListItem>
       ));

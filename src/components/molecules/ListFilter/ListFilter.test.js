@@ -5,7 +5,7 @@ import "jest-styled-components"
 import ListFilter from "./ListFilter"
 
 const options = ["Hello", "Foo", "Bar", "World"]
-const formattedOptions = arr => arr.map(item => ({ key: item, value: <p>{item}</p> }))
+const formattedOptions = arr => arr.map(item => ({ key: item, id: item, value: <p>{item}</p> }))
 
 describe("FilterableList Component Testing", () => {
   const componentFull = mount(<ListFilter items={formattedOptions(options)} />)
@@ -48,7 +48,7 @@ describe("FilterableList Component Testing", () => {
       },
     })
     expect(component.state().value).toEqual("this is old")
-    component.setProps({ items: [{ key: "new item", value: <p>new item</p> }] })
+    component.setProps({ items: [{ id: "new item", key: "new item", value: <p>new item</p> }] })
     expect(component.state().value).toEqual("")
   })
 })
