@@ -14,6 +14,10 @@ export const Container = styled.div`
   width: 100%;
   height: 500px;
   position: relative;
+  .ag-popup {
+    height: 0 !important;
+    min-height: 0 !important;
+}
   .ag-cell {
     overflow: visible;
     display: flex;
