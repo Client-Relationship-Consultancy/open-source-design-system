@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { colourPalette } from "../../../brandColours";
 
 interface IStepWrapper {
-  stepTopFlexAlignment: string;
+  stepTopFlexAlignment?: string;
 }
 
 const StepWrapper = styled.div<IStepWrapper>`
@@ -65,9 +64,9 @@ interface IStep {
 
 interface IProps {
   steps: IStep[];
-  stepTopFlexAlignment: string;
-  id: string;
-  className: string;
+  stepTopFlexAlignment?: string;
+  id?: string;
+  className?: string;
 }
 
 class StepDescription extends React.PureComponent<IProps> {
