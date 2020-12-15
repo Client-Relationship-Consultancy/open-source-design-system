@@ -5,9 +5,26 @@ import { ListFilter } from "../../../index"
 
 const stories = storiesOf("List", module)
 
-const options = ["Apple", "Banana Boat", "Crab", "Dog", "Super Book", "Anaconda", "Boat"]
+const options = [
+  "Ahsa",
+  "ab",
+  "àb",
+  "Bhsd",
+  "bhas",
+  "àpple",
+  "apple",
+  "abple",
+  "Apple",
+  "10Banana Boat",
+  "1Crab",
+  "2Dog",
+  "Super Book",
+  "Anaconda",
+  "Boat",
+  "Amazonzzz",
+]
 
-const formattedOptions = options.map(item => {
+const formattedOptions = options.map((item,idx) => {
   const itemKey = item
     .toLowerCase()
     .trim()
@@ -15,11 +32,12 @@ const formattedOptions = options.map(item => {
     .join("-")
 
   return {
-    key: `${itemKey}`,
+    key: `${item}`,
+    id: `${idx}`,
     value: (
       <div
         data-item={itemKey}
-        onClick={event => console.log(event.target.getAttribute("data-item"))}
+        onClick={(event) => console.log(event.target.getAttribute("data-item"))}
       >
         {item}
       </div>
