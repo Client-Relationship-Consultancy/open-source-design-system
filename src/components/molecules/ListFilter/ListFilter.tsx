@@ -67,8 +67,8 @@ class ListFilter extends React.PureComponent<IListFilter> {
   compareWords = (a: string, b: string, pos = 0): number => {
     const aLetter = a.charAt(pos);
     const bLetter = b.charAt(pos);
-    const formattedA = aLetter && aLetter !== "" ? aLetter : "1";
-    const formattedB = bLetter && bLetter !== "" ? bLetter : "1";
+    const formattedA = aLetter !== "" ? aLetter : "1";
+    const formattedB = bLetter !== "" ? bLetter : "1";
     if (formattedA === "1" && formattedB === "1") {
       return 0;
     }
