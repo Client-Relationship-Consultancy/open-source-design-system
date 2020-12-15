@@ -64,11 +64,11 @@ class ListFilter extends React.PureComponent<IListFilter> {
     });
   };
 
-  compareWords = (a: string, b: string, pos = 1): number => {
-    const formattedA =
-      a.slice(pos - 1, pos) && a.slice(pos - 1, pos) !== "" ? a.slice(pos - 1, pos) : "1";
-    const formattedB =
-      b.slice(pos - 1, pos) && b.slice(pos - 1, pos) !== "" ? b.slice(pos - 1, pos) : "1";
+  compareWords = (a: string, b: string, pos = 0): number => {
+    const aLetter = a.charAt(pos);
+    const bLetter = b.charAt(pos);
+    const formattedA = aLetter && aLetter !== "" ? aLetter : "1";
+    const formattedB = bLetter && bLetter !== "" ? bLetter : "1";
     if (formattedA === "1" && formattedB === "1") {
       return 0;
     }
