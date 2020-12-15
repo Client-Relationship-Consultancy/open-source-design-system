@@ -24,7 +24,7 @@ const options = [
   "Amazonzzz",
 ]
 
-const formattedOptions = options.map((item,idx) => {
+const formattedOptions = options.map((item,index) => {
   const itemKey = item
     .toLowerCase()
     .trim()
@@ -32,8 +32,8 @@ const formattedOptions = options.map((item,idx) => {
     .join("-")
 
   return {
-    key: `${item}`,
-    id: `${idx}`,
+    key: item,
+    id: index,
     value: (
       <div
         data-item={itemKey}
