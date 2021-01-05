@@ -66,8 +66,8 @@ interface IIconContainer {
 }
 
 const IconContainer = styled.div<IIconContainer>`
-  ${props => props.rotateDegrees && `transform: rotate(${props.rotateDegrees}deg);`}
-  ${props => !props.isVisible && "display: none;"}
+  ${(props) => props.rotateDegrees && `transform: rotate(${props.rotateDegrees}deg);`}
+  ${(props) => !props.isVisible && "display: none;"}
 `;
 IconContainer.displayName = "IconContainer";
 
@@ -77,8 +77,9 @@ interface IStyledFontAwesomeIcon {
 }
 
 const StyledFontAwesomeIcon = styled(FontAwesomeIcon)<IStyledFontAwesomeIcon>`
-  color: ${({color, theme, shade}) => color && theme[color].hex ? theme[color].hex : theme[color][shade].hex};
-  ${props => props.onClick && "cursor: pointer;"}
+  color: ${({ color, theme, shade }) =>
+    color && theme[color].hex ? theme[color].hex : theme[color][shade].hex};
+  ${(props) => props.onClick && "cursor: pointer;"}
 `;
 StyledFontAwesomeIcon.displayName = "StyledFontAwesomeIcon";
 
@@ -128,7 +129,11 @@ IconWithTheme.defaultProps = {
 };
 IconWithTheme.displayName = "IconWithTheme";
 
-const Icon = withTheme(IconWithTheme);
+/*
+ * @debt typing:design-system "FrankS: Design System untyped"
+ */
+
+const Icon: any = withTheme(IconWithTheme);
 Icon.displayName = "Icon";
 
 export default Icon;

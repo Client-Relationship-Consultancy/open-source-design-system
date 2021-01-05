@@ -104,7 +104,7 @@ export class CustomSelect extends React.Component<IProps, IState> {
     return defaultVal as IDropdownObject;
   };
 
-  onChange = (value: ValueType<IDropdownObject>): void => {
+  onChange = (value: ValueType<IDropdownObject, any>): void => {
     if (this.props.isMulti && this.props.onChangeMulti) {
       this.props.onChangeMulti(value as OptionsType<IDropdownObject>);
     } else if (this.props.onChange) {
@@ -137,7 +137,7 @@ export class CustomSelect extends React.Component<IProps, IState> {
     } = this.props;
     let filteredValue: IDropdownObject[] | undefined;
     if (isMulti && value && blacklistedOptions) {
-      filteredValue = value.filter(v => !blacklistedOptions.includes(v.value));
+      filteredValue = value.filter((v) => !blacklistedOptions.includes(v.value));
     }
     const selectId = id ? `${id}-select` : "";
     return (
@@ -189,7 +189,11 @@ CustomSelect.defaultProps = {
   theme: colourPalette.examplePalette,
 };
 
-const Select = withTheme(CustomSelect);
+/*
+ * @debt typing:design-system "FrankS: Design System untyped"
+ */
+
+const Select: any = withTheme(CustomSelect);
 Select.displayName = "Select";
 
 export default Select;

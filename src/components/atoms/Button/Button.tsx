@@ -216,7 +216,11 @@ class BasicButton extends React.PureComponent<IProps> {
   };
 }
 
-const Button = withTheme(BasicButton);
+/*
+ * @debt typing:design-system "FrankS: Design System untyped"
+ */
+
+const Button: any = withTheme(BasicButton);
 Button.displayName = "Button";
 
 export default Button;
