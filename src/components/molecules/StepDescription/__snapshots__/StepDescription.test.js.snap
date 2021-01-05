@@ -96,7 +96,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "StepDescription__StepsContainer-d382sh-3",
+            "componentId": "StepDescription__StepsContainer-xvf6o0-3",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -106,7 +106,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
           "displayName": "StepsContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "StepDescription__StepsContainer-d382sh-3",
+          "styledComponentId": "StepDescription__StepsContainer-xvf6o0-3",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -125,9 +125,9 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepDescription__StepWrapper-d382sh-0",
+                  "componentId": "StepDescription__StepWrapper-xvf6o0-0",
                   "isStatic": false,
-                  "lastClassName": "jfkOFI",
+                  "lastClassName": "fvQwJb",
                   "rules": Array [
                     "display:flex;align-items:",
                     [Function],
@@ -137,7 +137,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "displayName": "StepWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepDescription__StepWrapper-d382sh-0",
+                "styledComponentId": "StepDescription__StepWrapper-xvf6o0-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -409,7 +409,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepNumber-d382sh-1",
+                        "componentId": "StepDescription__StepNumber-xvf6o0-1",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -423,7 +423,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepNumber",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepNumber-d382sh-1",
+                      "styledComponentId": "StepDescription__StepNumber-xvf6o0-1",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -825,7 +825,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepName-d382sh-2",
+                        "componentId": "StepDescription__StepName-xvf6o0-2",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -837,7 +837,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepName",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepName-d382sh-2",
+                      "styledComponentId": "StepDescription__StepName-xvf6o0-2",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -989,9 +989,9 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepDescription__StepWrapper-d382sh-0",
+                  "componentId": "StepDescription__StepWrapper-xvf6o0-0",
                   "isStatic": false,
-                  "lastClassName": "jfkOFI",
+                  "lastClassName": "fvQwJb",
                   "rules": Array [
                     "display:flex;align-items:",
                     [Function],
@@ -1001,7 +1001,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "displayName": "StepWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepDescription__StepWrapper-d382sh-0",
+                "styledComponentId": "StepDescription__StepWrapper-xvf6o0-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -1273,7 +1273,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepNumber-d382sh-1",
+                        "componentId": "StepDescription__StepNumber-xvf6o0-1",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -1287,7 +1287,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepNumber",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepNumber-d382sh-1",
+                      "styledComponentId": "StepDescription__StepNumber-xvf6o0-1",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1689,7 +1689,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepName-d382sh-2",
+                        "componentId": "StepDescription__StepName-xvf6o0-2",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -1701,7 +1701,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepName",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepName-d382sh-2",
+                      "styledComponentId": "StepDescription__StepName-xvf6o0-2",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1853,9 +1853,9 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepDescription__StepWrapper-d382sh-0",
+                  "componentId": "StepDescription__StepWrapper-xvf6o0-0",
                   "isStatic": false,
-                  "lastClassName": "jfkOFI",
+                  "lastClassName": "fvQwJb",
                   "rules": Array [
                     "display:flex;align-items:",
                     [Function],
@@ -1865,7 +1865,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                 "displayName": "StepWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepDescription__StepWrapper-d382sh-0",
+                "styledComponentId": "StepDescription__StepWrapper-xvf6o0-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2137,7 +2137,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepNumber-d382sh-1",
+                        "componentId": "StepDescription__StepNumber-xvf6o0-1",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -2151,7 +2151,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepNumber",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepNumber-d382sh-1",
+                      "styledComponentId": "StepDescription__StepNumber-xvf6o0-1",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2553,7 +2553,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepDescription__StepName-d382sh-2",
+                        "componentId": "StepDescription__StepName-xvf6o0-2",
                         "isStatic": false,
                         "lastClassName": "c3",
                         "rules": Array [
@@ -2565,7 +2565,7 @@ exports[`StepDescription Component Testing should match snapshot for styling 1`]
                       "displayName": "StepName",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepDescription__StepName-d382sh-2",
+                      "styledComponentId": "StepDescription__StepName-xvf6o0-2",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],

@@ -2,12 +2,12 @@ import "./index.css"
 
 // Atom components
 import Box from "./components/atoms/Box"
+import Button, { IconButton } from "./components/atoms/Button"
 import Card from "./components/atoms/Card"
 import Checkbox from "./components/atoms/Checkbox"
 import Collapsible from "./components/atoms/Collapsible"
 import FileInput from "./components/atoms/FileInput"
 import Icon from "./components/atoms/Icon"
-import Button from "./components/atoms/Button"
 import Heading from "./components/atoms/Heading"
 import Input from "./components/atoms/Input"
 import Label from "./components/atoms/Label"
@@ -69,6 +69,7 @@ export {
   FileInput,
   Heading,
   Icon,
+  IconButton,
   Input,
   Label,
   List,

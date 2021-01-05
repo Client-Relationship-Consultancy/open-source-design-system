@@ -2201,24 +2201,28 @@ exports[`FilterableList Component Testing should match snapshot 1`] = `
   items={
     Array [
       Object {
+        "id": "Hello",
         "key": "Hello",
         "value": <p>
           Hello
         </p>,
       },
       Object {
+        "id": "Foo",
         "key": "Foo",
         "value": <p>
           Foo
         </p>,
       },
       Object {
+        "id": "Bar",
         "key": "Bar",
         "value": <p>
           Bar
         </p>,
       },
       Object {
+        "id": "World",
         "key": "World",
         "value": <p>
           World

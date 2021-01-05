@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomTextEditor test should match last snapshot 1`] = `
+<TextEditor
+  onChange={[Function]}
+  type="text"
+  value="mock initial value"
+/>
+`;

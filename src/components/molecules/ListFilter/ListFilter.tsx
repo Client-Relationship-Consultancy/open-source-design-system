@@ -4,7 +4,7 @@ import { ListContainer, ListItem } from "../List";
 import { colourPalette } from "../../../brandColours";
 
 const SearchWrapper = styled.div`
-  border-bottom: 1px solid ${props => props.theme.primary.light.hex};
+  border-bottom: 1px solid ${(props) => props.theme.primary.light.hex};
 `;
 SearchWrapper.defaultProps = {
   theme: colourPalette.examplePalette,
@@ -19,7 +19,7 @@ const Search = styled.input`
   padding: 0.5rem 1rem;
   margin: 0.55rem 0;
   ::placeholder {
-    color: ${props => props.theme.black.tint80.hex};
+    color: ${(props) => props.theme.black.tint80.hex};
   }
 `;
 Search.defaultProps = {
@@ -28,7 +28,7 @@ Search.defaultProps = {
 Search.displayName = "Search";
 
 const NoResults = styled.span`
-  color: ${props => props.theme.black.tint80.hex};
+  color: ${(props) => props.theme.black.tint80.hex};
 `;
 NoResults.defaultProps = {
   theme: colourPalette.examplePalette,
@@ -38,6 +38,7 @@ NoResults.displayName = "NoResults";
 export interface IListFilterItems {
   key: string;
   value: JSX.Element | string;
+  id: string;
 }
 
 interface IListFilter {
@@ -63,6 +64,25 @@ class ListFilter extends React.PureComponent<IListFilter> {
     });
   };
 
+  compareWords = (a: string, b: string, pos = 0): number => {
+    const aLetter = a.charAt(pos);
+    const bLetter = b.charAt(pos);
+    const formattedA = aLetter !== "" ? aLetter : "1";
+    const formattedB = bLetter !== "" ? bLetter : "1";
+    if (formattedA === "1" && formattedB === "1") {
+      return 0;
+    }
+    const compare = new Intl.Collator("en", {
+      sensitivity: "variant",
+      numeric: true,
+      caseFirst: "upper",
+    }).compare(formattedA, formattedB);
+    if (compare === 0) {
+      return this.compareWords(a, b, pos + 1);
+    }
+    return compare;
+  };
+
   renderItems = () => {
     const { padding, customErrorMessage, items } = this.props;
     const error = (
@@ -73,11 +93,12 @@ class ListFilter extends React.PureComponent<IListFilter> {
     if (!items) {
       return error;
     }
+
     const result = items
-      .filter(item => item.key.toLowerCase().includes(this.state.value.toLowerCase()))
-      .sort((a, b) => (a.key.toLowerCase() > b.key.toLowerCase() ? 1 : -1))
-      .map(item => (
-        <ListItem padding={padding} key={item.key}>
+      .filter((item) => item.key.toLowerCase().includes(this.state.value.toLowerCase()))
+      .sort((a, b) => this.compareWords(a.key, b.key))
+      .map((item) => (
+        <ListItem padding={padding} key={item.id}>
           {item.value}
         </ListItem>
       ));

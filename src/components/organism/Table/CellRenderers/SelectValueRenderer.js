@@ -1,87 +1,52 @@
-import React from "react"
-import PropTypes from "prop-types"
-import styled from "styled-components"
-import { ArrowIcon } from "../../../molecules/Panel"
+// function to act as a class
+export function SelectValueRenderer() {
+}
 
-export const Wrapper = styled.div`
-  white-space: pre;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: calc(100% - 20px);
+// gets called once before the renderer is used
+SelectValueRenderer.prototype.init = function(props) {
+  this.props = props
 
-  button {
-    position: absolute;
-    top: 0.55rem;
-    right: 0.55rem;
-    background-color: transparent;
-    transition: opacity 0.15s;
-    opacity: 0;
-    border: none;
-    color: ${(props) => props.theme.action.main.hex};
-    path {
-      fill: ${(props) => props.theme.action.main.hex};
-    }
-  }
-  :hover {
-    cursor: default;
+  const div = document.createElement("div")
+  div.className = "SelectValueCell"
+  div.innerHTML = this.renderValue() + this.buttonHtml()
 
-    button {
-      opacity: 1;
-      cursor: pointer;
-      outline: none;
-    }
-  }
-`
+  const button = div.querySelector("button")
 
-Wrapper.displayName = "Wrapper"
-
-class SelectValueRenderer extends React.Component {
-  renderValue = () => {
-    const fullOption =
-      this.props.colDef.cellEditorParams &&
-      this.props.colDef.cellEditorParams.values &&
-      this.props.colDef.cellEditorParams.values.find((option) => option.value === this.props.value)
-
-    return (fullOption ? fullOption.label : this.props.value) || " "
-  }
-
-  startEditingCell = () => {
+  this.onClickEvent = function(){
     const {
       node: { rowIndex },
       colDef: { field },
-    } = this.props
-
-    this.props.api.startEditingCell({ rowIndex, colKey: field })
+    } = props
+    props.api.startEditingCell({ rowIndex, colKey: field })
   }
+  button.addEventListener("click", this.onClickEvent)
 
-  render = () => {
-    return (
-      <Wrapper>
-        {this.renderValue()}
-        <button type="button" onClick={this.startEditingCell}>
-          <ArrowIcon name="chevron-down" size="1x" flipped={false} />
-        </button>
-      </Wrapper>
-    )
-  }
+  this.eGui = div
 }
 
-SelectValueRenderer.displayName = "SelectValueRenderer"
+SelectValueRenderer.prototype.renderValue = function() {
+  const fullOption =
+    this.props.colDef.cellEditorParams &&
+    this.props.colDef.cellEditorParams.values &&
+    this.props.colDef.cellEditorParams.values.find((option) => option.value === this.props.value)
 
-SelectValueRenderer.propTypes = {
-  colDef: PropTypes.shape({
-    cellEditorParams: PropTypes.shape({
-      values: PropTypes.array,
-    }),
-    field: PropTypes.string,
-  }),
-  node: PropTypes.shape({
-    rowIndex: PropTypes.number,
-  }),
-  api: PropTypes.shape({
-    startEditingCell: PropTypes.func,
-  }),
-  value: PropTypes.string,
+  return (fullOption ? fullOption.label : this.props.value) || " "
+}
+
+SelectValueRenderer.prototype.svg = function() {
+  return "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fas\" data-icon=\"chevron-down\" class=\"svg-inline--fa fa-chevron-down fa-w-14 fa-1x sc-iwsKbI clbLNE\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\" color=\"black\" shade=\"main\" theme=\"[object Object]\">" +
+    "<path fill=\"currentColor\" d=\"M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z\"></path>" +
+    "</svg>"
+}
+
+SelectValueRenderer.prototype.buttonHtml = function() {
+  // eslint-disable-next-line prefer-template
+  return "<button>" + this.svg() + "</button>"
+}
+
+// gets called once (assuming destroy hasn't been called first) when grid ready to insert the element
+SelectValueRenderer.prototype.getGui = function() {
+  return this.eGui
 }
 
 export default SelectValueRenderer

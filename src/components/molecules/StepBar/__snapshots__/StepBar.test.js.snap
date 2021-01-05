@@ -94,7 +94,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "StepBar__StepsContainer-sc-18iuvx8-3",
+            "componentId": "StepBar__StepsContainer-zpdrvt-3",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -104,7 +104,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
           "displayName": "StepsContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "StepBar__StepsContainer-sc-18iuvx8-3",
+          "styledComponentId": "StepBar__StepsContainer-zpdrvt-3",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -126,7 +126,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepBar__StepWrapper-sc-18iuvx8-0",
+                  "componentId": "StepBar__StepWrapper-zpdrvt-0",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -136,7 +136,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 "displayName": "StepWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepBar__StepWrapper-sc-18iuvx8-0",
+                "styledComponentId": "StepBar__StepWrapper-zpdrvt-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -408,7 +408,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepBar__StepNumber-sc-18iuvx8-1",
+                        "componentId": "StepBar__StepNumber-zpdrvt-1",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -422,7 +422,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       "displayName": "StepNumber",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepBar__StepNumber-sc-18iuvx8-1",
+                      "styledComponentId": "StepBar__StepNumber-zpdrvt-1",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -1586,7 +1586,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepBar__StepName-sc-18iuvx8-2",
+                        "componentId": "StepBar__StepName-zpdrvt-2",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -1598,7 +1598,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       "displayName": "StepName",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepBar__StepName-sc-18iuvx8-2",
+                      "styledComponentId": "StepBar__StepName-zpdrvt-2",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2003,7 +2003,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 },
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepBar__Line-sc-18iuvx8-4",
+                  "componentId": "StepBar__Line-zpdrvt-4",
                   "isStatic": false,
                   "lastClassName": "c5",
                   "rules": Array [
@@ -2015,7 +2015,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 "displayName": "Line",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepBar__Line-sc-18iuvx8-4",
+                "styledComponentId": "StepBar__Line-zpdrvt-4",
                 "target": "hr",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2165,7 +2165,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "StepBar__StepWrapper-sc-18iuvx8-0",
+                  "componentId": "StepBar__StepWrapper-zpdrvt-0",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -2175,7 +2175,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                 "displayName": "StepWrapper",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "StepBar__StepWrapper-sc-18iuvx8-0",
+                "styledComponentId": "StepBar__StepWrapper-zpdrvt-0",
                 "target": "div",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
@@ -2447,7 +2447,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepBar__StepNumber-sc-18iuvx8-1",
+                        "componentId": "StepBar__StepNumber-zpdrvt-1",
                         "isStatic": false,
                         "lastClassName": "c2",
                         "rules": Array [
@@ -2461,7 +2461,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       "displayName": "StepNumber",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepBar__StepNumber-sc-18iuvx8-1",
+                      "styledComponentId": "StepBar__StepNumber-zpdrvt-1",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],
@@ -2865,7 +2865,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       },
                       "attrs": Array [],
                       "componentStyle": ComponentStyle {
-                        "componentId": "StepBar__StepName-sc-18iuvx8-2",
+                        "componentId": "StepBar__StepName-zpdrvt-2",
                         "isStatic": false,
                         "lastClassName": "c4",
                         "rules": Array [
@@ -2877,7 +2877,7 @@ exports[`StepBar Component Testing should match snapshot for styling 1`] = `
                       "displayName": "StepName",
                       "foldedComponentIds": Array [],
                       "render": [Function],
-                      "styledComponentId": "StepBar__StepName-sc-18iuvx8-2",
+                      "styledComponentId": "StepBar__StepName-zpdrvt-2",
                       "target": "div",
                       "toString": [Function],
                       "warnTooManyClasses": [Function],

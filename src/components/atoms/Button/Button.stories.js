@@ -4,6 +4,7 @@ import { storiesOf } from "@storybook/react"
 import { text, boolean, select } from "@storybook/addon-knobs"
 
 import Button from "./Button"
+import IconButton from "./IconButton/IconButton"
 
 const stories = storiesOf("Buttons", module)
 
@@ -34,8 +35,11 @@ const iconSizes = {
 const iconTypes = {
   Check: "check",
   DownArrow: "chevron-down",
-  Times: "times",
+  File: "file",
   None: "",
+  Save: "save",
+  Times: "times",
+  Upload: "upload",
 }
 
 stories.add("Button with icon options", () => {
@@ -53,7 +57,7 @@ stories.add("Button with icon options", () => {
   )
 })
 
-const selectArrowSvg = (
+const circleSVG = (
   <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <circle cx="50" cy="50" r="40" strokeWidth="5" />
   </svg>
@@ -65,11 +69,24 @@ stories.add("Button using passed SVG icon", () => {
       buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
       buttonSize={select("Button Size", buttonSizes, "large")}
       disabled={boolean("Disabled", false)}
-      icon={selectArrowSvg}
+      icon={circleSVG}
       iconPosition={select("Icon Position", iconPositions, "before")}
       iconSize={select("Icon Size", iconSizes, "large")}
     >
       {text("Button Description", "Button")}
     </Button>
+  )
+})
+
+stories.add("Icon only button", () => {
+  return (
+    <IconButton
+      buttonType={select("Button Type", buttonTypes, "secondaryOutline")}
+      buttonSize={select("Button Size", buttonSizes, "large")}
+      disabled={boolean("Disabled", false)}
+      icon={select("Icon Type", iconTypes, "times")}
+    >
+      HA! You tried passing in text, expecting it to be used as a label; what folly!
+    </IconButton>
   )
 })

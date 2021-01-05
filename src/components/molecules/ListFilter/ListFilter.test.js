@@ -5,11 +5,12 @@ import "jest-styled-components"
 import ListFilter from "./ListFilter"
 
 const options = ["Hello", "Foo", "Bar", "World"]
-const formattedOptions = arr => arr.map(item => ({ key: item, value: <p>{item}</p> }))
+const formattedOptions = (arr) => arr.map((item) => ({ key: item, id: item, value: <p>{item}</p> }))
 
 describe("FilterableList Component Testing", () => {
   const componentFull = mount(<ListFilter items={formattedOptions(options)} />)
   const component = shallow(<ListFilter items={formattedOptions(options)} />)
+  const componentInstance = component.instance()
   const emptyComponent = mount(<ListFilter />)
   it("should match snapshot", () => {
     const tree = toJson(componentFull)
@@ -48,7 +49,47 @@ describe("FilterableList Component Testing", () => {
       },
     })
     expect(component.state().value).toEqual("this is old")
-    component.setProps({ items: [{ key: "new item", value: <p>new item</p> }] })
+    component.setProps({ items: [{ id: "new item", key: "new item", value: <p>new item</p> }] })
     expect(component.state().value).toEqual("")
+  })
+
+  it("compareWords should return the right value to order the words", () => {
+    const data = [
+      "Ahsa",
+      "ab",
+      "àb",
+      "Bhsd",
+      "bhas",
+      "àpple",
+      "apple",
+      "abple",
+      "Apple",
+      "10Banana Boat",
+      "1Crab",
+      "2Dog",
+      "Super Book",
+      "Anaconda",
+      "Boat",
+      "Amazonzzz",
+    ]
+    const result = [
+      "10Banana Boat",
+      "1Crab",
+      "2Dog",
+      "Ahsa",
+      "Amazonzzz",
+      "Anaconda",
+      "Apple",
+      "ab",
+      "abple",
+      "apple",
+      "àb",
+      "àpple",
+      "Bhsd",
+      "Boat",
+      "bhas",
+      "Super Book",
+    ]
+    expect(data.sort(componentInstance.compareWords)).toEqual(result)
   })
 })
