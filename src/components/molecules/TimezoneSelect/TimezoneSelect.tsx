@@ -19,7 +19,15 @@ const Key = styled.span`
   font-weight: 600;
 `
 
-export const getKeyFromTimezone = timezone => {
+type Timezone = {
+  id: number;
+  name: string;
+  gmt_offset_january: number;
+  dst_offset_july: number;
+  type: string;
+}
+
+export const getKeyFromTimezone = (timezone: Timezone)  => {
   const [continent] = timezone.name.split("/")
   const { gmt_offset_january: gmt, dst_offset_july: dst } = timezone
   const GMT = `GMT${gmt >= 0 ? "+" : ""}${gmt}:00`
@@ -27,14 +35,20 @@ export const getKeyFromTimezone = timezone => {
   return `(${GMT}/${DST}) ${continent}`
 }
 
-export const getCountryForTimezone = timezone => {
+export const getCountryForTimezone = (timezone: Timezone)  => {
   const [, country] = timezone.name.split("/")
   return country && country.split("_").join(" ")
 }
 
-export const getLabel = values => values.slice(0, 5).join(", ")
+export const getLabel = (values: string[]) => values.slice(0, 5).join(", ")
 
-export const Timezone = props => (
+interface ITimezoneProps {
+  theme: any;
+  timezoneKey: string;
+  values: string[];
+}
+
+export const Timezone = (props: ITimezoneProps) => (
   <TimezoneContainer>
     <Key theme={props.theme}>{props.timezoneKey}</Key>
     {`- ${getLabel(props.values)}`}
@@ -47,11 +61,43 @@ Timezone.defaultProps = {
 
 Timezone.propTypes = {
   timezoneKey: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   values: PropTypes.array.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
   theme: PropTypes.object,
 }
 
-class TimezoneSelect extends React.Component {
+interface IDropdownObject {
+  value: string;
+  label: string;
+}
+
+interface IProps{
+  id: string;
+  title: string;
+  name: string;
+  placeholder: string;
+  onChange: () => void;
+  isClearable: boolean;
+  onBlur: () => void;
+  className: string;
+  useFormik: boolean;
+  customSort: (a: IDropdownObject, b: IDropdownObject) => number;
+}
+
+interface ITimezoneProps {
+  theme: any;
+  timezoneKey: string;
+  values: string[];
+}
+
+class TimezoneSelect extends React.Component <IProps>{
+static defaultProps= {
+  placeholder: "Type to select a timezone...",
+  isClearable: true,
+  useFormik: true,
+}
+
   // Create function to convert given options object to the correct format (objects within an array)
   renderOptions = () => {
     const groupedTimezones = timezones.rows
@@ -60,12 +106,12 @@ class TimezoneSelect extends React.Component {
         value: getCountryForTimezone(timezone),
       }))
       .reduce(
-        (prev, { key, value }) => ({ ...prev, [key]: prev[key] ? [...prev[key], value] : [value] }),
+        (prev: any, { key, value }) => ({ ...prev, [key]: prev[key] ? [...prev[key], value] : [value] }),
         {},
       )
 
     return Object.entries(groupedTimezones)
-      .map(([key, values]) => ({
+      .map(([key, values]: any) => ({
         key: `${key} - ${getLabel(values)}`,
         value: <Timezone timezoneKey={key} values={values} />,
       }))
@@ -102,27 +148,6 @@ class TimezoneSelect extends React.Component {
       />
     )
   }
-}
-
-TimezoneSelect.displayName = "TimezoneSelect"
-
-TimezoneSelect.defaultProps = {
-  placeholder: "Type to select a timezone...",
-  isClearable: true,
-  useFormik: true,
-}
-
-TimezoneSelect.propTypes = {
-  id: PropTypes.string,
-  title: PropTypes.string,
-  name: PropTypes.string,
-  placeholder: PropTypes.string,
-  onChange: PropTypes.func,
-  isClearable: PropTypes.bool,
-  onBlur: PropTypes.func,
-  className: PropTypes.string,
-  useFormik: PropTypes.bool,
-  customSort: PropTypes.func,
 }
 
 export default TimezoneSelect

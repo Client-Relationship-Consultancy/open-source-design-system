@@ -159,7 +159,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
           "$$typeof": Symbol(react.forward_ref),
           "attrs": Array [],
           "componentStyle": ComponentStyle {
-            "componentId": "TimezoneSelect__TimezoneContainer-fzbfhx-0",
+            "componentId": "TimezoneSelect__TimezoneContainer-sc-1goij9n-0",
             "isStatic": false,
             "lastClassName": "c0",
             "rules": Array [
@@ -169,7 +169,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
           "displayName": "TimezoneSelect__TimezoneContainer",
           "foldedComponentIds": Array [],
           "render": [Function],
-          "styledComponentId": "TimezoneSelect__TimezoneContainer-fzbfhx-0",
+          "styledComponentId": "TimezoneSelect__TimezoneContainer-sc-1goij9n-0",
           "target": "div",
           "toString": [Function],
           "warnTooManyClasses": [Function],
@@ -315,7 +315,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
                 "$$typeof": Symbol(react.forward_ref),
                 "attrs": Array [],
                 "componentStyle": ComponentStyle {
-                  "componentId": "TimezoneSelect__Key-fzbfhx-1",
+                  "componentId": "TimezoneSelect__Key-sc-1goij9n-1",
                   "isStatic": false,
                   "lastClassName": "c1",
                   "rules": Array [
@@ -327,7 +327,7 @@ exports[`TimezoneSelect Component Testing Should match the snapshot of <Timezone
                 "displayName": "TimezoneSelect__Key",
                 "foldedComponentIds": Array [],
                 "render": [Function],
-                "styledComponentId": "TimezoneSelect__Key-fzbfhx-1",
+                "styledComponentId": "TimezoneSelect__Key-sc-1goij9n-1",
                 "target": "span",
                 "toString": [Function],
                 "warnTooManyClasses": [Function],
