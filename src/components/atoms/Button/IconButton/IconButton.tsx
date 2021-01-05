@@ -151,7 +151,11 @@ class BasicIconButton extends React.PureComponent<IProps> {
   };
 }
 
-const IconButton = withTheme(BasicIconButton);
+/*
+ * @debt typing:design-system "FrankS: Design System untyped"
+ */
+
+const IconButton: any = withTheme(BasicIconButton);
 IconButton.displayName = "IconButton";
 
 export default IconButton;
