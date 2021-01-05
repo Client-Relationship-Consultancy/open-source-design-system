@@ -150,25 +150,4 @@ static defaultProps= {
   }
 }
 
-// TimezoneSelect.displayName = "TimezoneSelect"
-
-// TimezoneSelect.defaultProps = {
-//   placeholder: "Type to select a timezone...",
-//   isClearable: true,
-//   useFormik: true,
-// }
-
-// TimezoneSelect.propTypes = {
-//   id: PropTypes.string,
-//   title: PropTypes.string,
-//   name: PropTypes.string,
-//   placeholder: PropTypes.string,
-//   onChange: PropTypes.func,
-//   isClearable: PropTypes.bool,
-//   onBlur: PropTypes.func,
-//   className: PropTypes.string,
-//   useFormik: PropTypes.bool,
-//   customSort: PropTypes.func,
-// }
-
 export default TimezoneSelect
