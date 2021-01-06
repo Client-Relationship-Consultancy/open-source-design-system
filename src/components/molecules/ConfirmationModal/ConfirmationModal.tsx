@@ -23,7 +23,7 @@ export const HeaderBar = styled.div<IWithTitleProps>`
     font-size: 1.375rem;
     font-weight: 500;
     line-height: 1.65rem;
-    color: ${(props) => props.theme.primary.main.hex};
+    color: ${({ theme }) => theme.primary.main.hex};
     margin-left: 1.4rem;
   }
 `;
