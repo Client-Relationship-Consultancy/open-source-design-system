@@ -65,7 +65,7 @@ const ContentContainer = styled.p`
 const ButtonText = styled.p`
   font-size: 14px;
   line-height: 22px;
-  margin: 0 20px;
+  padding: 2px;
 `;
 
 ButtonText.displayName = "ButtonText";
@@ -123,10 +123,10 @@ export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (p
         </HeaderBar>
         <ContentContainer withTitle={!!title}>{children}</ContentContainer>
         <ButtonRow>
-          <Button onClick={onNo} buttonType="ghost">
+          <Button onClick={onNo} buttonType="ghost" buttonSize="medium">
             <ButtonText className="noButton">{noButtonLabel}</ButtonText>
           </Button>
-          <Button onClick={onYes} buttonType="primary">
+          <Button onClick={onYes} buttonType="primary" buttonSize="medium">
             <ButtonText className="yesButton">{yesButtonLabel}</ButtonText>
           </Button>
         </ButtonRow>

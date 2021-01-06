@@ -11,8 +11,8 @@ storiesOf("Modals", module)
   .add("Confirmation Modal without Title", () => (
     <ConfirmationModal
       isOpen
-      yesButtonLabel={text("Yes button label", "Yes")}
-      noButtonLabel={text("No button label", "No")}
+      yesButtonLabel={text("Yes button label", "Button")}
+      noButtonLabel={text("No button label", "Cancel")}
     >
       This is some more text as I can’t move the original text.
       <br />
@@ -27,8 +27,8 @@ storiesOf("Modals", module)
   .add("Confirmation Modal with Title", () => (
     <ConfirmationModal
       isOpen
-      yesButtonLabel={text("Yes button label", "Yes")}
-      noButtonLabel={text("No button label", "No")}
+      yesButtonLabel={text("Yes button label", "Button")}
+      noButtonLabel={text("No button label", "Cancel")}
       title="Title of the modal"
     >
       You have clicked on another user whilst still in progress of editing the permissions of
