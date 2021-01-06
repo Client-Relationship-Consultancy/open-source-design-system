@@ -13,7 +13,7 @@ export const HeaderBar = styled.div<IWithTitleProps>`
   width: 100%;
   height: ${({ withTitle }) => (withTitle ? "3.5rem" : "2.875rem")};
   border-bottom: 0.0625rem solid
-    ${(props) => (props.withTitle ? props.theme.primary.main.hex : "transparent")};
+    ${({ withTitle, theme }) => (withTitle ? theme.primary.main.hex : "transparent")};
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
