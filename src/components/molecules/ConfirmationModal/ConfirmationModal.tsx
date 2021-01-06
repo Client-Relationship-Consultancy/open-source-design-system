@@ -84,7 +84,7 @@ const customStyles = {
     padding: 0,
     width: "700px",
     height: "fit-content",
-    borderRadius: "1rem",
+    borderRadius: "10px",
   },
 };
 
