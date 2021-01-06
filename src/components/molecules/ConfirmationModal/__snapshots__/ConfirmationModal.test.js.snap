@@ -16,7 +16,7 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
   style={
     Object {
       "content": Object {
-        "borderRadius": "10px",
+        "borderRadius": "0.625rem",
         "bottom": 0,
         "height": "fit-content",
         "left": 0,
@@ -25,7 +25,7 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
         "padding": 0,
         "right": 0,
         "top": 0,
-        "width": "700px",
+        "width": "43.75rem",
       },
       "overlay": Object {
         "zIndex": 100,
@@ -203,8 +203,8 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
 exports[`ConfirmationModal Component Test check function in styled components 1`] = `
 .c0 {
   width: 100%;
-  height: 46px;
-  border-bottom: 1px solid transparent;
+  height: 2.875rem;
+  border-bottom: 0.0625rem solid transparent;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -220,15 +220,15 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 0 9.6px;
+  padding: 0 0.6rem;
 }
 
 .c0 h1 {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-weight: 500;
-  line-height: 26.4px;
+  line-height: 1.65rem;
   color: #A42824;
-  margin-left: 22.4px;
+  margin-left: 1.4rem;
 }
 
 <ConfirmationModal__HeaderBar
@@ -497,11 +497,11 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
           "rules": Array [
             "width:100%;height:",
             [Function],
-            ";border-bottom:1px solid ",
+            ";border-bottom:0.0625rem solid ",
             [Function],
-            ";display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;padding:0 9.6px;h1{font-size:22px;font-weight:500;line-height:26.4px;color:",
+            ";display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;padding:0 0.6rem;h1{font-size:1.375rem;font-weight:500;line-height:1.65rem;color:",
             [Function],
-            ";margin-left:22.4px;}",
+            ";margin-left:1.4rem;}",
           ],
         },
         "displayName": "ConfirmationModal__HeaderBar",
