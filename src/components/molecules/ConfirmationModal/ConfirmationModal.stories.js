@@ -21,7 +21,7 @@ storiesOf("Modals", module)
       Bethany B. If you change users now you will lose the current changes you have made.
       <br />
       <br />
-      Are you sure want to switch to another user?
+      <b>Are you sure want to switch to another user?</b>
     </ConfirmationModal>
   ))
   .add("Confirmation Modal with Title", () => (
