@@ -19,15 +19,17 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
   style={
     Object {
       "content": Object {
+        "borderRadius": "0.625rem",
         "bottom": 0,
-        "height": "300px",
+        "boxShadow": "0px 0px 16px #696969",
+        "height": "fit-content",
         "left": 0,
         "margin": "auto",
-        "overflow": "visible",
+        "overflow": "hidden",
         "padding": 0,
         "right": 0,
         "top": 0,
-        "width": "700px",
+        "width": "43.75rem",
       },
       "overlay": Object {
         "zIndex": 100,
@@ -163,12 +165,32 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
           },
         }
       }
-    />
-    <ConfirmationModal__ContentContainer>
+      withTitle={false}
+    >
+      <IconButton
+        buttonSize="large"
+        buttonType="ghost"
+        icon="times"
+      />
+    </ConfirmationModal__HeaderBar>
+    <ConfirmationModal__ContentContainer
+      withTitle={false}
+    >
       I am a lovely confirmation modal
     </ConfirmationModal__ContentContainer>
     <ConfirmationModal__ButtonRow>
       <Button
+        buttonSize="medium"
+        buttonType="ghost"
+      >
+        <ButtonText
+          className="noButton"
+        >
+          No
+        </ButtonText>
+      </Button>
+      <Button
+        buttonSize="medium"
         buttonType="primary"
       >
         <ButtonText
@@ -177,13 +199,211 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
           Yes
         </ButtonText>
       </Button>
+    </ConfirmationModal__ButtonRow>
+  </ConfirmationModal__InsideContainer>
+</Modal>
+`;
+
+exports[`ConfirmationModal Component Test Match last snapshot with title 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  closeTimeoutMS={0}
+  contentElement={[Function]}
+  isOpen={true}
+  overlayElement={[Function]}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  preventScroll={false}
+  role="dialog"
+  shouldCloseOnEsc={true}
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
+  style={
+    Object {
+      "content": Object {
+        "borderRadius": "0.625rem",
+        "bottom": 0,
+        "boxShadow": "0px 0px 16px #696969",
+        "height": "fit-content",
+        "left": 0,
+        "margin": "auto",
+        "overflow": "hidden",
+        "padding": 0,
+        "right": 0,
+        "top": 0,
+        "width": "43.75rem",
+      },
+      "overlay": Object {
+        "zIndex": 100,
+      },
+    }
+  }
+>
+  <ConfirmationModal__InsideContainer>
+    <ConfirmationModal__HeaderBar
+      theme={
+        Object {
+          "action": Object {
+            "dark": Object {
+              "RGB": "79,38,98",
+              "hex": "#4E2662",
+              "on": "#FFFFFF",
+            },
+            "light": Object {
+              "RGB": "173,101,207",
+              "hex": "#AD65CF",
+              "on": "#FFFFFF",
+            },
+            "main": Object {
+              "RGB": "116,60,143",
+              "hex": "#743C8F",
+              "on": "#FFFFFF",
+            },
+          },
+          "background": Object {
+            "RGB": "246,246,246",
+            "hex": "#F6F6F6",
+            "on": "#272727",
+          },
+          "black": Object {
+            "main": Object {
+              "RGB": "39,39,39",
+              "hex": "#272727",
+              "on": "#FFFFFF",
+            },
+            "tint20": Object {
+              "RGB": "236,236,236",
+              "hex": "#ECECEC",
+              "on": "#272727",
+            },
+            "tint40": Object {
+              "RGB": "199,199,199",
+              "hex": "#C7C7C7",
+              "on": "#272727",
+            },
+            "tint60": Object {
+              "RGB": "160,160,160",
+              "hex": "#A0A0A0",
+              "on": "#FFFFFF",
+            },
+            "tint80": Object {
+              "RGB": "105,105,105",
+              "hex": "#696969",
+              "on": "#FFFFFF",
+            },
+          },
+          "complimentary": Object {
+            "dark": Object {
+              "RGB": "206,185,0",
+              "hex": "#CEB900",
+              "on": "#272727",
+            },
+            "light": Object {
+              "RGB": "255,245,157",
+              "hex": "#FFF59D",
+              "on": "#272727",
+            },
+            "main": Object {
+              "RGB": "255,238,82",
+              "hex": "#FFEE52",
+              "on": "#272727",
+            },
+          },
+          "error": Object {
+            "dark": Object {
+              "RGB": "197,73,1",
+              "hex": "#C54901",
+              "on": "#FFFFFF",
+            },
+            "main": Object {
+              "RGB": "255,115,32",
+              "hex": "#FF7320",
+              "on": "#FFFFFF",
+            },
+          },
+          "primary": Object {
+            "dark": Object {
+              "RGB": "102,22,20",
+              "hex": "#661614",
+              "on": "#FFFFFF",
+            },
+            "light": Object {
+              "RGB": "218,52,47",
+              "hex": "#DA342F",
+              "on": "#FFFFFF",
+            },
+            "main": Object {
+              "RGB": "164,40,36",
+              "hex": "#A42824",
+              "on": "#FFFFFF",
+            },
+          },
+          "secondary": Object {
+            "dark": Object {
+              "RGB": "5,38,59",
+              "hex": "#05263B",
+              "on": "#FFFFFF",
+            },
+            "light": Object {
+              "RGB": "89,156,175",
+              "hex": "#599CAF",
+              "on": "#FFFFFF",
+            },
+            "main": Object {
+              "RGB": "11,70,107",
+              "hex": "#0B466B",
+              "on": "#FFFFFF",
+            },
+          },
+          "surface": Object {
+            "RGB": "255,255,255",
+            "hex": "#FFFFFF",
+            "on": "#272727",
+          },
+          "white": Object {
+            "RGB": "255,255,255",
+            "hex": "#FFFFFF",
+            "on": "#272727",
+          },
+        }
+      }
+      withTitle={true}
+    >
+      <IconButton
+        buttonSize="large"
+        buttonType="ghost"
+        icon="times"
+      />
+      <h1>
+        test title
+      </h1>
+    </ConfirmationModal__HeaderBar>
+    <ConfirmationModal__ContentContainer
+      withTitle={true}
+    >
+      I am a lovely confirmation modal
+    </ConfirmationModal__ContentContainer>
+    <ConfirmationModal__ButtonRow>
       <Button
-        buttonType="primaryOutline"
+        buttonSize="medium"
+        buttonType="ghost"
       >
         <ButtonText
           className="noButton"
         >
           No
+        </ButtonText>
+      </Button>
+      <Button
+        buttonSize="medium"
+        buttonType="primary"
+      >
+        <ButtonText
+          className="yesButton"
+        >
+          Yes
         </ButtonText>
       </Button>
     </ConfirmationModal__ButtonRow>
@@ -194,8 +414,32 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
 exports[`ConfirmationModal Component Test check function in styled components 1`] = `
 .c0 {
   width: 100%;
-  background-color: #A42824;
-  height: 40px;
+  height: 2.875rem;
+  border-bottom: 0.0625rem solid transparent;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+}
+
+.c0 h1 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.65rem;
+  color: #A42824;
+  margin-left: 1.4rem;
 }
 
 <ConfirmationModal__HeaderBar
@@ -462,9 +706,13 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "width:100%;background-color:",
+            "width:100%;height:",
             [Function],
-            ";height:40px;",
+            ";border-bottom:0.0625rem solid ",
+            [Function],
+            ";display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;padding:0 0.6rem;h1{font-size:1.375rem;font-weight:500;line-height:1.65rem;color:",
+            [Function],
+            ";margin-left:1.4rem;}",
           ],
         },
         "displayName": "ConfirmationModal__HeaderBar",
@@ -604,6 +852,574 @@ exports[`ConfirmationModal Component Test check function in styled components 1`
         },
       }
     }
+  >
+    <div
+      className="c0"
+    />
+  </StyledComponent>
+</ConfirmationModal__HeaderBar>
+`;
+
+exports[`ConfirmationModal Component Test check function in styled components ContentContainer with title 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  font-style: normal;
+  margin: 1.3125rem 0;
+  margin-top: 1.3125rem;
+}
+
+<ConfirmationModal__ContentContainer
+  withTitle={true}
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "ConfirmationModal__ContentContainer-sc-1lf36yh-3",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;justify-content:flex-start;flex-direction:column;padding:0 2rem;font-size:1rem;font-weight:300;line-height:1.2rem;font-style:normal;margin:1.3125rem 0;margin-top:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "ConfirmationModal__ContentContainer",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "ConfirmationModal__ContentContainer-sc-1lf36yh-3",
+        "target": "p",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    withTitle={true}
+  >
+    <p
+      className="c0"
+    />
+  </StyledComponent>
+</ConfirmationModal__ContentContainer>
+`;
+
+exports[`ConfirmationModal Component Test check function in styled components ContentContainer without title 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  font-style: normal;
+  margin: 1.3125rem 0;
+  margin-top: 0;
+}
+
+<ConfirmationModal__ContentContainer>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "ConfirmationModal__ContentContainer-sc-1lf36yh-3",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;justify-content:flex-start;flex-direction:column;padding:0 2rem;font-size:1rem;font-weight:300;line-height:1.2rem;font-style:normal;margin:1.3125rem 0;margin-top:",
+            [Function],
+            ";",
+          ],
+        },
+        "displayName": "ConfirmationModal__ContentContainer",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "ConfirmationModal__ContentContainer-sc-1lf36yh-3",
+        "target": "p",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+  >
+    <p
+      className="c0"
+    />
+  </StyledComponent>
+</ConfirmationModal__ContentContainer>
+`;
+
+exports[`ConfirmationModal Component Test check function in styled components with title 1`] = `
+.c0 {
+  width: 100%;
+  height: 3.5rem;
+  border-bottom: 0.0625rem solid #A42824;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+}
+
+.c0 h1 {
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1.65rem;
+  color: #A42824;
+  margin-left: 1.4rem;
+}
+
+<ConfirmationModal__HeaderBar
+  theme={
+    Object {
+      "action": Object {
+        "dark": Object {
+          "RGB": "79,38,98",
+          "hex": "#4E2662",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "173,101,207",
+          "hex": "#AD65CF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "116,60,143",
+          "hex": "#743C8F",
+          "on": "#FFFFFF",
+        },
+      },
+      "background": Object {
+        "RGB": "246,246,246",
+        "hex": "#F6F6F6",
+        "on": "#272727",
+      },
+      "black": Object {
+        "main": Object {
+          "RGB": "39,39,39",
+          "hex": "#272727",
+          "on": "#FFFFFF",
+        },
+        "tint20": Object {
+          "RGB": "236,236,236",
+          "hex": "#ECECEC",
+          "on": "#272727",
+        },
+        "tint40": Object {
+          "RGB": "199,199,199",
+          "hex": "#C7C7C7",
+          "on": "#272727",
+        },
+        "tint60": Object {
+          "RGB": "160,160,160",
+          "hex": "#A0A0A0",
+          "on": "#FFFFFF",
+        },
+        "tint80": Object {
+          "RGB": "105,105,105",
+          "hex": "#696969",
+          "on": "#FFFFFF",
+        },
+      },
+      "complimentary": Object {
+        "dark": Object {
+          "RGB": "206,185,0",
+          "hex": "#CEB900",
+          "on": "#272727",
+        },
+        "light": Object {
+          "RGB": "255,245,157",
+          "hex": "#FFF59D",
+          "on": "#272727",
+        },
+        "main": Object {
+          "RGB": "255,238,82",
+          "hex": "#FFEE52",
+          "on": "#272727",
+        },
+      },
+      "error": Object {
+        "dark": Object {
+          "RGB": "197,73,1",
+          "hex": "#C54901",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "255,115,32",
+          "hex": "#FF7320",
+          "on": "#FFFFFF",
+        },
+      },
+      "primary": Object {
+        "dark": Object {
+          "RGB": "102,22,20",
+          "hex": "#661614",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "218,52,47",
+          "hex": "#DA342F",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "164,40,36",
+          "hex": "#A42824",
+          "on": "#FFFFFF",
+        },
+      },
+      "secondary": Object {
+        "dark": Object {
+          "RGB": "5,38,59",
+          "hex": "#05263B",
+          "on": "#FFFFFF",
+        },
+        "light": Object {
+          "RGB": "89,156,175",
+          "hex": "#599CAF",
+          "on": "#FFFFFF",
+        },
+        "main": Object {
+          "RGB": "11,70,107",
+          "hex": "#0B466B",
+          "on": "#FFFFFF",
+        },
+      },
+      "surface": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
+      "white": Object {
+        "RGB": "255,255,255",
+        "hex": "#FFFFFF",
+        "on": "#272727",
+      },
+    }
+  }
+  withTitle={true}
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "action": Object {
+              "dark": Object {
+                "RGB": "79,38,98",
+                "hex": "#4E2662",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "173,101,207",
+                "hex": "#AD65CF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "116,60,143",
+                "hex": "#743C8F",
+                "on": "#FFFFFF",
+              },
+            },
+            "background": Object {
+              "RGB": "246,246,246",
+              "hex": "#F6F6F6",
+              "on": "#272727",
+            },
+            "black": Object {
+              "main": Object {
+                "RGB": "39,39,39",
+                "hex": "#272727",
+                "on": "#FFFFFF",
+              },
+              "tint20": Object {
+                "RGB": "236,236,236",
+                "hex": "#ECECEC",
+                "on": "#272727",
+              },
+              "tint40": Object {
+                "RGB": "199,199,199",
+                "hex": "#C7C7C7",
+                "on": "#272727",
+              },
+              "tint60": Object {
+                "RGB": "160,160,160",
+                "hex": "#A0A0A0",
+                "on": "#FFFFFF",
+              },
+              "tint80": Object {
+                "RGB": "105,105,105",
+                "hex": "#696969",
+                "on": "#FFFFFF",
+              },
+            },
+            "complimentary": Object {
+              "dark": Object {
+                "RGB": "206,185,0",
+                "hex": "#CEB900",
+                "on": "#272727",
+              },
+              "light": Object {
+                "RGB": "255,245,157",
+                "hex": "#FFF59D",
+                "on": "#272727",
+              },
+              "main": Object {
+                "RGB": "255,238,82",
+                "hex": "#FFEE52",
+                "on": "#272727",
+              },
+            },
+            "error": Object {
+              "dark": Object {
+                "RGB": "197,73,1",
+                "hex": "#C54901",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "255,115,32",
+                "hex": "#FF7320",
+                "on": "#FFFFFF",
+              },
+            },
+            "primary": Object {
+              "dark": Object {
+                "RGB": "102,22,20",
+                "hex": "#661614",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "218,52,47",
+                "hex": "#DA342F",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "164,40,36",
+                "hex": "#A42824",
+                "on": "#FFFFFF",
+              },
+            },
+            "secondary": Object {
+              "dark": Object {
+                "RGB": "5,38,59",
+                "hex": "#05263B",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "89,156,175",
+                "hex": "#599CAF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "11,70,107",
+                "hex": "#0B466B",
+                "on": "#FFFFFF",
+              },
+            },
+            "surface": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+            "white": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "ConfirmationModal__HeaderBar-sc-1lf36yh-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "width:100%;height:",
+            [Function],
+            ";border-bottom:0.0625rem solid ",
+            [Function],
+            ";display:flex;flex-direction:row-reverse;align-items:center;justify-content:space-between;padding:0 0.6rem;h1{font-size:1.375rem;font-weight:500;line-height:1.65rem;color:",
+            [Function],
+            ";margin-left:1.4rem;}",
+          ],
+        },
+        "displayName": "ConfirmationModal__HeaderBar",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "ConfirmationModal__HeaderBar-sc-1lf36yh-0",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "action": Object {
+          "dark": Object {
+            "RGB": "79,38,98",
+            "hex": "#4E2662",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "173,101,207",
+            "hex": "#AD65CF",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "116,60,143",
+            "hex": "#743C8F",
+            "on": "#FFFFFF",
+          },
+        },
+        "background": Object {
+          "RGB": "246,246,246",
+          "hex": "#F6F6F6",
+          "on": "#272727",
+        },
+        "black": Object {
+          "main": Object {
+            "RGB": "39,39,39",
+            "hex": "#272727",
+            "on": "#FFFFFF",
+          },
+          "tint20": Object {
+            "RGB": "236,236,236",
+            "hex": "#ECECEC",
+            "on": "#272727",
+          },
+          "tint40": Object {
+            "RGB": "199,199,199",
+            "hex": "#C7C7C7",
+            "on": "#272727",
+          },
+          "tint60": Object {
+            "RGB": "160,160,160",
+            "hex": "#A0A0A0",
+            "on": "#FFFFFF",
+          },
+          "tint80": Object {
+            "RGB": "105,105,105",
+            "hex": "#696969",
+            "on": "#FFFFFF",
+          },
+        },
+        "complimentary": Object {
+          "dark": Object {
+            "RGB": "206,185,0",
+            "hex": "#CEB900",
+            "on": "#272727",
+          },
+          "light": Object {
+            "RGB": "255,245,157",
+            "hex": "#FFF59D",
+            "on": "#272727",
+          },
+          "main": Object {
+            "RGB": "255,238,82",
+            "hex": "#FFEE52",
+            "on": "#272727",
+          },
+        },
+        "error": Object {
+          "dark": Object {
+            "RGB": "197,73,1",
+            "hex": "#C54901",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "255,115,32",
+            "hex": "#FF7320",
+            "on": "#FFFFFF",
+          },
+        },
+        "primary": Object {
+          "dark": Object {
+            "RGB": "102,22,20",
+            "hex": "#661614",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "218,52,47",
+            "hex": "#DA342F",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "164,40,36",
+            "hex": "#A42824",
+            "on": "#FFFFFF",
+          },
+        },
+        "secondary": Object {
+          "dark": Object {
+            "RGB": "5,38,59",
+            "hex": "#05263B",
+            "on": "#FFFFFF",
+          },
+          "light": Object {
+            "RGB": "89,156,175",
+            "hex": "#599CAF",
+            "on": "#FFFFFF",
+          },
+          "main": Object {
+            "RGB": "11,70,107",
+            "hex": "#0B466B",
+            "on": "#FFFFFF",
+          },
+        },
+        "surface": Object {
+          "RGB": "255,255,255",
+          "hex": "#FFFFFF",
+          "on": "#272727",
+        },
+        "white": Object {
+          "RGB": "255,255,255",
+          "hex": "#FFFFFF",
+          "on": "#272727",
+        },
+      }
+    }
+    withTitle={true}
   >
     <div
       className="c0"

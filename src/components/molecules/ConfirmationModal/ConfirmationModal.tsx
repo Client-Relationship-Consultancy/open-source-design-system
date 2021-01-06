@@ -1,14 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import ReactModal from "react-modal";
-import Button from "../../atoms/Button";
+import Button, { IconButton } from "../../atoms/Button";
 import zIndexes from "../../../zIndexes";
 import { colourPalette } from "../../../brandColours";
 
-export const HeaderBar = styled.div`
+interface IWithTitleProps extends React.HTMLProps<HTMLDivElement> {
+  withTitle: boolean;
+}
+
+export const HeaderBar = styled.div<IWithTitleProps>`
   width: 100%;
-  background-color: ${(props) => props.theme.primary.main.hex};
-  height: 40px;
+  height: ${({ withTitle }) => (withTitle ? "3.5rem" : "2.875rem")};
+  border-bottom: 0.0625rem solid
+    ${({ withTitle, theme }) => (withTitle ? theme.primary.main.hex : "transparent")};
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+  h1 {
+    font-size: 1.375rem;
+    font-weight: 500;
+    line-height: 1.65rem;
+    color: ${({ theme }) => theme.primary.main.hex};
+    margin-left: 1.4rem;
+  }
 `;
 HeaderBar.defaultProps = {
   theme: colourPalette.examplePalette,
@@ -24,21 +41,31 @@ const InsideContainer = styled.div`
 const ButtonRow = styled.div`
   display: flex;
   flex-direction: row;
-  margin-bottom: 20px;
-  justify-content: center;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+  padding: 0 1.125rem;
   > * + * {
-    margin-left: 3rem;
+    margin-left: 1.125rem;
   }
 `;
 
-const ContentContainer = styled.div`
+export const ContentContainer = styled.p<IWithTitleProps>`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 0 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.2rem;
+  font-style: normal;
+  margin: 1.3125rem 0;
+  margin-top: ${({ withTitle }) => (withTitle ? "1.3125rem" : "0")};
 `;
 
 const ButtonText = styled.p`
-  font-size: 20px;
-  margin: 0 20px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding: 0.125rem;
 `;
 
 ButtonText.displayName = "ButtonText";
@@ -48,15 +75,17 @@ const customStyles = {
     zIndex: zIndexes.modal,
   },
   content: {
-    overflow: "visible",
+    overflow: "hidden",
     margin: "auto",
     left: 0,
     right: 0,
     top: 0,
     bottom: 0,
     padding: 0,
-    width: "700px",
-    height: "300px",
+    width: "43.75rem",
+    height: "fit-content",
+    borderRadius: "0.625rem",
+    boxShadow: "0px 0px 16px #696969",
   },
 };
 
@@ -71,6 +100,7 @@ export interface IConfirmationModal {
   };
   yesButtonLabel?: string | React.ReactNode;
   noButtonLabel?: string | React.ReactNode;
+  title?: string | React.ReactNode;
 }
 export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (props) => {
   const {
@@ -83,18 +113,22 @@ export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (p
     classNameHooks,
     yesButtonLabel = "Yes",
     noButtonLabel = "No",
+    title,
   } = props;
   return (
     <ReactModal isOpen={isOpen} style={customStyles} id={id} className={className}>
       <InsideContainer className={classNameHooks?.container}>
-        <HeaderBar />
-        <ContentContainer>{children}</ContentContainer>
+        <HeaderBar withTitle={!!title}>
+          <IconButton buttonSize="large" buttonType="ghost" icon="times" onClick={onNo} />
+          {title && <h1>{title}</h1>}
+        </HeaderBar>
+        <ContentContainer withTitle={!!title}>{children}</ContentContainer>
         <ButtonRow>
-          <Button onClick={onYes} buttonType="primary">
-            <ButtonText className="yesButton">{yesButtonLabel}</ButtonText>
-          </Button>
-          <Button onClick={onNo} buttonType="primaryOutline">
+          <Button onClick={onNo} buttonType="ghost" buttonSize="medium">
             <ButtonText className="noButton">{noButtonLabel}</ButtonText>
+          </Button>
+          <Button onClick={onYes} buttonType="primary" buttonSize="medium">
+            <ButtonText className="yesButton">{yesButtonLabel}</ButtonText>
           </Button>
         </ButtonRow>
       </InsideContainer>
