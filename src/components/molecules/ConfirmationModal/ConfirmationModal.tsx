@@ -12,20 +12,20 @@ interface IWithTitleProps extends React.HTMLProps<HTMLDivElement> {
 
 export const HeaderBar = styled.div`
   width: 100%;
-  height: ${(props: IWithTitleProps) => (props.withTitle ? "56px" : "46px")};
-  border-bottom: 1px solid
+  height: ${(props: IWithTitleProps) => (props.withTitle ? "3.5rem" : "2.875rem")};
+  border-bottom: 0.0625rem solid
     ${(props: IWithTitleProps) => (props.withTitle ? props.theme.primary.main.hex : "transparent")};
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  padding: 0 9.6px;
+  padding: 0 0.6rem;
   h1 {
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 500;
-    line-height: 26.4px;
+    line-height: 1.65rem;
     color: ${(props: IWithTitleProps) => props.theme.primary.main.hex};
-    margin-left: 22.4px;
+    margin-left: 1.4rem;
   }
 `;
 HeaderBar.defaultProps = {
@@ -44,28 +44,28 @@ const ButtonRow = styled.div`
   flex-direction: row;
   margin-bottom: 1rem;
   justify-content: flex-end;
-  padding: 0 18px;
+  padding: 0 1.125rem;
   > * + * {
-    margin-left: 18px;
+    margin-left: 1.125rem;
   }
 `;
 
 const ContentContainer = styled.p`
   display: flex;
   justify-content: flex-start;
-  padding: 0 32px;
-  font-size: 16px;
+  padding: 0 2rem;
+  font-size: 1rem;
   font-weight: 300;
-  line-height: 19.2px;
+  line-height: 1.2rem;
   font-style: normal;
-  margin: 21px 0;
-  margin-top: ${(props: IWithTitleProps) => (props.withTitle ? "21px" : "0")};
+  margin: 1.3125rem 0;
+  margin-top: ${(props: IWithTitleProps) => (props.withTitle ? "1.3125rem" : "0")};
 `;
 
 const ButtonText = styled.p`
-  font-size: 14px;
-  line-height: 22px;
-  padding: 2px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  padding: 0.125rem;
 `;
 
 ButtonText.displayName = "ButtonText";
@@ -82,9 +82,9 @@ const customStyles = {
     top: 0,
     bottom: 0,
     padding: 0,
-    width: "700px",
+    width: "43.75rem",
     height: "fit-content",
-    borderRadius: "10px",
+    borderRadius: "0.625rem",
   },
 };
 
