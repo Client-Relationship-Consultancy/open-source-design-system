@@ -7,14 +7,13 @@ import { colourPalette } from "../../../brandColours";
 
 interface IWithTitleProps extends React.HTMLProps<HTMLDivElement> {
   withTitle: boolean;
-  theme: any;
 }
 
-export const HeaderBar = styled.div`
+export const HeaderBar = styled.div<IWithTitleProps>`
   width: 100%;
-  height: ${(props: IWithTitleProps) => (props.withTitle ? "3.5rem" : "2.875rem")};
+  height: ${({ withTitle }) => (withTitle ? "3.5rem" : "2.875rem")};
   border-bottom: 0.0625rem solid
-    ${(props: IWithTitleProps) => (props.withTitle ? props.theme.primary.main.hex : "transparent")};
+    ${(props) => (props.withTitle ? props.theme.primary.main.hex : "transparent")};
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -24,7 +23,7 @@ export const HeaderBar = styled.div`
     font-size: 1.375rem;
     font-weight: 500;
     line-height: 1.65rem;
-    color: ${(props: IWithTitleProps) => props.theme.primary.main.hex};
+    color: ${(props) => props.theme.primary.main.hex};
     margin-left: 1.4rem;
   }
 `;
@@ -50,16 +49,17 @@ const ButtonRow = styled.div`
   }
 `;
 
-const ContentContainer = styled.p`
+export const ContentContainer = styled.p<IWithTitleProps>`
   display: flex;
   justify-content: flex-start;
+  flex-direction: column;
   padding: 0 2rem;
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.2rem;
   font-style: normal;
   margin: 1.3125rem 0;
-  margin-top: ${(props: IWithTitleProps) => (props.withTitle ? "1.3125rem" : "0")};
+  margin-top: ${({ withTitle }) => (withTitle ? "1.3125rem" : "0")};
 `;
 
 const ButtonText = styled.p`
@@ -85,6 +85,7 @@ const customStyles = {
     width: "43.75rem",
     height: "fit-content",
     borderRadius: "0.625rem",
+    boxShadow: "0px 0px 16px #696969",
   },
 };
 

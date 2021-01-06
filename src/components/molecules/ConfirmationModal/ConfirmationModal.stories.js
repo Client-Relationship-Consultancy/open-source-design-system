@@ -14,7 +14,7 @@ storiesOf("Modals", module)
       yesButtonLabel={text("Yes button label", "Button")}
       noButtonLabel={text("No button label", "Cancel")}
     >
-      This is some more text as I can’t move the original text.
+      Without a title, we can have text here also.
       <br />
       <br />
       You have clicked on another user whilst still in progress of editing the permissions of
@@ -35,6 +35,6 @@ storiesOf("Modals", module)
       Bethany B. If you change users now you will lose the current changes you have made.
       <br />
       <br />
-      Are you sure want to switch to another user?
+      <b>Are you sure want to switch to another user?</b>
     </ConfirmationModal>
   ))
