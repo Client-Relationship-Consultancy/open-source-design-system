@@ -83,7 +83,7 @@ CloseModalButton.displayName = "CloseModalButton";
 
 interface IProps {
   children: (closeModal: () => void) => any;
-  label?: string;
+  label: string | React.ReactNode;
   id?: string;
   className?: string;
 }
