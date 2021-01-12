@@ -117,9 +117,7 @@ exports[`Test Modal Test that modal closes 1`] = `
 <Modal
   label="Test Label"
 >
-  <Modal__StyledContainer
-    key="0"
-  >
+  <Modal__StyledContainer>
     <StyledComponent
       forwardedComponent={
         Object {
@@ -1118,10 +1116,11 @@ exports[`Test Modal Test that modal closes 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
+  ,
   <span
     id="Modal-undefined"
-    key="1"
   />
+  ,
 </Modal>
 `;
 
@@ -1242,9 +1241,7 @@ exports[`Test Modal Test that modal is not initially visible. 1`] = `
 <Modal
   label="Test Label"
 >
-  <Modal__StyledContainer
-    key="0"
-  >
+  <Modal__StyledContainer>
     <StyledComponent
       forwardedComponent={
         Object {
@@ -2243,10 +2240,11 @@ exports[`Test Modal Test that modal is not initially visible. 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
+  ,
   <span
     id="Modal-undefined"
-    key="1"
   />
+  ,
 </Modal>
 `;
 
@@ -2367,9 +2365,7 @@ exports[`Test Modal Test that modal opens 1`] = `
 <Modal
   label="Test Label"
 >
-  <Modal__StyledContainer
-    key="0"
-  >
+  <Modal__StyledContainer>
     <StyledComponent
       forwardedComponent={
         Object {
@@ -3368,9 +3364,10 @@ exports[`Test Modal Test that modal opens 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
+  ,
   <span
     id="Modal-undefined"
-    key="1"
   />
+  ,
 </Modal>
 `;
