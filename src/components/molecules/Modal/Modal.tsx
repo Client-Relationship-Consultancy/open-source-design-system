@@ -1,14 +1,13 @@
-import React from "react"
-import styled from "styled-components"
-import PropTypes from "prop-types"
+import React from "react";
+import styled from "styled-components";
 
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faTimes } from "@fortawesome/free-solid-svg-icons"
-import Button from "../../atoms/Button"
-import { colourPalette } from "../../../brandColours"
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+import Button from "../../atoms/Button";
+import { colourPalette } from "../../../brandColours";
 
-library.add(faTimes)
+library.add(faTimes);
 
 const ModalBox = styled.div`
   box-sizing: border-box;
@@ -21,13 +20,13 @@ const ModalBox = styled.div`
   transform: translate(-50%, -50%);
   width: 75%;
   height: 80%;
-  background-color: ${props => props.theme.surface.hex};
+  background-color: ${(props) => props.theme.surface.hex};
   border-radius: 10px;
-`
+`;
 ModalBox.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-ModalBox.displayName = "ModalBox"
+};
+ModalBox.displayName = "ModalBox";
 
 const ModalBackground = styled.div`
   position: fixed;
@@ -35,12 +34,12 @@ const ModalBackground = styled.div`
   width: 100vw;
   top: 0;
   left: 0;
-  background-color: rgba(${props => props.theme.black.tint80.RGB}, 0.8);
-`
+  background-color: rgba(${(props) => props.theme.black.tint80.RGB}, 0.8);
+`;
 ModalBackground.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-ModalBackground.displayName = "ModalBackground"
+};
+ModalBackground.displayName = "ModalBackground";
 
 const ModalContainer = styled.div`
   padding: 1rem;
@@ -50,21 +49,21 @@ const ModalContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-`
-ModalContainer.displayName = "ModalContainer"
+`;
+ModalContainer.displayName = "ModalContainer";
 
 const ModalBody = styled.div`
   width: 100%;
   height: 100%;
   padding: 1rem;
   overflow-y: auto;
-`
-ModalBody.displayName = "ModalBody"
+`;
+ModalBody.displayName = "ModalBody";
 
 const CloseModalButton = styled.div`
   display: flex;
   align-items: center;
-  color: ${props => props.theme.secondary.main.hex};
+  color: ${(props) => props.theme.secondary.main.hex};
   font-size: 1rem;
   position: absolute;
   top: 1rem;
@@ -74,30 +73,40 @@ const CloseModalButton = styled.div`
   }
   :hover {
     cursor: pointer;
-    color: ${props => props.theme.secondary.dark.hex};
+    color: ${(props) => props.theme.secondary.dark.hex};
   }
-`
+`;
 CloseModalButton.defaultProps = {
   theme: colourPalette.examplePalette,
-}
-CloseModalButton.displayName = "CloseModalButton"
+};
+CloseModalButton.displayName = "CloseModalButton";
 
-class Modal extends React.Component {
-  constructor(props) {
-    super(props)
+interface IProps {
+  children: (closeModal: () => void) => any;
+  label?: string;
+  id?: string;
+  className?: string;
+}
+interface IState {
+  modal: boolean;
+}
+
+class Modal extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
     this.state = {
       modal: false,
-    }
-    this.showModal = this.showModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
+    };
+    this.showModal = this.showModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
 
   showModal() {
-    this.setState({ modal: true })
+    this.setState({ modal: true });
   }
 
   closeModal() {
-    this.setState({ modal: false })
+    this.setState({ modal: false });
   }
 
   render() {
@@ -114,22 +123,14 @@ class Modal extends React.Component {
           </ModalContainer>
         </ModalBox>
       </div>
-    )
+    );
     return (
       <div id={this.props.id} className={this.props.className}>
         <Button onClick={this.showModal}>{this.props.label}</Button>
         {this.state.modal ? ShowModal : ""}
       </div>
-    )
+    );
   }
 }
-Modal.displayName = "Modal"
 
-Modal.propTypes = {
-  children: PropTypes.func,
-  label: PropTypes.string,
-  id: PropTypes.string,
-  className: PropTypes.string,
-}
-
-export default Modal
+export default Modal;
