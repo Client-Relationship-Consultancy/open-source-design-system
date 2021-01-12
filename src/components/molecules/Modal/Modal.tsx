@@ -134,11 +134,9 @@ class Modal extends React.Component<IProps, IState> {
         <StyledContainer id={this.props.id} className={this.props.className}>
           <Button onClick={this.showModal}>{this.props.label}</Button>
         </StyledContainer>
-        ,
         <span id={`Modal-${this.props.id}`} className={this.props.className}>
           {this.state.modal ? ShowModal : ""}
         </span>
-        ,
       </>
     );
   }

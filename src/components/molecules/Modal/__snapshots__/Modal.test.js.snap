@@ -1116,11 +1116,9 @@ exports[`Test Modal Test that modal closes 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
-  ,
   <span
     id="Modal-undefined"
   />
-  ,
 </Modal>
 `;
 
@@ -2240,11 +2238,9 @@ exports[`Test Modal Test that modal is not initially visible. 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
-  ,
   <span
     id="Modal-undefined"
   />
-  ,
 </Modal>
 `;
 
@@ -3364,10 +3360,8 @@ exports[`Test Modal Test that modal opens 1`] = `
       </div>
     </StyledComponent>
   </Modal__StyledContainer>
-  ,
   <span
     id="Modal-undefined"
   />
-  ,
 </Modal>
 `;
