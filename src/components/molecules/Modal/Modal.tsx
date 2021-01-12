@@ -22,6 +22,7 @@ const ModalBox = styled.div`
   height: 80%;
   background-color: ${(props) => props.theme.surface.hex};
   border-radius: 10px;
+  z-index: 9999;
 `;
 ModalBox.defaultProps = {
   theme: colourPalette.examplePalette,
@@ -81,6 +82,10 @@ CloseModalButton.defaultProps = {
 };
 CloseModalButton.displayName = "CloseModalButton";
 
+const StyledContainer = styled.div`
+  z-index: 10;
+`;
+
 interface IProps {
   children: (closeModal: () => void) => any;
   label: string | React.ReactNode;
@@ -124,12 +129,14 @@ class Modal extends React.Component<IProps, IState> {
         </ModalBox>
       </div>
     );
-    return (
-      <div id={this.props.id} className={this.props.className}>
+    return [
+      <StyledContainer key={0} id={this.props.id} className={this.props.className}>
         <Button onClick={this.showModal}>{this.props.label}</Button>
+      </StyledContainer>,
+      <span key={1} id={`Modal-${this.props.id}`} className={this.props.className}>
         {this.state.modal ? ShowModal : ""}
-      </div>
-    );
+      </span>,
+    ];
   }
 }
 
