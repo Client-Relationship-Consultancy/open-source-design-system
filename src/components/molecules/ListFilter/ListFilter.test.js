@@ -64,7 +64,6 @@ describe("FilterableList Component Testing", () => {
       "apple",
       "abple",
       "Apple",
-      "10Banana Boat",
       "1Crab",
       "2Dog",
       "Super Book",
@@ -74,7 +73,6 @@ describe("FilterableList Component Testing", () => {
     ]
     const result = [
       "1Crab",
-      "10Banana Boat",
       "2Dog",
       "Ahsa",
       "Amazonzzz",
