@@ -34,7 +34,6 @@ HeaderBar.defaultProps = {
 const InsideContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100%;
   justify-content: space-between;
 `;
 
@@ -73,17 +72,19 @@ ButtonText.displayName = "ButtonText";
 const customStyles = {
   overlay: {
     zIndex: zIndexes.modal,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
   },
   content: {
     overflow: "hidden",
     margin: "auto",
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
+    top: "auto",
+    right: "auto",
+    bottom: "auto",
+    left: "auto",
     padding: 0,
     width: "43.75rem",
-    height: "fit-content",
     borderRadius: "0.625rem",
     boxShadow: "0px 0px 16px #696969",
   },
