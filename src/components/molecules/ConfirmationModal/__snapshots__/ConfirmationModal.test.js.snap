@@ -20,18 +20,20 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
     Object {
       "content": Object {
         "borderRadius": "0.625rem",
-        "bottom": 0,
+        "bottom": "auto",
         "boxShadow": "0px 0px 16px #696969",
-        "height": "fit-content",
-        "left": 0,
+        "left": "auto",
         "margin": "auto",
         "overflow": "hidden",
         "padding": 0,
-        "right": 0,
-        "top": 0,
+        "right": "auto",
+        "top": "auto",
         "width": "43.75rem",
       },
       "overlay": Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
         "zIndex": 100,
       },
     }
@@ -224,18 +226,20 @@ exports[`ConfirmationModal Component Test Match last snapshot with title 1`] = `
     Object {
       "content": Object {
         "borderRadius": "0.625rem",
-        "bottom": 0,
+        "bottom": "auto",
         "boxShadow": "0px 0px 16px #696969",
-        "height": "fit-content",
-        "left": 0,
+        "left": "auto",
         "margin": "auto",
         "overflow": "hidden",
         "padding": 0,
-        "right": 0,
-        "top": 0,
+        "right": "auto",
+        "top": "auto",
         "width": "43.75rem",
       },
       "overlay": Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "center",
         "zIndex": 100,
       },
     }
