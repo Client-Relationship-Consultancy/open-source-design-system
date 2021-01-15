@@ -75,14 +75,16 @@ describe("CustomSelect Component Test", () => {
   })
 
   it("check onBlur function", () => {
+    component.setState({ focus: true })
     component.instance().onBlur()
-    expect(component.state().touched).toBeTruthy()
+    expect(component.state().focus).toBeFalsy()
   })
 
   it("render error message and caption message", () => {
     const formikErrorProps = {
       values: { name: "" },
       errors: { name: "error" },
+      touched: { name: true },
       setFieldValue: jest.fn(),
     }
     component.setProps({ formik: formikErrorProps })
@@ -96,6 +98,7 @@ describe("CustomSelect Component Test", () => {
     const newFormikErrorProps = {
       values: { name: "" },
       errors: {},
+      touched: { name: false },
       setFieldValue: jest.fn(),
     }
     component.setProps({ formik: newFormikErrorProps })
