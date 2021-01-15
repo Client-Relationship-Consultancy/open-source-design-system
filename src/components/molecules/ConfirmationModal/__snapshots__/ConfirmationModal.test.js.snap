@@ -24,7 +24,7 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
         "boxShadow": "0px 0px 16px #696969",
         "left": "auto",
         "margin": "auto",
-        "overflow": "hidden",
+        "overflow": "visible",
         "padding": 0,
         "right": "auto",
         "top": "auto",
@@ -185,21 +185,21 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
         buttonSize="medium"
         buttonType="ghost"
       >
-        <ButtonText
-          className="noButton"
+        <span
+          className="modal_noButtonLabel"
         >
           No
-        </ButtonText>
+        </span>
       </Button>
       <Button
         buttonSize="medium"
         buttonType="primary"
       >
-        <ButtonText
-          className="yesButton"
+        <span
+          className="modal_yesButtonLabel"
         >
           Yes
-        </ButtonText>
+        </span>
       </Button>
     </ConfirmationModal__ButtonRow>
   </ConfirmationModal__InsideContainer>
@@ -230,7 +230,7 @@ exports[`ConfirmationModal Component Test Match last snapshot with title 1`] = `
         "boxShadow": "0px 0px 16px #696969",
         "left": "auto",
         "margin": "auto",
-        "overflow": "hidden",
+        "overflow": "visible",
         "padding": 0,
         "right": "auto",
         "top": "auto",
@@ -394,21 +394,21 @@ exports[`ConfirmationModal Component Test Match last snapshot with title 1`] = `
         buttonSize="medium"
         buttonType="ghost"
       >
-        <ButtonText
-          className="noButton"
+        <span
+          className="modal_noButtonLabel"
         >
           No
-        </ButtonText>
+        </span>
       </Button>
       <Button
         buttonSize="medium"
         buttonType="primary"
       >
-        <ButtonText
-          className="yesButton"
+        <span
+          className="modal_yesButtonLabel"
         >
           Yes
-        </ButtonText>
+        </span>
       </Button>
     </ConfirmationModal__ButtonRow>
   </ConfirmationModal__InsideContainer>
