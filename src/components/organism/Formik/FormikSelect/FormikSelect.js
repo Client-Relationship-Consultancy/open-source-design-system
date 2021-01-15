@@ -1,12 +1,11 @@
 import React from "react"
-import { connect } from "formik"
+import { connect, getIn } from "formik"
 import PropTypes from "prop-types"
 import Select from "../../../atoms/Select"
 import HelperErrorMessage from "../HelperErrorMessage"
 
 export class CustomSelect extends React.PureComponent {
   state = {
-    touched: false,
     focus: false,
   }
 
@@ -20,7 +19,7 @@ export class CustomSelect extends React.PureComponent {
   }
 
   onBlur = () => {
-    this.setState({ touched: true, focus: false })
+    this.setState({ focus: false })
   }
 
   onFocus = () => {
@@ -37,8 +36,9 @@ export class CustomSelect extends React.PureComponent {
 
   render() {
     const { name, id, caption } = this.props
-    const { errors } = this.props.formik
-
+    const { errors, touched } = this.props.formik
+    const error = getIn(errors, name)
+    const touch = getIn(touched, name)
     return (
       <div>
         <Select
@@ -51,9 +51,9 @@ export class CustomSelect extends React.PureComponent {
           onFocus={this.onFocus}
         />
         <HelperErrorMessage
-          error={errors[name]}
+          error={error}
           caption={caption}
-          isError={errors[name] && this.state.touched}
+          isError={error && touch}
           isFocus={this.state.focus}
         />
       </div>
