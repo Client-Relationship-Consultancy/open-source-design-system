@@ -98,6 +98,8 @@ describe("CustomSelect Component Test", () => {
     const newFormikErrorProps = {
       values: { name: "" },
       errors: {},
+      touched: { name: false },
+
       setFieldValue: jest.fn(),
     }
     component.setProps({ formik: newFormikErrorProps })
