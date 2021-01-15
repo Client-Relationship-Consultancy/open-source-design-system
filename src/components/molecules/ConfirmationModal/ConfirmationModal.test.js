@@ -43,8 +43,8 @@ describe("ConfirmationModal Component Test", () => {
       <ConfirmationModal isOpen>I am a lovely confirmation modal</ConfirmationModal>,
     )
 
-    expect(component.find("ButtonText.yesButton").text()).toEqual("Yes")
-    expect(component.find("ButtonText.noButton").text()).toEqual("No")
+    expect(component.find("span.modal_noButtonLabel").text()).toEqual("No")
+    expect(component.find("span.modal_yesButtonLabel").text()).toEqual("Yes")
   })
 
   it("should accept a string/JSX message for the yes button", () => {
@@ -54,11 +54,11 @@ describe("ConfirmationModal Component Test", () => {
       </ConfirmationModal>,
     )
 
-    expect(component.find("ButtonText.yesButton").text()).toEqual("I like to confirm")
+    expect(component.find("span.modal_yesButtonLabel").text()).toEqual("I like to confirm")
 
     const YesJSX = () => <div>Confirm</div>
     component.setProps({ yesButtonLabel: <YesJSX /> })
-    expect(component.find("ButtonText.yesButton").contains(<YesJSX />)).toEqual(true)
+    expect(component.find("span.modal_yesButtonLabel").contains(<YesJSX />)).toEqual(true)
   })
 
   it("should accept a string/JSX message for the no button", () => {
@@ -68,10 +68,10 @@ describe("ConfirmationModal Component Test", () => {
       </ConfirmationModal>,
     )
 
-    expect(component.find("ButtonText.noButton").text()).toEqual("Cancel")
+    expect(component.find("span.modal_noButtonLabel").text()).toEqual("Cancel")
 
     const NoJSX = () => <div>Nope</div>
     component.setProps({ noButtonLabel: <NoJSX /> })
-    expect(component.find("ButtonText.noButton").contains(<NoJSX />)).toEqual(true)
+    expect(component.find("span.modal_noButtonLabel").contains(<NoJSX />)).toEqual(true)
   })
 })

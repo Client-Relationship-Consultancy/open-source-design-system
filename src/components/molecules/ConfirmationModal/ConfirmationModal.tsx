@@ -61,13 +61,6 @@ export const ContentContainer = styled.p<IWithTitleProps>`
   margin-top: ${({ withTitle }) => (withTitle ? "1.3125rem" : "0")};
 `;
 
-const ButtonText = styled.p`
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  padding: 0.125rem;
-`;
-
-ButtonText.displayName = "ButtonText";
 
 const customStyles = {
   overlay: {
@@ -77,7 +70,7 @@ const customStyles = {
     alignItems: "center",
   },
   content: {
-    overflow: "hidden",
+    overflow:"visible",
     margin: "auto",
     top: "auto",
     right: "auto",
@@ -126,10 +119,10 @@ export const ConfirmationModal: React.FunctionComponent<IConfirmationModal> = (p
         <ContentContainer withTitle={!!title}>{children}</ContentContainer>
         <ButtonRow>
           <Button onClick={onNo} buttonType="ghost" buttonSize="medium">
-            <ButtonText className="noButton">{noButtonLabel}</ButtonText>
+            <span className="modal_noButtonLabel">{noButtonLabel}</span>
           </Button>
           <Button onClick={onYes} buttonType="primary" buttonSize="medium">
-            <ButtonText className="yesButton">{yesButtonLabel}</ButtonText>
+            <span className="modal_yesButtonLabel">{yesButtonLabel}</span>
           </Button>
         </ButtonRow>
       </InsideContainer>
