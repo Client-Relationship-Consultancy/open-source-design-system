@@ -4,6 +4,9 @@ import { colourPalette } from "../../../brandColours";
 
 const StyledTabs = styled.div`
   display: flex;
+  position:sticky;
+  top:0;
+  background:${(props) => props.theme.surface.hex};
   flex-direction: row;
   color: ${(props) => props.theme.black.main.hex};
   font-size: 1rem;
@@ -44,7 +47,7 @@ interface IState {
 interface ITab {
   id: string;
   header: string;
-  content: React.ReactNode;
+  content: React.ReactNode | React.ReactElement;
   default?: boolean;
 }
 
@@ -73,20 +76,6 @@ class Tabs extends React.Component<IProps, IState> {
     return undefined;
   };
 
-  /*
-  tabs={
-        [{
-            id: "activityLog"
-            header: "activity log",
-        content: <ActivtityLog />,
-            default: true,
-    },
-        {
-            header: "activity log",
-        content: <ActivtityLog />
-    }
-        ]}
-  */
   selectTab = (id: string): void => {
     this.setState({ selected: id });
   };
@@ -100,12 +89,13 @@ class Tabs extends React.Component<IProps, IState> {
               className={this.state.selected === tab.id ? "selected" : undefined}
               onClick={this.selectTab.bind(this, tab.id)}
               type="button"
+              key={tab.id}
             >
               {tab.header}
             </button>
           ))}
         </StyledTabs>
-        {this.getSelectedTabContent()}
+        {this.state.selected && this.getSelectedTabContent()}
       </>
     );
   }
