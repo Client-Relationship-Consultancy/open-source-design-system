@@ -4,9 +4,9 @@ import { colourPalette } from "../../../brandColours";
 
 const StyledTabs = styled.div`
   display: flex;
-  position:sticky;
-  top:0;
-  background:${(props) => props.theme.surface.hex};
+  position: sticky;
+  top: 0;
+  background: ${(props) => props.theme.surface.hex};
   flex-direction: row;
   color: ${(props) => props.theme.black.main.hex};
   font-size: 1rem;
