@@ -48,8 +48,8 @@ interface IState {
 
 interface ITab {
   id: string;
-  header: string | React.ReactNode | React.ReactElement;
-  content: React.ReactNode | React.ReactElement;
+  header: React.ReactNode;
+  content: React.ReactNode;
   default?: boolean;
 }
 
