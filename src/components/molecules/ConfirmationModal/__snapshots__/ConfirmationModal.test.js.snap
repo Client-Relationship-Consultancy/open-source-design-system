@@ -34,7 +34,7 @@ exports[`ConfirmationModal Component Test Match last snapshot 1`] = `
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "center",
-        "zIndex": 100,
+        "zIndex": 9999,
       },
     }
   }
@@ -240,7 +240,7 @@ exports[`ConfirmationModal Component Test Match last snapshot with title 1`] = `
         "alignItems": "center",
         "display": "flex",
         "justifyContent": "center",
-        "zIndex": 100,
+        "zIndex": 9999,
       },
     }
   }

@@ -1,3 +1,4 @@
 export default {
-  modal: 100,
+  modal: 9999,
+  tabs: 9998,
 }

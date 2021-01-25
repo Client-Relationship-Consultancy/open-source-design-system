@@ -11,6 +11,7 @@ import Icon from "./components/atoms/Icon"
 import Heading from "./components/atoms/Heading"
 import Input from "./components/atoms/Input"
 import Label from "./components/atoms/Label"
+import Tabs from "./components/atoms/Tabs"
 import List from "./components/atoms/List"
 import LuggageLabel from "./components/atoms/LuggageLabel"
 import Paragraph from "./components/atoms/Paragraph"
@@ -72,6 +73,7 @@ export {
   IconButton,
   Input,
   Label,
+  Tabs,
   List,
   LuggageLabel,
   Paragraph,
