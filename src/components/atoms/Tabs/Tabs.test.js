@@ -62,11 +62,14 @@ describe("Tabs", () => {
   it("render the default tab", () => {
     expect(component.find("button.selected").text()).toEqual("activity log")
     expect(component.find("span").text()).toEqual("sure!")
+    expect(component.find("span").text()).not.toEqual("wooow")
   })
+  
   it("render the selected tab", () => {
     component.instance().selectTab("tab2")
     expect(component.find("button.selected").text()).toEqual("activity log 1")
     expect(component.find("span").text()).toEqual("wooow")
+    expect(component.find("span").text()).not.toEqual("sure!")
   })
 
   it("getSelectedTabContent return undefined if no tab is selected", () => {
