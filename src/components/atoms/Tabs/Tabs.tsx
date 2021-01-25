@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { colourPalette } from "../../../brandColours";
 
-const StyledTabs = styled.div`
+export const StyledTabs = styled.div`
   display: flex;
   position: sticky;
   top: 0;
@@ -13,6 +13,7 @@ const StyledTabs = styled.div`
   font-family: "Gentona", "Montserrat";
   width: 100%;
   align-items: stretch;
+  z-index: 9999;
   button {
     line-height: 22px;
     font-size: 14px;

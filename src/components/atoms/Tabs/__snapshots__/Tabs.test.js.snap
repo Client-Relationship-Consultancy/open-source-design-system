@@ -1,5 +1,262 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Tabs StyledTabs should match the snapshot 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: mockColorsurface;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  color: mockColorblack;
+  font-size: 1rem;
+  font-family: "Gentona","Montserrat";
+  width: 100%;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  z-index: 9999;
+}
+
+.c0 button {
+  line-height: 22px;
+  font-size: 14px;
+  text-align: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline-width: 0;
+  padding: 7.5px 0;
+}
+
+.c0 button::hover {
+  outline-width: 0;
+}
+
+.c0 button.selected {
+  border-bottom: 2px solid mockColoraction;
+  font-weight: 600;
+  color: mockColoraction;
+}
+
+<StyledTabs
+  theme={
+    Object {
+      "action": Object {
+        "main": Object {
+          "hex": "mockColoraction",
+        },
+      },
+      "black": Object {
+        "main": Object {
+          "hex": "mockColorblack",
+        },
+      },
+      "surface": Object {
+        "hex": "mockColorsurface",
+      },
+    }
+  }
+>
+  <StyledComponent
+    forwardedComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "_foldedDefaultProps": Object {
+          "theme": Object {
+            "action": Object {
+              "dark": Object {
+                "RGB": "79,38,98",
+                "hex": "#4E2662",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "173,101,207",
+                "hex": "#AD65CF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "116,60,143",
+                "hex": "#743C8F",
+                "on": "#FFFFFF",
+              },
+            },
+            "background": Object {
+              "RGB": "246,246,246",
+              "hex": "#F6F6F6",
+              "on": "#272727",
+            },
+            "black": Object {
+              "main": Object {
+                "RGB": "39,39,39",
+                "hex": "#272727",
+                "on": "#FFFFFF",
+              },
+              "tint20": Object {
+                "RGB": "236,236,236",
+                "hex": "#ECECEC",
+                "on": "#272727",
+              },
+              "tint40": Object {
+                "RGB": "199,199,199",
+                "hex": "#C7C7C7",
+                "on": "#272727",
+              },
+              "tint60": Object {
+                "RGB": "160,160,160",
+                "hex": "#A0A0A0",
+                "on": "#FFFFFF",
+              },
+              "tint80": Object {
+                "RGB": "105,105,105",
+                "hex": "#696969",
+                "on": "#FFFFFF",
+              },
+            },
+            "complimentary": Object {
+              "dark": Object {
+                "RGB": "206,185,0",
+                "hex": "#CEB900",
+                "on": "#272727",
+              },
+              "light": Object {
+                "RGB": "255,245,157",
+                "hex": "#FFF59D",
+                "on": "#272727",
+              },
+              "main": Object {
+                "RGB": "255,238,82",
+                "hex": "#FFEE52",
+                "on": "#272727",
+              },
+            },
+            "error": Object {
+              "dark": Object {
+                "RGB": "197,73,1",
+                "hex": "#C54901",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "255,115,32",
+                "hex": "#FF7320",
+                "on": "#FFFFFF",
+              },
+            },
+            "primary": Object {
+              "dark": Object {
+                "RGB": "102,22,20",
+                "hex": "#661614",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "218,52,47",
+                "hex": "#DA342F",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "164,40,36",
+                "hex": "#A42824",
+                "on": "#FFFFFF",
+              },
+            },
+            "secondary": Object {
+              "dark": Object {
+                "RGB": "5,38,59",
+                "hex": "#05263B",
+                "on": "#FFFFFF",
+              },
+              "light": Object {
+                "RGB": "89,156,175",
+                "hex": "#599CAF",
+                "on": "#FFFFFF",
+              },
+              "main": Object {
+                "RGB": "11,70,107",
+                "hex": "#0B466B",
+                "on": "#FFFFFF",
+              },
+            },
+            "surface": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+            "white": Object {
+              "RGB": "255,255,255",
+              "hex": "#FFFFFF",
+              "on": "#272727",
+            },
+          },
+        },
+        "attrs": Array [],
+        "componentStyle": ComponentStyle {
+          "componentId": "Tabs__StyledTabs-sc-1et8nn2-0",
+          "isStatic": false,
+          "lastClassName": "c0",
+          "rules": Array [
+            "display:flex;position:sticky;top:0;background:",
+            [Function],
+            ";flex-direction:row;color:",
+            [Function],
+            ";font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";width:100%;align-items:stretch;z-index:9999;button{line-height:22px;font-size:14px;text-align:center;flex-grow:1;background:transparent;border:none;outline-width:0;padding:7.5px 0;}button::hover{outline-width:0;}button.selected{border-bottom:2px solid ",
+            [Function],
+            ";font-weight:600;color:",
+            [Function],
+            ";}",
+          ],
+        },
+        "displayName": "StyledTabs",
+        "foldedComponentIds": Array [],
+        "render": [Function],
+        "styledComponentId": "Tabs__StyledTabs-sc-1et8nn2-0",
+        "target": "div",
+        "toString": [Function],
+        "warnTooManyClasses": [Function],
+        "withComponent": [Function],
+      }
+    }
+    forwardedRef={null}
+    theme={
+      Object {
+        "action": Object {
+          "main": Object {
+            "hex": "mockColoraction",
+          },
+        },
+        "black": Object {
+          "main": Object {
+            "hex": "mockColorblack",
+          },
+        },
+        "surface": Object {
+          "hex": "mockColorsurface",
+        },
+      }
+    }
+  >
+    <div
+      className="c0"
+    >
+      <button
+        className="selected"
+        type="button"
+      >
+        tab
+      </button>
+    </div>
+  </StyledComponent>
+</StyledTabs>
+`;
+
 exports[`Tabs should match the snapshot 1`] = `
 <Fragment>
   <StyledTabs
