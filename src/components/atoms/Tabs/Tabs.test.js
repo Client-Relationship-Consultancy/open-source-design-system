@@ -2,9 +2,23 @@ import React from "react"
 import { mount, shallow } from "enzyme"
 import toJson from "enzyme-to-json"
 import "jest-styled-components"
-import Tabs, { StyledTabs } from "./Tabs"
+import Tabs, { StyledTabs, getDefaultTabId } from "./Tabs"
 
 describe("Tabs", () => {
+  const propsWithoutDefault = {
+    tabs: [
+      {
+        id: "tab1",
+        header: "activity log",
+        content: <span>sure!</span>,
+      },
+      {
+        id: "tab2",
+        header: "activity log 1",
+        content: <span>wooow</span>,
+      },
+    ],
+  }
   const props = {
     tabs: [
       {
@@ -57,25 +71,20 @@ describe("Tabs", () => {
 
   it("getSelectedTabContent return undefined if no tab is selected", () => {
     component.setState({ selected: "not available" })
-    expect(component.instance().getSelectedTabContent()).toEqual(undefined)
+    expect(component.instance().getSelectedTabContent()).toEqual("No content found under this tab")
   })
 
-  it("should return the first tab selected if no tab as default set to true", () => {
-    const propsMock = {
-      tabs: [
-        {
-          id: "tab1",
-          header: "activity log",
-          content: <span>sure!</span>,
-        },
-        {
-          id: "tab2",
-          header: "activity log 1",
-          content: <span>wooow</span>,
-        },
-      ],
-    }
-    const componentMock = shallow(<Tabs {...propsMock} />)
+  it("getDefaultTabId should return the correct starting tab if default is available", () => {
+    expect(getDefaultTabId(props.tabs)).toEqual(props.tabs[0].id)
+  })
+
+  it("getDefaultTabId should return the correct starting tab if default is not available", () => {
+    expect(getDefaultTabId(propsWithoutDefault.tabs)).toEqual(propsWithoutDefault.tabs[0].id)
+  })
+
+  it("should return the first tab selected if no tab has default set to true", () => {
+    
+    const componentMock = shallow(<Tabs {...propsWithoutDefault} />)
     expect(componentMock.find("button.selected").text()).toEqual("activity log")
     expect(componentMock.find("span").text()).toEqual("sure!")
   })

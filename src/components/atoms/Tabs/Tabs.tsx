@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { colourPalette } from "../../../brandColours";
+import zIndex from "../../../zIndexes";
 
 export const StyledTabs = styled.div`
   display: flex;
@@ -13,22 +14,23 @@ export const StyledTabs = styled.div`
   font-family: "Gentona", "Montserrat";
   width: 100%;
   align-items: stretch;
-  z-index: 9999;
+  z-index: ${zIndex.tabs};
   button {
-    line-height: 22px;
-    font-size: 14px;
+    line-height: 1.375rem;
+    font-size: 0.875rem;
     text-align: center;
     flex-grow: 1;
     background: transparent;
     border: none;
     outline-width: 0;
-    padding: 7.5px 0;
+    padding: 0.4688rem 0;
+    cursor:pointer;
   }
   button::hover {
     outline-width: 0;
   }
   button.selected {
-    border-bottom: 2px solid ${(props) => props.theme.action.main.hex};
+    border-bottom: 0.125rem solid ${(props) => props.theme.action.main.hex};
     font-weight: 600;
     color: ${(props) => props.theme.action.main.hex};
   }
@@ -40,14 +42,13 @@ StyledTabs.defaultProps = {
 
 StyledTabs.displayName = "StyledTabs";
 
-// type TabsProps = React.HTMLProps<HTMLTabsElement>;
 interface IState {
   selected: string;
 }
 
 interface ITab {
   id: string;
-  header: string;
+  header: string | React.ReactNode | React.ReactElement;
   content: React.ReactNode | React.ReactElement;
   default?: boolean;
 }
@@ -56,7 +57,7 @@ interface IProps {
   tabs: ITab[];
 }
 
-function getDefaultTabId(tabs: ITab[]): string {
+export function getDefaultTabId(tabs: ITab[]): string {
   const defaultTab = tabs.filter((tab) => tab.default);
   if (defaultTab.length > 0) {
     return defaultTab[0].id;
@@ -74,7 +75,7 @@ class Tabs extends React.Component<IProps, IState> {
     if (selectedTab.length > 0) {
       return selectedTab[0].content;
     }
-    return undefined;
+    return "No content found under this tab";
   };
 
   selectTab = (id: string): void => {

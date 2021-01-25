@@ -21,12 +21,12 @@ exports[`Tabs StyledTabs should match the snapshot 1`] = `
   -webkit-box-align: stretch;
   -ms-flex-align: stretch;
   align-items: stretch;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .c0 button {
-  line-height: 22px;
-  font-size: 14px;
+  line-height: 1.375rem;
+  font-size: 0.875rem;
   text-align: center;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -35,7 +35,8 @@ exports[`Tabs StyledTabs should match the snapshot 1`] = `
   background: transparent;
   border: none;
   outline-width: 0;
-  padding: 7.5px 0;
+  padding: 0.4688rem 0;
+  cursor: pointer;
 }
 
 .c0 button::hover {
@@ -43,7 +44,7 @@ exports[`Tabs StyledTabs should match the snapshot 1`] = `
 }
 
 .c0 button.selected {
-  border-bottom: 2px solid mockColoraction;
+  border-bottom: 0.125rem solid mockColoraction;
   font-weight: 600;
   color: mockColoraction;
 }
@@ -207,7 +208,9 @@ exports[`Tabs StyledTabs should match the snapshot 1`] = `
             [Function],
             ";flex-direction:row;color:",
             [Function],
-            ";font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";width:100%;align-items:stretch;z-index:9999;button{line-height:22px;font-size:14px;text-align:center;flex-grow:1;background:transparent;border:none;outline-width:0;padding:7.5px 0;}button::hover{outline-width:0;}button.selected{border-bottom:2px solid ",
+            ";font-size:1rem;font-family:\\"Gentona\\",\\"Montserrat\\";width:100%;align-items:stretch;z-index:",
+            "9998",
+            ";button{line-height:1.375rem;font-size:0.875rem;text-align:center;flex-grow:1;background:transparent;border:none;outline-width:0;padding:0.4688rem 0;cursor:pointer;}button::hover{outline-width:0;}button.selected{border-bottom:0.125rem solid ",
             [Function],
             ";font-weight:600;color:",
             [Function],
