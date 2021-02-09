@@ -211,6 +211,7 @@ TableWithTheme.defaultProps = {
   theme: colourPalette.examplePalette,
   gridOptions,
   singleClickEdit: true,
+  animateRows: true,
 }
 
 const Table = withTheme(TableWithTheme)
