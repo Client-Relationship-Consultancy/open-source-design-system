@@ -17,7 +17,7 @@ export const Container = styled.div`
   .ag-popup {
     height: 0 !important;
     min-height: 0 !important;
-}
+  }
   .ag-cell {
     overflow: visible;
     display: flex;
@@ -165,28 +165,25 @@ export class TableWithTheme extends React.PureComponent {
 
   render() {
     const { rows, onCellValueChanged, suppressDragLeaveHidesColumns, isDisabled } = this.props
+    const tableProps = {
+      getRowStyle: this.getRowStyle,
+      rowData: rows,
+      columnDefs: this.renderColumns(),
+      rowDragManaged: true,
+      animateRows: true,
+      rowSelection: "multiple",
+      frameworkComponents,
+      components,
+      rowHeight: 40,
+      onCellValueChanged,
+      suppressDragLeaveHidesColumns,
+      suppressCellSelection: isDisabled,
+      ...this.props,
+      onRowDragEnd: (event) => this.props.onRowDragEnd(event.node.data.key, event.overIndex),
+    }
     return (
       <Container className={`ag-theme-balham${isDisabled ? " ag-disabled" : ""}`}>
-        <AgGridReact
-          {...this.props}
-          getRowStyle={this.getRowStyle}
-          rowData={rows}
-          columnDefs={this.renderColumns()}
-          rowDragManaged
-          animateRows
-          rowSelection="multiple"
-          onGridReady={this.props.onGridReady}
-          onRowDragEnd={(event) => this.props.onRowDragEnd(event.node.data.key, event.overIndex)}
-          frameworkComponents={frameworkComponents}
-          components={components}
-          rowHeight={40}
-          onRowSelected={this.props.onRowSelected}
-          onCellValueChanged={onCellValueChanged}
-          gridOptions={this.props.gridOptions}
-          suppressDragLeaveHidesColumns={suppressDragLeaveHidesColumns}
-          suppressCellSelection={isDisabled}
-          singleClickEdit={this.props.singleClickEdit}
-        />
+        <AgGridReact {...tableProps} />
       </Container>
     )
   }
@@ -205,6 +202,7 @@ TableWithTheme.propTypes = {
   singleClickEdit: PropTypes.bool,
   onGridReady: PropTypes.func,
   getRowStyle: PropTypes.func,
+  animateRows: PropTypes.bool,
 }
 
 TableWithTheme.defaultProps = {
