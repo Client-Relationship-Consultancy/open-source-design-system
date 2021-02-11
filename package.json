@@ -123,7 +123,7 @@
     "babel-plugin-styled-components": "^1.8.0",
     "css-loader": "^3.4.1",
     "cypress": "^5.2.0",
-    "cypress-cucumber-preprocessor": "^1.16.0",
+    "cypress-cucumber-preprocessor": "^4.0.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "enzyme-to-json": "^3.3.4",
