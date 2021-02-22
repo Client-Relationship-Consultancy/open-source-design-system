@@ -1,6 +1,6 @@
 {
   "name": "@crcdevops/open-source-design-system",
-  "version": "1.7.29",
+  "version": "1.7.30",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
     "@fortawesome/free-solid-svg-icons": "^5.7.1",
@@ -88,7 +88,8 @@
   "resolutions": {
     "acorn": "^7.1.1",
     "marked": "^0.7.0",
-    "node-fetch": "2.6.1"
+    "node-fetch": "2.6.1",
+    "immer":"^8.0.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
