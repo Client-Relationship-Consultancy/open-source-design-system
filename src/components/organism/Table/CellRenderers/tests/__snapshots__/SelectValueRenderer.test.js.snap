@@ -8,7 +8,7 @@ exports[`SelectValueRenderer should match snapshot 1`] = `
   <button>
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-chevron-down fa-w-14 fa-1x sc-iwsKbI clbLNE"
+      class="dropdown-icon-select-renderer"
       color="black"
       data-icon="chevron-down"
       data-prefix="fas"
