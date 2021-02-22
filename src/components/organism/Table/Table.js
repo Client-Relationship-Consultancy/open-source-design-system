@@ -92,6 +92,23 @@ export const Container = styled.div`
   .ag-sort-order {
     display: none;
   }
+  
+  svg:not(:root).svg-inline--fa {
+    overflow: visible;
+  }
+  .svg-inline--fa.fa-w-14 {
+    width: 0.875em;
+  }
+  .fa-1x {
+    font-size: 1em;
+  }
+  .svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+  }
 `
 
 AgGridReact.prototype.areEquivalent = (a, b) => a === b
