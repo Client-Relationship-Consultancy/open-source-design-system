@@ -6,12 +6,9 @@ exports[`SelectValueRenderer should match snapshot 1`] = `
 >
   girls
   <button>
-    <style>
-      svg:not(:root).svg-inline--fa {overflow: visible;}.svg-inline--fa.fa-w-14 {width: 0.875em;}.fa-1x {font-size: 1em;}.svg-inline--fa {display: inline-block;font-size: inherit;height: 1em;overflow: visible;vertical-align: -0.125em;}
-    </style>
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-chevron-down fa-w-14 fa-1x sc-iwsKbI clbLNE"
+      class="dropdown-icon-select-renderer"
       color="black"
       data-icon="chevron-down"
       data-prefix="fas"

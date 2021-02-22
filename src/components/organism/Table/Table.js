@@ -92,6 +92,17 @@ export const Container = styled.div`
   .ag-sort-order {
     display: none;
   }
+
+  .dropdown-icon-select-renderer {
+    overflow: visible;
+    width: 0.875em;
+    font-size: 1em;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+  }
 `
 
 AgGridReact.prototype.areEquivalent = (a, b) => a === b
