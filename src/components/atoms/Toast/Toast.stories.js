@@ -1,8 +1,8 @@
 import React from "react"
 import { storiesOf } from "@storybook/react"
 import { boolean } from "@storybook/addon-knobs"
-import { Toast } from "../../../index"
 import { styled } from "@storybook/theming"
+import { Toast } from "../../../index"
 
 const Container = styled.div`
   position: relative;
