@@ -29,19 +29,21 @@ interface IToastProps extends IToastContainerProps {
 
 const slideDown = keyframes`
   from {
-    top:-100px;
+    transform: translate(-50%,-100%);
     opacity:0;
   }
   to {
+    transform: translate(-50%,0);
     opacity:1;
   }
 `;
 const slideUp = keyframes`
   from {
     opacity:1;
+    transform: translate(-50%,0);
   }
   to {
-    top:-100px;
+    transform: translate(-50%,-100%);
     opacity:0;
   }
 `;
@@ -56,7 +58,6 @@ export const ToastContainer = styled.div<IToastContainerProps>`
   display: block;
   max-width: 100%;
   left: 50%;
-  transform: translateX(-50%);
   text-align: center;
   font-style: normal;
   font-weight: normal;
