@@ -2,7 +2,7 @@ import React from "react"
 import { storiesOf } from "@storybook/react"
 import { boolean } from "@storybook/addon-knobs"
 import { styled } from "@storybook/theming"
-import { Toast } from "../../../index"
+import { Toast } from "./Toast"
 
 const Container = styled.div`
   position: relative;
