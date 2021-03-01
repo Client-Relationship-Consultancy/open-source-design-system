@@ -46,7 +46,7 @@ const slideUp = keyframes`
   }
 `;
 
-const ToastContainer = styled.div<IToastContainerProps>`
+export const ToastContainer = styled.div<IToastContainerProps>`
   align-content: "center";
   background: #fff1f0;
   border: 0.0625rem solid #ffa39e;
