@@ -22,6 +22,7 @@ import TextToggle from "./components/atoms/TextToggle"
 import Theme from "./components/atoms/Theme"
 import Tooltip from "./components/atoms/Tooltip"
 import { Menu } from "./components/atoms/Menu"
+import Toast from "./components/atoms/Toast"
 
 // Molecule components
 import Accordion from "./components/molecules/Accordion"
@@ -84,6 +85,7 @@ export {
   Theme,
   Tooltip,
   Menu,
+  Toast,
   // ==================
   // Molecule components
   // ==================
