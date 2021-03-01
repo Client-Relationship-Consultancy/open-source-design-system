@@ -7,10 +7,17 @@ import Toast, { ToastContainer } from "./Toast"
 describe("Tabs", () => {
   const propsDefault = {
     align: "middle",
-  top: undefined,
-  position: undefined,
-  type: "error",
-  visible: true,
+    top: undefined,
+    position: undefined,
+    type: "error",
+    visible: true,
+    theme: {
+      error: {
+        main: {
+          RGB: "220,16,16",
+        },
+      },
+    },
   }
   const props = {
     align: "middle",
@@ -18,6 +25,13 @@ describe("Tabs", () => {
     position: "fixed",
     type: "error",
     visible: true,
+    theme: {
+      error: {
+        main: {
+          RGB: "220,16,16",
+        },
+      },
+    },
   }
   const propsNotVisible = {
     align: "middle",
@@ -25,8 +39,19 @@ describe("Tabs", () => {
     position: "fixed",
     type: "error",
     visible: false,
+    theme: {
+      error: {
+        main: {
+          RGB: "220,16,16",
+        },
+      },
+    },
   }
-  const componentDefault = shallow(<Toast {...propsDefault} ><div>test</div></Toast>)
+  const componentDefault = shallow(
+    <Toast {...propsDefault}>
+      <div>test</div>
+    </Toast>,
+  )
   const component = shallow(
     <Toast {...props}>
       <div>test</div>
@@ -88,5 +113,4 @@ describe("Tabs", () => {
     const tree = toJson(ToastContainerShallow)
     expect(tree).toMatchSnapshot()
   })
-
 })

@@ -48,8 +48,8 @@ const slideUp = keyframes`
 
 export const ToastContainer = styled.div<IToastContainerProps>`
   align-content: "center";
-  background: #fff1f0;
-  border: 0.0625rem solid #ffa39e;
+  background-color: rgba(${(props) => props.theme.error.main.RGB}, 0.1);
+  border: 0.0625rem solid rgba(${(props) => props.theme.error.main.RGB}, 0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
   position: ${(props: IToastContainerProps) => props.position || "absolute"};

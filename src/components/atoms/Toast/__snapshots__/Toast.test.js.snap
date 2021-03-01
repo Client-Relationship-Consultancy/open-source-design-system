@@ -5,8 +5,8 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background: #fff1f0;
-  border: 0.0625rem solid #ffa39e;
+  background-color: rgba(220,16,16,0.1);
+  border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
   position: fixed;
@@ -33,6 +33,15 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
 <ToastContainer
   align="middle"
   position="fixed"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   top="20px"
   type="error"
   visible={true}
@@ -48,7 +57,11 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background:#fff1f0;border:0.0625rem solid #ffa39e;box-sizing:border-box;border-radius:0.25rem;position:",
+            "align-content:\\"center\\";background-color:rgba(",
+            [Function],
+            ",0.1);border:0.0625rem solid rgba(",
+            [Function],
+            ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
             ";display:block;max-width:100%;left:50%;transform:translateX(-50%);text-align:center;font-style:normal;font-weight:normal;font-size:0.875rem;line-height:1.375rem;top:",
             [Function],
@@ -71,6 +84,15 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
     }
     forwardedRef={null}
     position="fixed"
+    theme={
+      Object {
+        "error": Object {
+          "main": Object {
+            "RGB": "220,16,16",
+          },
+        },
+      }
+    }
     top="20px"
     type="error"
     visible={true}
@@ -95,8 +117,8 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background: #fff1f0;
-  border: 0.0625rem solid #ffa39e;
+  background-color: rgba(220,16,16,0.1);
+  border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
   position: absolute;
@@ -122,6 +144,15 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
 
 <ToastContainer
   align="middle"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   type="error"
   visible={true}
 >
@@ -136,7 +167,11 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background:#fff1f0;border:0.0625rem solid #ffa39e;box-sizing:border-box;border-radius:0.25rem;position:",
+            "align-content:\\"center\\";background-color:rgba(",
+            [Function],
+            ",0.1);border:0.0625rem solid rgba(",
+            [Function],
+            ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
             ";display:block;max-width:100%;left:50%;transform:translateX(-50%);text-align:center;font-style:normal;font-weight:normal;font-size:0.875rem;line-height:1.375rem;top:",
             [Function],
@@ -158,6 +193,15 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
       }
     }
     forwardedRef={null}
+    theme={
+      Object {
+        "error": Object {
+          "main": Object {
+            "RGB": "220,16,16",
+          },
+        },
+      }
+    }
     type="error"
     visible={true}
   >
@@ -181,8 +225,8 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background: #fff1f0;
-  border: 0.0625rem solid #ffa39e;
+  background-color: rgba(220,16,16,0.1);
+  border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
   position: fixed;
@@ -209,6 +253,15 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
 <ToastContainer
   align="middle"
   position="fixed"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   top="20px"
   type="error"
   visible={false}
@@ -224,7 +277,11 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background:#fff1f0;border:0.0625rem solid #ffa39e;box-sizing:border-box;border-radius:0.25rem;position:",
+            "align-content:\\"center\\";background-color:rgba(",
+            [Function],
+            ",0.1);border:0.0625rem solid rgba(",
+            [Function],
+            ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
             ";display:block;max-width:100%;left:50%;transform:translateX(-50%);text-align:center;font-style:normal;font-weight:normal;font-size:0.875rem;line-height:1.375rem;top:",
             [Function],
@@ -247,6 +304,15 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
     }
     forwardedRef={null}
     position="fixed"
+    theme={
+      Object {
+        "error": Object {
+          "main": Object {
+            "RGB": "220,16,16",
+          },
+        },
+      }
+    }
     top="20px"
     type="error"
     visible={false}
@@ -270,6 +336,15 @@ exports[`Tabs should match the snapshot 1`] = `
 <ToastContainer
   align="middle"
   position="fixed"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   top="20px"
   type="error"
   visible={true}
@@ -283,6 +358,15 @@ exports[`Tabs should match the snapshot 1`] = `
 exports[`Tabs should match the snapshot for default props 1`] = `
 <ToastContainer
   align="middle"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   type="error"
   visible={true}
 >
@@ -296,6 +380,15 @@ exports[`Tabs should match the snapshot not visible 1`] = `
 <ToastContainer
   align="middle"
   position="fixed"
+  theme={
+    Object {
+      "error": Object {
+        "main": Object {
+          "RGB": "220,16,16",
+        },
+      },
+    }
+  }
   top="20px"
   type="error"
   visible={false}
