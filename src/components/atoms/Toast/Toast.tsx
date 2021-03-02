@@ -24,7 +24,7 @@ interface IToastContainerProps {
 }
 
 interface IToastProps extends IToastContainerProps {
-  children: React.ReactChildren;
+  children: React.ReactNode;
 }
 
 const slideDown = keyframes`
