@@ -10,6 +10,13 @@ const Container = styled.div`
   height: 500px;
 `
 
+const YellowBox = styled.div`
+  background-color: yellow;
+  padding: 2rem;
+  font-style:bolder;
+  font-size:2rem;
+`
+
 const stories = storiesOf("Toast", module)
 
 stories.add("Standard style", (context) => {
@@ -19,6 +26,7 @@ stories.add("Standard style", (context) => {
 
   return (
     <Container>
+      <YellowBox>test test test test test test</YellowBox>
       <Toast visible={boolean("show toast", true)}>
         <div style={{ display: "flex", flexDirection: "row", whiteSpace: "nowrap" }}>
           <svg

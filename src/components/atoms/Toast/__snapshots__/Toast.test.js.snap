@@ -5,7 +5,7 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background-color: rgba(220,16,16,0.1);
+  background-color: white;
   border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
@@ -21,10 +21,16 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
   top: 20px;
   -webkit-animation: ezMiKc 0.3s forwards;
   animation: ezMiKc 0.3s forwards;
-  padding: 0.5625rem 1rem;
   visibility: visible;
   -webkit-transition: visibility 0.3s linear;
   transition: visibility 0.3s linear;
+}
+
+.c0 > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220,16,16,0.1);
+  padding: 0.5625rem 1rem;
 }
 
 <ToastContainer
@@ -54,9 +60,9 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background-color:rgba(",
+            "align-content:\\"center\\";background-color:white;> div{width:100%;height:100%;background-color:rgba(",
             [Function],
-            ",0.1);border:0.0625rem solid rgba(",
+            ",0.1);padding:0.5625rem 1rem;}border:0.0625rem solid rgba(",
             [Function],
             ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
@@ -64,7 +70,7 @@ exports[`Tabs ToastContainer should match the snapshot 1`] = `
             [Function],
             ";animation:",
             [Function],
-            " 0.3s forwards;padding:0.5625rem 1rem;visibility:",
+            " 0.3s forwards;visibility:",
             [Function],
             ";transition:visibility 0.3s linear;",
           ],
@@ -114,7 +120,7 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background-color: rgba(220,16,16,0.1);
+  background-color: white;
   border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
@@ -130,10 +136,16 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
   top: 0.625rem;
   -webkit-animation: ezMiKc 0.3s forwards;
   animation: ezMiKc 0.3s forwards;
-  padding: 0.5625rem 1rem;
   visibility: visible;
   -webkit-transition: visibility 0.3s linear;
   transition: visibility 0.3s linear;
+}
+
+.c0 > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220,16,16,0.1);
+  padding: 0.5625rem 1rem;
 }
 
 <ToastContainer
@@ -161,9 +173,9 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background-color:rgba(",
+            "align-content:\\"center\\";background-color:white;> div{width:100%;height:100%;background-color:rgba(",
             [Function],
-            ",0.1);border:0.0625rem solid rgba(",
+            ",0.1);padding:0.5625rem 1rem;}border:0.0625rem solid rgba(",
             [Function],
             ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
@@ -171,7 +183,7 @@ exports[`Tabs ToastContainer should match the snapshot default props 1`] = `
             [Function],
             ";animation:",
             [Function],
-            " 0.3s forwards;padding:0.5625rem 1rem;visibility:",
+            " 0.3s forwards;visibility:",
             [Function],
             ";transition:visibility 0.3s linear;",
           ],
@@ -219,7 +231,7 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
   -webkit-align-content: "center";
   -ms-flex-line-pack: "center";
   align-content: "center";
-  background-color: rgba(220,16,16,0.1);
+  background-color: white;
   border: 0.0625rem solid rgba(220,16,16,0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
@@ -235,10 +247,16 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
   top: 20px;
   -webkit-animation: goNLxH 0.3s forwards;
   animation: goNLxH 0.3s forwards;
-  padding: 0.5625rem 1rem;
   visibility: hidden;
   -webkit-transition: visibility 0.3s linear;
   transition: visibility 0.3s linear;
+}
+
+.c0 > div {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(220,16,16,0.1);
+  padding: 0.5625rem 1rem;
 }
 
 <ToastContainer
@@ -268,9 +286,9 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
           "isStatic": false,
           "lastClassName": "c0",
           "rules": Array [
-            "align-content:\\"center\\";background-color:rgba(",
+            "align-content:\\"center\\";background-color:white;> div{width:100%;height:100%;background-color:rgba(",
             [Function],
-            ",0.1);border:0.0625rem solid rgba(",
+            ",0.1);padding:0.5625rem 1rem;}border:0.0625rem solid rgba(",
             [Function],
             ",0.5);box-sizing:border-box;border-radius:0.25rem;position:",
             [Function],
@@ -278,7 +296,7 @@ exports[`Tabs ToastContainer should match the snapshot not visible 1`] = `
             [Function],
             ";animation:",
             [Function],
-            " 0.3s forwards;padding:0.5625rem 1rem;visibility:",
+            " 0.3s forwards;visibility:",
             [Function],
             ";transition:visibility 0.3s linear;",
           ],
@@ -341,7 +359,9 @@ exports[`Tabs should match the snapshot 1`] = `
   visible={true}
 >
   <div>
-    test
+    <div>
+      test
+    </div>
   </div>
 </ToastContainer>
 `;
@@ -362,7 +382,9 @@ exports[`Tabs should match the snapshot for default props 1`] = `
   visible={true}
 >
   <div>
-    test
+    <div>
+      test
+    </div>
   </div>
 </ToastContainer>
 `;
@@ -385,7 +407,9 @@ exports[`Tabs should match the snapshot not visible 1`] = `
   visible={false}
 >
   <div>
-    test
+    <div>
+      test
+    </div>
   </div>
 </ToastContainer>
 `;
