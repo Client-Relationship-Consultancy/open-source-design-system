@@ -50,7 +50,13 @@ const slideUp = keyframes`
 
 export const ToastContainer = styled.div<IToastContainerProps>`
   align-content: "center";
-  background-color: rgba(${(props) => props.theme.error.main.RGB}, 0.1);
+  background-color: white;
+  > div {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(${(props) => props.theme.error.main.RGB}, 0.1);
+    padding: 0.5625rem 1rem;
+  }
   border: 0.0625rem solid rgba(${(props) => props.theme.error.main.RGB}, 0.5);
   box-sizing: border-box;
   border-radius: 0.25rem;
@@ -65,7 +71,6 @@ export const ToastContainer = styled.div<IToastContainerProps>`
   line-height: 1.375rem;
   top: ${(props: IToastContainerProps) => props.top || "0.625rem"};
   animation: ${(props: IToastContainerProps) => (props.visible ? slideDown : slideUp)} 0.3s forwards;
-  padding: 0.5625rem 1rem;
   visibility: ${(props: IToastContainerProps) => (props.visible ? "visible" : "hidden")};
   transition: visibility 0.3s linear;
 `;
@@ -74,7 +79,11 @@ ToastContainer.displayName = "ToastContainer";
 
 const Toast: React.FunctionComponent<IToastProps> = (props) => {
   const { children } = props;
-  return <ToastContainer {...props}>{children}</ToastContainer>;
+  return (
+    <ToastContainer {...props}>
+      <div>{children}</div>
+    </ToastContainer>
+  );
 };
 
 Toast.displayName = "Toast";
